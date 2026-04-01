@@ -211,11 +211,11 @@
   <div id="tr-content" style="display:none">
 
   <div class="tab-row" id="tr-tab-row">
-    <button class="tab-btn active" onclick="switchTab('treningi','t-nastepny',this)">▶ Następny</button>
-    <button class="tab-btn" onclick="switchTab('treningi','t-poprzedni',this)">⏮ Poprzedni</button>
-    <button class="tab-btn" onclick="switchTab('treningi','t-archiwum',this)">📋 Archiwum</button>
-    <button class="tab-btn" onclick="switchTab('treningi','t-szablony2',this)">📝 Szablony C2</button>
-    <button class="tab-btn" onclick="switchTab('treningi','t-szablony',this)">📝 Szablony C1</button>
+    <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
+    <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
+    <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
+    <button class="tab-btn" onclick="switchTab('tr-content','t-szablony2',this)">📝 Szablony C2</button>
+    <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)">📝 Szablony C1</button>
   </div>
 
   <!-- TAB: NASTĘPNY -->
@@ -1582,13 +1582,13 @@
   <div id="rm-content" style="display:none">
 
   <div class="tab-row">
-    <button class="tab-btn active" onclick="switchTab('roadmap','r-mapa',this)">🗓️ Mapa</button>
-    <button class="tab-btn" onclick="switchTab('roadmap','r-big4',this)">💪 Big 4</button>
-    <button class="tab-btn" onclick="switchTab('roadmap','r-deload',this)">⚪ Deload</button>
-    <button class="tab-btn" onclick="switchTab('roadmap','r-cut1',this)">🔻 Cut #1</button>
-    <button class="tab-btn" onclick="switchTab('roadmap','r-bulk',this)">📈 Bulk</button>
-    <button class="tab-btn" onclick="switchTab('roadmap','r-cut2',this)">🎯 Cut #2</button>
-    <button class="tab-btn" onclick="switchTab('roadmap','r-zasady',this)">📋 Zasady</button>
+    <button class="tab-btn active" onclick="switchTab('rm-content','r-mapa',this)">🗓️ Mapa</button>
+    <button class="tab-btn" onclick="switchTab('rm-content','r-big4',this)">💪 Big 4</button>
+    <button class="tab-btn" onclick="switchTab('rm-content','r-deload',this)">⚪ Deload</button>
+    <button class="tab-btn" onclick="switchTab('rm-content','r-cut1',this)">🔻 Cut #1</button>
+    <button class="tab-btn" onclick="switchTab('rm-content','r-bulk',this)">📈 Bulk</button>
+    <button class="tab-btn" onclick="switchTab('rm-content','r-cut2',this)">🎯 Cut #2</button>
+    <button class="tab-btn" onclick="switchTab('rm-content','r-zasady',this)">📋 Zasady</button>
   </div>
 
   <div id="r-mapa"    class="tab-panel active"></div>
@@ -1764,16 +1764,10 @@
   // ── ZAKŁADKI WEWNĘTRZNE ────────────────────────────────────────
   function switchTab(sectionId, panelId, btn) {
     const section = document.getElementById(sectionId);
-    // Only hide direct child tab-panels (not nested ones)
-    Array.from(section.children).forEach(el => {
-      if (el.classList && el.classList.contains('tab-panel')) el.classList.remove('active');
-    });
-    // Remove active from tab-btns that are direct children of section's tab-row
-    Array.from(section.children).forEach(el => {
-      if (el.classList && el.classList.contains('tab-row')) {
-        el.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      }
-    });
+    // Ukryj wszystkie tab-panele bezpośrednio wewnątrz tego kontenera
+    section.querySelectorAll(':scope > .tab-panel').forEach(el => el.classList.remove('active'));
+    // Usuń active ze wszystkich przycisków w tab-row tego kontenera
+    section.querySelectorAll(':scope > .tab-row .tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(panelId).classList.add('active');
     btn.classList.add('active');
   }
@@ -1871,6 +1865,11 @@
     renderSzablony('tr-szablony-c1', data.szablony_c1, 'C1');
     document.getElementById('tr-loading').style.display='none';
     document.getElementById('tr-content').style.display='block';
+    // Jawnie ustaw stan zakładek po renderowaniu
+    ['t-nastepny','t-poprzedni','t-archiwum','t-szablony2','t-szablony'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', i === 0);
+    });
   }
 
   function renderNastepny(n) {
@@ -2104,6 +2103,11 @@
     renderPlanTabSimple('pc2-erb', data.erb);
     document.getElementById('plan-loading').style.display = 'none';
     document.getElementById('plan-c2-content').style.display = 'block';
+    // Jawnie ustaw stan zakładek po renderowaniu
+    ['pc2-ua','pc2-ub','pc2-lower','pc2-ebl','pc2-erb'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', i === 0);
+    });
   }
 
   function renderPlanTab(panelId, blok, showCel) {
@@ -2180,6 +2184,11 @@
     renderRoadmapZasady(d.zasady);
     document.getElementById('rm-loading').style.display = 'none';
     document.getElementById('rm-content').style.display = 'block';
+    // Jawnie ustaw stan zakładek po renderowaniu
+    ['r-mapa','r-big4','r-deload','r-cut1','r-bulk','r-cut2','r-zasady'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', i === 0);
+    });
   }
 
   function renderRoadmapMapa(m) {
