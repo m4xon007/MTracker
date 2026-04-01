@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.17</title>
+<title>Marcin — Plan 2026 · v2.18</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.17</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.18</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1220,9 +1220,11 @@
       const isBg   = c.opcjonalny ? 'background:rgba(100,116,139,0.05)' : isSS ? 'background:rgba(59,130,246,0.04)' : '';
       const celColor = { accent2:'var(--accent2)', text3:'var(--text3)' }[c.cel_color] || 'var(--text3)';
       const nameStyle = isMain ? 'color:var(--accent2);font-weight:600' : '';
+      const partiaCell = c.partia ? `<td style="font-size:11px;color:var(--text3)">${c.partia}</td>` : '<td></td>';
       return `<tr${isBg ? ` style="${isBg}"` : ''}>
         <td>${c.nr}</td>
         <td style="${nameStyle}">${c.nazwa}</td>
+        ${partiaCell}
         <td>${c.serie}</td>
         <td>${c.powt}</td>
         <td>${c.przerwa}</td>
@@ -1236,7 +1238,7 @@
       ${alertHtml}
       <div class="workout-table card">
         <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
+          <tr><th>#</th><th>Ćwiczenie</th><th style="font-size:11px">Partia</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
           ${rows}
         </table>
         <div style="margin-top:10px;font-size:12px;color:${blok.uwaga&&blok.uwaga.startsWith('⚠️')?'var(--yellow)':'var(--text3)'}">${blok.uwaga||''}</div>
