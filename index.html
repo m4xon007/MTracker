@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026</title>
+<title>Marcin — Plan 2026 · v2.04</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.04</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1578,6 +1578,8 @@
 <!-- ═══ PLAN 2026 ══════════════════════════════════════════════════ -->
 <section id="roadmap">
   <h2>🗺️ Plan 2026 — droga do BF 15%</h2>
+  <div id="rm-loading" style="color:var(--text3);font-size:13px;padding:20px 0">Ładowanie roadmapy…</div>
+  <div id="rm-content" style="display:none">
 
   <div class="tab-row">
     <button class="tab-btn active" onclick="switchTab('roadmap','r-mapa',this)">🗓️ Mapa</button>
@@ -1589,163 +1591,15 @@
     <button class="tab-btn" onclick="switchTab('roadmap','r-zasady',this)">📋 Zasady</button>
   </div>
 
-  <!-- TAB: MAPA -->
-  <div id="r-mapa" class="tab-panel active">
-    <div class="card">
-      <div class="card-title">📊 Punkt startowy — marzec 2026</div>
-      <div class="stat-grid">
-        <div class="stat-box"><div class="stat-num" style="color:var(--accent2)">87 kg</div><div class="stat-label">Waga</div></div>
-        <div class="stat-box"><div class="stat-num" style="color:var(--yellow)">19,4%</div><div class="stat-label">BF%</div></div>
-        <div class="stat-box"><div class="stat-num" style="color:var(--green)">70 kg</div><div class="stat-label">LBM</div></div>
-      </div>
-      <table style="margin-top:4px">
-        <tr><th>Wskaźnik</th><th>Teraz</th><th>Cel końcowy</th><th>Różnica</th></tr>
-        <tr><td>Waga</td><td>87 kg</td><td>~83–84 kg</td><td style="color:var(--green)">-3–4 kg</td></tr>
-        <tr><td>BF%</td><td>19,4%</td><td>15%</td><td style="color:var(--green)">-4,4%</td></tr>
-        <tr><td>Tłuszcz (kg)</td><td>16,9 kg</td><td>~12,5 kg</td><td style="color:var(--green)">-4,4 kg</td></tr>
-        <tr><td>LBM</td><td>70,1 kg</td><td>~71–72 kg</td><td style="color:var(--green)">+1–2 kg</td></tr>
-      </table>
-      <div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">💡</span><span>Przy BF 15% i LBM ~71,6 kg (po bulku) waga wyniesie <strong>~84 kg</strong> — niżej niż teraz, mimo więcej mięśni. Klucz: bulk musi poprzedzać finalny cut.</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title">🗓️ Przegląd etapów — 2026</div>
-      <table>
-        <tr><th>Etap</th><th>Okres</th><th>Czas</th><th>Cel wagowy</th><th>Cel BF%</th></tr>
-        <tr><td><span class="badge badge-yellow">⚪ Deload</span></td><td>23–29.03</td><td>1 tyg</td><td>~87 kg</td><td>~19%</td></tr>
-        <tr><td><span class="badge badge-red">🔻 Mini cut #1</span></td><td>kwi–maj</td><td>8 tyg</td><td>84–85 kg</td><td>16–17%</td></tr>
-        <tr><td><span class="badge badge-green">📈 Mini bulk</span></td><td>cze–sie</td><td>10–12 tyg</td><td>86–87 kg</td><td>17–18%</td></tr>
-        <tr><td><span class="badge badge-red">🔻 Mini cut #2</span></td><td>wrz–paź</td><td>6–8 tyg</td><td>83–84 kg</td><td>15%</td></tr>
-        <tr style="font-weight:600;border-top:2px solid var(--border)"><td>🎯 Cel</td><td>październik 2026</td><td>—</td><td>~83–84 kg</td><td style="color:var(--green)">15%</td></tr>
-      </table>
-      <div class="alert alert-success" style="margin-top:12px"><span class="alert-icon">🎯</span><span><strong>Checkpoint po deloadzie (~30.03):</strong> waga + BF% + obwody + zdjęcia. Decyzja o starcie Mini cut #1. Nie czekać na 1 kwietnia.</span></div>
-    </div>
-  </div><!-- /r-mapa -->
+  <div id="r-mapa"    class="tab-panel active"></div>
+  <div id="r-big4"    class="tab-panel"></div>
+  <div id="r-deload"  class="tab-panel"></div>
+  <div id="r-cut1"    class="tab-panel"></div>
+  <div id="r-bulk"    class="tab-panel"></div>
+  <div id="r-cut2"    class="tab-panel"></div>
+  <div id="r-zasady"  class="tab-panel"></div>
 
-  <!-- TAB: BIG 4 -->
-  <div id="r-big4" class="tab-panel">
-    <div class="card">
-      <div class="card-title">💪 Big 4 — tracker progresji 2026</div>
-      <div class="goal-card">
-        <div class="goal-header"><div><div class="goal-name">⭐ Ławka sztanga</div><div class="goal-sub">Start: 60 kg (sty 2026) → Teraz: 70 kg → Cel po bulku: 85 kg</div></div><span class="badge badge-green">70 kg</span></div>
-        <div class="progress-wrap"><div class="progress-label"><span style="color:var(--text3)">60 kg</span><span style="color:var(--accent2)">70 kg ← teraz</span><span style="color:var(--green)">85 kg</span></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:40%"></div></div></div>
-        <div style="font-size:11px;color:var(--text3)">Rekompozycja/cut: utrzymać | Mini bulk: bić rekordy · ostatni: AMRAP 10 przy 67,5 kg (04.03)</div>
-      </div>
-      <div class="goal-card">
-        <div class="goal-header"><div><div class="goal-name">⭐ Podciąganie (asysta)</div><div class="goal-sub">Start: -25 kg (sty 2026) → Teraz: -17,5 kg → Cel: BW (0 kg)</div></div><span class="badge badge-green">-17,5 kg</span></div>
-        <div class="progress-wrap"><div class="progress-label"><span style="color:var(--text3)">-25 kg</span><span style="color:var(--accent2)">-17,5 kg ← teraz</span><span style="color:var(--green)">BW</span></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:30%"></div></div></div>
-        <div style="font-size:11px;color:var(--text3)">Na cutach: utrzymać | Na bulku: szybkie skoki · ostatni: -19 kg 5×8 równo (08.03)</div>
-      </div>
-      <div class="goal-card">
-        <div class="goal-header"><div><div class="goal-name">⭐ Front squat</div><div class="goal-sub">Start: ~50 kg → Teraz: 60 kg (stabilizacja tyg 7–10) → Cel po bulku: 80 kg</div></div><span class="badge badge-blue">60 kg</span></div>
-        <div class="progress-wrap"><div class="progress-label"><span style="color:var(--text3)">50 kg</span><span style="color:var(--accent2)">60 kg ← teraz</span><span style="color:var(--green)">80 kg</span></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:33%"></div></div></div>
-        <div style="font-size:11px;color:var(--text3)">Lędźwie priorytet — nigdy nie forsować przy dyskomforcie · ostatni: 60 kg 3×10 (06.03)</div>
-      </div>
-      <div class="goal-card">
-        <div class="goal-header"><div><div class="goal-name">⭐ Trap bar deadlift</div><div class="goal-sub">Start: ~60 kg → Teraz: 75 kg (stabilizacja tyg 7–10) → Cel po bulku: 100 kg</div></div><span class="badge badge-blue">75 kg</span></div>
-        <div class="progress-wrap"><div class="progress-label"><span style="color:var(--text3)">60 kg</span><span style="color:var(--accent2)">75 kg ← teraz</span><span style="color:var(--green)">100 kg</span></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:38%"></div></div></div>
-        <div style="font-size:11px;color:var(--text3)">Zamiennik dla RDL — bezpieczny dla lędźwi · ostatni: 75 kg 3×10 (06.03)</div>
-      </div>
-    </div>
-  </div><!-- /r-big4 -->
-
-  <!-- TAB: DELOAD -->
-  <div id="r-deload" class="tab-panel">
-    <div class="card" style="border-left:3px solid var(--yellow)">
-      <div class="card-title">⚪ Deload &nbsp;<span class="badge badge-yellow">23–29.03.2026 · 1 tydzień</span></div>
-      <div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">😴</span><span>Prawdziwy odpoczynek — nie trening z mniejszymi ciężarami. Pełna regeneracja CNS, ścięgien i stawów po 10 tygodniach. Bez tego mini cut zaczyna się ze zmęczonym organizmem.</span></div>
-      <table>
-        <tr><th>Parametr</th><th>Normalnie</th><th style="color:var(--yellow)">Deload</th></tr>
-        <tr><td>Ciężary</td><td>100%</td><td style="color:var(--yellow)">-40%</td></tr>
-        <tr><td>Serie per ćwicz.</td><td>3–5</td><td style="color:var(--yellow)">2</td></tr>
-        <tr><td>Tempo</td><td>3-1-1-0</td><td style="color:var(--yellow)">2-1-2-0 (fokus na technikę)</td></tr>
-        <tr><td>Czas treningu</td><td>75–90 min</td><td style="color:var(--yellow)">45–55 min</td></tr>
-        <tr><td>Dieta</td><td colspan="2">bez zmian — utrzymaj kalorie i białko</td></tr>
-        <tr><td>Sen</td><td colspan="2" style="color:var(--green)">priorytet — minimum 7–8h</td></tr>
-      </table>
-      <div class="alert alert-warn" style="margin-top:12px"><span class="alert-icon">⚠️</span><span>Typowa reakcja: po deloadzie czujesz się "za świeży" i chcesz trenować mocniej. To dobry znak — wejdź w mini cut z tym zapasem energii, nie przepalaj go na deloadzie.</span></div>
-      <div class="alert alert-success" style="margin-top:8px"><span class="alert-icon">🎯</span><span><strong>Checkpoint ~30.03:</strong> waga + BF% + obwody + zdjęcia. Decyzja o starcie Mini cut #1. Nie czekać na 1 kwietnia.</span></div>
-    </div>
-  </div><!-- /r-deload -->
-
-  <!-- TAB: CUT #1 -->
-  <div id="r-cut1" class="tab-panel">
-    <div class="card" style="border-left:3px solid var(--red)">
-      <div class="card-title">🔻 Mini cut #1 &nbsp;<span class="badge badge-red">kwiecień–maj 2026 · 8 tygodni</span></div>
-      <div class="stat-grid" style="margin-bottom:12px">
-        <div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--red)">-350</div><div class="stat-label">kcal deficyt/dzień</div></div>
-        <div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--accent2)">~2150</div><div class="stat-label">kcal dni odpoczynku</div></div>
-        <div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--green)">185g+</div><div class="stat-label">białko / dzień</div></div>
-      </div>
-      <div class="alert alert-warn"><span class="alert-icon">🎯</span><span><strong>Ciąć z węgli i tłuszczów w dniach odpoczynku — nigdy z białka.</strong> Szczegółowe zmiany posiłków: Dieta → Mini cut.</span></div>
-      <table style="margin-top:12px">
-        <tr><th>Parametr</th><th>Dni treningowe</th><th>Dni odpoczynku</th></tr>
-        <tr><td>Kalorie</td><td>~2600 kcal (bez zmian)</td><td style="color:var(--red)">~2100–2150 kcal (-350)</td></tr>
-        <tr><td>Białko</td><td style="color:var(--green)">185–200g</td><td style="color:var(--green)">185–200g (bez zmian!)</td></tr>
-        <tr><td>Węglowodany</td><td>bez zmian</td><td style="color:var(--yellow)">-50–80g wieczorem</td></tr>
-        <tr><td>Trening</td><td colspan="2">bez zmian — te same ciężary i serie</td></tr>
-      </table>
-      <div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">📊</span><span>Tyg 1–2: szybki spadek ~0,5–1 kg (woda i glikogen). Tyg 3–8: ~0,3–0,4 kg/tydz. Łącznie: -2,5–3 kg.</span></div>
-      <div class="alert alert-warn"><span class="alert-icon">⚠️</span><span><strong>Sygnały że cut za agresywny:</strong> siła spada &gt;15% przez 2 tygodnie, waga spada &gt;0,8 kg/tydz → dodaj 150 kcal w dniach odpoczynku.</span></div>
-      <div class="alert alert-success"><span class="alert-icon">✅</span><span>Kreatyna 5g/dzień bez przerw — utrzymuje siłę i objętość mięśni na deficycie. Jeden z niewielu suplementów który realnie pomaga na cucie.</span></div>
-    </div>
-  </div><!-- /r-cut1 -->
-
-  <!-- TAB: BULK -->
-  <div id="r-bulk" class="tab-panel">
-    <div class="card" style="border-left:3px solid var(--green)">
-      <div class="card-title">📈 Mini bulk &nbsp;<span class="badge badge-green">czerwiec–sierpień 2026 · 10–12 tygodni</span></div>
-      <div class="stat-grid" style="margin-bottom:12px">
-        <div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--green)">+200</div><div class="stat-label">kcal nadwyżka/dzień</div></div>
-        <div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--accent2)">~2700</div><div class="stat-label">kcal dni treningowe</div></div>
-        <div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--green)">+1,5 kg</div><div class="stat-label">cel LBM</div></div>
-      </div>
-      <div class="alert alert-info"><span class="alert-icon">💡</span><span>Wchodzisz z BF ~16–17% — dobry punkt startowy. Poniżej 15% organizm efektywniej buduje mięśnie zamiast tłuszczu. Nie czekaj do 12%.</span></div>
-      <table style="margin-top:12px">
-        <tr><th>Parametr</th><th>Dni treningowe</th><th>Dni odpoczynku</th></tr>
-        <tr><td>Kalorie</td><td style="color:var(--green)">~2700–2800 kcal</td><td>~2400 kcal</td></tr>
-        <tr><td>Białko</td><td style="color:var(--green)">180–200g</td><td style="color:var(--green)">180–200g</td></tr>
-        <tr><td>Węglowodany</td><td style="color:var(--green)">więcej przed i po treningu</td><td>umiarkowanie</td></tr>
-      </table>
-      <div class="alert alert-success" style="margin-top:12px"><span class="alert-icon">✅</span><span><strong>Na bulku bicz rekordy.</strong> Ławka, podciąganie, front squat — tu zobaczysz największe skoki. Celuj w +2,5 kg co 2–3 tygodnie na głównych ćwiczeniach.</span></div>
-      <div class="alert alert-success"><span class="alert-icon">✅</span><span>Węglowodany okołotreningowe — banan lub ryż przed treningiem, węgle po. Insulin spike po treningu = lepsze wchłanianie aminokwasów.</span></div>
-      <div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>BF% rośnie szybciej niż ~0,5%/tydz przez 2 tygodnie z rzędu → zmniejsz nadwyżkę o 100–150 kcal. Cel: max +2 kg wagi/miesiąc.</span></div>
-      <div class="alert alert-info"><span class="alert-icon">📊</span><span>Tyg 1–2: wzrost ~0,5–1 kg (woda i glikogen). Tyg 3–12: ~0,2–0,3 kg LBM/tydz. Łącznie: +1–1,5 kg mięśni.</span></div>
-    </div>
-  </div><!-- /r-bulk -->
-
-  <!-- TAB: CUT #2 -->
-  <div id="r-cut2" class="tab-panel">
-    <div class="card" style="border-left:3px solid var(--red)">
-      <div class="card-title">🎯 Mini cut #2 &nbsp;<span class="badge badge-red">wrzesień–październik 2026 · 6–8 tygodni</span></div>
-      <div class="alert alert-success"><span class="alert-icon">🏆</span><span>Wchodzisz z ~87 kg i ~17–18% BF po bulku — LBM ~71,5 kg. Ten cut to "ostatnia mila" do 15%. Łatwiejszy niż cut #1 bo masz więcej mięśni = wyższe spalanie w spoczynku.</span></div>
-      <table style="margin-top:12px">
-        <tr><th>Parametr</th><th>Wartość</th></tr>
-        <tr><td>Deficyt</td><td style="color:var(--red)">-300–350 kcal/dzień (tak samo jak cut #1)</td></tr>
-        <tr><td>Czas</td><td>6–8 tygodni — krócej bo mniej do zgubienia</td></tr>
-        <tr><td>Cel wagowy</td><td style="color:var(--green)">83–84 kg</td></tr>
-        <tr><td>Cel BF%</td><td style="color:var(--green)">15% 🎯</td></tr>
-        <tr><td>LBM po cucie</td><td style="color:var(--green)">~71–72 kg (+1–2 kg vs marzec 2026)</td></tr>
-      </table>
-      <div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">📊</span><span>W październiku 2026: ~83–84 kg przy BF 15% — wyglądasz lepiej niż w marcu mimo podobnej wagi, bo masz 1–2 kg więcej mięśni i 4–5 kg mniej tłuszczu.</span></div>
-    </div>
-  </div><!-- /r-cut2 -->
-
-  <!-- TAB: ZASADY -->
-  <div id="r-zasady" class="tab-panel">
-    <div class="card">
-      <div class="card-title">📋 Zasady wspólne — wszystkie etapy</div>
-      <table>
-        <tr><th>Zasada</th><th>Dlaczego</th></tr>
-        <tr><td style="color:var(--green);font-weight:600">Białko nigdy poniżej 180g</td><td style="color:var(--text3);font-size:12px">Jedyna ochrona mięśni podczas deficytu. Przy 180g+ i treningu siłowym utrata LBM minimalna.</td></tr>
-        <tr><td style="color:var(--green);font-weight:600">Trening siłowy przez wszystkie fazy</td><td style="color:var(--text3);font-size:12px">Cardio spala, ale sygnał do zachowania mięśni daje tylko trening z obciążeniem. Cardio opcjonalnie 1–2× tydzień 20–30 min.</td></tr>
-        <tr><td style="color:var(--green);font-weight:600">Deficyt max -500 kcal/dzień</td><td style="color:var(--text3);font-size:12px">Agresywniejszy deficyt = szybsza utrata mięśni, gorsza regeneracja, ryzyko kontuzji. Wolniej = trwale.</td></tr>
-        <tr><td style="color:var(--green);font-weight:600">Waga 2× w tygodniu, patrz na średnią 7-dniową</td><td style="color:var(--text3);font-size:12px">Wahania dobowe ±1 kg są normalne. Decyzje tylko na podstawie trendu tygodniowego, nie pojedynczego pomiaru.</td></tr>
-        <tr><td style="color:var(--yellow);font-weight:600">Przerwa między cutami (bulk lub utrzymanie)</td><td style="color:var(--text3);font-size:12px">Ciągły deficyt = adaptacja metaboliczna (organizm spowalnia spalanie). Przerwa resetuje metabolizm.</td></tr>
-        <tr><td style="color:var(--yellow);font-weight:600">Deload co 8–10 tygodni</td><td style="color:var(--text3);font-size:12px">Regeneracja ścięgien i CNS. Bez deloadów narasta ryzyko kontuzji — szczególnie przy lędźwiach.</td></tr>
-        <tr><td style="color:var(--yellow);font-weight:600">Obwody + zdjęcia co fazę</td><td style="color:var(--text3);font-size:12px">Waga to jeden wskaźnik — obwody i zdjęcia pokazują rzeczywistą zmianę składu ciała. Pierwsze pomiary ~30.03.</td></tr>
-      </table>
-    </div>
-  </div><!-- /r-zasady -->
+  </div><!-- /rm-content -->
 </section>
 
 </div><!-- /app-content -->
@@ -2315,19 +2169,175 @@
       </div>`;
   }
 
+  // ── RENDERER ROADMAPY ─────────────────────────────────────────
+  function renderRoadmap(d) {
+    renderRoadmapMapa(d.mapa);
+    renderRoadmapBig4(d.big4);
+    renderRoadmapFaza('r-deload', d.fazy.deload, 'deload');
+    renderRoadmapFaza('r-cut1',   d.fazy.cut1,   'cut');
+    renderRoadmapFaza('r-bulk',   d.fazy.bulk,   'bulk');
+    renderRoadmapFaza('r-cut2',   d.fazy.cut2,   'cut2');
+    renderRoadmapZasady(d.zasady);
+    document.getElementById('rm-loading').style.display = 'none';
+    document.getElementById('rm-content').style.display = 'block';
+  }
+
+  function renderRoadmapMapa(m) {
+    const el = document.getElementById('r-mapa');
+    const ps = m.punkt_startowy;
+    const statsHtml = ps.stats.map(s =>
+      `<div class="stat-box"><div class="stat-num" style="color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
+    ).join('');
+    const wsRow = ps.wskazniki.map(w =>
+      `<tr><td>${w.nazwa}</td><td>${w.teraz}</td><td>${w.cel}</td><td style="color:var(--${w.roznica_kolor})">${w.roznica}</td></tr>`
+    ).join('');
+
+    const BADGE_CLS = {yellow:'badge-yellow',red:'badge-red',green:'badge-green'};
+    const etapyRows = m.etapy.map(e => {
+      const bc = BADGE_CLS[e.badge]||'badge-gray';
+      const hl = e.aktywny ? 'style="font-weight:600;color:var(--accent2)"' : '';
+      return `<tr ${hl}><td><span class="badge ${bc}">${e.nazwa}</span></td><td>${e.okres}</td><td>${e.czas}</td><td>${e.cel_waga}</td><td>${e.cel_bf}</td></tr>`;
+    }).join('');
+    const celRow = `<tr style="font-weight:600;border-top:2px solid var(--border)"><td>🎯 Cel</td><td>${m.cel_finalny.okres}</td><td>—</td><td>${m.cel_finalny.cel_waga}</td><td style="color:var(--green)">${m.cel_finalny.cel_bf}</td></tr>`;
+
+    el.innerHTML = `
+      <div class="card">
+        <div class="card-title">📊 ${ps.tytul}</div>
+        <div class="stat-grid">${statsHtml}</div>
+        <table style="margin-top:4px">
+          <tr><th>Wskaźnik</th><th>Teraz</th><th>Cel końcowy</th><th>Różnica</th></tr>
+          ${wsRow}
+        </table>
+        <div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">💡</span><span>${ps.alert}</span></div>
+      </div>
+      <div class="card">
+        <div class="card-title">🗓️ Przegląd etapów — 2026</div>
+        <table>
+          <tr><th>Etap</th><th>Okres</th><th>Czas</th><th>Cel wagowy</th><th>Cel BF%</th></tr>
+          ${etapyRows}${celRow}
+        </table>
+        <div class="alert alert-success" style="margin-top:12px"><span class="alert-icon">🎯</span><span>${m.checkpoint_alert}</span></div>
+      </div>`;
+  }
+
+  function renderRoadmapBig4(big4) {
+    const el = document.getElementById('r-big4');
+    const BADGE_CLS = {green:'badge-green',blue:'badge-blue',yellow:'badge-yellow'};
+    const cards = big4.map(b => {
+      const start = b.label_start || b.start_kg + ' kg';
+      const teraz = b.label_teraz || b.teraz_kg + ' kg ← teraz';
+      const cel   = b.label_cel   || b.cel_kg + ' kg';
+      const range = b.cel_kg - b.start_kg;
+      const prog  = b.label_teraz
+        ? Math.round((b.teraz_kg / b.start_kg) * 100) // asysta — odwrotna skala
+        : Math.round(((b.teraz_kg - b.start_kg) / range) * 100);
+      const pct = Math.min(Math.max(prog, 0), 100);
+      const bc = BADGE_CLS[b.badge_kolor] || 'badge-gray';
+      return `<div class="goal-card">
+        <div class="goal-header">
+          <div><div class="goal-name">${b.nazwa}</div><div class="goal-sub">${b.opis}</div></div>
+          <span class="badge ${bc}">${b.badge}</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span style="color:var(--text3)">${start}</span>
+            <span style="color:var(--accent2)">${teraz}</span>
+            <span style="color:var(--green)">${cel}</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+        </div>
+        <div style="font-size:11px;color:var(--text3)">${b.uwaga}</div>
+      </div>`;
+    }).join('');
+    el.innerHTML = `<div class="card"><div class="card-title">💪 Big 4 — tracker progresji 2026</div>${cards}</div>`;
+  }
+
+  function renderRoadmapFaza(panelId, faza, typ) {
+    const el = document.getElementById(panelId);
+    const BORDER = {yellow:'var(--yellow)',red:'var(--red)',green:'var(--green)'};
+    const border = BORDER[faza.border_kolor] || 'var(--border)';
+
+    // Stats (cut/bulk)
+    let statsHtml = '';
+    if (faza.stats) {
+      statsHtml = `<div class="stat-grid" style="margin-bottom:12px">${
+        faza.stats.map(s => `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`).join('')
+      }</div>`;
+    }
+
+    // Alerts before table
+    const alertsBefore = (faza.alerty||[]).filter((_,i) => i === 0);
+    const alertsAfter  = (faza.alerty||[]).filter((_,i) => i > 0);
+    const renderAlerts = (arr) => arr.map(a => alertBox(a.typ, a.ikona, a.tekst)).join('');
+
+    // Parameters table
+    let tableHtml = '';
+    if (faza.parametry) {
+      if (typ === 'deload') {
+        const rows = faza.parametry.map(p => {
+          if (p.deload === null) {
+            const c = p.normalnie_kolor ? `style="color:var(--${p.normalnie_kolor})"` : '';
+            return `<tr><td>${p.parametr}</td><td colspan="2" ${c}>${p.normalnie}</td></tr>`;
+          }
+          const dc = p.deload_kolor ? `style="color:var(--${p.deload_kolor})"` : '';
+          return `<tr><td>${p.parametr}</td><td>${p.normalnie}</td><td ${dc}>${p.deload}</td></tr>`;
+        }).join('');
+        tableHtml = `<table><tr><th>Parametr</th><th>Normalnie</th><th style="color:var(--yellow)">Deload</th></tr>${rows}</table>`;
+      } else if (typ === 'cut' || typ === 'bulk') {
+        const rows = faza.parametry.map(p => {
+          if (!p.odpoczynek) return `<tr><td>${p.parametr}</td><td colspan="2">${p.trening}</td></tr>`;
+          const tc = p.trening_kolor ? `style="color:var(--${p.trening_kolor})"` : '';
+          const oc = p.odpoczynek_kolor ? `style="color:var(--${p.odpoczynek_kolor})"` : '';
+          return `<tr><td>${p.parametr}</td><td ${tc}>${p.trening}</td><td ${oc}>${p.odpoczynek}</td></tr>`;
+        }).join('');
+        tableHtml = `<table style="margin-top:12px"><tr><th>Parametr</th><th>Dni treningowe</th><th>Dni odpoczynku</th></tr>${rows}</table>`;
+      } else if (typ === 'cut2') {
+        const rows = faza.parametry.map(p => {
+          const c = p.kolor ? `style="color:var(--${p.kolor})"` : '';
+          return `<tr><td>${p.parametr}</td><td ${c}>${p.wartosc}</td></tr>`;
+        }).join('');
+        tableHtml = `<table style="margin-top:12px"><tr><th>Parametr</th><th>Wartość</th></tr>${rows}</table>`;
+      }
+    }
+
+    const BADGE_CLS = {yellow:'badge-yellow',red:'badge-red',green:'badge-green'};
+    const bc = BADGE_CLS[faza.border_kolor] || 'badge-gray';
+
+    el.innerHTML = `<div class="card" style="border-left:3px solid ${border}">
+      <div class="card-title">${faza.tytul} &nbsp;<span class="badge ${bc}">${faza.badge}</span></div>
+      ${statsHtml}
+      ${renderAlerts(alertsBefore)}
+      ${tableHtml}
+      ${renderAlerts(alertsAfter)}
+    </div>`;
+  }
+
+  function renderRoadmapZasady(zasady) {
+    const el = document.getElementById('r-zasady');
+    const rows = zasady.map(z => {
+      const c = {green:'var(--green)',yellow:'var(--yellow)'}[z.kolor] || 'var(--text)';
+      return `<tr><td style="color:${c};font-weight:600">${z.zasada}</td><td style="color:var(--text3);font-size:12px">${z.dlaczego}</td></tr>`;
+    }).join('');
+    el.innerHTML = `<div class="card"><div class="card-title">📋 Zasady wspólne — wszystkie etapy</div>
+      <table><tr><th>Zasada</th><th>Dlaczego</th></tr>${rows}</table>
+    </div>`;
+  }
+
   // ── FETCH — ładuj wszystkie JSONy równolegle ──────────────────
   Promise.all([
     fetch('data/waga.json').then(r=>{ if(!r.ok) throw new Error('waga.json: HTTP '+r.status); return r.json(); }),
     fetch('data/treningi.json').then(r=>{ if(!r.ok) throw new Error('treningi.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/plan_c2.json').then(r=>{ if(!r.ok) throw new Error('plan_c2.json: HTTP '+r.status); return r.json(); })
-  ]).then(([wagaData, treningiData, planC2Data]) => {
+    fetch('data/plan_c2.json').then(r=>{ if(!r.ok) throw new Error('plan_c2.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/roadmap.json').then(r=>{ if(!r.ok) throw new Error('roadmap.json: HTTP '+r.status); return r.json(); })
+  ]).then(([wagaData, treningiData, planC2Data, roadmapData]) => {
     renderWaga(wagaData);
     renderTreningi(treningiData);
     renderPlanC2(planC2Data);
+    renderRoadmap(roadmapData);
   }).catch(err => {
     console.error(err);
     const msg = '⚠️ Błąd ładowania: ' + err.message;
-    ['waga-loading','tr-loading','plan-loading'].forEach(id => {
+    ['waga-loading','tr-loading','plan-loading','rm-loading'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.textContent = msg;
     });
