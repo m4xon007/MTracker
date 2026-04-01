@@ -300,6 +300,42 @@
   <h2>🏋️ Plan Treningowy</h2>
 
   <div class="tab-row">
+    <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)">🆕 Cykl 2</button>
+    <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)">📦 Cykl 1 (archiwum)</button>
+    <button class="tab-btn" onclick="switchTab('plan','p-core',this)">🏠 Core</button>
+    <button class="tab-btn" onclick="switchTab('plan','p-rozgrzewka',this)">🔥 Rozgrzewka</button>
+  </div>
+
+  <!-- ══ CYKL 2 — renderowany z plan_c2.json ══ -->
+  <div id="p-cykl2" class="tab-panel active">
+    <div id="plan-loading" style="color:var(--text3);font-size:13px;padding:20px 0">Ładowanie planu…</div>
+    <div id="plan-c2-content" style="display:none">
+      <div class="tab-row" style="margin-top:4px" id="plan-c2-tabs">
+        <button class="tab-btn active" onclick="switchTab('plan-c2-inner','pc2-ua',this)">Upper A</button>
+        <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-ub',this)">Upper B</button>
+        <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-lower',this)">Lower</button>
+        <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-ebl',this)">🔵 EB+L</button>
+        <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-erb',this)">🟠 ER+B</button>
+      </div>
+      <div id="plan-c2-inner">
+        <div id="pc2-ua"    class="tab-panel active"></div>
+        <div id="pc2-ub"    class="tab-panel"></div>
+        <div id="pc2-lower" class="tab-panel"></div>
+        <div id="pc2-ebl"   class="tab-panel"></div>
+        <div id="pc2-erb"   class="tab-panel"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CYKL 1 — statyczny (archiwum, rzadko edytowany) ══ -->
+  <div id="p-cykl1" class="tab-panel">
+    <div class="alert alert-info" style="margin-bottom:16px">
+      <span class="alert-icon">📦</span>
+      <span>Cykl 1 zakończony 29.03.2026 · 10 tygodni · plan zachowany jako archiwum.</span>
+    </div>
+  <h2>🏋️ Plan Treningowy</h2>
+
+  <div class="tab-row">
     <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)">📦 Cykl 1</button>
     <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)">🆕 Cykl 2</button>
     <button class="tab-btn" onclick="switchTab('plan','p-core',this)">🏠 Core</button>
@@ -385,6 +421,8 @@
       <div style="margin-top:12px;font-size:12px;color:var(--yellow)">⚠️ Lędźwie &gt;3/10 przy Trap bar → zamień na leg press. Zero RDL.</div>
     </div>
   </div><!-- /p-lower -->
+  </div><!-- /p-cykl1 -->
+
   </div><!-- /p-cykl1 -->
 
   <div id="p-core" class="tab-panel">
@@ -649,6 +687,7 @@
   </div><!-- /p-cykl2 -->
 
 </section>
+
 
 <!-- ═══ HARMONOGRAM ═══════════════════════════════════════════════ -->
 <section id="harmonogram">
@@ -2202,19 +2241,95 @@
     });
   }
 
-  // ── FETCH — ładuj oba JSONy równolegle ───────────────────────
+  // ── RENDERER PLANU C2 ─────────────────────────────────────────
+  function renderPlanC2(data) {
+    renderPlanTab('pc2-ua',    data.upper_a, true);
+    renderPlanTab('pc2-ub',    data.upper_b, true);
+    renderPlanTab('pc2-lower', data.lower,   true);
+    renderPlanTabSimple('pc2-ebl', data.ebl);
+    renderPlanTabSimple('pc2-erb', data.erb);
+    document.getElementById('plan-loading').style.display = 'none';
+    document.getElementById('plan-c2-content').style.display = 'block';
+  }
+
+  function renderPlanTab(panelId, blok, showCel) {
+    const el = document.getElementById(panelId);
+    const alertHtml = blok.alert
+      ? `<div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">🆕</span><span>${blok.alert}</span></div>`
+      : '';
+
+    const rows = blok.cwiczenia.map(c => {
+      const isMain = c.glowne;
+      const isSS   = c.ss;
+      const isBg   = c.opcjonalny ? 'background:rgba(100,116,139,0.05)' : isSS ? 'background:rgba(59,130,246,0.04)' : '';
+      const celColor = { accent2:'var(--accent2)', text3:'var(--text3)' }[c.cel_color] || 'var(--text3)';
+      const nameStyle = isMain ? 'color:var(--accent2);font-weight:600' : '';
+      return `<tr${isBg ? ` style="${isBg}"` : ''}>
+        <td>${c.nr}</td>
+        <td style="${nameStyle}">${c.nazwa}</td>
+        <td>${c.serie}</td>
+        <td>${c.powt}</td>
+        <td>${c.przerwa}</td>
+        <td><span class="kg-badge">${c.start}</span></td>
+        <td style="font-size:11px;color:${celColor}">${c.cel}</td>
+      </tr>`;
+    }).join('');
+
+    el.innerHTML = `
+      <h3>${blok.label} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
+      ${alertHtml}
+      <div class="workout-table card">
+        <table>
+          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
+          ${rows}
+        </table>
+        <div style="margin-top:10px;font-size:12px;color:${blok.uwaga&&blok.uwaga.startsWith('⚠️')?'var(--yellow)':'var(--text3)'}">${blok.uwaga||''}</div>
+      </div>`;
+  }
+
+  function renderPlanTabSimple(panelId, blok) {
+    const el = document.getElementById(panelId);
+    const alertHtml = blok.alert
+      ? `<div class="alert alert-info"><span class="alert-icon">💡</span><span>${blok.alert}</span></div>`
+      : '';
+    const rows = blok.cwiczenia.map(c => {
+      const isSS = c.ss;
+      const bg = isSS ? 'background:rgba(59,130,246,0.04)' : '';
+      return `<tr${bg ? ` style="${bg}"` : ''}>
+        <td>${c.nr}</td>
+        <td>${c.nazwa}</td>
+        <td>${c.serie_powt}</td>
+        <td>${c.tempo||'—'}</td>
+        <td>${c.przerwa}</td>
+        <td style="font-size:11px;color:var(--text3)">${c.cel}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `
+      <h3>${blok.label} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
+      ${alertHtml}
+      <div class="workout-table card">
+        <table>
+          <tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th><th>Tempo</th><th>Przerwa</th><th>Progresja</th></tr>
+          ${rows}
+        </table>
+      </div>`;
+  }
+
+  // ── FETCH — ładuj wszystkie JSONy równolegle ──────────────────
   Promise.all([
     fetch('data/waga.json').then(r=>{ if(!r.ok) throw new Error('waga.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/treningi.json').then(r=>{ if(!r.ok) throw new Error('treningi.json: HTTP '+r.status); return r.json(); })
-  ]).then(([wagaData, treningiData]) => {
+    fetch('data/treningi.json').then(r=>{ if(!r.ok) throw new Error('treningi.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/plan_c2.json').then(r=>{ if(!r.ok) throw new Error('plan_c2.json: HTTP '+r.status); return r.json(); })
+  ]).then(([wagaData, treningiData, planC2Data]) => {
     renderWaga(wagaData);
     renderTreningi(treningiData);
+    renderPlanC2(planC2Data);
   }).catch(err => {
     console.error(err);
     const msg = '⚠️ Błąd ładowania: ' + err.message;
-    ['waga-loading','tr-loading'].forEach(id=>{
-      const el=document.getElementById(id);
-      if(el) el.textContent=msg;
+    ['waga-loading','tr-loading','plan-loading'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = msg;
     });
   });
 </script>
