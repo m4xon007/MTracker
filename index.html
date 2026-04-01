@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.10</title>
+<title>Marcin — Plan 2026 · v2.11</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.10</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.11</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1736,6 +1736,39 @@
     }).join('');
     el.innerHTML = `<div class="card"><div class="card-title">📋 Zasady wspólne — wszystkie etapy</div>
       <table><tr><th>Zasada</th><th>Dlaczego</th></tr>${rows}</table>
+    </div>`;
+  }
+
+  // ── RENDERER HARMONOGRAMU (bilans) ───────────────────────────
+  function renderHarmonogram(d) {
+    renderBilans('harm-bilans-c2', d.cykl2);
+    renderBilans('harm-bilans-c1', d.cykl1);
+  }
+
+  function renderBilans(elId, cykl) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const b = cykl.bilans;
+    const total_z = (b.UA.zrobione||0) + (b.UB.zrobione||0) + (b.L.zrobione||0);
+    const total_p = (b.UA.planowane||0) + (b.UB.planowane||0) + (b.L.planowane||0);
+    const pct = total_p > 0 ? Math.round((total_z / total_p) * 100) : 0;
+    const typy = [
+      { key:'UA', label:'Upper A', kolor:'var(--accent)' },
+      { key:'UB', label:'Upper B', kolor:'var(--green)' },
+      { key:'L',  label:'Lower',   kolor:'var(--yellow)' }
+    ];
+    const spans = typy.map(t =>
+      `<span>${t.label} <strong style="color:${t.kolor}">${b[t.key].zrobione}</strong><span style="color:var(--text3)">/${b[t.key].planowane}</span></span>`
+    ).join('<span style="color:var(--text3)">·</span>');
+    el.innerHTML = `<div class="card">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;margin-bottom:10px">
+        <span style="color:var(--text3);font-weight:600">📊 Bilans:</span>
+        ${spans}
+        <span style="color:var(--text3)">·</span>
+        <span>Łącznie <strong>${total_z}</strong><span style="color:var(--text3)">/${total_p}</span></span>
+      </div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+      <div style="font-size:11px;color:var(--text3);margin-top:6px;text-align:right">${pct}% cyklu ukończone</div>
     </div>`;
   }
 
