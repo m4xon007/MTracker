@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.07</title>
+<title>Marcin — Plan 2026 · v2.09</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.07</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.09</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1741,21 +1741,22 @@
 
   // ── RENDERER DIETY ────────────────────────────────────────────
   function renderDieta(d) {
-    renderDietaReko(d.rekompozycja);
-    renderDietaMinicut(d.minicut);
-    renderDietaProdukty(d.produkty);
-    renderDietaPrzepisy(d.przepisy);
-    renderDietaZakupy(d.zakupy);
+    const errors = [];
+    const safe = (name, fn) => { try { fn(); } catch(e) { errors.push(name + ': ' + e.message); console.error(name, e); } };
+    safe('reko',      () => renderDietaReko(d.rekompozycja));
+    safe('minicut',   () => renderDietaMinicut(d.minicut));
+    safe('produkty',  () => renderDietaProdukty(d.produkty));
+    safe('przepisy',  () => renderDietaPrzepisy(d.przepisy));
+    safe('zakupy',    () => renderDietaZakupy(d.zakupy));
+    if (errors.length) {
+      const el = document.getElementById('diet-minicut-stats');
+      if (el) el.innerHTML = '<div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Błąd renderera: ' + errors.join(' | ') + '</span></div>';
+    }
     // aktywna faza jako domyślna zakładka
     const aktywna = d.meta && d.meta.aktywna_faza === 'minicut' ? 'd-minicut' : 'd-rekompozycja';
-    ['d-rekompozycja','d-minicut','d-produkty','d-przepisy'].forEach((id,i) => {
+    ['d-rekompozycja','d-minicut','d-produkty','d-przepisy'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', id === aktywna);
-    });
-    // sync tab buttons
-    document.querySelectorAll('#dieta > .tab-row .tab-btn').forEach(btn => {
-      const target = btn.getAttribute('onclick').match(/'([^']+)'\s*,this/)?.[1];
-      if (target) btn.classList.toggle('active', target === aktywna);
     });
   }
 
@@ -1910,13 +1911,14 @@
   }
 
   // ── FETCH — ładuj wszystkie JSONy równolegle ──────────────────
+  const CB = '?v=' + Date.now(); // cache-buster
   Promise.all([
-    fetch('data/waga.json').then(r=>{ if(!r.ok) throw new Error('waga.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/treningi.json').then(r=>{ if(!r.ok) throw new Error('treningi.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/plan_c2.json').then(r=>{ if(!r.ok) throw new Error('plan_c2.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/roadmap.json').then(r=>{ if(!r.ok) throw new Error('roadmap.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/harmonogram.json').then(r=>{ if(!r.ok) throw new Error('harmonogram.json: HTTP '+r.status); return r.json(); }),
-    fetch('data/dieta.json').then(r=>{ if(!r.ok) throw new Error('dieta.json: HTTP '+r.status); return r.json(); })
+    fetch('data/waga.json'+CB).then(r=>{ if(!r.ok) throw new Error('waga.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/treningi.json'+CB).then(r=>{ if(!r.ok) throw new Error('treningi.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/plan_c2.json'+CB).then(r=>{ if(!r.ok) throw new Error('plan_c2.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/roadmap.json'+CB).then(r=>{ if(!r.ok) throw new Error('roadmap.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/harmonogram.json'+CB).then(r=>{ if(!r.ok) throw new Error('harmonogram.json: HTTP '+r.status); return r.json(); }),
+    fetch('data/dieta.json'+CB).then(r=>{ if(!r.ok) throw new Error('dieta.json: HTTP '+r.status); return r.json(); })
   ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData]) => {
     renderWaga(wagaData);
     renderTreningi(treningiData);
