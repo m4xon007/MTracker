@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.11</title>
+<title>Marcin — Plan 2026 · v2.12</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.11</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.12</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -328,101 +328,29 @@
   </div>
 
   <!-- ══ CYKL 1 — statyczny (archiwum, rzadko edytowany) ══ -->
+  <!-- ══ CYKL 1 — renderowany z plan_c1.json ══ -->
   <div id="p-cykl1" class="tab-panel">
-    <div class="alert alert-info" style="margin-bottom:16px">
+    <div class="alert alert-info" style="margin-bottom:12px">
       <span class="alert-icon">📦</span>
       <span>Cykl 1 zakończony 29.03.2026 · 10 tygodni · plan zachowany jako archiwum.</span>
     </div>
-  <h2>🏋️ Plan Treningowy</h2>
-
-  <div class="tab-row">
-    <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)">📦 Cykl 1</button>
-    <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)">🆕 Cykl 2</button>
-    <button class="tab-btn" onclick="switchTab('plan','p-core',this)">🏠 Core</button>
-    <button class="tab-btn" onclick="switchTab('plan','p-rozgrzewka',this)">🔥 Rozgrzewka</button>
-  </div>
-
-  <!-- ══ CYKL 1 ══ -->
-  <div id="p-cykl1" class="tab-panel">
-    <div class="tab-row" style="margin-top:4px">
-      <button class="tab-btn active" onclick="switchTab('p-cykl1','p-ua',this)">Upper A</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl1','p-ub',this)">Upper B</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl1','p-lower',this)">Lower</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl1','p-dodatkowy',this)">🔵 EB+L</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl1','p-ramiona',this)">🟠 ER+B</button>
-    </div>
-    <div id="p-ua" class="tab-panel active">
-    <h3>Upper A — push-pull + barki + ramiona &nbsp;<span class="badge badge-gray">~75–90 min</span></h3>
-    <div class="workout-table card">
-      <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th></tr>
-        <tr class="exercise-main"><td>1</td><td>⭐ Ławka sztanga</td><td>4</td><td>5–8</td><td>3-1-1-0</td><td>3 min</td><td><span class="kg-badge">70 kg</span></td></tr>
-        <tr><td>2</td><td>Wyciskanie hantli na ławce skośnej (30°)</td><td>3</td><td>8–10</td><td>3-1-1-0</td><td>2 min</td><td><span class="kg-badge">26,5 kg</span> <span style="font-size:11px;color:var(--green)">↑ po deloadzie</span></td></tr>
-        <tr style="background:rgba(59,130,246,0.04)"><td>3</td><td>SS1a · Wyciskanie hantli siedząc (barki)</td><td>3</td><td>8–10</td><td>2-1-1-0</td><td>—</td><td><span class="kg-badge">20 kg</span></td></tr>
-        <tr style="background:rgba(59,130,246,0.04)"><td>4</td><td>SS1b · Unoszenie hantli bokiem siedząc</td><td>4</td><td>12–15</td><td>2-0-2-0</td><td>90 s</td><td><span class="kg-badge">12,5 kg</span> <span style="font-size:11px;color:var(--green)">↑ po deloadzie</span></td></tr>
-        <tr><td>5</td><td>HS ISO Lateral High Row</td><td>4</td><td>8–12</td><td>2-1-2-0</td><td>90 s</td><td><span class="kg-badge">90 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr><td>6</td><td>Francuskie wyciskanie leżąc hantlami</td><td>3</td><td>8–10</td><td>3-0-1-0</td><td>90 s</td><td><span class="kg-badge">12,5 kg</span> <span style="font-size:11px;color:var(--green)">↑ ustabilizowane</span></td></tr>
-        <tr><td>7</td><td>Uginanie hantlami z rotacją (biceps)</td><td>2</td><td>10–12</td><td>2-1-2-0</td><td>60 s</td><td><span class="kg-badge">20 kg</span></td></tr>
-        <tr><td>8</td><td>Ściąganie drążka podchwytem</td><td>3</td><td>8–12</td><td>2-1-2-0</td><td>2 min</td><td><span class="kg-badge">60 kg</span></td></tr>
-        <tr style="background:rgba(34,197,94,0.04)"><td>9</td><td>SS2a · Wiosłowanie na maszynie</td><td>2</td><td>10–12</td><td>2-1-2-0</td><td>—</td><td><span class="kg-badge">35 kg</span> <span style="font-size:11px;color:var(--text3)">(kalibracja 19.03)</span></td></tr>
-        <tr style="background:rgba(34,197,94,0.04)"><td>10</td><td>SS2b · Face pulls (HS)</td><td>3</td><td>15</td><td>2-1-2-0</td><td>60 s</td><td><span class="kg-badge">21 kg</span></td></tr>
-        <tr><td>11</td><td>Prostowanie triceps nad głową (linka LifeFitness)</td><td>3</td><td>12–15</td><td>2-0-2-0</td><td>60 s</td><td><span class="kg-badge">24,5 (stos)</span></td></tr>
-      </table>
-      <div style="margin-top:12px;font-size:12px;color:var(--text3)">⚡ Progresja: górna granica powt. we wszystkich seriach → +2,5 kg / +1 pozycja stosu. &nbsp;|&nbsp; <span style="color:var(--accent2)">Nowa kolejność od 19.03:</span> barki (SS1) przed High Row, Francuskie po High Row. Poz. 8: Ściąganie drążka podchwytem (Fixed Pulldown do zdecydowania po 30.03).</div>
-    </div>
-  </div><!-- /p-ua -->
-  <div id="p-ub" class="tab-panel">
-    <h3>Upper B — podciąganie + klatka + barki + ramiona &nbsp;<span class="badge badge-gray">~80–90 min</span></h3>
-    <div class="workout-table card">
-      <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Partia</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th></tr>
-        <tr class="exercise-main"><td>1</td><td>⭐ Podciąganie nachwytem (asysta)</td><td style="font-size:11px;color:var(--text3)">Plecy + biceps</td><td>5</td><td>6–8</td><td>3-1-1-0</td><td>120 s</td><td><span class="kg-badge">-17,5 kg</span></td></tr>
-        <tr><td>2</td><td>Wyciskanie hantli płaska</td><td style="font-size:11px;color:var(--text3)">Klatka środkowa</td><td>4</td><td>8–10</td><td>3-1-1-0</td><td>90 s</td><td><span class="kg-badge">30 kg</span> <span style="font-size:11px;color:var(--green)">↑ po deloadzie</span></td></tr>
-        <tr><td>3</td><td>Arnoldki (siedząc)</td><td style="font-size:11px;color:var(--text3)">Barki</td><td>3</td><td>8–10</td><td>2-1-1-0</td><td>90 s</td><td><span class="kg-badge">17,5 kg</span></td></tr>
-        <tr style="background:rgba(34,197,94,0.04)"><td>4</td><td>SS · Rozpiętki Butterfly (klatka)</td><td style="font-size:11px;color:var(--text3)">Klatka izolacja</td><td>3</td><td>10–12</td><td>2-1-2-0</td><td>—</td><td><span class="kg-badge">68 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr style="background:rgba(34,197,94,0.04)"><td>5</td><td>SS · Odwrotne rozpiętki Butterfly (tylne barki)</td><td style="font-size:11px;color:var(--text3)">Barki tylne</td><td>3</td><td>12–15</td><td>2-1-2-0</td><td>60 s</td><td><span class="kg-badge">59 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span> <span style="font-size:11px;color:var(--green)">↑ po deloadzie</span></td></tr>
-        <tr><td>6</td><td>Chest Press (ISO Lateral Incline Press)</td><td style="font-size:11px;color:var(--text3)">Klatka górna</td><td>3</td><td>10–12</td><td>2-1-2-0</td><td>75 s</td><td><span class="kg-badge">45 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr><td>7</td><td>Wyciąg dolny siedząc (neutralny chwyt)</td><td style="font-size:11px;color:var(--text3)">Plecy środek</td><td>3</td><td>10–12</td><td>2-1-2-0</td><td>90 s</td><td><span class="kg-badge">40 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr><td>8</td><td>Cable lateral raise jednorącz</td><td style="font-size:11px;color:var(--text3)">Barki boczne</td><td>4</td><td>10–12</td><td>2-0-2-0</td><td>90 s</td><td><span class="kg-badge">7,5 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr><td>9</td><td>Prostowanie ramion na wyciągu górnym (warkocz)</td><td style="font-size:11px;color:var(--text3)">Triceps</td><td>3</td><td>10–12</td><td>2-0-2-0</td><td>60 s</td><td><span class="kg-badge">28 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr><td>10</td><td>Uginanie z linką wyciągu dolnego</td><td style="font-size:11px;color:var(--text3)">Biceps</td><td>2</td><td>10–12</td><td>2-1-2-0</td><td>60 s</td><td><span class="kg-badge">31 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td></tr>
-        <tr><td>11</td><td>Podciąganie australijskie</td><td style="font-size:11px;color:var(--text3)">Plecy + biceps</td><td>2</td><td>8–12</td><td>2-1-2-0</td><td>60 s</td><td>BW</td></tr>
-        <tr><td>12</td><td>Dipy na poręczach</td><td style="font-size:11px;color:var(--text3)">Klatka dolna + triceps</td><td>2</td><td>8–12</td><td>2-1-2-0</td><td>90 s</td><td>BW</td></tr>
-      </table>
-      <div style="margin-top:12px;font-size:12px;color:var(--text3)">⚡ Poz. 4+5: superseria na tej samej maszynie HS — obrót siedzenia między ćwiczeniami. Prostowanie triceps: warkocz (rope) — rozciągnij ręce na boki w dolnej pozycji. &nbsp;|&nbsp; Progresja: górna granica powt. we wszystkich seriach → +2,5 kg lub +1 pozycja stosu.</div>
-    </div>
-  </div><!-- /p-ub -->
-  <div id="p-lower" class="tab-panel">
-    <h3>Lower — nogi + stabilizacja lędźwi &nbsp;<span class="badge badge-gray">~80–85 min</span> &nbsp;<span class="badge badge-yellow">Faza stabilizacji tyg 7–10</span></h3>
-    <div class="workout-table card">
-      <div class="alert alert-info" style="margin-bottom:12px">
-        <span class="alert-icon">ℹ</span>
-        <span><strong>Filozofia fazy:</strong> stabilizacja pierwsza, siła druga. Front squat i Trap bar na obniżonych ciężarach — fokus na neutralny kręgosłup. Progresja ciężarów wraca po deloadzie.</span>
+    <div id="plan-c1-loading" style="color:var(--text3);font-size:13px;padding:8px 0">Ładowanie planu C1…</div>
+    <div id="plan-c1-content" style="display:none">
+      <div class="tab-row" style="margin-top:4px" id="plan-c1-tabs">
+        <button class="tab-btn active" onclick="switchTab('plan-c1-inner','pc1-ua',this)">Upper A</button>
+        <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-ub',this)">Upper B</button>
+        <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-lower',this)">Lower</button>
+        <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-ebl',this)">🔵 EB+L</button>
+        <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-erb',this)">🟠 ER+B</button>
       </div>
-      <table>
-        <tr><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th><th>Uwagi</th></tr>
-        <tr style="background:rgba(34,197,94,0.05)"><td colspan="7" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok 1: Aktywacja (~8 min) ──</td></tr>
-        <tr><td>Glute bridge</td><td>2</td><td>10</td><td>2-2-1-0</td><td>45 s</td><td>BW/guma</td><td style="font-size:11px;color:var(--text3)">2 sek napięcie na górze</td></tr>
-        <tr><td>Bird-dog</td><td>2</td><td>8/str</td><td>2-2-1-0</td><td>45 s</td><td>BW</td><td style="font-size:11px;color:var(--text3)">2 sek zatrzymanie, napięty brzuch</td></tr>
-        <tr style="background:rgba(59,130,246,0.05)"><td colspan="7" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok 2: Główne ──</td></tr>
-        <tr class="exercise-main"><td>⭐ Front squat</td><td>3</td><td>10</td><td>3-1-2-0</td><td>2 min</td><td><span class="kg-badge">60 kg</span></td><td style="font-size:11px;color:var(--yellow)">lędźwie 10/10 ✅ — ustabilizować</td></tr>
-        <tr class="exercise-main"><td>⭐ Trap bar deadlift</td><td>3–5</td><td>8–10</td><td>2-1-2-0</td><td>2 min</td><td><span class="kg-badge">85 kg</span></td><td style="font-size:11px;color:var(--yellow)">Big 4 progresja ✅ — ustabilizować</td></tr>
-        <tr style="background:rgba(100,116,139,0.05)"><td colspan="7" style="color:var(--text3);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok 3: Maszyny ──</td></tr>
-        <tr><td>Leg press HS</td><td>3</td><td>10–12</td><td>3-1-1-0</td><td>2 min</td><td><span class="kg-badge">115 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td><td style="font-size:11px;color:var(--text3)">3×12 ✅ ustabilizowany → +5 kg</td></tr>
-        <tr><td>Zginanie nóg siedzące</td><td>4–5</td><td>12–15</td><td>2-1-2-0</td><td>90 s</td><td><span class="kg-badge">75 kg</span></td><td style="font-size:11px;color:var(--text3)">+7 kg ✅ — ustabilizować 4×12–15</td></tr>
-        <tr><td>Zginanie nóg leżące HS</td><td>2</td><td>10–12</td><td>2-1-2-0</td><td>90 s</td><td><span class="kg-badge">67 kg</span></td><td style="font-size:11px;color:var(--text3)">+7 kg ✅ — ustabilizować 2×12</td></tr>
-        <tr><td>Hack squat HS V Squat</td><td>4–5</td><td>10–12</td><td>3-1-1-0</td><td>2 min</td><td><span class="kg-badge">100 kg</span> <span style="font-size:11px;color:var(--yellow)">(HS)</span></td><td style="font-size:11px;color:var(--text3)">+15 kg ✅ — ustabilizować 4×10–12</td></tr>
-        <tr><td>Wspięcia na palcach stojąc</td><td>4</td><td>12–15</td><td>2-1-2-1</td><td>60 s</td><td><span class="kg-badge">50 kg</span></td><td style="font-size:11px;color:var(--text3)">zmiana na stojąc na stałe — cel 4×15</td></tr>
-        <tr style="background:rgba(34,211,238,0.05)"><td colspan="7" style="color:var(--accent2);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok 4: Core na siłowni ──</td></tr>
-        <tr><td>Podciąganie kolan SS ze wspięciami stojąc (step Smith)</td><td>4</td><td>12–15</td><td>2-1-2-0</td><td>60 s</td><td>BW</td><td style="font-size:11px;color:var(--text3)">4 serie na stałe (SS ze wspięciami)</td></tr>
-        <tr><td>Skręty z linką</td><td>3</td><td>12–15</td><td>2-0-2-0</td><td>60 s</td><td><span class="kg-badge">15 kg</span></td><td style="font-size:11px;color:var(--text3)">nowa baza — cel 3×15</td></tr>
-        <tr class="exercise-opt"><td>Wykroki (zamiennik Front squat)</td><td>3</td><td>10–12</td><td>2-1-2-0</td><td>90 s</td><td>—</td><td style="font-size:11px;color:var(--text3)">opcjonalne</td></tr>
-      </table>
-      <div style="margin-top:12px;font-size:12px;color:var(--yellow)">⚠️ Lędźwie &gt;3/10 przy Trap bar → zamień na leg press. Zero RDL.</div>
+      <div id="plan-c1-inner">
+        <div id="pc1-ua"    class="tab-panel active"></div>
+        <div id="pc1-ub"    class="tab-panel"></div>
+        <div id="pc1-lower" class="tab-panel"></div>
+        <div id="pc1-ebl"   class="tab-panel"></div>
+        <div id="pc1-erb"   class="tab-panel"></div>
+      </div>
     </div>
-  </div><!-- /p-lower -->
-  </div><!-- /p-cykl1 -->
-
   </div><!-- /p-cykl1 -->
 
   <div id="p-core" class="tab-panel">
@@ -1943,6 +1871,120 @@
     </details>`;
   }
 
+  // ── RENDERER PLANU C1 ─────────────────────────────────────────
+  function renderPlanC1(data) {
+    renderC1Tab('pc1-ua',    data.upper_a, 'ua');
+    renderC1Tab('pc1-ub',    data.upper_b, 'ub');
+    renderC1Lower('pc1-lower', data.lower);
+    renderC1Simple('pc1-ebl', data.ebl);
+    renderC1Simple('pc1-erb', data.erb);
+    document.getElementById('plan-c1-loading').style.display = 'none';
+    document.getElementById('plan-c1-content').style.display = 'block';
+    ['pc1-ua','pc1-ub','pc1-lower','pc1-ebl','pc1-erb'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', i === 0);
+    });
+  }
+
+  function renderC1Tab(panelId, blok, typ) {
+    const el = document.getElementById(panelId);
+    if (!el) return;
+    const hasPartia = typ === 'ub';
+    const header = hasPartia
+      ? `<tr><th>#</th><th>Ćwiczenie</th><th>Partia</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th></tr>`
+      : `<tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th></tr>`;
+    const rows = blok.cwiczenia.map(c => {
+      const isSS = c.ss;
+      const bg = isSS ? 'background:rgba(59,130,246,0.04)' : '';
+      const nameStyle = c.glowne ? 'color:var(--accent2);font-weight:600' : '';
+      const partiaCell = hasPartia ? `<td style="font-size:11px;color:var(--text3)">${c.partia||''}</td>` : '';
+      return `<tr${bg ? ` style="${bg}"` : ''}>
+        <td>${c.nr}</td>
+        <td style="${nameStyle}">${c.nazwa}</td>
+        ${partiaCell}
+        <td>${c.serie}</td><td>${c.powt}</td>
+        <td>${c.tempo}</td><td>${c.przerwa}</td>
+        <td><span class="kg-badge">${c.ciezar}</span></td>
+      </tr>`;
+    }).join('');
+    const badge_extra = blok.badge_extra ? `&nbsp;<span class="badge badge-yellow">${blok.badge_extra}</span>` : '';
+    el.innerHTML = `
+      <h3>${blok.label}${badge_extra} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
+      <div class="workout-table card">
+        <table>${header}${rows}</table>
+        <div style="margin-top:10px;font-size:12px;color:var(--text3)">${blok.uwaga||''}</div>
+      </div>`;
+  }
+
+  function renderC1Lower(panelId, lower) {
+    const el = document.getElementById(panelId);
+    if (!el) return;
+    const BLOK_COLORS = { green:'var(--green)', accent:'var(--accent)', text3:'var(--text3)', accent2:'var(--accent2)' };
+    const alertHtml = lower.alert
+      ? `<div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">ℹ</span><span><strong>Filozofia fazy:</strong> ${lower.alert}</span></div>`
+      : '';
+    const bloки = lower.bloki.map(b => {
+      const col = BLOK_COLORS[b.kolor] || 'var(--text3)';
+      const headerRow = `<tr style="background:rgba(0,0,0,0.03)"><td colspan="7" style="color:${col};font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── ${b.nazwa} ──</td></tr>`;
+      const cwRows = b.cwiczenia.map(c => {
+        const nameStyle = c.glowne ? 'color:var(--accent2);font-weight:600' : c.opcjonalny ? 'color:var(--text3);font-style:italic' : '';
+        return `<tr>
+          <td style="${nameStyle}">${c.nazwa}</td>
+          <td>${c.serie}</td><td>${c.powt}</td>
+          <td>${c.tempo}</td><td>${c.przerwa}</td>
+          <td><span class="kg-badge">${c.ciezar}</span></td>
+          <td style="font-size:11px;color:var(--text3)">${c.uwagi||''}</td>
+        </tr>`;
+      }).join('');
+      return headerRow + cwRows;
+    }).join('');
+    el.innerHTML = `
+      <h3>${lower.label} &nbsp;<span class="badge badge-gray">${lower.czas}</span>${lower.badge_extra ? `&nbsp;<span class="badge badge-yellow">${lower.badge_extra}</span>` : ''}</h3>
+      <div class="workout-table card">
+        ${alertHtml}
+        <table>
+          <tr><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th><th>Uwagi</th></tr>
+          ${bloки}
+        </table>
+        <div style="margin-top:10px;font-size:12px;color:var(--yellow)">${lower.uwaga||''}</div>
+      </div>`;
+  }
+
+  function renderC1Simple(panelId, blok) {
+    const el = document.getElementById(panelId);
+    if (!el) return;
+    const alertHtml = blok.alert
+      ? `<div class="alert alert-info"><span class="alert-icon">💡</span><span>${blok.alert}</span></div>`
+      : '';
+    // Rozgrzewka (only for ebl)
+    let rozgrzewkaHtml = '';
+    if (blok.rozgrzewka) {
+      const rows = blok.rozgrzewka.map(r =>
+        `<tr><td>${r.nr}</td><td>${r.nazwa}</td><td>${r.serie_powt}</td><td style="font-size:11px;color:var(--text3)">${r.uwagi}</td></tr>`
+      ).join('');
+      rozgrzewkaHtml = `<div class="workout-table card" style="margin-bottom:12px">
+        <div class="card-title">🟡 Rozgrzewka z gumą — 8–10 min</div>
+        <table><tr><th>#</th><th>Ćwiczenie</th><th>Serie × Powt.</th><th>Uwagi</th></tr>${rows}</table>
+      </div>`;
+    }
+    const rows = blok.cwiczenia.map(c => {
+      const bg = c.ss ? 'background:rgba(59,130,246,0.04)' : '';
+      return `<tr${bg ? ` style="${bg}"` : ''}>
+        <td>${c.nr}</td><td>${c.nazwa}</td>
+        <td>${c.serie_powt}</td><td>${c.tempo||'—'}</td>
+        <td>${c.przerwa}</td>
+        <td style="font-size:11px;color:var(--text3)">${c.cel}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `
+      <h3>${blok.label} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
+      ${alertHtml}
+      ${rozgrzewkaHtml}
+      <div class="workout-table card">
+        <table><tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th><th>Tempo</th><th>Przerwa</th><th>Progresja</th></tr>${rows}</table>
+      </div>`;
+  }
+
   // ── FETCH — ładuj wszystkie JSONy równolegle ──────────────────
   const CB = '?v=' + Date.now(); // cache-buster
 
@@ -1958,11 +2000,13 @@
     fetchJSON('plan_c2.json'),
     fetchJSON('roadmap.json'),
     fetchJSON('harmonogram.json'),
-    fetchJSON('dieta.json')
-  ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData]) => {
+    fetchJSON('dieta.json'),
+    fetchJSON('plan_c1.json')
+  ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData, planC1Data]) => {
     renderWaga(wagaData);
     renderTreningi(treningiData);
     renderPlanC2(planC2Data);
+    renderPlanC1(planC1Data);
     renderRoadmap(roadmapData);
     renderHarmonogram(harmData);
     renderDieta(dietaData);

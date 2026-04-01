@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "cykl": 1,
+    "start": "12.01.2026",
+    "koniec": "29.03.2026",
+    "czas_trwania": "10 tygodni",
+    "deload": "23–29.03.2026",
+    "status": "zakończony"
+  },
+
+  "upper_a": {
+    "label": "Upper A — Cykl 1",
+    "podtytul": "push-pull + barki + ramiona",
+    "czas": "~75–90 min",
+    "uwaga": "⚡ Progresja: górna granica powt. we wszystkich seriach → +2,5 kg / +1 pozycja stosu. Nowa kolejność od 19.03: barki (SS1) przed High Row, Francuskie po High Row.",
+    "cwiczenia": [
+      { "nr": "1",  "nazwa": "⭐ Ławka sztanga",                          "serie": 4,   "powt": "5–8",   "tempo": "3-1-1-0", "przerwa": "3 min",  "ciezar": "70 kg",       "glowne": true },
+      { "nr": "2",  "nazwa": "Wyciskanie hantli na ławce skośnej (30°)",  "serie": 3,   "powt": "8–10",  "tempo": "3-1-1-0", "przerwa": "2 min",  "ciezar": "26,5 kg" },
+      { "nr": "3",  "nazwa": "SS1a · Wyciskanie hantli siedząc (barki)",  "serie": 3,   "powt": "8–10",  "tempo": "2-1-1-0", "przerwa": "—",      "ciezar": "20 kg",       "ss": true },
+      { "nr": "4",  "nazwa": "SS1b · Unoszenie hantli bokiem siedząc",    "serie": 4,   "powt": "12–15", "tempo": "2-0-2-0", "przerwa": "90 s",   "ciezar": "12,5 kg",     "ss": true },
+      { "nr": "5",  "nazwa": "HS ISO Lateral High Row",                   "serie": 4,   "powt": "8–12",  "tempo": "2-1-2-0", "przerwa": "90 s",   "ciezar": "90 kg" },
+      { "nr": "6",  "nazwa": "Francuskie wyciskanie leżąc hantlami",      "serie": 3,   "powt": "8–10",  "tempo": "3-0-1-0", "przerwa": "90 s",   "ciezar": "12,5 kg" },
+      { "nr": "7",  "nazwa": "Uginanie hantlami z rotacją (biceps)",      "serie": 2,   "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "60 s",   "ciezar": "20 kg" },
+      { "nr": "8",  "nazwa": "Ściąganie drążka podchwytem",               "serie": 3,   "powt": "8–12",  "tempo": "2-1-2-0", "przerwa": "2 min",  "ciezar": "60 kg" },
+      { "nr": "9",  "nazwa": "SS2a · Wiosłowanie na maszynie",            "serie": 2,   "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "—",      "ciezar": "35 kg",       "ss": true },
+      { "nr": "10", "nazwa": "SS2b · Face pulls (HS)",                    "serie": 3,   "powt": "15",    "tempo": "2-1-2-0", "przerwa": "60 s",   "ciezar": "21 kg",       "ss": true },
+      { "nr": "11", "nazwa": "Prostowanie triceps nad głową (LifeFitness)","serie": 3,  "powt": "12–15", "tempo": "2-0-2-0", "przerwa": "60 s",   "ciezar": "24,5 (stos)" }
+    ]
+  },
+
+  "upper_b": {
+    "label": "Upper B — Cykl 1",
+    "podtytul": "podciąganie + klatka + barki + ramiona",
+    "czas": "~80–90 min",
+    "uwaga": "⚡ Poz. 4+5: superseria na tej samej maszynie HS — obrót siedzenia między ćwiczeniami. Prostowanie triceps: warkocz (rope) — rozciągnij ręce na boki w dolnej pozycji.",
+    "cwiczenia": [
+      { "nr": "1",  "nazwa": "⭐ Podciąganie nachwytem (asysta)",          "partia": "Plecy + biceps",      "serie": 5, "powt": "6–8",   "tempo": "3-1-1-0", "przerwa": "120 s", "ciezar": "-17,5 kg", "glowne": true },
+      { "nr": "2",  "nazwa": "Wyciskanie hantli płaska",                  "partia": "Klatka środkowa",     "serie": 4, "powt": "8–10",  "tempo": "3-1-1-0", "przerwa": "90 s",  "ciezar": "30 kg" },
+      { "nr": "3",  "nazwa": "Arnoldki (siedząc)",                        "partia": "Barki",               "serie": 3, "powt": "8–10",  "tempo": "2-1-1-0", "przerwa": "90 s",  "ciezar": "17,5 kg" },
+      { "nr": "4",  "nazwa": "SS · Rozpiętki Butterfly (klatka)",         "partia": "Klatka izolacja",     "serie": 3, "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "—",     "ciezar": "68 kg",    "ss": true },
+      { "nr": "5",  "nazwa": "SS · Odwrotne rozpiętki Butterfly",         "partia": "Barki tylne",         "serie": 3, "powt": "12–15", "tempo": "2-1-2-0", "przerwa": "60 s",  "ciezar": "59 kg",    "ss": true },
+      { "nr": "6",  "nazwa": "Chest Press (ISO Lateral Incline Press)",   "partia": "Klatka górna",        "serie": 3, "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "75 s",  "ciezar": "45 kg" },
+      { "nr": "7",  "nazwa": "Wyciąg dolny siedząc (neutralny chwyt)",    "partia": "Plecy środek",        "serie": 3, "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "90 s",  "ciezar": "40 kg" },
+      { "nr": "8",  "nazwa": "Cable lateral raise jednorącz",             "partia": "Barki boczne",        "serie": 4, "powt": "10–12", "tempo": "2-0-2-0", "przerwa": "90 s",  "ciezar": "7,5 kg" },
+      { "nr": "9",  "nazwa": "Prostowanie ramion na wyciągu (warkocz)",   "partia": "Triceps",             "serie": 3, "powt": "10–12", "tempo": "2-0-2-0", "przerwa": "60 s",  "ciezar": "28 kg" },
+      { "nr": "10", "nazwa": "Uginanie z linką wyciągu dolnego",          "partia": "Biceps",              "serie": 2, "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "60 s",  "ciezar": "31 kg" },
+      { "nr": "11", "nazwa": "Podciąganie australijskie",                 "partia": "Plecy + biceps",      "serie": 2, "powt": "8–12",  "tempo": "2-1-2-0", "przerwa": "60 s",  "ciezar": "BW" },
+      { "nr": "12", "nazwa": "Dipy na poręczach",                        "partia": "Klatka dolna + triceps","serie": 2,"powt": "8–12",  "tempo": "2-1-2-0", "przerwa": "90 s",  "ciezar": "BW" }
+    ]
+  },
+
+  "lower": {
+    "label": "Lower — Cykl 1",
+    "podtytul": "nogi + stabilizacja lędźwi",
+    "czas": "~80–85 min",
+    "badge_extra": "Faza stabilizacji tyg 7–10",
+    "alert": "Filozofia fazy: stabilizacja pierwsza, siła druga. Front squat i Trap bar na obniżonych ciężarach — fokus na neutralny kręgosłup. Progresja ciężarów wraca po deloadzie.",
+    "uwaga": "⚠️ Lędźwie >3/10 przy Trap bar → zamień na leg press. Zero RDL.",
+    "bloki": [
+      {
+        "nazwa": "Blok 1: Aktywacja (~8 min)",
+        "kolor": "green",
+        "cwiczenia": [
+          { "nazwa": "Glute bridge", "serie": 2, "powt": "10",    "tempo": "2-2-1-0", "przerwa": "45 s", "ciezar": "BW/guma", "uwagi": "2 sek napięcie na górze" },
+          { "nazwa": "Bird-dog",     "serie": 2, "powt": "8/str", "tempo": "2-2-1-0", "przerwa": "45 s", "ciezar": "BW",      "uwagi": "2 sek zatrzymanie, napięty brzuch" }
+        ]
+      },
+      {
+        "nazwa": "Blok 2: Główne",
+        "kolor": "accent",
+        "cwiczenia": [
+          { "nazwa": "⭐ Front squat",       "serie": 3,   "powt": "10",    "tempo": "3-1-2-0", "przerwa": "2 min", "ciezar": "60 kg",  "uwagi": "lędźwie 10/10 ✅ — ustabilizować", "glowne": true },
+          { "nazwa": "⭐ Trap bar deadlift", "serie": "3–5","powt": "8–10", "tempo": "2-1-2-0", "przerwa": "2 min", "ciezar": "85 kg",  "uwagi": "Big 4 progresja ✅ — ustabilizować", "glowne": true }
+        ]
+      },
+      {
+        "nazwa": "Blok 3: Maszyny",
+        "kolor": "text3",
+        "cwiczenia": [
+          { "nazwa": "Leg press HS",            "serie": 3,   "powt": "10–12", "tempo": "3-1-1-0", "przerwa": "2 min", "ciezar": "115 kg", "uwagi": "3×12 ✅ ustabilizowany → +5 kg" },
+          { "nazwa": "Zginanie nóg siedzące",   "serie": "4–5","powt": "12–15","tempo": "2-1-2-0", "przerwa": "90 s",  "ciezar": "75 kg",  "uwagi": "+7 kg ✅ — ustabilizować 4×12–15" },
+          { "nazwa": "Zginanie nóg leżące HS",  "serie": 2,   "powt": "10–12","tempo": "2-1-2-0", "przerwa": "90 s",  "ciezar": "67 kg",  "uwagi": "+7 kg ✅ — ustabilizować 2×12" },
+          { "nazwa": "Hack squat HS V Squat",   "serie": "4–5","powt": "10–12","tempo": "3-1-1-0", "przerwa": "2 min", "ciezar": "100 kg", "uwagi": "+15 kg ✅ — ustabilizować 4×10–12" },
+          { "nazwa": "Wspięcia na palcach stojąc","serie": 4, "powt": "12–15","tempo": "2-1-2-1", "przerwa": "60 s",  "ciezar": "50 kg",  "uwagi": "zmiana na stojąc na stałe — cel 4×15" }
+        ]
+      },
+      {
+        "nazwa": "Blok 4: Core na siłowni",
+        "kolor": "accent2",
+        "cwiczenia": [
+          { "nazwa": "Podciąganie kolan SS ze wspięciami (Smith)", "serie": 4, "powt": "12–15", "tempo": "2-1-2-0", "przerwa": "60 s", "ciezar": "BW",   "uwagi": "4 serie na stałe (SS ze wspięciami)" },
+          { "nazwa": "Skręty z linką",                             "serie": 3, "powt": "12–15", "tempo": "2-0-2-0", "przerwa": "60 s", "ciezar": "15 kg", "uwagi": "nowa baza — cel 3×15" },
+          { "nazwa": "Wykroki (zamiennik Front squat)",            "serie": 3, "powt": "10–12", "tempo": "2-1-2-0", "przerwa": "90 s", "ciezar": "—",     "uwagi": "opcjonalne", "opcjonalny": true }
+        ]
+      }
+    ]
+  },
+
+  "ebl": {
+    "label": "EB+L — Barki + Lędźwie · Cykl 1",
+    "czas": "~60–70 min",
+    "alert": "EB+L — uzupełnienie planu głównego: tylne barki, rotatory, lędźwie. Minimum 1 dzień buforu przed UA/UB/Lower.",
+    "rozgrzewka": [
+      { "nr": "1", "nazwa": "Krążenia ramion",           "serie_powt": "2×10/ramię",  "uwagi": "Przód i tył, małe → duże koła, spokojne tempo" },
+      { "nr": "2", "nazwa": "Band pull apart",           "serie_powt": "3×20",         "uwagi": "Taśma na wys. klatki, rozciągasz poziomo — poczuj tylne barki" },
+      { "nr": "3", "nazwa": "Rotacja zewnętrzna z taśmą","serie_powt": "3×15/ramię",  "uwagi": "Łokieć przy boku zgięty 90°, powoli — rozgrzej rotatory" },
+      { "nr": "4", "nazwa": "Band Y-raise",              "serie_powt": "2×12",         "uwagi": "Taśma pod stopami, unosisz oba ramiona pod kątem 45° — aktywacja górnych pleców" },
+      { "nr": "5", "nazwa": "Rotacja w leżeniu (BW)",    "serie_powt": "1×10/ramię",   "uwagi": "Bez taśmy — pełna rotacja barku przed obciążeniem" }
+    ],
+    "cwiczenia": [
+      { "nr": "1", "nazwa": "Face Pull High (wyciąg górny)",    "serie_powt": "3×15–20", "tempo": "2-1-2-1", "przerwa": "60 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "2", "nazwa": "Odwrotne rozpiętki wyciąg dolny",  "serie_powt": "3×15–20", "tempo": "2-0-2-1", "przerwa": "45 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "3", "nazwa": "Rotacja zewnętrzna wyciąg (rotatory)", "serie_powt": "3×15–20","tempo": "2-1-2-1","przerwa": "45 s", "cel": "3×20 → +ciężar" },
+      { "nr": "4", "nazwa": "Unoszenie boczne wyciąg dolny",    "serie_powt": "3×15–20", "tempo": "2-0-2-0", "przerwa": "45 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "5", "nazwa": "Cable Pull-Through",                "serie_powt": "3×15–20", "tempo": "2-1-2-0", "przerwa": "60 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "6", "nazwa": "Seated Good Morning (linka)",       "serie_powt": "3×15–20", "tempo": "3-1-2-0", "przerwa": "60 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "7", "nazwa": "TRX Fallout",                       "serie_powt": "3×15–20", "tempo": "3-1-2-0", "przerwa": "60 s",  "cel": "3×20 → zmniejsz kąt" }
+    ]
+  },
+
+  "erb": {
+    "label": "ER+B — Ramiona + Brzuch · Cykl 1",
+    "czas": "~40–45 min",
+    "cwiczenia": [
+      { "nr": "SS1a", "nazwa": "Uginanie hantlami (supinacja)",  "serie_powt": "3×10–12", "tempo": "2-1-3-0", "przerwa": "45 s*",  "cel": "3×12 → +1kg", "ss": true },
+      { "nr": "SS1b", "nazwa": "Prostowanie triceps warkocz",    "serie_powt": "3×10–12", "tempo": "2-1-2-0", "przerwa": "60 s*",  "cel": "3×12 → +ciężar", "ss": true },
+      { "nr": "SS2a", "nazwa": "Uginanie z linką wyciąg dolny",  "serie_powt": "3×12–15", "tempo": "2-0-2-0", "przerwa": "45 s*",  "cel": "3×15 → +ciężar", "ss": true },
+      { "nr": "SS2b", "nazwa": "Prostowanie triceps nad głową",  "serie_powt": "3×12–15", "tempo": "2-0-2-0", "przerwa": "60 s*",  "cel": "3×15 → +ciężar", "ss": true },
+      { "nr": "3",    "nazwa": "Podciąganie kolan (LifeFitness)", "serie_powt": "3×15–20", "tempo": "2-1-2-0", "przerwa": "60 s",   "cel": "3×20 → Hanging Knee Raise" },
+      { "nr": "4",    "nazwa": "Skręty z linką",                 "serie_powt": "3×12–15", "tempo": "2-0-2-1", "przerwa": "45 s",   "cel": "3×15 → +ciężar" },
+      { "nr": "5",    "nazwa": "Plank RKC",                      "serie_powt": "3×20 sek","tempo": "—",        "przerwa": "45 s",   "cel": "3×30 sek → RKC z nóg" }
+    ]
+  }
+}
