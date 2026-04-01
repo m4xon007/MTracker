@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.12</title>
+<title>Marcin — Plan 2026 · v2.14</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.12</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.14</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -204,101 +204,78 @@
 <div class="app-content">
 
 <!-- ═══ TRENINGI ════════════════════════════════════════════════════ -->
-<!-- ═══ TRENINGI ════════════════════════════════════════════════════ -->
 <section id="treningi" class="active">
   <h2>💪 Treningi</h2>
   <div id="tr-loading" style="color:var(--text3);font-size:13px;padding:20px 0">Ładowanie danych treningów…</div>
   <div id="tr-content" style="display:none">
-
-  <div class="tab-row" id="tr-tab-row">
-    <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
-    <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
-    <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
-    <button class="tab-btn" onclick="switchTab('tr-content','t-szablony2',this)">📝 Szablony C2</button>
-    <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)">📝 Szablony C1</button>
-  </div>
-
-  <!-- TAB: NASTĘPNY -->
-  <div id="t-nastepny" class="tab-panel active">
-    <div id="tr-nastepny-card"></div>
-    <h3>Kolejne treningi</h3>
-    <div id="tr-kolejne" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
-  </div>
-
-  <!-- TAB: POPRZEDNI -->
-  <div id="t-poprzedni" class="tab-panel">
-    <div id="tr-poprzedni-card"></div>
-    <div class="card" id="tr-wnioski-card">
-      <div class="card-title">📋 Wnioski i zmiany</div>
-      <div id="tr-wnioski"></div>
+    <div class="tab-row">
+      <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony2',this)">📝 Szablony C2</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)">📝 Szablony C1</button>
     </div>
-  </div>
-
-  <!-- TAB: ARCHIWUM -->
-  <div id="t-archiwum" class="tab-panel">
-    <details style="margin-bottom:12px" open>
-      <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--accent2);border-radius:8px;font-size:13px;color:var(--accent2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;font-weight:600">
-        <span>📋 Historia treningów — Cykl 2 &nbsp;<span style="color:var(--text3);font-size:11px;font-weight:400">kwi–maj 2026 · Mini cut · 8 tygodni</span></span><span style="font-size:10px;color:var(--text3)">▼</span>
-      </summary>
-      <div style="padding-top:8px">
-        <div class="card">
+    <div id="t-nastepny" class="tab-panel active">
+      <div id="tr-nastepny-card"></div>
+      <h3>Kolejne treningi</h3>
+      <div id="tr-kolejne" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
+    </div>
+    <div id="t-poprzedni" class="tab-panel">
+      <div id="tr-poprzedni-card"></div>
+      <div class="card" id="tr-wnioski-card">
+        <div class="card-title">📋 Wnioski i zmiany</div>
+        <div id="tr-wnioski"></div>
+      </div>
+    </div>
+    <div id="t-archiwum" class="tab-panel">
+      <details style="margin-bottom:12px" open>
+        <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--accent2);border-radius:8px;font-size:13px;color:var(--accent2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;font-weight:600">
+          <span>📋 Historia treningów — Cykl 2 &nbsp;<span style="color:var(--text3);font-size:11px;font-weight:400">kwi–maj 2026 · Mini cut · 8 tygodni</span></span><span style="font-size:10px;color:var(--text3)">▼</span>
+        </summary>
+        <div style="padding-top:8px"><div class="card">
           <div class="card-title">Historia treningów — Cykl 2</div>
-          <table id="tr-hist-c2">
-            <tr><th>Data</th><th>Trening</th><th>Ocena</th><th>Kcal</th><th>Czas</th><th>Kluczowe wyniki</th></tr>
-          </table>
-        </div>
-      </div>
-    </details>
-
-    <details style="margin-bottom:12px">
-      <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--accent2);border-radius:8px;font-size:13px;color:var(--accent2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;font-weight:600">
-        <span>📈 Progresja Cyklu 2 — historia sesji</span><span style="font-size:10px;color:var(--text3)">▼</span>
-      </summary>
-      <div style="padding-top:8px" id="tr-prog-c2"></div>
-    </details>
-
-    <details style="margin-bottom:12px">
-      <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none">
-        <span>📋 Historia treningów — Cykl 1 &nbsp;<span style="color:var(--text3);font-size:11px;font-weight:400">27 sesji · sty–mar 2026</span></span><span style="font-size:10px;color:var(--text3)">▼</span>
-      </summary>
-      <div style="padding-top:8px">
-        <div class="card">
+          <table id="tr-hist-c2"><tr><th>Data</th><th>Trening</th><th>Ocena</th><th>Kcal</th><th>Czas</th><th>Kluczowe wyniki</th></tr></table>
+        </div></div>
+      </details>
+      <details style="margin-bottom:12px">
+        <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--accent2);border-radius:8px;font-size:13px;color:var(--accent2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;font-weight:600">
+          <span>📈 Progresja Cyklu 2 — historia sesji</span><span style="font-size:10px;color:var(--text3)">▼</span>
+        </summary>
+        <div style="padding-top:8px" id="tr-prog-c2"></div>
+      </details>
+      <details style="margin-bottom:12px">
+        <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none">
+          <span>📋 Historia treningów — Cykl 1 &nbsp;<span style="color:var(--text3);font-size:11px;font-weight:400">27 sesji · sty–mar 2026</span></span><span style="font-size:10px;color:var(--text3)">▼</span>
+        </summary>
+        <div style="padding-top:8px"><div class="card">
           <div class="card-title">Historia wszystkich treningów</div>
-          <table id="tr-hist-c1">
-            <tr><th>Data</th><th>Trening</th><th>Ocena</th><th>Kcal</th><th>Czas</th><th>Kluczowe wyniki</th></tr>
-          </table>
-        </div>
-      </div>
-    </details>
-
-    <details style="margin-top:4px">
-      <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center">
-        <span>📈 Progresja Cyklu 1 — historia sesji</span>
-        <span style="font-size:11px;color:var(--text3)">▼ rozwiń</span>
-      </summary>
-      <div style="padding-top:8px" id="tr-prog-c1"></div>
-    </details>
-  </div>
-
-  <!-- TAB: SZABLONY C2 -->
-  <div id="t-szablony2" class="tab-panel">
-    <div class="alert alert-info" style="margin-bottom:16px">
-      <span class="alert-icon">💡</span>
-      <span>Skopiuj prompt aktualizacyjny, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
+          <table id="tr-hist-c1"><tr><th>Data</th><th>Trening</th><th>Ocena</th><th>Kcal</th><th>Czas</th><th>Kluczowe wyniki</th></tr></table>
+        </div></div>
+      </details>
+      <details style="margin-top:4px">
+        <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <span>📈 Progresja Cyklu 1 — historia sesji</span>
+          <span style="font-size:11px;color:var(--text3)">▼ rozwiń</span>
+        </summary>
+        <div style="padding-top:8px" id="tr-prog-c1"></div>
+      </details>
     </div>
-    <div id="tr-szablony-c2"></div>
+    <div id="t-szablony2" class="tab-panel">
+      <div class="alert alert-info" style="margin-bottom:16px">
+        <span class="alert-icon">💡</span>
+        <span>Skopiuj prompt aktualizacyjny, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
+      </div>
+      <div id="tr-szablony-c2"></div>
+    </div>
+    <div id="t-szablony" class="tab-panel">
+      <div id="tr-szablony-c1"></div>
+    </div>
   </div>
-
-  <!-- TAB: SZABLONY C1 -->
-  <div id="t-szablony" class="tab-panel">
-    <div id="tr-szablony-c1"></div>
-  </div>
-
-  </div><!-- /tr-content -->
 </section>
+
+<!-- ═══ PLAN ══════════════════════════════════════════════════════ -->
 <section id="plan">
   <h2>🏋️ Plan Treningowy</h2>
-
   <div class="tab-row">
     <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)">🆕 Cykl 2</button>
     <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)">📦 Cykl 1 (archiwum)</button>
@@ -306,11 +283,10 @@
     <button class="tab-btn" onclick="switchTab('plan','p-rozgrzewka',this)">🔥 Rozgrzewka</button>
   </div>
 
-  <!-- ══ CYKL 2 — renderowany z plan_c2.json ══ -->
   <div id="p-cykl2" class="tab-panel active">
     <div id="plan-loading" style="color:var(--text3);font-size:13px;padding:20px 0">Ładowanie planu…</div>
     <div id="plan-c2-content" style="display:none">
-      <div class="tab-row" style="margin-top:4px" id="plan-c2-tabs">
+      <div class="tab-row" style="margin-top:4px">
         <button class="tab-btn active" onclick="switchTab('plan-c2-inner','pc2-ua',this)">Upper A</button>
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-ub',this)">Upper B</button>
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-lower',this)">Lower</button>
@@ -327,8 +303,6 @@
     </div>
   </div>
 
-  <!-- ══ CYKL 1 — statyczny (archiwum, rzadko edytowany) ══ -->
-  <!-- ══ CYKL 1 — renderowany z plan_c1.json ══ -->
   <div id="p-cykl1" class="tab-panel">
     <div class="alert alert-info" style="margin-bottom:12px">
       <span class="alert-icon">📦</span>
@@ -336,7 +310,7 @@
     </div>
     <div id="plan-c1-loading" style="color:var(--text3);font-size:13px;padding:8px 0">Ładowanie planu C1…</div>
     <div id="plan-c1-content" style="display:none">
-      <div class="tab-row" style="margin-top:4px" id="plan-c1-tabs">
+      <div class="tab-row" style="margin-top:4px">
         <button class="tab-btn active" onclick="switchTab('plan-c1-inner','pc1-ua',this)">Upper A</button>
         <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-ub',this)">Upper B</button>
         <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-lower',this)">Lower</button>
@@ -351,7 +325,7 @@
         <div id="pc1-erb"   class="tab-panel"></div>
       </div>
     </div>
-  </div><!-- /p-cykl1 -->
+  </div>
 
   <div id="p-core" class="tab-panel">
     <h3>🏠 Core w domu — środy i piątki &nbsp;<span class="badge badge-green">15–18 min</span></h3>
@@ -373,96 +347,7 @@
         <tr><td>C2</td><td><strong>Side-lying hip abduction</strong></td><td>3</td><td>12/stronę</td><td>30 s</td><td style="font-size:11px;color:var(--text3)">Leżysz na boku, unosisz nogę powoli — bez rotacji biodra. Możesz dodać gumę.</td></tr>
       </table>
     </div>
-  </div><!-- /p-core -->
-  <div id="p-dodatkowy" class="tab-panel">
-    <h3>🔵 EB+L — Barki + Lędźwie &nbsp;<span class="badge badge-gray">~60–70 min</span></h3>
-    <div class="alert alert-info"><span class="alert-icon">💡</span><span>EB+L — uzupełnienie planu głównego: tylne barki, rotatory, lędźwie. <strong>Minimum 1 dzień buforu przed UA/UB/Lower.</strong></span></div>
-
-    <!-- ROZGRZEWKA -->
-    <div class="workout-table card">
-      <div class="card-title">🟡 Rozgrzewka z gumą — 8–10 min</div>
-      <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie × Powt.</th><th>Uwagi</th></tr>
-        <tr><td>1</td><td>Krążenia ramion</td><td>2×10 / ramię</td><td style="font-size:11px;color:var(--text3)">Przód i tył, małe → duże koła, spokojne tempo</td></tr>
-        <tr><td>2</td><td>Band pull apart</td><td>3×20</td><td style="font-size:11px;color:var(--text3)">Taśma na wys. klatki, rozciągasz poziomo — poczuj tylne barki</td></tr>
-        <tr><td>3</td><td>Rotacja zewnętrzna z taśmą</td><td>3×15 / ramię</td><td style="font-size:11px;color:var(--text3)">Łokieć przy boku zgięty 90°, powoli — rozgrzej rotatory przed wyciągiem</td></tr>
-        <tr><td>4</td><td>Band Y-raise</td><td>2×12</td><td style="font-size:11px;color:var(--text3)">Taśma pod stopami, unosisz oba ramiona pod kątem 45° do przodu i w górę — aktywacja górnych pleców</td></tr>
-        <tr><td>5</td><td>Rotacja w leżeniu na boku (BW)</td><td>1×10 / ramię</td><td style="font-size:11px;color:var(--text3)">Bez taśmy — pełna rotacja barku przed obciążeniem</td></tr>
-      </table>
-    </div>
-
-    <!-- TRENING GŁÓWNY -->
-    <div class="workout-table card">
-      <div class="card-title">💪 Trening — wyciąg LifeFitness + TRX &nbsp;<span style="font-weight:400;color:var(--text3);text-transform:none;letter-spacing:0">~35–40 min</span></div>
-      <table>
-        <tr><th>#</th><th>Ćwiczenie (EN)</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Start / uwagi</th></tr>
-
-        <tr style="background:rgba(59,130,246,0.05)"><td colspan="7" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Tylne barki — wyciąg wysoko ──</td></tr>
-        <tr><td>1</td><td>Face pulls</td><td>4</td><td>15</td><td>2-1-3-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">18–21 kg</span> ten sam ciężar co UA, ale wolniejsze tempo — może być trudniejszy</td></tr>
-        <tr><td>2</td><td>Cable reverse fly — single arm</td><td>3</td><td>15 / ramię</td><td>2-0-2-0</td><td>45 s między ramionami</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">start 5–7 kg</span> stoisz bokiem, odciągasz ramię w tył i na bok łukiem — łokieć lekko ugięty</td></tr>
-
-        <tr style="background:rgba(34,197,94,0.05)"><td colspan="7" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Rotatory — wyciąg na wys. łokcia ──</td></tr>
-        <tr><td>3</td><td>Cable external rotation — single arm</td><td>3</td><td>15 / ramię</td><td>2-0-2-0</td><td>45 s między ramionami</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">start 3–5 kg</span> łokieć przy boku zgięty 90° — nie ruszać łokciem przez cały ruch</td></tr>
-
-        <tr style="background:rgba(59,130,246,0.05)"><td colspan="7" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Lędźwie — wyciąg dolny ──</td></tr>
-        <tr><td>4</td><td>Cable pull-through</td><td>3</td><td>12–15</td><td>2-1-2-0</td><td>90 s</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">start 15–20 kg</span> tyłem do wyciągu, linka między nogami — wyprost bioder, nie kręgosłupa</td></tr>
-        <tr><td>5</td><td>Seated cable good morning</td><td>3</td><td>12–15</td><td>3-1-2-0</td><td>90 s</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">start 10–15 kg</span> przodem do wyciągu, opad tułowia z neutralnym kręgosłupem — prostowniki kontrolują ruch</td></tr>
-
-        <tr style="background:rgba(245,158,11,0.05)"><td colspan="7" style="color:var(--yellow);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Boczne barki — wyciąg nisko ──</td></tr>
-        <tr><td>6</td><td>Cable upright row — single arm &nbsp;<span style="color:var(--text3)">lub</span>&nbsp; Cable Y-raise</td><td>3</td><td>12–15 / ramię</td><td>2-0-2-0</td><td>45 s między ramionami</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">start 5–7 kg</span> Upright row: łokieć max do wys. barku · Y-raise: ramię 45° do przodu i w górę · szczypanie przy upright row → przejdź na Y-raise</td></tr>
-
-        <tr style="background:rgba(34,197,94,0.05)"><td colspan="7" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Stabilizacja — TRX ──</td></tr>
-        <tr><td>7</td><td>TRX fallout</td><td>3</td><td>8–10</td><td>3-1-2-0</td><td>90 s</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">BW — kąt TRX</span> wychylasz się do przodu jak rollout — zacznij prawie pionowo, lędźwie neutralne przez cały ruch</td></tr>
-      </table>
-      <div style="margin-top:12px;font-size:12px;color:var(--text3)">⚡ Progresja: gdy 3 serie w górnym zakresie są łatwe i czujesz mięsień (nie staw) → +1 pozycja stosu. Bez pośpiechu.</div>
-    </div>
-
-    <!-- CARDIO -->
-    <div class="workout-table card">
-      <div class="card-title">🚴 Cardio — 20 min &nbsp;<span style="font-weight:400;color:var(--text3);text-transform:none;letter-spacing:0">na końcu</span></div>
-      <table>
-        <tr><th>Sprzęt</th><th>Intensywność</th><th>Cel</th></tr>
-        <tr><td>Rower / orbitrek / bieżnia</td><td style="color:var(--yellow)">Umiarkowana — możesz mówić, ale czujesz wysiłek</td><td style="font-size:11px;color:var(--text3)">Spalanie kalorii + aktywne schłodzenie</td></tr>
-      </table>
-    </div>
-
-    <div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Sygnał stopu: szczypanie lub ból w przedniej części barku → zejdź z ciężarem. Ból lędźwi &gt;2/10 → zakończ blok lędźwiowy. Nie forsuj.</span></div>
   </div>
-
-  <!-- RAMIONA + BRZUCH -->
-  <div id="p-ramiona" class="tab-panel">
-    <h3>🟠 ER+B — Ramiona + Brzuch &nbsp;<span class="badge badge-gray">~35–45 min</span></h3>
-    <div class="alert alert-info"><span class="alert-icon">💡</span><span>ER+B — izolacja ramion i brzucha. <strong>Minimum 1 dzień buforu przed UA / UB.</strong> Tu chodzi o jakość i czucie mięśnia, nie ciężar.</span></div>
-
-    <!-- BICEPS + TRICEPS -->
-    <div class="workout-table card">
-      <div class="card-title">💙🟠 Biceps + Triceps</div>
-      <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Start / uwagi</th></tr>
-        <tr style="background:rgba(59,130,246,0.04)"><td>SS1a</td><td>HS Biceps Curl (maszyna)</td><td>3</td><td>10–12</td><td>2-1-3-0</td><td>—</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">lekki stos</span> oba ramiona naraz — 3 sek powrót, łokcie stabilne na podpórce</td></tr>
-        <tr style="background:rgba(59,130,246,0.04)"><td>SS1b</td><td>HS Select Triceps Extension (maszyna)</td><td>3</td><td>10–12</td><td>2-1-2-0</td><td>90 s</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">lekki stos</span> łokcie stabilne — antagoniści, przechodzisz od razu z jednej maszyny na drugą</td></tr>
-        <tr><td>3</td><td>Młotek z linką jednorącz (wyciąg dolny)</td><td>3</td><td>12–15 / ramię</td><td>2-0-2-0</td><td>45 s między ramionami</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">lekki stos</span> kciuk do góry, łokieć przy boku — brachialis i brachioradialis</td></tr>
-        <tr><td>4</td><td>Prostowanie nad głową jednorącz z linką (wyciąg dolny, tyłem)</td><td>3</td><td>10–12 / ramię</td><td>3-0-2-0</td><td>45 s między ramionami</td><td style="font-size:11px;color:var(--text3)"><span class="kg-badge">lekki stos</span> tyłem do wyciągu, linka nad głową, łokieć przy uchu — długa głowa tricepsa</td></tr>
-      </table>
-      <div style="margin-top:12px;font-size:12px;color:var(--text3)">⚡ SS1: obie maszyny HS muszą być blisko siebie. Gdy triceps pracuje — biceps odpoczywa i odwrotnie. Lepszy pump, krótszy czas.</div>
-    </div>
-
-    <!-- BRZUCH -->
-    <div class="workout-table card">
-      <div class="card-title">🟢 Brzuch &amp; core</div>
-      <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Uwagi</th></tr>
-        <tr><td>5</td><td>HS Select Abdominal Crunch (maszyna)</td><td>3</td><td>12–15</td><td>2-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">kontrolowany ruch — nie zarzucaj ciężarem, czuj prosty brzucha</td></tr>
-        <tr><td>6</td><td>Maszyna skośne (klęk, rotacja prawo / lewo)</td><td>3</td><td>12–15 / stronę</td><td>2-0-2-0</td><td>45 s między stronami</td><td style="font-size:11px;color:var(--text3)">izolacja skośnych — kontroluj powrót, nie odskakuj</td></tr>
-        <tr><td>7</td><td>TRX knee raise</td><td>3</td><td>12–15</td><td>2-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">trzymasz uchwyty TRX, podciągasz kolana do klatki — dolny brzuch. Im bardziej poziomo tym trudniej.</td></tr>
-      </table>
-      <div style="margin-top:12px;font-size:12px;color:var(--text3)">⚡ Skręty z linką celowo pominięte — masz je w Lower. TRX knee raise najtrudniejszy — zacznij od małego kąta.</div>
-    </div>
-
-    <div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Sygnał stopu: ból w łokciu przy prostowaniu tricepsa lub uginaniu bicepsa → zejdź z ciężarem. Ramiona są partią pomocniczą w UA i UB — nie forsuj ich w dniu dodatkowym.</span></div>
-  </div>
-
-  <!-- ROZGRZEWKA -->
 
   <div id="p-rozgrzewka" class="tab-panel">
     <h3>🔄 Wersja Universal — Upper A / Upper B &nbsp;<span class="badge badge-gray">~10 min</span></h3>
@@ -487,7 +372,7 @@
         <tr><td>14</td><td>Band External Rotation</td><td>8</td><td style="font-size:11px;color:var(--text3)">Łokieć przy ciele — chroni staw barkowy</td></tr>
       </table>
     </div>
-    <h3>🦵 Wariant Lower — blok aktywacyjny zamiast gumy na barki</h3>
+    <h3>🦵 Wariant Lower — blok aktywacyjny</h3>
     <div class="workout-table card">
       <table>
         <tr><th>#</th><th>Ćwiczenie</th><th>Serie × Powt.</th><th>Uwagi</th></tr>
@@ -498,124 +383,7 @@
       </table>
     </div>
   </div>
-
-  <!-- ══ CYKL 2 ══ -->
-  <div id="p-cykl2" class="tab-panel active">
-    <div class="tab-row" style="margin-top:4px">
-      <button class="tab-btn active" onclick="switchTab('p-cykl2','p2-ua',this)">Upper A</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl2','p2-ub',this)">Upper B</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl2','p2-lower',this)">Lower</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl2','p2-ebl',this)">🔵 EB+L</button>
-      <button class="tab-btn" onclick="switchTab('p-cykl2','p2-erb',this)">🟠 ER+B</button>
-    </div>
-
-    <!-- C2 UPPER A -->
-    <div id="p2-ua" class="tab-panel active">
-      <h3>Upper A — Cykl 2 &nbsp;<span class="badge badge-gray">~75–90 min</span></h3>
-      <div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">🆕</span><span>Start 31.03.2026 · Mini cut · Nowe ćwiczenia: HS ISO Incline Press, Landmine Press, Chest Supported Lateral Raise, Smith CGBP, Kneeling Cable Triceps</span></div>
-      <div class="workout-table card">
-        <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
-          <tr class="exercise-main"><td>1</td><td>⭐ Ławka sztanga</td><td>4</td><td>5–8</td><td>3 min</td><td><span class="kg-badge">70 kg</span></td><td style="font-size:11px;color:var(--accent2)">75–77,5 kg</td></tr>
-          <tr><td>2</td><td>HS ISO Lateral Incline Press</td><td>4</td><td>8–12</td><td>2 min</td><td><span class="kg-badge">40 kg</span></td><td style="font-size:11px;color:var(--accent2)">50–55 kg</td></tr>
-          <tr><td>3</td><td>Half-Kneeling Landmine Press</td><td>3</td><td>8–12</td><td>90 s</td><td><span class="kg-badge">25 kg</span></td><td style="font-size:11px;color:var(--accent2)">30–32,5 kg</td></tr>
-          <tr><td>4</td><td>Chest Supported Lateral Raise</td><td>4</td><td>12–15</td><td>60 s</td><td><span class="kg-badge">10 kg</span></td><td style="font-size:11px;color:var(--text3)">+1 kg/prog</td></tr>
-          <tr><td>5</td><td>HS ISO Lateral High Row</td><td>4</td><td>8–12</td><td>2 min</td><td><span class="kg-badge">90 kg</span></td><td style="font-size:11px;color:var(--accent2)">100–105 kg</td></tr>
-          <tr><td>6</td><td>Ściąganie drążka podchwytem</td><td>3</td><td>8–12</td><td>90 s</td><td><span class="kg-badge">60 kg</span></td><td style="font-size:11px;color:var(--accent2)">67,5–70 kg</td></tr>
-          <tr><td>7</td><td>Smith Machine Close Grip Bench Press</td><td>3</td><td>6–10</td><td>90 s</td><td><span class="kg-badge">50 kg</span></td><td style="font-size:11px;color:var(--accent2)">57,5–60 kg</td></tr>
-          <tr><td>8</td><td>Kneeling Overhead Cable Triceps Extension</td><td>3</td><td>10–15</td><td>60 s</td><td><span class="kg-badge">21,5 kg</span></td><td style="font-size:11px;color:var(--text3)">+2,5 kg/prog</td></tr>
-          <tr><td>9</td><td>Uginanie hantlami z rotacją</td><td>3</td><td>10–12</td><td>60 s</td><td><span class="kg-badge">20 kg</span></td><td style="font-size:11px;color:var(--text3)">+1 kg/prog</td></tr>
-          <tr style="background:rgba(59,130,246,0.04)"><td>SS10</td><td>Face pull półklęcząc ze sznurkiem</td><td>3</td><td>10–15</td><td>90 s</td><td><span class="kg-badge">15 kg</span></td><td style="font-size:11px;color:var(--text3)">+2,5 kg/prog</td></tr>
-        </table>
-        <div style="margin-top:10px;font-size:12px;color:var(--text3)">⚡ Progresja: 2/3 serii w górnym zakresie przez 2 sesje z rzędu → +ciężar. Mini cut: progresja wolniejsza — priorytet to utrzymanie siły.</div>
-      </div>
-    </div>
-
-    <!-- C2 UPPER B -->
-    <div id="p2-ub" class="tab-panel">
-      <h3>Upper B — Cykl 2 &nbsp;<span class="badge badge-gray">~80–90 min</span></h3>
-      <div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">🆕</span><span>Nowe: Smith Incline Press, Cable Crossover, EZ-bar Skull Crusher, Hammer Curl. SS: Podciąganie australijskie+Dipy, Rozpiętki+Odwrotne rozpiętki</span></div>
-      <div class="workout-table card">
-        <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
-          <tr class="exercise-main"><td>1</td><td>⭐ Podciąganie nachwytem (asysta)</td><td>5</td><td>6–8</td><td>3 min</td><td><span class="kg-badge">-12,5 kg</span></td><td style="font-size:11px;color:var(--accent2)">-7,5 lub -5 kg</td></tr>
-          <tr><td>2</td><td>Smith Machine Incline Bench Press</td><td>3</td><td>6–8</td><td>3 min</td><td><span class="kg-badge">50 kg</span></td><td style="font-size:11px;color:var(--accent2)">57,5–60 kg</td></tr>
-          <tr style="background:rgba(34,197,94,0.04)"><td>SS3a</td><td>Podciąganie australijskie</td><td>3</td><td>8–12</td><td>45 s*</td><td>BW</td><td style="font-size:11px;color:var(--text3)">obniż drążek / +obciążenie</td></tr>
-          <tr style="background:rgba(34,197,94,0.04)"><td>SS3b</td><td>Dipy na poręczach</td><td>3</td><td>8–12</td><td>90 s*</td><td>BW</td><td style="font-size:11px;color:var(--text3)">+obciążenie (pas)</td></tr>
-          <tr style="background:rgba(59,130,246,0.04)"><td>SS4a</td><td>Rozpiętki Butterfly (klatka)</td><td>3</td><td>10–12</td><td>45 s*</td><td><span class="kg-badge">68 kg</span></td><td style="font-size:11px;color:var(--text3)">+5 kg/prog</td></tr>
-          <tr style="background:rgba(59,130,246,0.04)"><td>SS4b</td><td>Odwrotne rozpiętki (tylne barki)</td><td>3</td><td>12–15</td><td>90 s*</td><td><span class="kg-badge">59 kg</span></td><td style="font-size:11px;color:var(--text3)">+5 kg/prog</td></tr>
-          <tr><td>5</td><td>Cable Crossover</td><td>3</td><td>10–15</td><td>90 s</td><td><span class="kg-badge">10 kg/str</span></td><td style="font-size:11px;color:var(--text3)">+2,5 kg/prog</td></tr>
-          <tr><td>6</td><td>Arnoldki siedząc</td><td>3</td><td>8–10</td><td>90 s</td><td><span class="kg-badge">17,5 kg</span></td><td style="font-size:11px;color:var(--accent2)">20–22,5 kg</td></tr>
-          <tr><td>7</td><td>Cable Lateral Raise jednorącz</td><td>4</td><td>10–12</td><td>60 s</td><td><span class="kg-badge">7,5 kg</span></td><td style="font-size:11px;color:var(--text3)">+1 kg/prog</td></tr>
-          <tr><td>8</td><td>HS Seated Row (wiosłowanie)</td><td>4</td><td>8–12</td><td>2 min</td><td><span class="kg-badge">42,5 kg</span></td><td style="font-size:11px;color:var(--text3)">+5 kg/prog</td></tr>
-          <tr><td>9</td><td>EZ-bar Skull Crusher</td><td>3</td><td>8–12</td><td>90 s</td><td><span class="kg-badge">22,5 kg</span></td><td style="font-size:11px;color:var(--accent2)">27,5–30 kg</td></tr>
-          <tr><td>10</td><td>Hammer Curl</td><td>3</td><td>10–12</td><td>60 s</td><td><span class="kg-badge">17,5 kg</span></td><td style="font-size:11px;color:var(--accent2)">20–22,5 kg</td></tr>
-        </table>
-        <div style="margin-top:10px;font-size:12px;color:var(--text3)">⚡ SS = superseria. * = przerwa w superserii. Progresja: 2/3 serii w górnym zakresie przez 2 sesje → +ciężar.</div>
-      </div>
-    </div>
-
-    <!-- C2 LOWER -->
-    <div id="p2-lower" class="tab-panel">
-      <h3>Lower — Cykl 2 &nbsp;<span class="badge badge-gray">~85–100 min</span></h3>
-      <div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">🆕</span><span>Nowe: zakres 4×4–6 na Big 4 (siłowy), HS Kneeling Leg Curl, Smith Calf Raise, Hanging Knee Raise SS Cable Crunch, Pallof Press. Leg Press opcjonalny ⚡.</span></div>
-      <div class="workout-table card">
-        <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
-          <tr class="exercise-main"><td>1</td><td>⭐ Front squat</td><td>4</td><td>4–6</td><td>4 min</td><td><span class="kg-badge">60 kg</span></td><td style="font-size:11px;color:var(--accent2)">65–67,5 kg</td></tr>
-          <tr class="exercise-main"><td>2</td><td>⭐ Trap bar deadlift</td><td>4</td><td>4–6</td><td>4 min</td><td><span class="kg-badge">85 kg</span></td><td style="font-size:11px;color:var(--accent2)">92,5–95 kg</td></tr>
-          <tr><td>3</td><td>Hack Squat HS</td><td>4</td><td>6–10</td><td>3 min</td><td><span class="kg-badge">95 kg</span></td><td style="font-size:11px;color:var(--accent2)">105–110 kg</td></tr>
-          <tr><td>4⚡</td><td>Leg Press (opcjonalny)</td><td>3</td><td>10–12</td><td>2 min</td><td><span class="kg-badge">80 kg</span></td><td style="font-size:11px;color:var(--text3)">+5 kg/prog</td></tr>
-          <tr><td>5</td><td>Zginanie nóg siedzące</td><td>4</td><td>10–12</td><td>90 s</td><td><span class="kg-badge">72,5 kg</span></td><td style="font-size:11px;color:var(--accent2)">80–82,5 kg</td></tr>
-          <tr><td>6</td><td>HS Iso-Lateral Kneeling Leg Curl</td><td>3</td><td>10–12</td><td>90 s</td><td><span class="kg-badge">42,5 kg</span></td><td style="font-size:11px;color:var(--text3)">+5 kg/prog</td></tr>
-          <tr><td>7</td><td>Smith Machine Standing Calf Raise</td><td>4</td><td>12–15</td><td>60 s</td><td><span class="kg-badge">50 kg</span></td><td style="font-size:11px;color:var(--text3)">+5 kg/prog</td></tr>
-          <tr style="background:rgba(34,197,94,0.04)"><td>SS8a</td><td>Hanging Knee Raise</td><td>3</td><td>12–15</td><td>45 s*</td><td>BW</td><td style="font-size:11px;color:var(--text3)">3×15 → Leg Raise</td></tr>
-          <tr style="background:rgba(34,197,94,0.04)"><td>SS8b</td><td>Cable Crunch</td><td>3</td><td>12–15</td><td>90 s*</td><td><span class="kg-badge">27,5 kg</span></td><td style="font-size:11px;color:var(--text3)">+2,5 kg/prog</td></tr>
-          <tr><td>9</td><td>Pallof Press (antyrotacja)</td><td>3</td><td>10–12/str</td><td>60 s</td><td><span class="kg-badge">10 kg</span></td><td style="font-size:11px;color:var(--text3)">+2,5 kg/prog</td></tr>
-        </table>
-        <div style="margin-top:10px;font-size:12px;color:var(--yellow)">⚠️ Lędźwie &gt;3/10 przy Trap bar → zamień na Leg press. Zero RDL. ⚡ Leg Press wchodzi gdy masz energię po Hack Squat i sesja &lt;100 min.</div>
-      </div>
-    </div>
-
-    <!-- C2 EB+L -->
-    <div id="p2-ebl" class="tab-panel">
-      <h3>🔵 EB+L — Barki + Lędźwie · Cykl 2 &nbsp;<span class="badge badge-gray">~55–60 min</span></h3>
-      <div class="alert alert-info"><span class="alert-icon">💡</span><span>Minimum 1 dzień buforu przed UA/UB/Lower. Fokus: tylne barki, rotatory, stabilizacja lędźwiowa.</span></div>
-      <div class="workout-table card">
-        <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th><th>Tempo</th><th>Przerwa</th><th>Progresja</th></tr>
-          <tr><td>1</td><td>Face Pull High (High Cable Face Pull)</td><td>3×15–20</td><td>2-1-2-1</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">3×20 → +ciężar</td></tr>
-          <tr><td>2</td><td>Cable Reverse Fly jednorącz</td><td>3×15–20</td><td>2-0-2-1</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">3×20 → +ciężar</td></tr>
-          <tr><td>3</td><td>Cable External Rotation (rotatory barku)</td><td>3×15–20</td><td>2-1-2-1</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">3×20 → +ciężar</td></tr>
-          <tr><td>4</td><td>Crossbody Cable Lateral Raise</td><td>3×15–20</td><td>2-0-2-0</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">3×20 → +ciężar</td></tr>
-          <tr><td>5</td><td>Cable Pull-Through (biodra + pośladki)</td><td>3×15–20</td><td>2-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">3×20 → +ciężar</td></tr>
-          <tr><td>6</td><td>Seated Cable Good Morning (lędźwie)</td><td>3×15–20</td><td>3-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">3×20 → +ciężar</td></tr>
-          <tr><td>7</td><td>TRX Fallout (core antyfleksyjny)</td><td>3×15–20</td><td>3-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">3×20 → zmniejsz kąt</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <!-- C2 ER+B -->
-    <div id="p2-erb" class="tab-panel">
-      <h3>🟠 ER+B — Ramiona + Brzuch · Cykl 2 &nbsp;<span class="badge badge-gray">~40–45 min</span></h3>
-      <div class="workout-table card">
-        <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th><th>Tempo</th><th>Przerwa</th><th>Progresja</th></tr>
-          <tr style="background:rgba(59,130,246,0.04)"><td>SS1a</td><td>HS Biceps Curl</td><td>3×10–12</td><td>2-1-3-0</td><td>45 s*</td><td style="font-size:11px;color:var(--text3)">3×12 → +ciężar</td></tr>
-          <tr style="background:rgba(59,130,246,0.04)"><td>SS1b</td><td>HS Triceps Extension</td><td>3×10–12</td><td>2-1-2-0</td><td>60 s*</td><td style="font-size:11px;color:var(--text3)">3×12 → +ciężar</td></tr>
-          <tr style="background:rgba(34,197,94,0.04)"><td>SS2a</td><td>Cable Curl (straight bar)</td><td>3×12–15</td><td>2-0-2-0</td><td>45 s*</td><td style="font-size:11px;color:var(--text3)">3×15 → +ciężar</td></tr>
-          <tr style="background:rgba(34,197,94,0.04)"><td>SS2b</td><td>Tricep Pushdown (D-handle)</td><td>3×12–15</td><td>2-0-2-0</td><td>60 s*</td><td style="font-size:11px;color:var(--text3)">3×15 → +ciężar</td></tr>
-          <tr><td>3</td><td>HS Abdominal Crunch</td><td>3×12–15</td><td>2-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">3×15 → +ciężar</td></tr>
-          <tr><td>4</td><td>Rotary Torso Machine (skośne)</td><td>3×12–15</td><td>2-0-2-1</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">3×15 → +ciężar</td></tr>
-          <tr><td>5</td><td>TRX Knee Raise</td><td>3×12–15</td><td>2-1-2-0</td><td>60 s</td><td style="font-size:11px;color:var(--text3)">3×15 → Hanging Knee Raise</td></tr>
-        </table>
-      </div>
-    </div>
-
-  </div><!-- /p-cykl2 -->
-
 </section>
-
 
 <!-- ═══ HARMONOGRAM ═══════════════════════════════════════════════ -->
 <section id="harmonogram">
@@ -967,7 +735,7 @@
   </button>
 </nav>
 
-</div><!-- /app -->
+
 
 <script>
   // ── DANE WAGI + TRENINGI — ładowane z JSON ────────────────────
@@ -1127,15 +895,6 @@
   }
 
   // ── KOPIOWANIE SZABLONÓW ───────────────────────────────────────
-  function copy(id) {
-    const text = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(text).then(()=>{
-      const btn = event.target;
-      btn.textContent = '✓ Skopiowano!';
-      setTimeout(()=>btn.textContent='📋 Kopiuj szablon',2000);
-    });
-  }
-  // ── RENDERER WAGI ─────────────────────────────────────────────
   function renderWaga(data) {
     const m = data.meta;
     RAW = data.pomiary;
