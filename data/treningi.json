@@ -1,0 +1,254 @@
+{
+  "nastepny": {
+    "tytul": "Cykl 2 — Upper A",
+    "data": "Wtorek, 01.04.2026",
+    "badge": "NASTĘPNY",
+    "badge_color": "blue",
+    "alert": {
+      "ikona": "🚀",
+      "tekst": "<strong>Start Cyklu 2 — Mini cut!</strong> Nowy plan UA/UB/Lower, nowe ćwiczenia. Pierwsze sesje to kalibracja ciężarów — ważna technika, nie ego."
+    },
+    "cwiczenia": [
+      { "nr": 1,  "nazwa": "⭐ Ławka sztanga",                  "ciezar": "70 kg",    "serie": "4×5–8", "uwagi": "Start C2 — zachowaj 70 kg z C1" },
+      { "nr": 2,  "nazwa": "HS ISO Lateral Incline Press",      "ciezar": "45 kg",    "serie": "4×8–12","uwagi": "kalibracja" },
+      { "nr": 3,  "nazwa": "Half-Kneeling Landmine Press",      "ciezar": "~27,5 kg", "serie": "3×8–12","uwagi": "nowe, kalibracja" },
+      { "nr": 4,  "nazwa": "Chest Supported Lateral Raise",     "ciezar": "~8 kg",    "serie": "4×12–15","uwagi": "nowe, kalibracja" },
+      { "nr": 5,  "nazwa": "⭐ HS ISO Lateral High Row",        "ciezar": "90 kg",    "serie": "4×8–12","uwagi": "zachowaj ciężar z C1" },
+      { "nr": 6,  "nazwa": "Ściąganie drążka podchwytem",       "ciezar": "57 kg",    "serie": "3×8–12","uwagi": "" },
+      { "nr": 7,  "nazwa": "Smith CGBP",                        "ciezar": "~50 kg",   "serie": "3×6–10","uwagi": "nowe, kalibracja" },
+      { "nr": 8,  "nazwa": "Kneeling Overhead Cable Triceps",   "ciezar": "~25 kg",   "serie": "3×10–15","uwagi": "nowe, kalibracja" },
+      { "nr": 9,  "nazwa": "Uginanie hantlami z rotacją",       "ciezar": "20 kg",    "serie": "3×10–12","uwagi": "" },
+      { "nr": 10, "nazwa": "SS · Face pull półklęcząc",         "ciezar": "~21 kg",   "serie": "3×10–15","uwagi": "nowe" }
+    ],
+    "kolejne": [
+      { "data": "Czw 03.04", "tytul": "Lower C2",    "badge_color": "yellow", "szczegoly": "Front squat 60 kg\nTrap bar 85 kg\n4×4–6", "uwaga": "Start C2 Lower — nowe zakresy" },
+      { "data": "Nd 06.04",  "tytul": "Upper B C2",  "badge_color": "green",  "szczegoly": "Podciąganie -12 kg\nSmith Incline ~55 kg\n5×6–8", "uwaga": "Kalibracja nowych ćwiczeń" },
+      { "data": "08.04",     "tytul": "Checkpoint",  "badge_color": "red",    "szczegoly": "Waga + trend\nSiła vs tyg 1\nDieta OK?", "uwaga": "Mini cut tydzień 1 — monitoring" }
+    ]
+  },
+
+  "poprzedni": {
+    "tytul": "Upper B",
+    "ocena_liczba": 8,
+    "ocena_tekst": "8/10",
+    "data": "Niedziela, 22.03.2026",
+    "czas": "1:44:59",
+    "kcal": 979,
+    "tetno": 118,
+    "obciazenie": 2.8,
+    "alert_sukces": "Hantle płaska 4×10 ✅ → po deloadzie +2,5 kg. Odwrotne rozpiętki 3×12 ✅ → po deloadzie +5 kg. Wyciąg dolny 3×10 ✅ progresja z 3×8. Podciąganie -12 kg 5×8 ustabilizowane.",
+    "cwiczenia": [
+      { "nr": 1,  "nazwa": "⭐ Podciąganie nachwytem (asysta)", "ciezar": "-12 kg",  "wynik": "8-8-8-8-8",    "badge": "ustabilizowane ✅",   "badge_color": "green",  "plan": "-12 kg → kolejny krok po deloadzie" },
+      { "nr": 2,  "nazwa": "Wyciskanie hantli płaska",          "ciezar": "27,5 kg", "wynik": "10-10-10-10",  "badge": "4×10 ✅ → progresja", "badge_color": "green",  "plan": "27,5 kg → +2,5 kg = 30 kg po deloadzie" },
+      { "nr": 3,  "nazwa": "Arnoldki (siedząc)",                "ciezar": "17,5 kg", "wynik": "10-10-8",      "badge": "plateau",             "badge_color": "yellow", "plan": "17,5 kg — bez zmian, cel 3×10" },
+      { "nr": 4,  "nazwa": "SS · Rozpiętki Butterfly (klatka)", "ciezar": "68 kg",   "wynik": "12-12-10",     "badge": "w toku",              "badge_color": "yellow", "plan": "68 kg — ustabilizować 3×12" },
+      { "nr": 5,  "nazwa": "SS · Odwrotne rozpiętki",           "ciezar": "54 kg",   "wynik": "12-12-12",     "badge": "3×12 ✅ → progresja", "badge_color": "green",  "plan": "54 kg → +5 kg = 59 kg po deloadzie" },
+      { "nr": 6,  "nazwa": "Chest Press (ISO Lateral Incline)", "ciezar": "45 kg",   "wynik": "10-7-7",       "badge": "kalibracja w toku",   "badge_color": "yellow", "plan": "45 kg — ustabilizować" },
+      { "nr": 7,  "nazwa": "Wyciąg dolny siedząc",              "ciezar": "40 kg",   "wynik": "10-10-10",     "badge": "3×10 ✅ progresja",   "badge_color": "green",  "plan": "40 kg → ustabilizować 3×12, potem +2,5 kg" },
+      { "nr": 8,  "nazwa": "Cable lateral raise jednorącz",     "ciezar": "7,5 kg",  "wynik": "8-7-7-7",      "badge": "za duży skok",        "badge_color": "yellow", "plan": "7,5 kg — cel ustabilizować 4×12" },
+      { "nr": 9,  "nazwa": "Prostowanie triceps (warkocz)",     "ciezar": "28 kg",   "wynik": "8-8-8",        "badge": "reset ✓",             "badge_color": "blue",   "plan": "28 kg = nowa baza — ustabilizować 3×10–12" },
+      { "nr": 10, "nazwa": "Uginanie z linką wyciąg dolny",     "ciezar": "31 kg",   "wynik": "8-8-8",        "badge": "reset ✓",             "badge_color": "blue",   "plan": "31 kg = nowa baza — ustabilizować 2×12" },
+      { "nr": "O","nazwa": "Dipy na poręczach",                 "ciezar": "BW",      "wynik": "12-12",        "badge": "2×12 ✓",              "badge_color": "green",  "plan": "bez zmian" },
+      { "nr": "O","nazwa": "Podciąganie australijskie",         "ciezar": "BW",      "wynik": "10-10",        "badge": "w zakresie",          "badge_color": "yellow", "plan": "cel 2×12" }
+    ],
+    "wnioski": [
+      { "typ": "success", "ikona": "✅", "tekst": "<strong>Hantle płaska 4×10</strong> — cel osiągnięty. Po deloadzie: 30 kg." },
+      { "typ": "success", "ikona": "✅", "tekst": "<strong>Odwrotne rozpiętki 3×12</strong> — ustabilizowane. Po deloadzie: +5 kg = 59 kg." },
+      { "typ": "success", "ikona": "✅", "tekst": "<strong>Wyciąg dolny 3×10</strong> — progresja z 3×8. Ustabilizować 3×12 przed kolejnym skokiem." },
+      { "typ": "warn",    "ikona": "⚠️", "tekst": "<strong>Koniec treningu bez siły</strong> — biceps i triceps totalnie padły. To 10 tydzień cyklu, CNS skumulowane zmęczenie. Deload w idealnym momencie." },
+      { "typ": "info",    "ikona": "🔄", "tekst": "<strong>Prostowanie triceps reset 28 kg, uginanie linka reset 31 kg</strong> — nowe bazy na tej maszynie." },
+      { "typ": "info",    "ikona": "ℹ️", "tekst": "<strong>Unoszenie linka 7,5 kg: 8-7-7-7</strong> — za duży skok z 5 kg. Zostaje 7,5 kg, cel ustabilizować 4×12 po deloadzie." }
+    ]
+  },
+
+  "archiwum": {
+    "historia_c2": [],
+    "historia_c1": [
+      { "data": "22.03 Nd", "typ": "Upper B", "typ_color": "blue",  "ocena": "8/10",  "kcal": 979,  "czas": "1:44", "wyniki": "Hantle płaska 4×10 ✅→30kg, odwrotne rozpiętki 3×12 ✅→59kg, wyciąg dolny 3×10 ✅, koniec bez siły — deload w punkt" },
+      { "data": "22.03 Nd", "typ": "Upper A", "typ_color": "blue",  "ocena": "9/10",  "kcal": 953,  "czas": "1:42", "wyniki": "Ławka 5-5-5-5-9 🔥, hantle skos 3×10→+2,5kg, Francuskie 3×10→+1kg, unoszenie 4×12→+2,5kg" },
+      { "data": "17.03 Wt", "typ": "Lower",   "typ_color": "gray",  "ocena": "9/10",  "kcal": 849,  "czas": "1:38", "wyniki": "Trap bar +10kg→85kg ✅ Big 4, leg press 3×12 ✅, hack squat +15kg→100kg, zginanie oba +7kg" },
+      { "data": "15.03 Nd", "typ": "Upper B", "typ_color": "blue",  "ocena": "9/10",  "kcal": 1037, "czas": "1:50", "wyniki": "Podciąganie -12 kg 5×8 ✅ Big 4, arnoldki 10-10-8, unoszenie 4×12→progresja" },
+      { "data": "12.03 Czw","typ": "Lower",   "typ_color": "gray",  "ocena": "8/10",  "kcal": 950,  "czas": "1:36", "wyniki": "Leg press +5kg→115kg ✅, kalibracja zginania 68kg, wspięcia→Smith 50kg" },
+      { "data": "10.03 Wt", "typ": "Upper A", "typ_color": "blue",  "ocena": "10/10", "kcal": 775,  "czas": "1:34", "wyniki": "Ławka 70 kg: 5-5-5-5-6 ✅, HS High Row kalibracja 90 kg, ściąganie drążka 60 kg" },
+      { "data": "08.03 Nd", "typ": "Upper B", "typ_color": "blue",  "ocena": "9/10",  "kcal": 882,  "czas": "1:34", "wyniki": "Podciąganie 5×8 →-17,5 kg, 5 progresji, kalibracja HS zakończona" },
+      { "data": "06.03 Pt", "typ": "Lower",   "typ_color": "gray",  "ocena": "8/10",  "kcal": 866,  "czas": "1:21", "wyniki": "Lędźwie 10/10 ⭐, Front squat 60 kg ✓, HS V Squat + Leg press kalibracja" },
+      { "data": "04.03 Śr", "typ": "Upper A", "typ_color": "blue",  "ocena": "7/10",  "kcal": 799,  "czas": "1:29", "wyniki": "Ławka AMRAP 10 → 70 kg ✓, pierwsza sesja Hammer Strength" },
+      { "data": "01.03 Nd", "typ": "Lower",   "typ_color": "gray",  "ocena": "8/10",  "kcal": 825,  "czas": "1:19", "wyniki": "4 progresje (leg press, zginanie, hack squat, wspięcia), lędźwie 7/10" },
+      { "data": "26.02 Czw","typ": "Upper B", "typ_color": "blue",  "ocena": "7/10",  "kcal": 872,  "czas": "1:36", "wyniki": "Dipy superseria, Arnoldki 10-8-8, podciąganie 8-8-8-6-6" },
+      { "data": "24.02 Wt", "typ": "Upper A", "typ_color": "blue",  "ocena": "6/10",  "kcal": 650,  "czas": "1:33", "wyniki": "Brak energii, ławka AMRAP 7, progresje zrobione" },
+      { "data": "22.02 Nd", "typ": "Lower",   "typ_color": "gray",  "ocena": "9/10",  "kcal": 805,  "czas": "1:29", "wyniki": "Lędźwie 10/10 ⭐, test ciężarów OK, core dodane na stałe" },
+      { "data": "19.02 Czw","typ": "Upper B", "typ_color": "blue",  "ocena": "8/10",  "kcal": 849,  "czas": "1:31", "wyniki": "6 progresji — najlepszy wynik do tej pory" },
+      { "data": "17.02 Wt", "typ": "Upper A", "typ_color": "blue",  "ocena": "4/10",  "kcal": 859,  "czas": "1:44", "wyniki": "Słabszy dzień, progresje jednak zrobione" },
+      { "data": "16.02 Nd", "typ": "Cardio",  "typ_color": "gray",  "ocena": null,    "kcal": null, "czas": null,   "wyniki": "Stretching, regeneracja lędźwi" },
+      { "data": "12.02 Śr", "typ": "Lower",   "typ_color": "gray",  "ocena": null,    "kcal": 825,  "czas": "1:19", "wyniki": "⚠️ Dyskomfort lędźwiowy po treningu" },
+      { "data": "10.02 Wt", "typ": "Upper B", "typ_color": "blue",  "ocena": null,    "kcal": 901,  "czas": "1:39", "wyniki": "Podciąganie -20 kg 8-7-6-6-6, cable lateral raise 7,5 kg, prostowanie 40 kg 12-12-12" },
+      { "data": "08.02 Nd", "typ": "Lower",   "typ_color": "gray",  "ocena": null,    "kcal": 812,  "czas": "1:28", "wyniki": "Trap bar 95 kg 8-8-6-6, leg press 100 kg, hack squat 50 kg, wspięcia 55 kg" },
+      { "data": "06.02 Czw","typ": "Upper A", "typ_color": "blue",  "ocena": null,    "kcal": 1011, "czas": "1:41", "wyniki": "Ławka 65 kg 5-5-5-5-8, unoszenie 8 kg 4×12, face pulls 30 kg, wiosłowanie 60 kg" },
+      { "data": "03.02 Wt", "typ": "Lower",   "typ_color": "gray",  "ocena": null,    "kcal": 863,  "czas": "1:34", "wyniki": "Trap bar 90 kg 8-8-8-8, leg press 100 kg, hack squat 50 kg, wspięcia 55 kg 15-15-15-15" },
+      { "data": "01.02 Nd", "typ": "Upper B", "typ_color": "blue",  "ocena": null,    "kcal": 808,  "czas": "1:27", "wyniki": "Podciąganie -25 kg 8-8-8-8-8, hantle płaska 25 kg, rozpiętki 50 kg, cable lateral raise 5 kg" },
+      { "data": "26.01 Nd", "typ": "Upper B", "typ_color": "blue",  "ocena": null,    "kcal": 766,  "czas": "1:31", "wyniki": "Podciąganie -25 kg 8-8-8-8-6, hantle płaska 25 kg, rozpiętki 50 kg, arnoldki 15 kg" },
+      { "data": "21.01 Wt", "typ": "Upper A", "typ_color": "blue",  "ocena": null,    "kcal": null, "czas": null,   "wyniki": "Ławka 65 kg 5-5-5-5-7, unoszenie 8 kg, High Row 25 kg, face pulls 30 kg" },
+      { "data": "19.01 Nd", "typ": "Lower",   "typ_color": "gray",  "ocena": null,    "kcal": null, "czas": null,   "wyniki": "Trap bar 80 kg 8-8-8-8, leg press 90 kg, hack squat 50 kg, front squat 65 kg" },
+      { "data": "18.01 Nd", "typ": "Upper B", "typ_color": "blue",  "ocena": null,    "kcal": 724,  "czas": "1:31", "wyniki": "Podciąganie -25 kg 8-8-8-8-6, hantle płaska 25 kg, rozpiętki 50 kg, arnoldki 17,5 kg" },
+      { "data": "15.01 Czw","typ": "Lower",   "typ_color": "gray",  "ocena": null,    "kcal": 903,  "czas": "1:38", "wyniki": "Trap bar 75 kg 8-8-8-8, front squat 65 kg, leg press 90 kg, wspięcia 55 kg 18-16-15-15" },
+      { "data": "13.01 Wt", "typ": "Upper A", "typ_color": "blue",  "ocena": null,    "kcal": 681,  "czas": "1:33", "wyniki": "Ławka 60 kg 5-5-5-5-8, High Row 25 kg 12-12-12-12, face pulls 30 kg, wiosłowanie 50 kg" }
+    ],
+
+    "progresja_c2": {
+      "ua": {
+        "kolor": "accent",
+        "label": "🔵 Upper A — Cykl 2",
+        "sesje": [],
+        "cwiczenia": [
+          { "nazwa": "⭐ Ławka sztanga",              "zakres": "4×5–8",    "cel": "2/3 w górnym → +2,5kg · cel 75–77,5kg" },
+          { "nazwa": "HS ISO Lateral Incline Press",  "zakres": "4×8–12",   "cel": "2/3 w górnym → +5kg · cel 50–55kg" },
+          { "nazwa": "Half-Kneeling Landmine Press",  "zakres": "3×8–12",   "cel": "2/3 w górnym → +2,5kg · cel 30–32,5kg" },
+          { "nazwa": "Chest Supported Lateral Raise", "zakres": "4×12–15",  "cel": "2/3 w górnym → +1kg" },
+          { "nazwa": "⭐ HS ISO Lateral High Row",    "zakres": "4×8–12",   "cel": "2/3 w górnym → +5kg · cel 100–105kg" },
+          { "nazwa": "Ściąganie drążka podchwytem",   "zakres": "3×8–12",   "cel": "2/3 w górnym → +2,5kg · cel 67,5–70kg" },
+          { "nazwa": "Smith CGBP",                    "zakres": "3×6–10",   "cel": "2/3 w górnym → +2,5kg · cel 57,5–60kg" },
+          { "nazwa": "Kneeling Overhead Cable Triceps","zakres": "3×10–15", "cel": "2/3 w górnym → +2,5kg" },
+          { "nazwa": "Uginanie hantlami z rotacją",   "zakres": "3×10–12",  "cel": "2/3 w górnym → +1kg" },
+          { "nazwa": "SS · Face pull półklęcząc",     "zakres": "3×10–15",  "cel": "2/3 w górnym → +2,5kg" }
+        ]
+      },
+      "ub": {
+        "kolor": "green",
+        "label": "🟢 Upper B — Cykl 2",
+        "sesje": [],
+        "cwiczenia": [
+          { "nazwa": "⭐ Podciąganie (asysta)",       "zakres": "5×6–8",   "cel": "5×8 → -2,5kg asysty · cel -7,5 lub -5kg" },
+          { "nazwa": "Smith Incline Bench Press",     "zakres": "3×6–8",   "cel": "2/3 w górnym → +2,5kg · cel 57,5–60kg" },
+          { "nazwa": "SS3a · Podciąganie australijskie","zakres":"3×8–12", "cel": "2/3 w górnym → obniż drążek lub +obciążenie" },
+          { "nazwa": "SS3b · Dipy",                  "zakres": "3×8–12",  "cel": "2/3 w górnym → +obciążenie (pas)" },
+          { "nazwa": "SS4a · Rozpiętki Butterfly",   "zakres": "3×10–12", "cel": "2/3 w górnym → +5kg" },
+          { "nazwa": "SS4b · Odwrotne rozpiętki",    "zakres": "3×12–15", "cel": "2/3 w górnym → +5kg" },
+          { "nazwa": "Cable Crossover",               "zakres": "3×10–15", "cel": "2/3 w górnym → +2,5kg" },
+          { "nazwa": "Arnoldki",                      "zakres": "3×8–10",  "cel": "2/3 w górnym → +2,5kg · cel 20–22,5kg" },
+          { "nazwa": "Cable Lateral Raise",           "zakres": "4×10–12", "cel": "2/3 w górnym → +1kg" },
+          { "nazwa": "HS Seated Row",                 "zakres": "4×8–12",  "cel": "2/3 w górnym → +5kg" },
+          { "nazwa": "EZ-bar Skull Crusher",          "zakres": "3×8–12",  "cel": "2/3 w górnym → +2,5kg · cel 27,5–30kg" },
+          { "nazwa": "Hammer Curl",                   "zakres": "3×10–12", "cel": "2/3 w górnym → +2,5kg · cel 20–22,5kg" }
+        ]
+      },
+      "lower": {
+        "kolor": "yellow",
+        "label": "🟠 Lower — Cykl 2",
+        "sesje": [],
+        "cwiczenia": [
+          { "nazwa": "⭐ Front squat",               "zakres": "4×4–6",    "cel": "2/3 w górnym → +2,5kg · cel 65–67,5kg" },
+          { "nazwa": "⭐ Trap bar deadlift",         "zakres": "4×4–6",    "cel": "2/3 w górnym → +2,5kg · cel 92,5–95kg" },
+          { "nazwa": "Hack Squat HS",                "zakres": "4×6–10",   "cel": "2/3 w górnym → +5kg · cel 105–110kg" },
+          { "nazwa": "Leg Press (opcja ⚡)",         "zakres": "3×10–12",  "cel": "2/3 w górnym → +5kg" },
+          { "nazwa": "Zginanie nóg siedzące",        "zakres": "4×10–12",  "cel": "2/3 w górnym → +2,5kg · cel 80–82,5kg" },
+          { "nazwa": "HS Kneeling Leg Curl",         "zakres": "3×10–12",  "cel": "2/3 w górnym → +5kg" },
+          { "nazwa": "Smith Calf Raise",             "zakres": "4×12–15",  "cel": "2/3 w górnym → +5kg" },
+          { "nazwa": "SS8a · Hanging Knee Raise",    "zakres": "3×12–15",  "cel": "3×15 → przejdź na Hanging Leg Raise" },
+          { "nazwa": "SS8b · Cable Crunch",          "zakres": "3×12–15",  "cel": "2/3 w górnym → +2,5kg" },
+          { "nazwa": "Pallof Press",                 "zakres": "3×10–12/str","cel":"2/3 w górnym → +2,5kg" }
+        ]
+      }
+    },
+
+    "progresja_c1": {
+      "ua": {
+        "kolor": "accent",
+        "label": "🔵 Upper A — Cykl 1",
+        "sesje": ["19.03","10.03","04.03","24.02","17.02","06.02","21.01","13.01"],
+        "cwiczenia": [
+          { "nazwa": "⭐ Ławka sztanga",     "zakres": "4×5–8",   "cel": "AMRAP≥8 → +2,5kg",
+            "dane": [{"v":"70×5-5-5-9","i":"★","c":"accent2"},{"v":"70×5-5-5-6","i":"↑","c":"green"},{"v":"67,5×5-5-5-10","i":"↑","c":"green"},{"v":"67,5×5-5-5-7","i":"→","c":"text3"},{"v":"67,5×5-5-5-6","i":"→","c":"text3"},{"v":"65×5-5-5-8","i":"↑","c":"green"},{"v":"65×5-5-5-7","i":"→","c":"text3"},{"v":"60×5-5-5-8","i":"","c":""}] },
+          { "nazwa": "Hantle skos 30°",     "zakres": "3×8–10",  "cel": "2/3×10 → +2,5kg",
+            "dane": [{"v":"24×10-10-10","i":"↑","c":"green"},{"v":"24×10-8-8","i":"→","c":"text3"},{"v":"24×10-8-9","i":"→","c":"text3"},{"v":"25×10-8-8","i":"→","c":"text3"},{"v":"25×10-9-7","i":"→","c":"text3"},{"v":"25×10-10-8","i":"→","c":"text3"},{"v":"25×10-8-8","i":"→","c":"text3"},{"v":"25×8-8-6","i":"","c":""}] },
+          { "nazwa": "SS1a · Barki",        "zakres": "3×8–10",  "cel": "2/3×10 → +2,5kg",
+            "dane": [{"v":"20×10-8-8","i":"→","c":"text3"},{"v":"20×10-8-7","i":"→","c":"text3"},{"v":"20×10-5-5","i":"↓","c":"red"},{"v":"20×10-8-6","i":"→","c":"text3"},{"v":"20×10-6-5","i":"↓","c":"red"},{"v":"20×10-7-7","i":"→","c":"text3"},{"v":"20×10-10-8","i":"→","c":"text3"},{"v":"20×8-6-6","i":"","c":""}] },
+          { "nazwa": "SS1b · Unoszenie bokiem","zakres": "4×12–15","cel":"3/4×12 → +2,5kg",
+            "dane": [{"v":"10×12-12-12-12","i":"↑","c":"green"},{"v":"10×12-10-10-10","i":"→","c":"text3"},{"v":"9×10-10-10-10","i":"→","c":"text3"},{"v":"9×10-10-10-8","i":"→","c":"text3"},{"v":"9×10-10-9-8","i":"→","c":"text3"},{"v":"8×12-12-12-12","i":"↑","c":"green"},{"v":"8×15-12-12-12","i":"","c":""},{"v":"8×10-10-10-8","i":"","c":""}] },
+          { "nazwa": "HS Lateral High Row", "zakres": "4×8–12",  "cel": "3/4×12 → +ciężar",
+            "dane": [{"v":"90×12-10-8-8","i":"→","c":"text3"},{"v":"90×10-10-10-8","i":"★","c":"accent2"},{"v":"30×10-10-8-8","i":"","c":""},{"v":"30×10-8-8-7","i":"","c":""},{"v":"27,5×10-10-10-10","i":"→","c":"text3"},{"v":"27,5×10-10-10-9","i":"→","c":"text3"},{"v":"25×10-10-10-10","i":"→","c":"text3"},{"v":"25×12-12-12-12","i":"","c":""}] },
+          { "nazwa": "Francuskie",          "zakres": "3×8–10",  "cel": "2/3×10 → +1kg",
+            "dane": [{"v":"12,5×10-10-10","i":"↑","c":"green"},{"v":"12,5×12-10-8","i":"→","c":"text3"},{"v":"12,5×12-8-8","i":"→","c":"text3"},{"v":"12,5×12-10-8","i":"→","c":"text3"},{"v":"12,5×12-8-7","i":"→","c":"text3"},{"v":"12,5×12-10-6","i":"→","c":"text3"},{"v":"12,5×12-12-10","i":"→","c":"text3"},{"v":"12,5×12-8-6","i":"","c":""}] },
+          { "nazwa": "Uginanie z rotacją",  "zakres": "2×10–12", "cel": "2×12 → +2,5kg",
+            "dane": [{"v":"20×10-9","i":"→","c":"text3"},{"v":"20×9-9","i":"→","c":"text3"},{"v":"20×9-9","i":"→","c":"text3"},{"v":"20×8-8","i":"→","c":"text3"},{"v":"20×10-8","i":"→","c":"text3"},{"v":"17,5×12-12","i":"↑","c":"green"},{"v":"17,5×12-10","i":"→","c":"text3"},{"v":"17,5×12-12","i":"","c":""}] },
+          { "nazwa": "Ściąganie drążka",    "zakres": "3×8–12",  "cel": "2/3×12 → +ciężar",
+            "dane": [{"v":"57×10-10","i":"→","c":"text3"},{"v":"57×10-10-10","i":"→","c":"text3"},{"v":"60×10-10-10","i":"→","c":"text3"},{"v":"60×10-10-8","i":"→","c":"text3"},{"v":"55×12-12-12","i":"↑","c":"green"},{"v":"55×10-10-8","i":"→","c":"text3"},{"v":"55×12-12-10","i":"→","c":"text3"},{"v":"55×10-8-6","i":"","c":""}] },
+          { "nazwa": "SS2a · Wiosłowanie",  "zakres": "2×10–12", "cel": "2×12 → +ciężar",
+            "dane": [{"v":"35×10-10","i":"★","c":"accent2"},{"v":"57×12-12","i":"","c":""},{"v":"57×12-12","i":"→","c":"text3"},{"v":"60×12-10","i":"→","c":"text3"},{"v":"60×10-10","i":"→","c":"text3"},{"v":"60×10-10","i":"→","c":"text3"},{"v":"55×12-12","i":"→","c":"text3"},{"v":"50×12-11","i":"","c":""}] },
+          { "nazwa": "SS2b · Face pulls",   "zakres": "3×15",    "cel": "3×15 → +ciężar",
+            "dane": [{"v":"21×12-12","i":"→","c":"text3"},{"v":"21×12-12-12","i":"→","c":"text3"},{"v":"21×10-10-10","i":"→","c":"text3"},{"v":"35×15-10-10","i":"","c":""},{"v":"35×13-10-10","i":"→","c":"text3"},{"v":"30×15-15-15","i":"↑","c":"green"},{"v":"30×15-15-12","i":"→","c":"text3"},{"v":"30×15-15-12","i":"","c":""}] },
+          { "nazwa": "Prostowanie nad głową","zakres":"3×12–15", "cel": "2/3×15 → +stos",
+            "dane": [{"v":"24,5s×10-10","i":"→","c":"text3"},{"v":"24,5s×8-8","i":"→","c":"text3"},{"v":"40×10-10","i":"","c":""},{"v":"35×12-12","i":"→","c":"text3"},{"v":"35×12-10","i":"→","c":"text3"},{"v":"35×15-15","i":"↑","c":"green"},{"v":"35×10-8","i":"","c":""},{"v":"—","i":"","c":"text3"}] }
+        ]
+      },
+      "ub": {
+        "kolor": "green",
+        "label": "🟢 Upper B — Cykl 1",
+        "sesje": ["22.03","15.03","08.03","26.02","19.02","10.02","01.02","26.01"],
+        "cwiczenia": [
+          { "nazwa": "⭐ Podciąganie (asysta)", "zakres": "5×6–8",   "cel": "5×8 → -2,5kg asysty",
+            "dane": [{"v":"-12×8-8-8-8-8","i":"★","c":"accent2"},{"v":"-12×8-8-8-8-8","i":"↑","c":"green"},{"v":"-19×8-8-8-8-8","i":"↑","c":"green"},{"v":"-20×8-8-8-6-6","i":"→","c":"text3"},{"v":"-20×8-8-6-6-6","i":"→","c":"text3"},{"v":"-20×8-7-6-6-6","i":"→","c":"text3"},{"v":"-25×8-8-8-8-8","i":"→","c":"text3"},{"v":"-25×8-8-8-8-6","i":"","c":""}] },
+          { "nazwa": "Wyciskanie płaska",      "zakres": "4×8–10",  "cel": "3/4×10 → +2,5kg",
+            "dane": [{"v":"27,5×10-10-10-10","i":"↑","c":"green"},{"v":"27,5×10-10-10-8","i":"→","c":"text3"},{"v":"27,5×10-10-8-8","i":"→","c":"text3"},{"v":"27,5×10-8-8-6","i":"→","c":"text3"},{"v":"25×10-10-10-10","i":"↑","c":"green"},{"v":"25×10-10-10-7","i":"→","c":"text3"},{"v":"25×10-10-9-8","i":"→","c":"text3"},{"v":"25×10-10-10-8","i":"","c":""}] },
+          { "nazwa": "Arnoldki",               "zakres": "3×8–10",  "cel": "2/3×10 → +2,5kg",
+            "dane": [{"v":"17,5×10-10-8","i":"→","c":"text3"},{"v":"17,5×10-10-8","i":"→","c":"text3"},{"v":"17,5×10-8-6","i":"→","c":"text3"},{"v":"17,5×10-8-8","i":"→","c":"text3"},{"v":"17,5×10-10-7","i":"→","c":"text3"},{"v":"15×10-10-10","i":"↑","c":"green"},{"v":"15×12-10-8","i":"→","c":"text3"},{"v":"15×12-8-8","i":"","c":""}] },
+          { "nazwa": "SS · Rozpiętki klatka", "zakres": "3×10–12", "cel": "2/3×12 → +ciężar",
+            "dane": [{"v":"68×12-12-10","i":"→","c":"text3"},{"v":"68×12-12-10","i":"→","c":"text3"},{"v":"68×12-10-10","i":"→","c":"text3"},{"v":"55×10-10-10","i":"→","c":"text3"},{"v":"50×12-12-12","i":"↑","c":"green"},{"v":"50×10-10-10","i":"→","c":"text3"},{"v":"50×12-8-11","i":"→","c":"text3"},{"v":"50×15-12-10","i":"","c":""}] },
+          { "nazwa": "SS · Odwrotne rozpiętki","zakres": "3×12–15","cel": "2/3×15 → +5kg",
+            "dane": [{"v":"54×12-12-12","i":"↑","c":"green"},{"v":"54×15-15-12","i":"↑","c":"green"},{"v":"54×12-12-12","i":"→","c":"text3"},{"v":"45×10-8-8","i":"↓","c":"red"},{"v":"40×12-12-12","i":"↑","c":"green"},{"v":"40×10-10-10","i":"→","c":"text3"},{"v":"40×12-12-12","i":"→","c":"text3"},{"v":"35×20-12-12","i":"","c":""}] },
+          { "nazwa": "Chest Press ISO",        "zakres": "3×10–12", "cel": "2/3×12 → +ciężar",
+            "dane": [{"v":"45×10-7-7","i":"→","c":"text3"},{"v":"45×8-8-8","i":"→","c":"text3"},{"v":"40×10-10-10","i":"↑","c":"green"},{"v":"55×12-10-10","i":"","c":""},{"v":"55×10-10-10","i":"→","c":"text3"},{"v":"—","i":"","c":"text3"},{"v":"—","i":"","c":"text3"},{"v":"—","i":"","c":"text3"}] },
+          { "nazwa": "Wyciąg dolny",           "zakres": "3×10–12", "cel": "2/3×12 → +2,5kg",
+            "dane": [{"v":"40×10-10-10","i":"↑","c":"green"},{"v":"40×8-8-8","i":"→","c":"text3"},{"v":"35×12-12-12","i":"↑","c":"green"},{"v":"60×12-12-10","i":"","c":""},{"v":"60×12-10-10","i":"→","c":"text3"},{"v":"60×10-10-10","i":"→","c":"text3"},{"v":"55×12-12-12","i":"↑","c":"green"},{"v":"50×12-10-10","i":"","c":""}] },
+          { "nazwa": "Cable lateral raise",    "zakres": "4×10–12", "cel": "3/4×12 → +2,5kg",
+            "dane": [{"v":"7,5×8-7-7-7","i":"→","c":"text3"},{"v":"5×12-12-12-12","i":"↑","c":"green"},{"v":"5×12-10-10-10","i":"→","c":"text3"},{"v":"10×12-10-8-8","i":"→","c":"text3"},{"v":"7,5×12-12-12-12","i":"↑","c":"green"},{"v":"7,5×10-10-10-10","i":"→","c":"text3"},{"v":"5×12-10-12-12","i":"→","c":"text3"},{"v":"5×10-10-10-10","i":"","c":""}] },
+          { "nazwa": "Prostowanie triceps",    "zakres": "3×10–12", "cel": "2/3×12 → +ciężar",
+            "dane": [{"v":"28×8-8-8","i":"★","c":"accent2"},{"v":"31×8-8-8","i":"→","c":"text3"},{"v":"28×10-8-8","i":"→","c":"text3"},{"v":"45×10-8-8","i":"","c":""},{"v":"40×12-12-12","i":"↑","c":"green"},{"v":"40×12-12-12","i":"→","c":"text3"},{"v":"40×15-12-12","i":"→","c":"text3"},{"v":"40×12-12-12","i":"","c":""}] },
+          { "nazwa": "Uginanie z linką",       "zakres": "2×10–12", "cel": "2×12 → +ciężar",
+            "dane": [{"v":"31×8-8-8","i":"★","c":"accent2"},{"v":"35×12-12-10","i":"→","c":"text3"},{"v":"35×12-12-12","i":"↑","c":"green"},{"v":"55×10-10","i":"","c":""},{"v":"50×12-12","i":"→","c":"text3"},{"v":"50×10-10","i":"→","c":"text3"},{"v":"50×8-8","i":"→","c":"text3"},{"v":"45×12-12","i":"","c":""}] },
+          { "nazwa": "Podciąganie australijskie","zakres":"2×8–12","cel":"2×12 → +obciążenie",
+            "dane": [{"v":"BW×10-10","i":"→","c":"text3"},{"v":"BW×10-10","i":"→","c":"text3"},{"v":"BW×10-10","i":"→","c":"text3"},{"v":"BW×10-8","i":"→","c":"text3"},{"v":"—","i":"","c":"text3"},{"v":"—","i":"","c":"text3"},{"v":"—","i":"","c":"text3"},{"v":"—","i":"","c":"text3"}] },
+          { "nazwa": "Dipy",                   "zakres": "2×8–12",  "cel": "2×12 → +obciążenie",
+            "dane": [{"v":"BW×12-12","i":"→","c":"text3"},{"v":"BW×12-12","i":"→","c":"text3"},{"v":"BW×10-10","i":"→","c":"text3"},{"v":"BW×10-8","i":"→","c":"text3"},{"v":"—","i":"","c":"text3"},{"v":"BW×12-12","i":"","c":""},{"v":"BW×12-12","i":"→","c":"text3"},{"v":"—","i":"","c":"text3"}] }
+        ]
+      },
+      "lower": {
+        "kolor": "yellow",
+        "label": "🟠 Lower — Cykl 1",
+        "sesje": ["17.03","12.03","06.03","01.03","22.02","12.02","08.02","03.02"],
+        "cwiczenia": [
+          { "nazwa": "⭐ Front squat",       "zakres": "3×10 (stab.)", "cel": "3×10 → +2,5kg",
+            "dane": [{"v":"—","i":"","c":""},{"v":"60×10-10-10","i":"→","c":"text3"},{"v":"60×10-10-10","i":"→","c":"text3"},{"v":"55×10-10-10","i":"↑","c":"green"},{"v":"60×8-8-8-8","i":"→","c":"text3"},{"v":"70×8-8-6-6","i":"","c":""},{"v":"60×8-8-6-6","i":"","c":""},{"v":"70×6-6-6-5","i":"","c":""}] },
+          { "nazwa": "⭐ Trap bar deadlift", "zakres": "3–5×8–10",    "cel": "3×10 → +5kg",
+            "dane": [{"v":"85×8-8-8-8-8","i":"★","c":"accent2"},{"v":"75×10-10-10","i":"↑","c":"green"},{"v":"75×10-10-10","i":"→","c":"text3"},{"v":"75×10-10-10","i":"→","c":"text3"},{"v":"80×8-8-8-8","i":"→","c":"text3"},{"v":"95×8-6-6-6","i":"↓","c":"red"},{"v":"95×8-8-6-6","i":"↓","c":"red"},{"v":"90×8-8-8-8","i":"","c":""}] },
+          { "nazwa": "Leg press HS",         "zakres": "3×10–12",     "cel": "2/3×12 → +5kg",
+            "dane": [{"v":"115×12-12-12","i":"↑","c":"green"},{"v":"115×12-10-10","i":"→","c":"text3"},{"v":"105×12-12-12","i":"↑","c":"green"},{"v":"130×12-12-12","i":"","c":""},{"v":"130×12-12-12","i":"→","c":"text3"},{"v":"100×6-6","i":"↓","c":"red"},{"v":"100×10-10-10","i":"↑","c":"green"},{"v":"100×10-8-7","i":"","c":""}] },
+          { "nazwa": "Zginanie siedząc",     "zakres": "4×12–15",     "cel": "3/4×15 → +ciężar",
+            "dane": [{"v":"75×15-15-12-12","i":"↑","c":"green"},{"v":"68×12-12-10-10","i":"→","c":"text3"},{"v":"90×15-15-12-12","i":"","c":""},{"v":"85×12-12-12-12","i":"→","c":"text3"},{"v":"80×15-15-12-12","i":"↑","c":"green"},{"v":"80×15-12-12-12","i":"→","c":"text3"},{"v":"80×15-12-12-10","i":"→","c":"text3"},{"v":"80×12-12-12-12","i":"","c":""}] },
+          { "nazwa": "Zginanie leżące HS",   "zakres": "2×10–12",     "cel": "2×12 → +ciężar",
+            "dane": [{"v":"67×10-10","i":"↑","c":"green"},{"v":"60×12-12","i":"↑","c":"green"},{"v":"60×12-12","i":"→","c":"text3"},{"v":"65×10-10","i":"→","c":"text3"},{"v":"65×10-10","i":"→","c":"text3"},{"v":"65×10-8-8","i":"→","c":"text3"},{"v":"60×10-10","i":"→","c":"text3"},{"v":"55×12-10-10","i":"","c":""}] },
+          { "nazwa": "Hack squat HS",        "zakres": "4–5×10–12",   "cel": "3/4×12 → +5kg",
+            "dane": [{"v":"100×10-10-10-10-10","i":"↑","c":"green"},{"v":"85×10-10-10-10","i":"↑","c":"green"},{"v":"80×10-10-10-10","i":"↑","c":"green"},{"v":"60×10-10-10-10","i":"↑","c":"green"},{"v":"60×10-10-10-10","i":"→","c":"text3"},{"v":"55×10-10-10-10","i":"↑","c":"green"},{"v":"50×10-10-10-10","i":"↑","c":"green"},{"v":"50×10-10-10","i":"","c":""}] },
+          { "nazwa": "Wspięcia stojąc",      "zakres": "4×12–15",     "cel": "3/4×15 → +2,5kg",
+            "dane": [{"v":"50×12-12-12-12","i":"→","c":"text3"},{"v":"50×12-12-12-12","i":"→","c":"text3"},{"v":"55×12-12-12-12","i":"","c":""},{"v":"55×12-12-12-12","i":"→","c":"text3"},{"v":"55×12-12-12-12","i":"→","c":"text3"},{"v":"55×15-12-12-10","i":"→","c":"text3"},{"v":"55×15-15-15-15","i":"↑","c":"green"},{"v":"55×15-15-15-15","i":"","c":""}] },
+          { "nazwa": "Podciąganie kolan",    "zakres": "4×15–20",     "cel": "4×20 → +obciążenie",
+            "dane": [{"v":"BW×20-20-15-15","i":"↑","c":"green"},{"v":"BW×20-20-15-15","i":"→","c":"text3"},{"v":"BW×20-15-15","i":"→","c":"text3"},{"v":"BW×15-15-12","i":"→","c":"text3"},{"v":"BW×15-15-12","i":"→","c":"text3"},{"v":"BW×15-15-12","i":"→","c":"text3"},{"v":"BW×15-12-12","i":"→","c":"text3"},{"v":"BW×15-12-12","i":"","c":""}] },
+          { "nazwa": "Skręty z linką",       "zakres": "3×12–15",     "cel": "2/3×15 → +2,5kg",
+            "dane": [{"v":"15×15-12-10","i":"→","c":"text3"},{"v":"15×12-12-12","i":"→","c":"text3"},{"v":"15×12-12-12","i":"→","c":"text3"},{"v":"25×12-12-12","i":"","c":""},{"v":"25×12-12-12","i":"→","c":"text3"},{"v":"25×12-10-10","i":"→","c":"text3"},{"v":"25×10-10-10","i":"→","c":"text3"},{"v":"25×10-10-10","i":"","c":""}] }
+        ]
+      }
+    }
+  },
+
+  "szablony_c2": {
+    "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Obciążenie: ___ | Tętno: ___\n\n1. Ławka sztanga [4×5–8 · 70kg]: __ kg×__-__-__-__\n2. HS ISO Lateral Incline Press [4×8–12 · 45kg]: __ kg×__-__-__-__\n3. Half-Kneeling Landmine Press [3×8–12 · ?kg]: __ kg×__-__-__\n4. Chest Supported Lateral Raise [4×12–15 · ?kg]: __ kg×__-__-__-__\n5. HS ISO Lateral High Row [4×8–12 · 90kg]: __ kg×__-__-__-__\n6. Ściąganie drążka podchwytem [3×8–12 · 57kg]: __ kg×__-__-__\n7. Smith CGBP [3×6–10 · ?kg]: __ kg×__-__-__\n8. Kneeling Overhead Cable Triceps [3×10–15 · ?kg]: __ kg×__-__-__\n9. Uginanie hantlami z rotacją [3×10–12 · 20kg]: __ kg×__-__-__\n10. SS · Face pull półklęcząc [3×10–15 · ?kg]: __ kg×__-__-__\n\nLędźwie: __/10  |  Uwagi: _____________________________________________",
+    "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Obciążenie: ___ | Tętno: ___\n\n1. Podciąganie nachwytem (asysta) [5×6–8 · -12kg]: -__ kg×__-__-__-__-__\n2. Smith Incline Bench Press [3×6–8 · ?kg]: __ kg×__-__-__\n3. SS3a · Podciąganie australijskie [3×8–12]: BW×__-__-__\n4. SS3b · Dipy [3×8–12]: BW×__-__-__\n5. SS4a · Rozpiętki Butterfly [3×10–12 · ?kg]: __ kg×__-__-__\n6. SS4b · Odwrotne rozpiętki [3×12–15 · 59kg]: __ kg×__-__-__\n7. Cable Crossover [3×10–15 · ?kg]: __ kg×__-__-__\n8. Arnoldki [3×8–10 · 17,5kg]: __ kg×__-__-__\n9. Cable Lateral Raise [4×10–12 · 7,5kg]: __ kg×__-__-__-__\n10. HS Seated Row [4×8–12 · ?kg]: __ kg×__-__-__-__\n11. EZ-bar Skull Crusher [3×8–12 · ?kg]: __ kg×__-__-__\n12. Hammer Curl [3×10–12 · ?kg]: __ kg×__-__-__\n\nLędźwie: __/10  |  Uwagi: _____________________________________________",
+    "lower": "Lower [DATA] | Czas: ___ | Kcal: ___ | Obciążenie: ___ | Tętno: ___\n\nA. Glute bridge: BW×__-__\nB. Bird-dog: BW×__-__\n1. Front squat [4×4–6 · 60kg]: __ kg×__-__-__-__\n2. Trap bar deadlift [4×4–6 · 85kg]: __ kg×__-__-__-__\n3. Hack Squat HS [4×6–10 · 100kg]: __ kg×__-__-__-__\n4. Leg Press (opcja ⚡) [3×10–12 · ?kg]: __ kg×__-__-__\n5. Zginanie nóg siedzące [4×10–12 · 75kg]: __ kg×__-__-__-__\n6. HS Kneeling Leg Curl [3×10–12 · ?kg]: __ kg×__-__-__\n7. Smith Calf Raise [4×12–15 · ?kg]: __ kg×__-__-__-__\n8. SS8a · Hanging Knee Raise [3×12–15]: BW×__-__-__\n9. SS8b · Cable Crunch [3×12–15 · ?kg]: __ kg×__-__-__\n10. Pallof Press [3×10–12/str · ?kg]: __ kg×__-__-__\n\nLędźwie: __/10  |  Uwagi: _____________________________________________",
+    "prompt": "Nowy raport treningowy — zaktualizuj TYLKO plik treningi.json.\n\n[WKLEJ RAPORT TUTAJ]\n\n════ CO ZAKTUALIZOWAĆ W treningi.json ════\n\n1. nastepny — zmień na kolejny zaplanowany trening (typ, data, ciężary po ewentualnej progresji)\n2. poprzedni — zastąp w całości danymi z tego raportu\n3. archiwum.historia_c2 — dodaj nowy wpis na początku tablicy\n4. archiwum.progresja_c2.[ua|ub|lower].sesje — dodaj datę na początku, usuń ostatnią jeśli >8\n5. archiwum.progresja_c2.[ua|ub|lower].cwiczenia[].dane — dodaj nowy wpis na początku każdego ćwiczenia, usuń ostatni jeśli >8\n\nReguła ikon: ★ = nowy rekord w całym cyklu · ↑ = ciężar wyższy niż poprzednia sesja · → = bez zmiany ciężaru · ↓ = ciężar niższy\n\n════ KONTEKST MINI CUT ════\nEtap: Mini cut #1 · start 31.03.2026 · 8 tygodni\nCel: ~86,9 kg → 84–85 kg · BF% 16–17%\nBiałko: ≥173g/dzień · Kalorie: odpoczynek ~2050–2100 kcal · trening ~2650–2750 kcal\n⚠️ Siła spada >15% przez 2 tyg z rzędu → zaproponuj +150 kcal w dniach odpoczynku\n⚠️ Waga nie spada przez 3 tyg z rzędu → zaproponuj -100 kcal z dni odpoczynku"
+  },
+
+  "szablony_c1": {
+    "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Obciążenie: ___ | Tętno: ___\n\n1. Ławka sztanga [4×5–8 · 70kg]: __ kg×__-__-__-__\n2. Hantle skos (30°) [3×8–10 · 26,5kg]: __ kg×__-__-__\n3. SS1a Wyciskanie barki siedząc [3×8–10 · 20kg]: __ kg×__-__-__\n4. SS1b Unoszenie bokiem siedząc [4×12–15 · 12,5kg]: __ kg×__-__-__-__\n5. HS ISO Lateral High Row [4×8–12 · 90kg]: __ kg×__-__-__-__\n6. Francuskie wyciskanie [3×8–10 · 12,5kg]: __ kg×__-__-__\n7. Uginanie hantlami z rotacją [2×10–12 · 20kg]: __ kg×__-__\n8. Ściąganie drążka podchwytem [3×8–12 · 57kg]: __ kg×__-__-__\n9. SS2a Wiosłowanie na maszynie [2×10–12 · 35kg]: __ kg×__-__\n10. SS2b Face pulls (HS) [3×15 · 21kg]: __ kg×__-__-__\n11. Prostowanie triceps nad głową LifeFitness [3×12–15 · 24,5stos]: __ stos×__-__-__\n\nLędźwie: __/10  |  Uwagi: _____________________________________________",
+    "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Obciążenie: ___ | Tętno: ___\n\n1. Podciąganie nachwytem (asysta) [5×6–8 · -12kg]: -__ kg×__-__-__-__-__\n2. Wyciskanie hantli płaska [4×8–10 · 30kg]: __ kg×__-__-__-__\n3. Arnoldki [3×8–10 · 17,5kg]: __ kg×__-__-__\n4. SS · Rozpiętki Butterfly klatka [3×10–12 · 68kg]: __ kg×__-__-__\n5. SS · Odwrotne rozpiętki Butterfly [3×12–15 · 59kg]: __ kg×__-__-__\n6. Chest Press ISO Lateral Incline [3×10–12 · 45kg]: __ kg×__-__-__\n7. Wyciąg dolny siedząc [3×10–12 · 40kg]: __ kg×__-__-__\n8. Cable lateral raise jednorącz [4×10–12 · 7,5kg]: __ kg×__-__-__-__\n9. Prostowanie triceps warkocz [3×10–12 · 28kg]: __ kg×__-__-__\n10. Uginanie z linką [2×10–12 · 31kg]: __ kg×__-__\nO. Dipy: BW×__-__\nO. Podciąganie australijskie: BW×__-__\n\nLędźwie: __/10  |  Uwagi: _____________________________________________",
+    "lower": "Lower [DATA] | Czas: ___ | Kcal: ___ | Obciążenie: ___ | Tętno: ___\n\nA. Glute bridge: BW×__-__\nB. Bird-dog: BW×__-__\n1. Front squat [3×10 · 60kg]: __ kg×__-__-__\n2. Trap bar deadlift [3–5×8–10 · 85kg]: __ kg×__-__-__\n3. Leg press HS [3×10–12 · 115kg]: __ kg×__-__-__\n4. Zginanie nóg siedzące [4×12–15 · 75kg]: __ kg×__-__-__-__\n5. Zginanie nóg leżące HS [2×10–12 · 67kg]: __ kg×__-__\n6. Hack squat HS V Squat [4–5×10–12 · 100kg]: __ kg×__-__-__-__\n7. Wspięcia stojąc [4×12–15 · 50kg]: __ kg×__-__-__-__\n8. Podciąganie kolan SS [4×12–15]: BW×__-__-__-__\n9. Skręty z linką [3×12–15 · 15kg]: __ kg×__-__-__\n\nLędźwie: __/10  |  Uwagi: _____________________________________________"
+  }
+}
