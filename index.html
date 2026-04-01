@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.16</title>
+<title>Marcin — Plan 2026 · v2.17</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.16</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.17</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -867,10 +867,14 @@
   // ── ZAKŁADKI WEWNĘTRZNE ────────────────────────────────────────
   function switchTab(sectionId, panelId, btn) {
     const section = document.getElementById(sectionId);
-    // Ukryj wszystkie tab-panele bezpośrednio wewnątrz tego kontenera
+    // Znajdź wspólnego rodzica tab-row i tab-paneli
+    // btn.closest('.tab-row') daje nam dokładny .tab-row który zawiera kliknięty przycisk
+    const tabRow = btn.closest('.tab-row');
+    if (tabRow) {
+      tabRow.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    }
+    // Ukryj bezpośrednie tab-panele wewnątrz sectionId
     section.querySelectorAll(':scope > .tab-panel').forEach(el => el.classList.remove('active'));
-    // Usuń active ze wszystkich przycisków w tab-row tego kontenera
-    section.querySelectorAll(':scope > .tab-row .tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(panelId).classList.add('active');
     btn.classList.add('active');
   }
