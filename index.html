@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.15</title>
+<title>Marcin — Plan 2026 · v2.16</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.15</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.16</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -212,8 +212,6 @@
       <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
       <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
       <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
-      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony2',this)">📝 Szablony C2</button>
-      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)">📝 Szablony C1</button>
     </div>
     <div id="t-nastepny" class="tab-panel active">
       <div id="tr-nastepny-card"></div>
@@ -260,16 +258,6 @@
         <div style="padding-top:8px" id="tr-prog-c1"></div>
       </details>
     </div>
-    <div id="t-szablony2" class="tab-panel">
-      <div class="alert alert-info" style="margin-bottom:16px">
-        <span class="alert-icon">💡</span>
-        <span>Skopiuj prompt aktualizacyjny, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
-      </div>
-      <div id="tr-szablony-c2"></div>
-    </div>
-    <div id="t-szablony" class="tab-panel">
-      <div id="tr-szablony-c1"></div>
-    </div>
   </div>
 </section>
 
@@ -292,13 +280,21 @@
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-lower',this)">Lower</button>
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-ebl',this)">🔵 EB+L</button>
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-erb',this)">🟠 ER+B</button>
+        <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-szablony',this)">📝 Szablony</button>
       </div>
       <div id="plan-c2-inner">
-        <div id="pc2-ua"    class="tab-panel active"></div>
-        <div id="pc2-ub"    class="tab-panel"></div>
-        <div id="pc2-lower" class="tab-panel"></div>
-        <div id="pc2-ebl"   class="tab-panel"></div>
-        <div id="pc2-erb"   class="tab-panel"></div>
+        <div id="pc2-ua"       class="tab-panel active"></div>
+        <div id="pc2-ub"       class="tab-panel"></div>
+        <div id="pc2-lower"    class="tab-panel"></div>
+        <div id="pc2-ebl"      class="tab-panel"></div>
+        <div id="pc2-erb"      class="tab-panel"></div>
+        <div id="pc2-szablony" class="tab-panel">
+          <div class="alert alert-info" style="margin-bottom:16px">
+            <span class="alert-icon">💡</span>
+            <span>Skopiuj prompt, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
+          </div>
+          <div id="tr-szablony-c2"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -316,13 +312,17 @@
         <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-lower',this)">Lower</button>
         <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-ebl',this)">🔵 EB+L</button>
         <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-erb',this)">🟠 ER+B</button>
+        <button class="tab-btn" onclick="switchTab('plan-c1-inner','pc1-szablony',this)">📝 Szablony</button>
       </div>
       <div id="plan-c1-inner">
-        <div id="pc1-ua"    class="tab-panel active"></div>
-        <div id="pc1-ub"    class="tab-panel"></div>
-        <div id="pc1-lower" class="tab-panel"></div>
-        <div id="pc1-ebl"   class="tab-panel"></div>
-        <div id="pc1-erb"   class="tab-panel"></div>
+        <div id="pc1-ua"       class="tab-panel active"></div>
+        <div id="pc1-ub"       class="tab-panel"></div>
+        <div id="pc1-lower"    class="tab-panel"></div>
+        <div id="pc1-ebl"      class="tab-panel"></div>
+        <div id="pc1-erb"      class="tab-panel"></div>
+        <div id="pc1-szablony" class="tab-panel">
+          <div id="tr-szablony-c1"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -955,12 +955,9 @@
     renderNastepny(data.nastepny);
     renderPoprzedni(data.poprzedni);
     renderArchiwum(data.archiwum);
-    renderSzablony('tr-szablony-c2', data.szablony_c2, 'C2');
-    renderSzablony('tr-szablony-c1', data.szablony_c1, 'C1');
     document.getElementById('tr-loading').style.display='none';
     document.getElementById('tr-content').style.display='block';
-    // Jawnie ustaw stan zakładek po renderowaniu
-    ['t-nastepny','t-poprzedni','t-archiwum','t-szablony2','t-szablony'].forEach((id, i) => {
+    ['t-nastepny','t-poprzedni','t-archiwum'].forEach((id, i) => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', i === 0);
     });
@@ -1201,7 +1198,7 @@
     document.getElementById('plan-loading').style.display = 'none';
     document.getElementById('plan-c2-content').style.display = 'block';
     // Jawnie ustaw stan zakładek po renderowaniu
-    ['pc2-ua','pc2-ub','pc2-lower','pc2-ebl','pc2-erb'].forEach((id, i) => {
+    ['pc2-ua','pc2-ub','pc2-lower','pc2-ebl','pc2-erb','pc2-szablony'].forEach((id, i) => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', i === 0);
     });
@@ -1769,6 +1766,8 @@
     renderTreningi(treningiData);
     renderPlanC2(planC2Data);
     renderPlanC1(planC1Data);
+    renderSzablony('tr-szablony-c2', treningiData.szablony_c2, 'C2');
+    renderSzablony('tr-szablony-c1', treningiData.szablony_c1, 'C1');
     renderRoadmap(roadmapData);
     renderHarmonogram(harmData);
     renderDieta(dietaData);
