@@ -1,264 +1,275 @@
 {
   "nastepny": {
-    "tytul": "Cykl 2 — Upper A",
-    "data": "Wtorek, 01.04.2026",
+    "tytul": "Upper B — Cykl 2",
+    "data": "Niedziela, 06.04.2026",
     "badge": "NASTĘPNY",
-    "badge_color": "blue",
+    "badge_color": "green",
     "alert": {
-      "ikona": "🚀",
-      "tekst": "<strong>Start Cyklu 2 — Mini cut!</strong> Nowy plan UA/UB/Lower, nowe ćwiczenia. Pierwsze sesje to kalibracja ciężarów — ważna technika, nie ego."
+      "ikona": "🎯",
+      "tekst": "<strong>Cel sesji:</strong> kalibracja ciężarów na nowych ćwiczeniach (Smith Incline, Cable Crossover, Seated Row, Skull Crusher). Priorytet: technika i zakres ruchu, nie ciężar."
     },
     "cwiczenia": [
       {
-        "nr": 1,
-        "nazwa": "⭐ Ławka sztanga",
-        "ciezar": "70 kg",
-        "serie": "4×5–8",
-        "uwagi": "Start C2 — zachowaj 70 kg z C1"
+        "nr": "1",
+        "nazwa": "⭐ Podciąganie nachwytem (asysta)",
+        "ciezar": "-12,5 kg",
+        "serie": "5×6–8",
+        "uwagi": "start C2 — utrzymaj z C1"
       },
       {
-        "nr": 2,
-        "nazwa": "HS ISO Lateral Incline Press",
-        "ciezar": "45 kg",
-        "serie": "4×8–12",
+        "nr": "2",
+        "nazwa": "Smith Machine Incline Barbell Press",
+        "ciezar": "~50 kg",
+        "serie": "3×6–8",
         "uwagi": "kalibracja"
       },
       {
-        "nr": 3,
-        "nazwa": "Half-Kneeling Landmine Press",
-        "ciezar": "~27,5 kg",
-        "serie": "3×8–12",
-        "uwagi": "nowe, kalibracja"
-      },
-      {
-        "nr": 4,
-        "nazwa": "Chest Supported Lateral Raise",
-        "ciezar": "~8 kg",
-        "serie": "4×12–15",
-        "uwagi": "nowe, kalibracja"
-      },
-      {
-        "nr": 5,
-        "nazwa": "⭐ HS ISO Lateral High Row",
-        "ciezar": "90 kg",
-        "serie": "4×8–12",
-        "uwagi": "zachowaj ciężar z C1"
-      },
-      {
-        "nr": 6,
-        "nazwa": "Ściąganie drążka podchwytem",
-        "ciezar": "57 kg",
+        "nr": "SS3a",
+        "nazwa": "Australian Pull-up",
+        "ciezar": "BW",
         "serie": "3×8–12",
         "uwagi": ""
       },
       {
-        "nr": 7,
-        "nazwa": "Smith CGBP",
-        "ciezar": "~50 kg",
-        "serie": "3×6–10",
-        "uwagi": "nowe, kalibracja"
+        "nr": "SS3b",
+        "nazwa": "Parallel Bar Dips",
+        "ciezar": "BW",
+        "serie": "3×8–12",
+        "uwagi": ""
       },
       {
-        "nr": 8,
-        "nazwa": "Kneeling Overhead Cable Triceps",
-        "ciezar": "~25 kg",
-        "serie": "3×10–15",
-        "uwagi": "nowe, kalibracja"
-      },
-      {
-        "nr": 9,
-        "nazwa": "Uginanie hantlami z rotacją",
-        "ciezar": "20 kg",
+        "nr": "SS4a",
+        "nazwa": "Butterfly Chest Fly",
+        "ciezar": "~68 kg",
         "serie": "3×10–12",
         "uwagi": ""
       },
       {
-        "nr": 10,
-        "nazwa": "SS · Face pull półklęcząc",
-        "ciezar": "~21 kg",
+        "nr": "SS4b",
+        "nazwa": "Reverse Pec Deck",
+        "ciezar": "~59 kg",
+        "serie": "3×12–15",
+        "uwagi": ""
+      },
+      {
+        "nr": "7",
+        "nazwa": "Cable Crossover",
+        "ciezar": "~10 kg",
         "serie": "3×10–15",
-        "uwagi": "nowe"
+        "uwagi": "kalibracja"
+      },
+      {
+        "nr": "8",
+        "nazwa": "Arnold Press",
+        "ciezar": "17,5 kg",
+        "serie": "3×8–10",
+        "uwagi": ""
+      },
+      {
+        "nr": "9",
+        "nazwa": "Cable Lateral Raise jednorącz",
+        "ciezar": "7,5 kg",
+        "serie": "4×10–12",
+        "uwagi": ""
+      },
+      {
+        "nr": "10",
+        "nazwa": "Seated Cable Row V-bar",
+        "ciezar": "~40 kg",
+        "serie": "4×8–12",
+        "uwagi": "kalibracja"
+      },
+      {
+        "nr": "11",
+        "nazwa": "EZ-bar Skull Crusher",
+        "ciezar": "~22,5 kg",
+        "serie": "3×8–12",
+        "uwagi": "kalibracja"
+      },
+      {
+        "nr": "12",
+        "nazwa": "Hammer Curl",
+        "ciezar": "15 kg",
+        "serie": "3×10–12",
+        "uwagi": ""
       }
     ],
     "kolejne": [
       {
-        "data": "Czw 03.04",
-        "tytul": "Lower C2",
+        "data": "Wt 08.04",
+        "tytul": "Upper A",
+        "badge_color": "blue",
+        "szczegoly": "Ławka 72,5 kg\nHS Incline 40 kg\nSeated Row 57 kg",
+        "uwaga": "Sprawdzić czy Seated Row 57 kg OK"
+      },
+      {
+        "data": "Czw 10.04",
+        "tytul": "Lower",
         "badge_color": "yellow",
-        "szczegoly": "Front squat 60 kg\nTrap bar 85 kg\n4×4–6",
-        "uwaga": "Start C2 Lower — nowe zakresy"
+        "szczegoly": "Front Squat 65 kg\nTrap Bar 80 kg\nKneeling Curl →+ciężar",
+        "uwaga": "Calf Raise → progresja"
       },
       {
-        "data": "Nd 06.04",
-        "tytul": "Upper B C2",
+        "data": "Nd 13.04",
+        "tytul": "Upper B",
         "badge_color": "green",
-        "szczegoly": "Podciąganie -12 kg\nSmith Incline ~55 kg\n5×6–8",
-        "uwaga": "Kalibracja nowych ćwiczeń"
-      },
-      {
-        "data": "08.04",
-        "tytul": "Checkpoint",
-        "badge_color": "red",
-        "szczegoly": "Waga + trend\nSiła vs tyg 1\nDieta OK?",
-        "uwaga": "Mini cut tydzień 1 — monitoring"
+        "szczegoly": "Podciąganie -12,5 kg\nSmith Incline →ustabilizować",
+        "uwaga": "Tydzień 2 — weryfikacja kalibracji"
       }
     ]
   },
   "poprzedni": {
-    "tytul": "Upper B",
-    "ocena_liczba": 8,
-    "ocena_tekst": "8/10",
-    "data": "Niedziela, 22.03.2026",
-    "czas": "1:44:59",
-    "kcal": 979,
-    "tetno": 118,
-    "obciazenie": 2.8,
-    "alert_sukces": "Hantle płaska 4×10 ✅ → po deloadzie +2,5 kg. Odwrotne rozpiętki 3×12 ✅ → po deloadzie +5 kg. Wyciąg dolny 3×10 ✅ progresja z 3×8. Podciąganie -12 kg 5×8 ustabilizowane.",
+    "tytul": "Lower",
+    "ocena_liczba": 7,
+    "ocena_tekst": "7/10",
+    "data": "Środa, 02.04.2026",
+    "czas": "1:30:04",
+    "kcal": 804,
+    "tetno": 116,
+    "obciazenie": 2.5,
+    "alert_sukces": "Front Squat 65 kg 4×6 ✅ — od razu powyżej startu (60 kg). Trap Bar 80 kg 4×6 solidna kalibracja. Calf Raise 50 kg 4×15 ✅ od razu górna granica. Hanging Knee Raise BW 20-15-15 — dobry start.",
     "cwiczenia": [
       {
         "nr": 1,
-        "nazwa": "⭐ Podciąganie nachwytem (asysta)",
-        "ciezar": "-12 kg",
-        "wynik": "8-8-8-8-8",
-        "badge": "ustabilizowane ✅",
-        "badge_color": "green",
-        "plan": "-12 kg → kolejny krok po deloadzie"
+        "nazwa": "⭐ Front Squat",
+        "ciezar": "65 kg",
+        "wynik": "6-6-6-6",
+        "badge": "★ nowy rekord C2",
+        "badge_color": "accent2",
+        "plan": "65 kg → ustabilizować 4×6"
       },
       {
         "nr": 2,
-        "nazwa": "Wyciskanie hantli płaska",
-        "ciezar": "27,5 kg",
-        "wynik": "10-10-10-10",
-        "badge": "4×10 ✅ → progresja",
-        "badge_color": "green",
-        "plan": "27,5 kg → +2,5 kg = 30 kg po deloadzie"
+        "nazwa": "⭐ Trap Bar Deadlift",
+        "ciezar": "80 kg",
+        "wynik": "6-6-6-6",
+        "badge": "kalibracja ✓",
+        "badge_color": "blue",
+        "plan": "80 kg → cel 85 kg"
       },
       {
         "nr": 3,
-        "nazwa": "Arnoldki (siedząc)",
-        "ciezar": "17,5 kg",
-        "wynik": "10-10-8",
-        "badge": "plateau",
-        "badge_color": "yellow",
-        "plan": "17,5 kg — bez zmian, cel 3×10"
+        "nazwa": "Hack Squat HS",
+        "ciezar": "60 kg",
+        "wynik": "10-10-10-10",
+        "badge": "★ nowy rekord C2",
+        "badge_color": "accent2",
+        "plan": "60 kg → cel 90 kg"
       },
       {
         "nr": 4,
-        "nazwa": "SS · Rozpiętki Butterfly (klatka)",
+        "nazwa": "HS Seated Leg Curl",
         "ciezar": "68 kg",
-        "wynik": "12-12-10",
-        "badge": "w toku",
-        "badge_color": "yellow",
-        "plan": "68 kg — ustabilizować 3×12"
+        "wynik": "12-12-12-12",
+        "badge": "4×12 ✅",
+        "badge_color": "green",
+        "plan": "68 kg → ustabilizować, potem +ciężar"
       },
       {
         "nr": 5,
-        "nazwa": "SS · Odwrotne rozpiętki",
-        "ciezar": "54 kg",
+        "nazwa": "HS Kneeling Leg Curl",
+        "ciezar": "15 kg",
         "wynik": "12-12-12",
-        "badge": "3×12 ✅ → progresja",
-        "badge_color": "green",
-        "plan": "54 kg → +5 kg = 59 kg po deloadzie"
+        "badge": "kalibracja ✓",
+        "badge_color": "blue",
+        "plan": "15 kg → cel 40 kg"
       },
       {
         "nr": 6,
-        "nazwa": "Chest Press (ISO Lateral Incline)",
-        "ciezar": "45 kg",
-        "wynik": "10-7-7",
-        "badge": "kalibracja w toku",
-        "badge_color": "yellow",
-        "plan": "45 kg — ustabilizować"
+        "nazwa": "SS · Smith Calf Raise",
+        "ciezar": "50 kg",
+        "wynik": "15-15-15-15",
+        "badge": "4×15 ✅",
+        "badge_color": "green",
+        "plan": "50 kg → +ciężar"
       },
       {
         "nr": 7,
-        "nazwa": "Wyciąg dolny siedząc",
-        "ciezar": "40 kg",
-        "wynik": "10-10-10",
-        "badge": "3×10 ✅ progresja",
-        "badge_color": "green",
-        "plan": "40 kg → ustabilizować 3×12, potem +2,5 kg"
+        "nazwa": "SS · Hanging Knee Raise",
+        "ciezar": "BW",
+        "wynik": "20-15-15",
+        "badge": "w toku",
+        "badge_color": "yellow",
+        "plan": "BW → cel 4×15"
       },
       {
         "nr": 8,
-        "nazwa": "Cable lateral raise jednorącz",
-        "ciezar": "7,5 kg",
-        "wynik": "8-7-7-7",
-        "badge": "za duży skok",
-        "badge_color": "yellow",
-        "plan": "7,5 kg — cel ustabilizować 4×12"
+        "nazwa": "SS · Cable Crunch",
+        "ciezar": "stos 5",
+        "wynik": "15-15-15",
+        "badge": "★ nowy rekord C2",
+        "badge_color": "accent2",
+        "plan": "stos 5 → kalibracja"
       },
       {
         "nr": 9,
-        "nazwa": "Prostowanie triceps (warkocz)",
-        "ciezar": "28 kg",
-        "wynik": "8-8-8",
-        "badge": "reset ✓",
-        "badge_color": "blue",
-        "plan": "28 kg = nowa baza — ustabilizować 3×10–12"
-      },
-      {
-        "nr": 10,
-        "nazwa": "Uginanie z linką wyciąg dolny",
-        "ciezar": "31 kg",
-        "wynik": "8-8-8",
-        "badge": "reset ✓",
-        "badge_color": "blue",
-        "plan": "31 kg = nowa baza — ustabilizować 2×12"
-      },
-      {
-        "nr": "O",
-        "nazwa": "Dipy na poręczach",
-        "ciezar": "BW",
-        "wynik": "12-12",
-        "badge": "2×12 ✓",
-        "badge_color": "green",
-        "plan": "bez zmian"
-      },
-      {
-        "nr": "O",
-        "nazwa": "Podciąganie australijskie",
-        "ciezar": "BW",
-        "wynik": "10-10",
-        "badge": "w zakresie",
-        "badge_color": "yellow",
-        "plan": "cel 2×12"
+        "nazwa": "SS · Pallof Press",
+        "ciezar": "stos 2",
+        "wynik": "12-12-12",
+        "badge": "★ nowy rekord C2",
+        "badge_color": "accent2",
+        "plan": "stos 2 → kalibracja"
       }
     ],
     "wnioski": [
       {
         "typ": "success",
         "ikona": "✅",
-        "tekst": "<strong>Hantle płaska 4×10</strong> — cel osiągnięty. Po deloadzie: 30 kg."
+        "tekst": "<strong>Front Squat 65 kg 4×6</strong> — od razu powyżej planowanego startu. Dobry znak na początek cyklu."
       },
       {
         "typ": "success",
         "ikona": "✅",
-        "tekst": "<strong>Odwrotne rozpiętki 3×12</strong> — ustabilizowane. Po deloadzie: +5 kg = 59 kg."
-      },
-      {
-        "typ": "success",
-        "ikona": "✅",
-        "tekst": "<strong>Wyciąg dolny 3×10</strong> — progresja z 3×8. Ustabilizować 3×12 przed kolejnym skokiem."
-      },
-      {
-        "typ": "warn",
-        "ikona": "⚠️",
-        "tekst": "<strong>Koniec treningu bez siły</strong> — biceps i triceps totalnie padły. To 10 tydzień cyklu, CNS skumulowane zmęczenie. Deload w idealnym momencie."
+        "tekst": "<strong>Calf Raise 50 kg 4×15</strong> — górna granica już w pierwszej sesji, progresja należna."
       },
       {
         "typ": "info",
         "ikona": "🔄",
-        "tekst": "<strong>Prostowanie triceps reset 28 kg, uginanie linka reset 31 kg</strong> — nowe bazy na tej maszynie."
+        "tekst": "<strong>Trap Bar 80 kg zamiast 85 kg</strong> — świadoma kalibracja nowego zakresu 4×4–6. Dobrze."
+      },
+      {
+        "typ": "info",
+        "ikona": "🔄",
+        "tekst": "<strong>Hack Squat 60 kg zamiast 90 kg</strong> — duży reset, nowy zakres 4×6–10. Ustabilizować przed skokami."
       },
       {
         "typ": "info",
         "ikona": "ℹ️",
-        "tekst": "<strong>Unoszenie linka 7,5 kg: 8-7-7-7</strong> — za duży skok z 5 kg. Zostaje 7,5 kg, cel ustabilizować 4×12 po deloadzie."
+        "tekst": "<strong>Kneeling Leg Curl 15 kg</strong> (start 40 kg) — nowa maszyna, kalibracja od dołu. Normalne."
+      },
+      {
+        "typ": "info",
+        "ikona": "ℹ️",
+        "tekst": "<strong>Cable Crunch / Pallof Press na stosach</strong> — brak kg na tej maszynie, używamy stos 5 / stos 2 jako punkt referencyjny."
+      },
+      {
+        "typ": "warn",
+        "ikona": "⚠️",
+        "tekst": "<strong>Leg Press pominięty</strong> — przy dużej liczbie ćwiczeń nowego planu rozsądna decyzja. Wróci gdy sesja będzie sprawna."
       }
     ]
   },
   "archiwum": {
-    "historia_c2": [],
+    "historia_c2": [
+      {
+        "data": "02.04 Śr",
+        "typ": "Lower",
+        "typ_color": "gray",
+        "ocena": "7/10",
+        "kcal": 804,
+        "czas": "1:30",
+        "wyniki": "Front Squat 65 kg 4×6 ★, Trap Bar 80 kg kalibracja, Hack Squat 60 kg reset, Calf Raise 4×15 ✅, kalibracja nowego planu"
+      },
+      {
+        "data": "31.03 Wt",
+        "typ": "Upper A",
+        "typ_color": "blue",
+        "ocena": "7/10",
+        "kcal": 852,
+        "czas": "1:40",
+        "wyniki": "Ławka 72,5 kg 5-5-5-6 ★, Seated Row 57 kg kalibracja, HS Incline 40 kg kalibracja, Landmine 25 kg 3×12 ✅"
+      }
+    ],
     "historia_c1": [
       {
         "data": "22.03 Nd",
@@ -517,57 +528,129 @@
       "ua": {
         "kolor": "accent",
         "label": "🔵 Upper A — Cykl 2",
-        "sesje": [],
+        "sesje": [
+          "31.03"
+        ],
         "cwiczenia": [
           {
             "nazwa": "⭐ Ławka sztanga",
             "zakres": "4×5–8",
-            "cel": "2/3 w górnym → +2,5kg · cel 75–77,5kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 75–77,5kg",
+            "dane": [
+              {
+                "v": "72,5×5-5-5-6",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "HS ISO Lateral Incline Press",
             "zakres": "4×8–12",
-            "cel": "2/3 w górnym → +5kg · cel 50–55kg"
+            "cel": "2/3 w górnym → +5kg · cel 50–55kg",
+            "dane": [
+              {
+                "v": "40×12-10-10-8",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Half-Kneeling Landmine Press",
             "zakres": "3×8–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 30–32,5kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 30–32,5kg",
+            "dane": [
+              {
+                "v": "25×12-12-12",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Chest Supported Lateral Raise",
             "zakres": "4×12–15",
-            "cel": "2/3 w górnym → +1kg"
+            "cel": "2/3 w górnym → +1kg",
+            "dane": [
+              {
+                "v": "8×12-12-12-10",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "⭐ HS ISO Lateral High Row",
             "zakres": "4×8–12",
-            "cel": "2/3 w górnym → +5kg · cel 100–105kg"
+            "cel": "2/3 w górnym → +5kg · cel 100–105kg",
+            "dane": [
+              {
+                "v": "70×12-12-12-12",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Ściąganie drążka podchwytem",
             "zakres": "3×8–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 67,5–70kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 67,5–70kg",
+            "dane": [
+              {
+                "v": "—",
+                "i": "",
+                "c": "text3"
+              }
+            ]
           },
           {
             "nazwa": "Smith CGBP",
             "zakres": "3×6–10",
-            "cel": "2/3 w górnym → +2,5kg · cel 57,5–60kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 57,5–60kg",
+            "dane": [
+              {
+                "v": "20×10-10-10",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Kneeling Overhead Cable Triceps",
             "zakres": "3×10–15",
-            "cel": "2/3 w górnym → +2,5kg"
+            "cel": "2/3 w górnym → +2,5kg",
+            "dane": [
+              {
+                "v": "21,5×10-9-9",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Uginanie hantlami z rotacją",
             "zakres": "3×10–12",
-            "cel": "2/3 w górnym → +1kg"
+            "cel": "2/3 w górnym → +1kg",
+            "dane": [
+              {
+                "v": "20×9-8-8",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "SS · Face pull półklęcząc",
             "zakres": "3×10–15",
-            "cel": "2/3 w górnym → +2,5kg"
+            "cel": "2/3 w górnym → +2,5kg",
+            "dane": [
+              {
+                "v": "15×15-15-12",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           }
         ]
       },
@@ -641,57 +724,129 @@
       "lower": {
         "kolor": "yellow",
         "label": "🟠 Lower — Cykl 2",
-        "sesje": [],
+        "sesje": [
+          "02.04"
+        ],
         "cwiczenia": [
           {
             "nazwa": "⭐ Front squat",
             "zakres": "4×4–6",
-            "cel": "2/3 w górnym → +2,5kg · cel 65–67,5kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 65–67,5kg",
+            "dane": [
+              {
+                "v": "65×6-6-6-6",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "⭐ Trap bar deadlift",
             "zakres": "4×4–6",
-            "cel": "2/3 w górnym → +2,5kg · cel 92,5–95kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 92,5–95kg",
+            "dane": [
+              {
+                "v": "80×6-6-6-6",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Hack Squat HS",
             "zakres": "4×6–10",
-            "cel": "2/3 w górnym → +5kg · cel 105–110kg"
+            "cel": "2/3 w górnym → +5kg · cel 105–110kg",
+            "dane": [
+              {
+                "v": "60×10-10-10-10",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Leg Press (opcja ⚡)",
             "zakres": "3×10–12",
-            "cel": "2/3 w górnym → +5kg"
+            "cel": "2/3 w górnym → +5kg",
+            "dane": [
+              {
+                "v": "—",
+                "i": "",
+                "c": "text3"
+              }
+            ]
           },
           {
             "nazwa": "Zginanie nóg siedzące",
             "zakres": "4×10–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 80–82,5kg"
+            "cel": "2/3 w górnym → +2,5kg · cel 80–82,5kg",
+            "dane": [
+              {
+                "v": "68×12-12-12-12",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "HS Kneeling Leg Curl",
             "zakres": "3×10–12",
-            "cel": "2/3 w górnym → +5kg"
+            "cel": "2/3 w górnym → +5kg",
+            "dane": [
+              {
+                "v": "15×12-12-12",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Smith Calf Raise",
             "zakres": "4×12–15",
-            "cel": "2/3 w górnym → +5kg"
+            "cel": "2/3 w górnym → +5kg",
+            "dane": [
+              {
+                "v": "50×15-15-15-15",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "SS8a · Hanging Knee Raise",
             "zakres": "3×12–15",
-            "cel": "3×15 → przejdź na Hanging Leg Raise"
+            "cel": "3×15 → przejdź na Hanging Leg Raise",
+            "dane": [
+              {
+                "v": "BW×20-15-15",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "SS8b · Cable Crunch",
             "zakres": "3×12–15",
-            "cel": "2/3 w górnym → +2,5kg"
+            "cel": "2/3 w górnym → +2,5kg",
+            "dane": [
+              {
+                "v": "stos5×15-15-15",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           },
           {
             "nazwa": "Pallof Press",
             "zakres": "3×10–12/str",
-            "cel": "2/3 w górnym → +2,5kg"
+            "cel": "2/3 w górnym → +2,5kg",
+            "dane": [
+              {
+                "v": "stos2×12-12-12",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
           }
         ]
       }
