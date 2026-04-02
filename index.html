@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.18</title>
+<title>Marcin — Plan 2026 · v2.19</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -196,7 +196,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.18</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.19</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1400,6 +1400,15 @@
           return `<tr><td>${p.parametr}</td><td ${tc}>${p.trening}</td><td ${oc}>${p.odpoczynek}</td></tr>`;
         }).join('');
         tableHtml = `<table style="margin-top:12px"><tr><th>Parametr</th><th>Dni treningowe</th><th>Dni odpoczynku</th></tr>${rows}</table>`;
+        // Tabela porównawcza mini cut vs rekompozycja
+        if (faza.porownanie) {
+          const porRows = faza.porownanie.map(p => {
+            const mc = p.minicut_color ? `style="color:var(--${p.minicut_color})"` : '';
+            return `<tr><td>${p.parametr}</td><td>${p.rekompozycja}</td><td ${mc}>${p.minicut}</td></tr>`;
+          }).join('');
+          tableHtml += `<div class="card-title" style="margin-top:16px">📋 Strategia — mini cut vs rekompozycja</div>
+            <table><tr><th>Parametr</th><th>Rekompozycja</th><th style="color:var(--red)">Mini cut</th></tr>${porRows}</table>`;
+        }
       } else if (typ === 'cut2') {
         const rows = faza.parametry.map(p => {
           const c = p.kolor ? `style="color:var(--${p.kolor})"` : '';
@@ -1549,26 +1558,70 @@
   function renderDietaMinicut(m) {
     const el = document.getElementById('diet-minicut-stats');
     if (!el) return;
-    const statsHtml = m.stats.map(s =>
-      `<div class="stat-box"><div class="stat-num" style="font-size:20px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
-    ).join('');
-    const alertsHtml = m.alerty.map(a => alertBox(a.typ, a.ikona, a.tekst)).join('');
-    const porRows = m.porownanie.map(p => {
-      const mc = p.minicut_color ? `style="color:var(--${p.minicut_color})"` : '';
-      return `<tr><td>${p.parametr}</td><td>${p.rekompozycja}</td><td ${mc}>${p.minicut}</td></tr>`;
+
+    // TDEE blok
+    const tdee = m.tdee || {};
+    const tdeeHtml = tdee.tdee ? `
+      <div class="card">
+        <div class="card-title">⚡ TDEE — zapotrzebowanie kaloryczne</div>
+        <div class="stat-grid" style="margin-top:4px">
+          ${m.stats.map(s => `<div class="stat-box"><div class="stat-num" style="font-size:20px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`).join('')}
+        </div>
+        <table style="margin-top:12px;font-size:12px">
+          <tr><td style="color:var(--text3);width:140px">BMR</td><td>${tdee.bmr} kcal</td></tr>
+          <tr><td style="color:var(--text3)">Współczynnik</td><td>${tdee.wspolczynnik}</td></tr>
+          <tr><td style="color:var(--text3)">Dane</td><td>${tdee.dane}</td></tr>
+          <tr><td style="color:var(--text3)">Weryfikacja</td><td style="color:var(--text3)">${tdee.weryfikacja}</td></tr>
+        </table>
+      </div>` : '';
+
+    // Tabela podsumowania tygodniowego Pon→Nd
+    const BC = { odpoczynek: 'badge-gray', trening: 'badge-blue' };
+    const srednia = m.srednia || {};
+    const tygRows = (m.podsumowanie_dni || []).map(dd => {
+      const kcalColor = dd.typ === 'trening' ? 'var(--green)' : 'var(--red)';
+      const bialkoNum = parseInt(dd.bialko);
+      const bialkoColor = bialkoNum >= 173 ? 'var(--green)' : 'var(--yellow)';
+      return `<tr>
+        <td>${dd.dzien}</td>
+        <td><span class="badge ${BC[dd.typ]}">${dd.typ}</span></td>
+        <td style="color:${kcalColor};font-weight:600">${dd.kcal}</td>
+        <td style="color:${bialkoColor}">${dd.bialko}</td>
+      </tr>`;
     }).join('');
-    el.innerHTML = `
+
+    const tygHtml = `
       <div class="card">
-        <div class="card-title">🔻 ${m.label} &nbsp;<span class="badge badge-red">start ${m.start} · 8 tygodni</span></div>
-        <div class="stat-grid" style="margin-top:4px">${statsHtml}</div>
-      </div>
-      <div class="card">
-        <div class="card-title">📋 Strategia — mini cut vs rekompozycja</div>
-        <table><tr><th>Parametr</th><th>Rekompozycja</th><th style="color:var(--red)">Mini cut</th></tr>${porRows}</table>
-      </div>
-      <div class="card"><div class="card-title">🎯 Cel i szanse powodzenia</div>${alertsHtml}</div>`;
-    renderPosilkiDni('diet-minicut-odpoczynek', m.posilki_odpoczynek);
-    renderPosilkiDni('diet-minicut-treningowe', m.posilki_treningowe);
+        <div class="card-title">📅 Menu tygodniowe — podsumowanie</div>
+        <table>
+          <tr><th>Dzień</th><th>Typ</th><th>Kcal</th><th>Białko</th></tr>
+          ${tygRows}
+          <tr style="font-weight:600;border-top:2px solid var(--border)">
+            <td>Średnia</td><td></td>
+            <td style="color:var(--accent2)">${srednia.kcal}</td>
+            <td style="color:var(--green)">${srednia.bialko}</td>
+          </tr>
+        </table>
+      </div>`;
+
+    el.innerHTML = tdeeHtml + tygHtml;
+
+    // Posiłki chronologicznie Pon→Nd
+    // Łączymy odpoczynek i treningowe w jedną listę posortowaną
+    const ORDER = ['Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
+    const wszystkie = [...(m.posilki_odpoczynek||[]), ...(m.posilki_treningowe||[])];
+    wszystkie.sort((a, b) => {
+      const dayA = ORDER.findIndex(o => a.dzien.includes(o));
+      const dayB = ORDER.findIndex(o => b.dzien.includes(o));
+      return dayA - dayB;
+    });
+    renderPosilkiDni('diet-minicut-odpoczynek', wszystkie);
+    // ukryj drugi placeholder
+    const el2 = document.getElementById('diet-minicut-treningowe');
+    if (el2) el2.style.display = 'none';
+    // ukryj nagłówki h3
+    const h3s = document.querySelectorAll('#d-minicut h3');
+    h3s.forEach(h => h.style.display = 'none');
   }
 
   function renderDietaProdukty(produkty) {
