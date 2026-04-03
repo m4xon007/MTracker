@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.27</title>
+<title>Marcin — Plan 2026 · v2.28</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -225,7 +225,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.27</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.28</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1619,22 +1619,31 @@
   function renderDietaReko(r) {
     const el = document.getElementById('diet-reko-stats');
     if (!el) return;
-    const statsHtml = r.stats.map(s =>
-      `<div class="stat-box"><div class="stat-num" style="color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
-    ).join('');
     const BC = { gray:'badge-gray', blue:'badge-blue' };
-    const rows = r.dni.map(d =>
+
+    // Oblicz średnie
+    const dni = r.dni || [];
+    const avgKcal = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.kcal.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
+    const avgBialko = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.bialko.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
+
+    const rows = dni.map(d =>
       `<tr><td>${d.dzien}</td><td>${d.kcal}</td><td>${d.bialko}</td><td><span class="badge ${BC[d.typ_color]||'badge-gray'}">${d.typ}</span></td></tr>`
     ).join('');
+
     el.innerHTML = `
       <div class="card">
         <div class="card-title">📊 Makroskładniki — ${r.label}</div>
-        <div class="stat-grid">${statsHtml}</div>
+        <table style="font-size:13px">
+          <tr><td style="color:var(--text3);width:150px">Kcal średnia</td><td style="font-weight:600;color:var(--accent2)">${r.srednia?.kcal || avgKcal} kcal/dzień</td></tr>
+          <tr><td style="color:var(--text3)">Białko średnie</td><td style="font-weight:600;color:var(--green)">${r.srednia?.bialko || avgBialko+'g'}/dzień</td></tr>
+          <tr><td style="color:var(--text3)">System</td><td style="font-size:12px;color:var(--text3)">cyklowanie kalorii — więcej w dni treningowe</td></tr>
+        </table>
         <table style="margin-top:12px">
           <tr><th>Dzień</th><th>Kcal</th><th>Białko</th><th>Typ</th></tr>
           ${rows}
           <tr style="font-weight:600;border-top:1px solid var(--border)">
-            <td>Średnia</td><td>${r.srednia.kcal}</td><td>${r.srednia.bialko}</td>
+            <td>Średnia</td><td style="color:var(--accent2)">${r.srednia?.kcal || avgKcal}</td>
+            <td style="color:var(--green)">${r.srednia?.bialko || avgBialko+'g'}</td>
             <td style="font-size:12px;color:var(--text3)">✓ z etykiet</td>
           </tr>
         </table>
@@ -1657,62 +1666,56 @@
     if (!el) return;
 
     const BC = { gray:'badge-gray', blue:'badge-blue' };
-
-    // Stat-boxy
-    const statsHtml = m.stats.map(s =>
-      `<div class="stat-box"><div class="stat-num" style="color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
-    ).join('');
-
-    // TDEE metodologia
     const tdee = m.tdee || {};
-    const tdeeDetailHtml = tdee.tdee ? `
-      <table style="margin-top:12px;font-size:12px">
-        <tr><td style="color:var(--text3);width:140px">BMR</td><td>${tdee.bmr} kcal</td></tr>
-        <tr><td style="color:var(--text3)">Aktywność</td><td>${tdee.wspolczynnik}</td></tr>
-        <tr><td style="color:var(--text3)">Metoda</td><td>${tdee.dane}</td></tr>
-        <tr><td style="color:var(--text3)">Weryfikacja</td><td style="color:var(--green)">${tdee.weryfikacja}</td></tr>
-      </table>` : '';
 
     // Tabela dni Pon→Nd z kolumną deficytu
-    const TDEE_DZIEN = 2648;
+    const TDEE_DZIEN = parseInt((tdee.tdee||'2648').replace(/[^0-9]/g,'')) || 2648;
     const dni = m.dni || m.podsumowanie_dni || [];
     const rows = dni.map(d => {
       const kcalNum = parseInt(d.kcal.replace(/[^0-9]/g,''));
       const deficyt = TDEE_DZIEN - kcalNum;
       const defColor = deficyt > 0 ? 'var(--green)' : 'var(--red)';
-      const kcalColor = parseInt(d.kcal) > 2400 ? 'var(--green)' : 'var(--red)';
+      const kcalColor = kcalNum > 2400 ? 'var(--accent2)' : 'var(--text2)';
       const bialkoNum = parseInt(d.bialko.replace(/[^0-9]/g,''));
       const bialkoColor = bialkoNum >= 173 ? 'var(--green)' : 'var(--yellow)';
       return `<tr>
         <td>${d.dzien}</td>
-        <td>${d.kcal}</td>
-        <td style="color:${defColor}">${deficyt > 0 ? '-' : '+'}${Math.abs(deficyt)}</td>
+        <td style="color:${kcalColor}">${d.kcal}</td>
+        <td style="color:${defColor};white-space:nowrap">${deficyt > 0 ? '-' : '+'}${Math.abs(deficyt)}</td>
         <td style="color:${bialkoColor}">${d.bialko}</td>
         <td><span class="badge ${BC[d.typ_color]||'badge-gray'}">${d.typ}</span></td>
       </tr>`;
     }).join('');
-    // Średnie z menu
-    const avgKcal = Math.round(dni.reduce((s,d) => s + parseInt(d.kcal.replace(/[^0-9]/g,'')), 0) / dni.length);
-    const avgBialko = Math.round(dni.reduce((s,d) => s + parseInt(d.bialko.replace(/[^0-9]/g,'')), 0) / dni.length);
+
+    // Oblicz średnie z menu
+    const avgKcal = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.kcal.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
+    const avgBialko = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.bialko.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
     const avgDeficyt = TDEE_DZIEN - avgKcal;
 
     el.innerHTML = `
       <div class="card">
         <div class="card-title">📊 Makroskładniki — ${m.label}</div>
-        <div class="stat-grid">${statsHtml}</div>
-        ${tdeeDetailHtml}
+        <table style="font-size:13px">
+          <tr><td style="color:var(--text3);width:150px">TDEE</td><td style="font-weight:600;color:var(--text2)">${tdee.tdee||'~2648'} kcal/dzień</td></tr>
+          <tr><td style="color:var(--text3)">Cel (dieta)</td><td style="font-weight:600;color:var(--accent2)">${avgKcal} kcal/dzień</td></tr>
+          <tr><td style="color:var(--text3)">Deficyt średni</td><td style="font-weight:600;color:var(--red)">-${avgDeficyt} kcal/dzień</td></tr>
+          <tr><td style="color:var(--text3)">Białko średnie</td><td style="font-weight:600;color:var(--green)">${avgBialko}g/dzień</td></tr>
+          <tr style="border-top:1px solid var(--border)"><td style="color:var(--text3);font-size:11px">BMR</td><td style="font-size:11px;color:var(--text3)">${tdee.bmr||'1868'} kcal · ${tdee.dane||'Mifflin-St Jeor'}</td></tr>
+          <tr><td style="color:var(--text3);font-size:11px">Aktywność</td><td style="font-size:11px;color:var(--text3)">${tdee.wspolczynnik||'smartwatch + kroki'}</td></tr>
+          <tr><td style="color:var(--text3);font-size:11px">Weryfikacja</td><td style="font-size:11px;color:var(--green)">${tdee.weryfikacja||'zgodność ✓'}</td></tr>
+        </table>
       </div>
       <div class="card">
         <div class="card-title">📅 Menu tygodniowe — podsumowanie</div>
-        <table style="margin-top:4px">
-          <tr><th>Dzień</th><th>Kcal</th><th style="color:var(--red)">Deficyt</th><th style="color:var(--green)">Białko</th><th>Typ</th></tr>
+        <table>
+          <tr><th>Dzień</th><th>Kcal</th><th>Deficyt</th><th>Białko</th><th>Typ</th></tr>
           ${rows}
-          <tr style="font-weight:600;border-top:1px solid var(--border)">
+          <tr style="font-weight:600;border-top:2px solid var(--border)">
             <td>Średnia</td>
             <td style="color:var(--accent2)">${avgKcal}</td>
             <td style="color:var(--green)">-${avgDeficyt}</td>
             <td style="color:var(--green)">${avgBialko}g</td>
-            <td style="font-size:11px;color:var(--text3)">z menu</td>
+            <td style="font-size:11px;color:var(--text3)">✓ z menu</td>
           </tr>
         </table>
       </div>`;
