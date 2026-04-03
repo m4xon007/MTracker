@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.25</title>
+<title>Marcin — Plan 2026 · v2.26</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -74,23 +74,23 @@
   /* ── WORKOUT TABLE — Plan C2/C1 ── */
   .workout-table table{font-size:12px;}
   .workout-table td:first-child,.workout-table th:first-child{width:24px;min-width:24px;max-width:28px;text-align:center;padding:5px 2px;white-space:nowrap;font-size:10px;}
-  /* Ćwiczenie — szeroka, zawija */
-  .workout-table td:nth-child(2),.workout-table th:nth-child(2){white-space:normal;min-width:140px;max-width:200px;word-break:break-word;font-size:11px;}
+  /* Ćwiczenie — wypełnia pozostałą przestrzeń */
+  .workout-table td:nth-child(2),.workout-table th:nth-child(2){white-space:normal;width:100%;word-break:break-word;font-size:11px;}
   /* Partia — zawija */
   .workout-table td:nth-child(3),.workout-table th:nth-child(3){white-space:normal;min-width:65px;max-width:90px;word-break:break-word;font-size:10px;color:var(--text3);}
-  /* Serie/Powt/Przerwa/Start/Cel — nie zawijaj */
+  /* Serie/Powt — minimalna szerokość */
   .workout-table td:nth-child(4),.workout-table th:nth-child(4),
   .workout-table td:nth-child(5),.workout-table th:nth-child(5),
   .workout-table td:nth-child(6),.workout-table th:nth-child(6),
   .workout-table td:nth-child(7),.workout-table th:nth-child(7),
-  .workout-table td:nth-child(8),.workout-table th:nth-child(8){white-space:nowrap;}
+  .workout-table td:nth-child(8),.workout-table th:nth-child(8){white-space:nowrap;width:1%;}
 
-  /* ── POPRZEDNI — tabela ćwiczeń ── */
+  /* ── NASTĘPNY / POPRZEDNI — tabela ćwiczeń ── */
   .next-table td:first-child,.next-table th:first-child{width:22px;min-width:22px;padding:5px 2px;white-space:nowrap;font-size:10px;text-align:center;}
-  .next-table td:nth-child(2),.next-table th:nth-child(2){white-space:normal;min-width:130px;max-width:180px;word-break:break-word;font-size:11px;}
+  .next-table td:nth-child(2),.next-table th:nth-child(2){white-space:normal;width:100%;word-break:break-word;font-size:11px;}
   .next-table td:nth-child(3),.next-table th:nth-child(3),
   .next-table td:nth-child(4),.next-table th:nth-child(4),
-  .next-table td:nth-child(5),.next-table th:nth-child(5){white-space:nowrap;}
+  .next-table td:nth-child(5),.next-table th:nth-child(5){white-space:nowrap;width:1%;}
 
   /* ── ARCHIWUM historia — kluczowe wyniki ── */
   .hist-wyniki{font-size:11px;color:var(--text3);white-space:normal;min-width:120px;max-width:200px;word-break:break-word;line-height:1.5;}
@@ -225,7 +225,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.25</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.26</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
