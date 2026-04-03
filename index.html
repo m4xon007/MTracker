@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.28</title>
+<title>Marcin — Plan 2026 · v2.29</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -225,7 +225,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.28</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.29</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1034,10 +1034,12 @@
       : '';
     const rows = n.cwiczenia.map(c => {
       const detail = c.uwagi ? `💬 ${c.uwagi}` : '—';
-      const hasDetail = !!c.uwagi;
-      const arrow = hasDetail ? ' <span style="color:var(--text3);font-size:10px">▾</span>' : '';
+      const arrow = c.uwagi ? ' <span style="color:var(--text3);font-size:10px">▾</span>' : '';
       return expandRow(
-        `<td>${c.nr}</td><td>${c.nazwa}${arrow}</td><td style="white-space:nowrap">${c.ciezar}</td><td style="white-space:nowrap">${c.serie}</td>`,
+        `<td style="font-size:10px;white-space:nowrap;text-align:center">${c.nr}</td>
+         <td>${c.nazwa}${arrow}</td>
+         <td style="text-align:center;white-space:nowrap"><span class="kg-badge">${c.ciezar}</span></td>
+         <td style="text-align:center;white-space:nowrap">${c.serie}</td>`,
         detail
       );
     }).join('');
@@ -1053,7 +1055,7 @@
         ${alertHtml}
         <div class="next-table" style="margin-top:12px">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Serie</th></tr>
+            <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Ciężar</th><th style="text-align:center">Serie</th></tr>
             ${rows}
           </table>
         </div>
@@ -1080,10 +1082,10 @@
       const emotka = {accent2:'★', green:'✅', yellow:'⚠️', blue:'→'}[c.badge_color] || '→';
       const detail = `<span class="badge" style="background:${bg};color:${fg}">${c.badge}</span>${c.plan ? '&nbsp; → &nbsp;' + c.plan : ''}`;
       return expandRow(
-        `<td style="white-space:nowrap;font-size:11px">${c.nr}</td>
+        `<td style="white-space:nowrap;font-size:11px;text-align:center">${c.nr}</td>
          <td style="white-space:normal;min-width:110px;word-break:break-word">${c.nazwa}</td>
-         <td style="white-space:nowrap"><span class="kg-badge">${c.ciezar}</span></td>
-         <td style="white-space:nowrap">${c.wynik}</td>
+         <td style="white-space:nowrap;text-align:center"><span class="kg-badge">${c.ciezar}</span></td>
+         <td style="white-space:nowrap;text-align:center;font-weight:600">${c.wynik}</td>
          <td style="text-align:center;font-size:14px">${emotka}</td>`,
         detail
       );
@@ -1103,7 +1105,7 @@
         ${p.alert_sukces ? alertBox('success','✅',p.alert_sukces) : ''}
         <div class="next-table" style="margin-top:12px">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Wynik</th><th>✓</th></tr>
+            <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Ciężar</th><th style="text-align:center">Wynik</th><th>✓</th></tr>
             ${rows}
           </table>
         </div>
@@ -1159,11 +1161,11 @@
       : '<span style="color:var(--text3)">—</span>';
     const uid = 'hr-' + Math.random().toString(36).slice(2,7);
     return `<tr style="cursor:pointer" data-expand="${uid}">
-      <td style="white-space:nowrap" ${hl}>${r.data}</td>
-      <td><span class="badge" style="background:${bg};color:${fg}">${r.typ}</span></td>
-      <td style="white-space:nowrap">${ocena}</td>
-      <td style="white-space:nowrap">${r.kcal||'—'}</td>
-      <td style="white-space:nowrap;color:var(--text3)">${r.czas||'—'} ▾</td>
+      <td style="white-space:nowrap;width:1%" ${hl}>${r.data}</td>
+      <td style="width:1%"><span class="badge" style="background:${bg};color:${fg}">${r.typ}</span></td>
+      <td style="white-space:nowrap;width:1%;text-align:center">${ocena}</td>
+      <td style="white-space:nowrap;width:1%;text-align:center">${r.kcal||'—'}</td>
+      <td style="white-space:nowrap;width:1%;text-align:center;color:var(--text3)">${r.czas||'—'} ▾</td>
     </tr>
     <tr id="${uid}" style="display:none;background:rgba(34,211,238,0.04)">
       <td colspan="5" style="padding:8px 10px;font-size:11px;color:var(--text3);white-space:normal;line-height:1.6">${r.wyniki}</td>
@@ -1173,54 +1175,58 @@
   function renderProgresja(p, withFilters, key) {
     const colorMap = {accent:'var(--accent)',green:'var(--green)',yellow:'var(--yellow)'};
     const titleColor = colorMap[p.kolor] || 'var(--text2)';
-    const hasSesje = p.sesje && p.sesje.length > 0;
     const hasDane = p.cwiczenia[0] && p.cwiczenia[0].dane;
 
     if (!hasDane) {
-      // C2 — empty skeleton, no Cel column
-      const rows = p.cwiczenia.map(c =>
-        `<tr><td class="pg-hd">${c.nazwa}</td><td class="pg-sub">${c.zakres}</td></tr>`
-      ).join('');
-      return `<div class="card" style="margin-bottom:16px">
+      // C2 — lista ćwiczeń, zakres, po kliknięciu placeholder
+      const rows = p.cwiczenia.map(c => expandRow(
+        `<td style="white-space:normal;word-break:break-word;font-weight:600;font-size:12px">${c.nazwa}</td>
+         <td style="white-space:nowrap;font-size:11px;color:var(--text3);width:1%">${c.zakres}</td>`,
+        `<span style="color:var(--text3);font-size:11px">Brak danych — sesje zostaną tu wyświetlone po wpisaniu raportów.</span>`
+      )).join('');
+      return `<div class="card" style="margin-bottom:12px">
         <div class="card-title" style="color:${titleColor};margin-bottom:8px">${p.label}</div>
-        <div style="overflow-x:auto"><table style="font-size:12px">
-          <tr><th style="min-width:160px">Ćwiczenie</th><th>Zakres</th></tr>
+        <table style="font-size:12px">
+          <tr><th>Ćwiczenie</th><th>Zakres</th></tr>
           ${rows}
-        </table></div>
+        </table>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć historię sesji</div>
       </div>`;
     }
 
-    // C1 — full progresja table with sesje columns
-    const tblId = key ? 'tbl-'+key : 'tbl-'+p.label.replace(/\W/g,'');
-    const filterBtns = withFilters
-      ? `<div style="display:flex;gap:4px"><button class="filter-btn active" data-n="5" onclick="filterCols('${tblId}',5)">Last 5</button><button class="filter-btn" data-n="8" onclick="filterCols('${tblId}',8)">Last 8</button><button class="filter-btn" data-n="all" onclick="filterCols('${tblId}','all')">All</button></div>`
-      : '';
+    // C1/C2 z danymi — lista ćwiczeń, po kliknięciu wiersz z wartościami sesji
+    const dataColorMap = {accent2:'var(--accent2)',green:'var(--green)',red:'var(--red)',text3:'var(--text3)','':`var(--text)`};
+    const sesjeLabel = p.sesje ? p.sesje.join(' · ') : '';
 
-    const sesjeHeaders = p.sesje.map(s =>
-      `<th style="font-size:10px;min-width:72px">${s}</th>`
-    ).join('');
-
-    const dataColorMap = {accent2:'var(--accent2)',green:'var(--green)',red:'var(--red)',text3:'var(--text3)','':'var(--text)'};
     const rows = p.cwiczenia.map(c => {
-      const cells = c.dane.map(d => {
+      const cells = (c.dane||[]).map(d => {
         const col = dataColorMap[d.c] || 'var(--text)';
-        const icon = d.i ? ` <span style="font-size:10px">${d.i}</span>` : '';
-        return `<td style="font-size:11px;color:${col}">${d.v}${icon}</td>`;
-      }).join('');
-      return `<tr><td class="pg-hd">${c.nazwa}</td><td class="pg-sub">${c.zakres}</td>${cells}</tr>`;
+        const icon = d.i ? ` ${d.i}` : '';
+        return `<span style="color:${col};white-space:nowrap">${d.v}${icon}</span>`;
+      }).join(' &nbsp;|&nbsp; ');
+      const detail = p.sesje
+        ? `<div style="font-size:10px;color:var(--text3);margin-bottom:4px">${sesjeLabel}</div><div style="line-height:2">${cells}</div>`
+        : cells;
+      return expandRow(
+        `<td style="white-space:normal;word-break:break-word;font-weight:600;font-size:12px">${c.nazwa}</td>
+         <td style="white-space:nowrap;font-size:11px;color:var(--text3);width:1%">${c.zakres}</td>`,
+        detail
+      );
     }).join('');
 
-    return `<div class="card" style="margin-bottom:16px">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+    const filterBtns = withFilters && key
+      ? `<div style="display:flex;gap:4px"><button class="filter-btn active" onclick="">Last 5</button><button class="filter-btn" onclick="">All</button></div>`
+      : '';
+
+    return `<div class="card" style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px">
         <div class="card-title" style="color:${titleColor};margin-bottom:0">${p.label}</div>
-        ${filterBtns}
       </div>
-      <div style="overflow-x:auto;margin-top:8px">
-        <table id="${tblId}" style="min-width:600px;font-size:12px">
-          <tr><th style="min-width:160px">Ćwiczenie</th><th>Zakres</th>${sesjeHeaders}</tr>
-          ${rows}
-        </table>
-      </div>
+      <table style="font-size:12px">
+        <tr><th>Ćwiczenie</th><th>Zakres</th></tr>
+        ${rows}
+      </table>
+      <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć wartości z sesji</div>
     </div>`;
   }
 
