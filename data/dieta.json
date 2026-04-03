@@ -2,118 +2,407 @@
   "meta": {
     "aktywna_faza": "minicut"
   },
-
   "rekompozycja": {
     "label": "Rekompozycja — sty–mar 2026",
-    "opis": "Cyklowanie kalorii — więcej w dni treningowe",
-    "cel_wagowy": "85–86 kg przy poprawie składu ciała (BF → 16–17%)",
     "stats": [
-      { "wartosc": "~2524",    "label": "kcal / dzień",     "kolor": "accent2" },
-      { "wartosc": "~182g",    "label": "białko / dzień",   "kolor": "green" },
-      { "wartosc": "2,12g/kg", "label": "białko / kg BW",   "kolor": "yellow" }
+      {
+        "wartosc": "~2524",
+        "label": "kcal / dzień",
+        "kolor": "accent2"
+      },
+      {
+        "wartosc": "~182g",
+        "label": "białko / dzień",
+        "kolor": "green"
+      },
+      {
+        "wartosc": "2,12g/kg",
+        "label": "białko / kg BW",
+        "kolor": "yellow"
+      }
     ],
     "dni": [
-      { "dzien": "Poniedziałek", "kcal": "~2444",        "bialko": "177g",  "typ": "odpoczynek",       "typ_color": "gray" },
-      { "dzien": "Wtorek",       "kcal": "~2743",        "bialko": "190g",  "typ": "Upper A/B",        "typ_color": "blue" },
-      { "dzien": "Środa",        "kcal": "~2352",        "bialko": "179g",  "typ": "odpoczynek",       "typ_color": "gray" },
-      { "dzien": "Czwartek",     "kcal": "~2771",        "bialko": "183g",  "typ": "Lower",            "typ_color": "blue" },
-      { "dzien": "Piątek",       "kcal": "~2406",        "bialko": "170g",  "typ": "odpoczynek",       "typ_color": "gray" },
-      { "dzien": "Sobota",       "kcal": "~2312 + drink","bialko": "172g",  "typ": "odpoczynek",       "typ_color": "gray" },
-      { "dzien": "Niedziela",    "kcal": "~2639",        "bialko": "201g",  "typ": "Upper A/B + cheat","typ_color": "blue" }
+      {
+        "dzien": "Poniedziałek",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2444",
+        "bialko": "177g"
+      },
+      {
+        "dzien": "Wtorek",
+        "typ": "Upper A/B",
+        "typ_color": "blue",
+        "kcal": "~2743",
+        "bialko": "190g"
+      },
+      {
+        "dzien": "Środa",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2352",
+        "bialko": "179g"
+      },
+      {
+        "dzien": "Czwartek",
+        "typ": "Lower",
+        "typ_color": "blue",
+        "kcal": "~2771",
+        "bialko": "183g"
+      },
+      {
+        "dzien": "Piątek",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2406",
+        "bialko": "170g"
+      },
+      {
+        "dzien": "Sobota",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2312 + drink",
+        "bialko": "172g"
+      },
+      {
+        "dzien": "Niedziela",
+        "typ": "Upper A/B + cheat",
+        "typ_color": "blue",
+        "kcal": "~2639",
+        "bialko": "201g"
+      }
     ],
-    "srednia": { "kcal": "~2524", "bialko": "182g" },
+    "srednia": {
+      "kcal": "~2524",
+      "bialko": "182g"
+    },
     "posilki_odpoczynek": [
       {
-        "dzien": "📅 Poniedziałek", "border": "var(--border)",
+        "dzien": "📅 Poniedziałek",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "II śniadanie","sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g", "kcal": 283, "bialko": "18g" },
-          { "nazwa": "Obiad",       "sklad": "Polędwiczki kurczaka 200g + ryż biały 70g (suchy) + warzywa 200g + oliwa 1 łyżka", "kcal": 622, "bialko": "52g" },
-          { "nazwa": "Przekąska",   "sklad": "Zott Protein Drink 250ml", "kcal": 165, "bialko": "21g" },
-          { "nazwa": "Kolacja",     "sklad": "Calvo tuńczyk sos pomidorowy 160g + 2 jajka + grahamka Putka 70g", "kcal": 646, "bialko": "49g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g",
+            "kcal": 283,
+            "bialko": "18g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Polędwiczki kurczaka 200g + ryż biały 70g (suchy) + warzywa 200g + oliwa 1 łyżka",
+            "kcal": 622,
+            "bialko": "52g"
+          },
+          {
+            "nazwa": "Przekąska",
+            "sklad": "Zott Protein Drink 250ml",
+            "kcal": 165,
+            "bialko": "21g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Calvo tuńczyk sos pomidorowy 160g + 2 jajka + grahamka Putka 70g",
+            "kcal": 646,
+            "bialko": "49g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2444, "suma_bialko": "177g", "suma_label": "SUMA"
+        "suma_kcal": 2444,
+        "suma_bialko": "177g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "📅 Środa", "border": "var(--border)",
+        "dzien": "📅 Środa",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "II śniadanie","sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g", "kcal": 283, "bialko": "18g" },
-          { "nazwa": "Obiad",       "sklad": "Dorsz atlantycki Lidl 200g + warzywa 200g + oliwa 1 łyżka (bez ryżu)", "kcal": 316, "bialko": "41g" },
-          { "nazwa": "Przekąska",   "sklad": "Zott Protein Drink 250ml", "kcal": 165, "bialko": "21g" },
-          { "nazwa": "Kolacja",     "sklad": "Szakszuka: 3 jajka + pomidory 200g + cebula + papryka + oliwa + mozzarella light Pilos 125g + grahamka Putka 70g", "kcal": 860, "bialko": "62g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g",
+            "kcal": 283,
+            "bialko": "18g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Dorsz atlantycki Lidl 200g + warzywa 200g + oliwa 1 łyżka (bez ryżu)",
+            "kcal": 316,
+            "bialko": "41g"
+          },
+          {
+            "nazwa": "Przekąska",
+            "sklad": "Zott Protein Drink 250ml",
+            "kcal": 165,
+            "bialko": "21g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Szakszuka: 3 jajka + pomidory 200g + cebula + papryka + oliwa + mozzarella light Pilos 125g + grahamka Putka 70g",
+            "kcal": 860,
+            "bialko": "62g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2352, "suma_bialko": "179g", "suma_label": "SUMA"
+        "suma_kcal": 2352,
+        "suma_bialko": "179g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "📅 Piątek", "border": "var(--border)",
+        "dzien": "📅 Piątek",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 35g + pasta orzechowa 20g + rodzynki 15g", "kcal": 706, "bialko": "46g" },
-          { "nazwa": "II śniadanie","sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g", "kcal": 283, "bialko": "18g" },
-          { "nazwa": "Obiad",       "sklad": "Rio Mare tuńczyk w oliwie 160g (odsączony ~104g) + makaron Lubella Pełne Ziarno Świdry 100g (suchy) + pomidory + ogórek", "kcal": 549, "bialko": "46g" },
-          { "nazwa": "Przekąska",   "sklad": "Zott Protein Drink 250ml", "kcal": 165, "bialko": "21g" },
-          { "nazwa": "Kolacja",     "sklad": "Jajecznica: 3 jajka + mozzarella light Pilos 25g + warzywa 200g + oliwa + grahamka Putka 70g", "kcal": 623, "bialko": "37g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 35g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 706,
+            "bialko": "46g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g",
+            "kcal": 283,
+            "bialko": "18g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Rio Mare tuńczyk w oliwie 160g (odsączony ~104g) + makaron Lubella Pełne Ziarno Świdry 100g (suchy) + pomidory + ogórek",
+            "kcal": 549,
+            "bialko": "46g"
+          },
+          {
+            "nazwa": "Przekąska",
+            "sklad": "Zott Protein Drink 250ml",
+            "kcal": 165,
+            "bialko": "21g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Jajecznica: 3 jajka + mozzarella light Pilos 25g + warzywa 200g + oliwa + grahamka Putka 70g",
+            "kcal": 623,
+            "bialko": "37g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2406, "suma_bialko": "170g", "suma_label": "SUMA"
+        "suma_kcal": 2406,
+        "suma_bialko": "170g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "📅 Sobota — odpoczynek + drink", "border": "var(--border)",
+        "dzien": "📅 Sobota — odpoczynek + drink",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g", "kcal": 533, "bialko": "35g" },
-          { "nazwa": "II śniadanie","sklad": "Protein rice: ryż biały 50g (suchy) + WPC 35g + jogurt naturalny 200g", "kcal": 452, "bialko": "39g" },
-          { "nazwa": "Obiad",       "sklad": "Łosoś atlantycki Lidl ze skórą 200g + warzywa 200g + oliwa 1 łyżka (bez frytek)", "kcal": 652, "bialko": "47g" },
-          { "nazwa": "Przekąska",   "sklad": "Zott Protein Drink 250ml", "kcal": 165, "bialko": "21g" },
-          { "nazwa": "Kolacja",     "sklad": "Omlet: 3 jajka + warzywa 150g + ser Gouda 20g + oliwa 1 łyżeczka", "kcal": 430, "bialko": "28g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g",
+            "kcal": 533,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Protein rice: ryż biały 50g (suchy) + WPC 35g + jogurt naturalny 200g",
+            "kcal": 452,
+            "bialko": "39g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Łosoś atlantycki Lidl ze skórą 200g + warzywa 200g + oliwa 1 łyżka (bez frytek)",
+            "kcal": 652,
+            "bialko": "47g"
+          },
+          {
+            "nazwa": "Przekąska",
+            "sklad": "Zott Protein Drink 250ml",
+            "kcal": 165,
+            "bialko": "21g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Omlet: 3 jajka + warzywa 150g + ser Gouda 20g + oliwa 1 łyżeczka",
+            "kcal": 430,
+            "bialko": "28g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2312, "suma_bialko": "172g", "suma_label": "SUMA (bez drinka)"
+        "suma_kcal": 2312,
+        "suma_bialko": "172g",
+        "suma_label": "SUMA (bez drinka)"
       }
     ],
     "posilki_treningowe": [
       {
-        "dzien": "💪 Wtorek — Upper A / Upper B", "border": "rgba(59,130,246,0.4)",
+        "dzien": "💪 Wtorek — Upper A / Upper B",
+        "border": "rgba(59,130,246,0.4)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "II śniadanie","sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g", "kcal": 283, "bialko": "18g" },
-          { "nazwa": "Obiad",       "sklad": "Polędwiczki kurczaka 200g + ryż biały 140g (suchy) + warzywa 200g + oliwa 1 łyżka", "kcal": 886, "bialko": "61g" },
-          { "nazwa": "Post-workout","sklad": "Zott Protein Drink 250ml + banan 120g", "kcal": 272, "bialko": "22g" },
-          { "nazwa": "Kolacja",     "sklad": "Twaróg chudy Pilos 200g + jogurt naturalny 200g + miód 15g + grahamka Putka 70g", "kcal": 574, "bialko": "52g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g",
+            "kcal": 283,
+            "bialko": "18g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Polędwiczki kurczaka 200g + ryż biały 140g (suchy) + warzywa 200g + oliwa 1 łyżka",
+            "kcal": 886,
+            "bialko": "61g"
+          },
+          {
+            "nazwa": "Post-workout",
+            "sklad": "Zott Protein Drink 250ml + banan 120g",
+            "kcal": 272,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Twaróg chudy Pilos 200g + jogurt naturalny 200g + miód 15g + grahamka Putka 70g",
+            "kcal": 574,
+            "bialko": "52g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2743, "suma_bialko": "190g", "suma_label": "SUMA"
+        "suma_kcal": 2743,
+        "suma_bialko": "190g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "💪 Czwartek — Lower", "border": "rgba(59,130,246,0.4)",
+        "dzien": "💪 Czwartek — Lower",
+        "border": "rgba(59,130,246,0.4)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 35g + pasta orzechowa 20g + rodzynki 15g", "kcal": 706, "bialko": "46g" },
-          { "nazwa": "II śniadanie","sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g", "kcal": 283, "bialko": "18g" },
-          { "nazwa": "Obiad",       "sklad": "Dorsz atlantycki Lidl 200g + ryż biały 130g (suchy) + warzywa 200g + oliwa 1 łyżka", "kcal": 774, "bialko": "45g" },
-          { "nazwa": "Post-workout","sklad": "Zott Protein Drink 250ml + banan 120g", "kcal": 272, "bialko": "22g" },
-          { "nazwa": "Kolacja",     "sklad": "Pancake: WPC 20g + 2 jajka + mąka pszenna 50g + twaróg Pilos 50g + jogurt naturalny 150g + borówki 60g + banan 40g", "kcal": 656, "bialko": "50g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 35g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 706,
+            "bialko": "46g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Jogurt naturalny 200g + WPC 10g + banan 120g",
+            "kcal": 283,
+            "bialko": "18g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Dorsz atlantycki Lidl 200g + ryż biały 130g (suchy) + warzywa 200g + oliwa 1 łyżka",
+            "kcal": 774,
+            "bialko": "45g"
+          },
+          {
+            "nazwa": "Post-workout",
+            "sklad": "Zott Protein Drink 250ml + banan 120g",
+            "kcal": 272,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Pancake: WPC 20g + 2 jajka + mąka pszenna 50g + twaróg Pilos 50g + jogurt naturalny 150g + borówki 60g + banan 40g",
+            "kcal": 656,
+            "bialko": "50g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2771, "suma_bialko": "183g", "suma_label": "SUMA",
+        "suma_kcal": 2771,
+        "suma_bialko": "183g",
+        "suma_label": "SUMA",
         "uwaga": "💡 Miejsce na dokładanie owoców do pancake"
       },
       {
-        "dzien": "💪 Niedziela — Upper A / Upper B + cheat meal", "border": "rgba(59,130,246,0.4)",
+        "dzien": "💪 Niedziela — Upper A / Upper B + cheat meal",
+        "border": "rgba(59,130,246,0.4)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g", "kcal": 533, "bialko": "35g" },
-          { "nazwa": "II śniadanie","sklad": "Protein rice: ryż biały 50g (suchy) + WPC 35g + jogurt naturalny 200g", "kcal": 452, "bialko": "39g" },
-          { "nazwa": "Pre-workout", "sklad": "Banan 120g", "kcal": 107, "bialko": "1g" },
-          { "nazwa": "Cheat meal",  "sklad": "Kotlety z polędwiczek Wipasz w panierce 200g + frytki Aviko 150g + surówka 150g + masło klarowane 15g", "kcal": 819, "bialko": "61g" },
-          { "nazwa": "Post-workout","sklad": "Zott Protein Drink 250ml", "kcal": 165, "bialko": "21g" },
-          { "nazwa": "Kolacja",     "sklad": "Twaróg chudy Pilos 150g + jogurt naturalny 200g + miód 10g + grahamka Putka 60g", "kcal": 483, "bialko": "42g" },
-          { "nazwa": "Inne",        "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g",
+            "kcal": 533,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "II śniadanie",
+            "sklad": "Protein rice: ryż biały 50g (suchy) + WPC 35g + jogurt naturalny 200g",
+            "kcal": 452,
+            "bialko": "39g"
+          },
+          {
+            "nazwa": "Pre-workout",
+            "sklad": "Banan 120g",
+            "kcal": 107,
+            "bialko": "1g"
+          },
+          {
+            "nazwa": "Cheat meal",
+            "sklad": "Kotlety z polędwiczek Wipasz w panierce 200g + frytki Aviko 150g + surówka 150g + masło klarowane 15g",
+            "kcal": 819,
+            "bialko": "61g"
+          },
+          {
+            "nazwa": "Post-workout",
+            "sklad": "Zott Protein Drink 250ml",
+            "kcal": 165,
+            "bialko": "21g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Twaróg chudy Pilos 150g + jogurt naturalny 200g + miód 10g + grahamka Putka 60g",
+            "kcal": 483,
+            "bialko": "42g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": 2639, "suma_bialko": "201g", "suma_label": "SUMA"
+        "suma_kcal": 2639,
+        "suma_bialko": "201g",
+        "suma_label": "SUMA"
       }
     ]
   },
-
   "minicut": {
     "label": "Mini cut #1 — kwi–maj 2026",
     "opis": "Deficyt ~384 kcal/dzień · białko ≥173g · 8 tygodni",
@@ -121,115 +410,410 @@
     "cel_wagowy": "84–85 kg",
     "cel_bf": "16–17%",
     "stats": [
-      { "wartosc": "~2366", "label": "kcal średnia/dzień", "kolor": "red" },
-      { "wartosc": "~384",  "label": "deficyt kcal/dzień", "kolor": "accent2" },
-      { "wartosc": "≥173g", "label": "białko minimum",     "kolor": "green" }
-    ],
-    "porownanie": [
-      { "parametr": "Kcal dni odpoczynku",  "rekompozycja": "~2379 kcal",        "minicut": "~2050–2100 kcal",      "minicut_color": "yellow" },
-      { "parametr": "Kcal dni treningowe",  "rekompozycja": "~2718 kcal",        "minicut": "~2639 kcal",           "minicut_color": "yellow" },
-      { "parametr": "Białko minimum",       "rekompozycja": "~182g średnio",     "minicut": "≥173g (2g/kg)",        "minicut_color": "green" },
-      { "parametr": "Efektywny deficyt",    "rekompozycja": "~0 (rekompozycja)", "minicut": "~384 kcal/dzień",      "minicut_color": "red" },
-      { "parametr": "Tempo redukcji",       "rekompozycja": "stabilizacja wagi", "minicut": "~0,32–0,35 kg/tydzień","minicut_color": "green" }
-    ],
-    "alerty": [
-      { "typ": "info",    "ikona": "📊", "tekst": "<strong>Cel:</strong> zejście z ~86,9 kg do 84–85 kg w 8 tygodniach przy BF% 16–17%. Deficyt ~2688 kcal tygodniowo → ~0,32–0,35 kg/tydzień → <strong>~2,5–2,8 kg w 8 tygodniach</strong> ✓" },
-      { "typ": "success", "ikona": "✅", "tekst": "<strong>Co działa na korzyść:</strong> dni treningowe bez głębokiego cięcia chronią siłę. Białko ≥173g przy każdym dniu chroni mięśnie. Sobota z drinkami wbudowana w plan." },
-      { "typ": "warn",    "ikona": "⚠️", "tekst": "<strong>Ryzyka:</strong> Środa i Piątek mają białko poniżej 173g — nadrabiają Wtorek i Czwartek. Sobota najsłabsza białkowo (~142g) — świadomy kompromis." },
-      { "typ": "info",    "ikona": "📉", "tekst": "<strong>Sygnał że cut za agresywny:</strong> siła spada >15% przez 2 tygodnie → +150 kcal w dniach odpoczynku. Waga nie spada 3 tyg → -100 kcal z dni odpoczynku." }
+      {
+        "wartosc": "~2648",
+        "label": "TDEE kcal/dzień",
+        "kolor": "text2"
+      },
+      {
+        "wartosc": "~350",
+        "label": "deficyt kcal/dzień",
+        "kolor": "red"
+      },
+      {
+        "wartosc": "~2298",
+        "label": "cel kcal/dzień",
+        "kolor": "accent2"
+      },
+      {
+        "wartosc": "≥173g",
+        "label": "białko minimum",
+        "kolor": "green"
+      }
     ],
     "posilki_odpoczynek": [
       {
-        "dzien": "📅 Poniedziałek", "border": "var(--border)",
+        "dzien": "📅 Poniedziałek",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie", "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "Pudding",   "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g", "kcal": 306, "bialko": "26g" },
-          { "nazwa": "Obiad",     "sklad": "Polędwiczki kurczaka 200g + marchewka kostka 225g + oliwa", "kcal": 420, "bialko": "50g" },
-          { "nazwa": "Shake",     "sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",   "sklad": "Calvo tuńczyk sos pomidorowy 160g + 2 jajka", "kcal": 438, "bialko": "46g" },
-          { "nazwa": "Inne",      "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 306,
+            "bialko": "26g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Kurczak 250g + marchewka mrożona 225g + oliwa",
+            "kcal": 386,
+            "bialko": "57g"
+          },
+          {
+            "nazwa": "Shake",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Tuńczyk Calvo sos pomidorowy 160g + 2 jajka",
+            "kcal": 438,
+            "bialko": "41g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": "~2053", "suma_bialko": "~181g", "suma_label": "SUMA"
+        "suma_kcal": "~2019",
+        "suma_bialko": "~183g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "📅 Środa", "border": "var(--border)",
+        "dzien": "📅 Środa",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie", "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "Pudding",   "sklad": "Ryż Arborio <strong>20g</strong> + WPC 20g + jogurt Pilos 200g", "kcal": 275, "bialko": "24g" },
-          { "nazwa": "Obiad",     "sklad": "Dorsz atlantycki 200g + warzywa na patelnię 225g + oliwa", "kcal": 421, "bialko": "43g" },
-          { "nazwa": "Shake",     "sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",   "sklad": "Szakszuka: 3 jajka + pomidory 200g + cebula + papryka + oliwa + mozzarella light 62g", "kcal": 504, "bialko": "36g" },
-          { "nazwa": "Inne",      "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 275,
+            "bialko": "24g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Dorsz Targ Rybny 200g + warzywa na patelnię 225g + oliwa",
+            "kcal": 449,
+            "bialko": "49g"
+          },
+          {
+            "nazwa": "Shake",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Szakszuka: 3 jajka + pomidory 200g + cebula + oliwa + mozzarella light 62g",
+            "kcal": 504,
+            "bialko": "36g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": "~2089", "suma_bialko": "~162g", "suma_label": "SUMA"
+        "suma_kcal": "~2117",
+        "suma_bialko": "~168g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "📅 Piątek", "border": "var(--border)",
+        "dzien": "📅 Piątek",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie", "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "Pudding",   "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g", "kcal": 306, "bialko": "26g" },
-          { "nazwa": "Obiad",     "sklad": "3 jajka + 2 tortille proteinowe Lidl + warzywa + oliwa", "kcal": 526, "bialko": "34g" },
-          { "nazwa": "Shake",     "sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",   "sklad": "Calvo tuńczyk sos pomidorowy 160g + 2 jajka", "kcal": 438, "bialko": "44g" },
-          { "nazwa": "Inne",      "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 306,
+            "bialko": "26g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Gyros: kurczak 150g + 2 tortille proteinowe + cebula + pomidor + sałata + oliwa 1 łyżeczka + przyprawy gyros",
+            "kcal": 485,
+            "bialko": "51g"
+          },
+          {
+            "nazwa": "Shake",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Tuńczyk Calvo sos pomidorowy 160g + 2 jajka",
+            "kcal": 438,
+            "bialko": "41g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": "~2159", "suma_bialko": "~163g", "suma_label": "SUMA"
+        "suma_kcal": "~2118",
+        "suma_bialko": "~177g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "📅 Sobota", "border": "var(--border)",
+        "dzien": "📅 Sobota",
+        "border": "var(--border)",
         "posilki": [
-          { "nazwa": "Śniadanie", "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g", "kcal": 533, "bialko": "35g" },
-          { "nazwa": "Pudding",   "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g", "kcal": 306, "bialko": "26g" },
-          { "nazwa": "Obiad",     "sklad": "Łosoś atlantycki 150g + warzywa na patelnię 225g", "kcal": 511, "bialko": "35g" },
-          { "nazwa": "Shake",     "sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",   "sklad": "Omlet: 2 jajka + warzywa 150g + oliwa 1 łyżeczka", "kcal": 277, "bialko": "17g" },
-          { "nazwa": "Inne",      "sklad": "2× cappuccino + whiskey 2× 60ml + cola 0% 2× + paluszki beskidzkie 50g", "kcal": 553, "bialko": "7g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g",
+            "kcal": 533,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 306,
+            "bialko": "26g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Mintaj 220g + warzywa na patelnię 225g + oliwa 1,5 łyżeczki + czosnek + tymianek + rozmaryn + papryka wędzona + cytryna",
+            "kcal": 348,
+            "bialko": "41g"
+          },
+          {
+            "nazwa": "Shake",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Omlet: 2 jajka + warzywa 150g + oliwa 1 łyżeczka",
+            "kcal": 277,
+            "bialko": "17g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino + whiskey 2× 60ml + cola 0% 2× + paluszki beskidzkie 50g",
+            "kcal": 553,
+            "bialko": "7g"
+          }
         ],
-        "suma_kcal": "~2341", "suma_bialko": "~142g", "suma_label": "SUMA",
-        "uwaga": "⚡ Okazjonalnie: antrykot 235g + warzywa na patelnię 225g zamiast łososia → ~732 kcal / ~52g białka"
+        "suma_kcal": "~2178",
+        "suma_bialko": "~148g",
+        "suma_label": "SUMA",
+        "uwaga": "⚡ Sobota: najsłabszy dzień białkowy (~148g) — świadomy kompromis. Whiskey + paluszki wbudowane w plan."
       }
     ],
     "posilki_treningowe": [
       {
-        "dzien": "💪 Wtorek — Upper A / Upper B", "border": "rgba(59,130,246,0.4)",
+        "dzien": "💪 Wtorek — Upper A / Upper B",
+        "border": "rgba(59,130,246,0.4)",
         "posilki": [
-          { "nazwa": "Śniadanie",        "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "Pudding",          "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g", "kcal": 306, "bialko": "26g" },
-          { "nazwa": "Obiad",            "sklad": "Polędwiczki kurczaka 200g + czarny ryż tajski 120g + warzywa na patelnię 225g + oliwa", "kcal": 904, "bialko": "67g" },
-          { "nazwa": "Shake (post-workout)","sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",          "sklad": "Twaróg chudy Pilos 200g + jogurt Pilos 200g + miód 15g + grahamka Putka 70g", "kcal": 574, "bialko": "52g" },
-          { "nazwa": "Inne",             "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 306,
+            "bialko": "26g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Polędwiczki kurczaka 200g + czarny ryż tajski 120g + warzywa na patelnię 225g + oliwa",
+            "kcal": 904,
+            "bialko": "67g"
+          },
+          {
+            "nazwa": "Shake (post-workout)",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Twaróg chudy Pilos 200g + jogurt Pilos 200g + miód 15g + grahamka Putka 70g",
+            "kcal": 574,
+            "bialko": "52g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": "~2673", "suma_bialko": "~204g", "suma_label": "SUMA"
+        "suma_kcal": "~2673",
+        "suma_bialko": "~204g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "💪 Czwartek — Lower", "border": "rgba(59,130,246,0.4)",
+        "dzien": "💪 Czwartek — Lower",
+        "border": "rgba(59,130,246,0.4)",
         "posilki": [
-          { "nazwa": "Śniadanie",        "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g", "kcal": 648, "bialko": "35g" },
-          { "nazwa": "Pudding",          "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g", "kcal": 306, "bialko": "26g" },
-          { "nazwa": "Obiad",            "sklad": "Dorsz atlantycki 200g + czarny ryż tajski 100g + marchewka kostka 225g + oliwa", "kcal": 824, "bialko": "52g" },
-          { "nazwa": "Shake (post-workout)","sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",          "sklad": "Pancake: WPC 20g + 2 jajka + mąka pszenna 50g + twaróg Pilos 50g + jogurt Pilos 200g + borówki 60g + banan 40g", "kcal": 686, "bialko": "52g" },
-          { "nazwa": "Inne",             "sklad": "2× cappuccino", "kcal": 80, "bialko": "2g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Płatki owsiane 40g + orkiszowe 40g + gryczane 30g + WPC 20g + pasta orzechowa 20g + rodzynki 15g",
+            "kcal": 648,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 306,
+            "bialko": "26g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Dorsz Targ Rybny 200g + czarny ryż tajski 100g + marchewka mrożona 225g + oliwa",
+            "kcal": 852,
+            "bialko": "58g"
+          },
+          {
+            "nazwa": "Shake (post-workout)",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Pancake: WPC 20g + 2 jajka + mąka 50g + skyr waniliowy Pilos 150g + twaróg Pilos 50g + borówki 60g + banan 40g",
+            "kcal": 611,
+            "bialko": "54g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "2× cappuccino",
+            "kcal": 80,
+            "bialko": "2g"
+          }
         ],
-        "suma_kcal": "~2705", "suma_bialko": "~189g", "suma_label": "SUMA",
-        "uwaga": "💡 Miejsce na dokładanie owoców do pancake — ryż 100g zostawia ~141 kcal buforu"
+        "suma_kcal": "~2658",
+        "suma_bialko": "~197g",
+        "suma_label": "SUMA"
       },
       {
-        "dzien": "💪 Niedziela — Upper A / Upper B", "border": "rgba(59,130,246,0.4)",
+        "dzien": "💪 Niedziela — Upper A / Upper B",
+        "border": "rgba(59,130,246,0.4)",
         "posilki": [
-          { "nazwa": "Śniadanie",   "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g", "kcal": 533, "bialko": "35g" },
-          { "nazwa": "Pudding",     "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g", "kcal": 306, "bialko": "26g" },
-          { "nazwa": "Obiad",       "sklad": "Polędwiczki kurczaka 200g w passacie (passata 200ml + czosnek + oliwa + zioła) + ryż Arborio 150g", "kcal": 845, "bialko": "62g" },
-          { "nazwa": "Shake",       "sklad": "20g Xplode + 150ml mleka Pilos High Protein + 100ml wody", "kcal": 161, "bialko": "22g" },
-          { "nazwa": "Kolacja",     "sklad": "Twaróg chudy Pilos 200g + jogurt Pilos 200g + miód 10g + grahamka Putka 70g", "kcal": 574, "bialko": "52g" },
-          { "nazwa": "Inne",        "sklad": "3× cappuccino", "kcal": 120, "bialko": "3g" }
+          {
+            "nazwa": "Śniadanie",
+            "sklad": "Grahamka Putka 70g + szynka naturalna 40g + ser Gouda 20g + 2 jajka + warzywa 100g",
+            "kcal": 533,
+            "bialko": "35g"
+          },
+          {
+            "nazwa": "Pudding",
+            "sklad": "Ryż Arborio 30g + WPC 20g + jogurt Pilos 200g",
+            "kcal": 306,
+            "bialko": "26g"
+          },
+          {
+            "nazwa": "Obiad",
+            "sklad": "Spaghetti pełnoziarniste 60g + ricotta Galbani 100g + szpinak baby 150g + kurczak 150g + cebula + czosnek + oliwa 1 łyżeczka",
+            "kcal": 629,
+            "bialko": "56g"
+          },
+          {
+            "nazwa": "Shake",
+            "sklad": "20g Xplode + 150ml Pilos HP mleko 0,5% + 100ml wody",
+            "kcal": 161,
+            "bialko": "22g"
+          },
+          {
+            "nazwa": "Kolacja",
+            "sklad": "Twaróg chudy Pilos 200g + jogurt Pilos 200g + miód 10g + grahamka Putka 70g",
+            "kcal": 574,
+            "bialko": "52g"
+          },
+          {
+            "nazwa": "Inne",
+            "sklad": "3× cappuccino",
+            "kcal": 120,
+            "bialko": "3g"
+          }
         ],
-        "suma_kcal": "~2539", "suma_bialko": "~200g", "suma_label": "SUMA"
+        "suma_kcal": "~2323",
+        "suma_bialko": "~194g",
+        "suma_label": "SUMA"
+      }
+    ],
+    "srednia": {
+      "kcal": "~2298",
+      "bialko": "~182g"
+    },
+    "tdee": {
+      "tdee": "~2648",
+      "bmr": "1868",
+      "wspolczynnik": "aktywność ze smartwatcha (3 treningi × ~850 kcal + 10 849 kroków/dzień × ~0,04 kcal)",
+      "dane": "Mifflin-St Jeor · 38 lat · 190 cm · 86,5 kg",
+      "weryfikacja": "implikowany z diety: ~2648 kcal — zgodność ✓"
+    },
+    "dni": [
+      {
+        "dzien": "Poniedziałek",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2019",
+        "bialko": "~183g"
+      },
+      {
+        "dzien": "Wtorek",
+        "typ": "trening UA/B",
+        "typ_color": "blue",
+        "kcal": "~2673",
+        "bialko": "~204g"
+      },
+      {
+        "dzien": "Środa",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2117",
+        "bialko": "~168g"
+      },
+      {
+        "dzien": "Czwartek",
+        "typ": "trening Lower",
+        "typ_color": "blue",
+        "kcal": "~2658",
+        "bialko": "~197g"
+      },
+      {
+        "dzien": "Piątek",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2118",
+        "bialko": "~177g"
+      },
+      {
+        "dzien": "Sobota",
+        "typ": "odpoczynek",
+        "typ_color": "gray",
+        "kcal": "~2178",
+        "bialko": "~148g"
+      },
+      {
+        "dzien": "Niedziela",
+        "typ": "trening UA/B",
+        "typ_color": "blue",
+        "kcal": "~2323",
+        "bialko": "~194g"
       }
     ]
   },
-
   "przepisy": [
     {
       "nazwa": "🍗 Kurczak w sosie pomidorowym (Niedziela obiad)",
@@ -237,11 +821,31 @@
       "makro_uwaga": "bez ryżu",
       "border": "rgba(59,130,246,0.4)",
       "skladniki": [
-        { "skladnik": "Polędwiczki kurczaka Wipasz", "ilosc": "200g",       "uwagi": "pokrojone w kostkę lub paski" },
-        { "skladnik": "Passata pomidorowa",           "ilosc": "200ml",      "uwagi": "lub pomidory z puszki" },
-        { "skladnik": "Czosnek",                      "ilosc": "1 ząbek",    "uwagi": "drobno posiekany" },
-        { "skladnik": "Oliwa z oliwek",               "ilosc": "1 łyżeczka", "uwagi": "do smażenia" },
-        { "skladnik": "Oregano, bazylia, sól, pieprz","ilosc": "do smaku",   "uwagi": "" }
+        {
+          "skladnik": "Polędwiczki kurczaka Wipasz",
+          "ilosc": "200g",
+          "uwagi": "pokrojone w kostkę lub paski"
+        },
+        {
+          "skladnik": "Passata pomidorowa",
+          "ilosc": "200ml",
+          "uwagi": "lub pomidory z puszki"
+        },
+        {
+          "skladnik": "Czosnek",
+          "ilosc": "1 ząbek",
+          "uwagi": "drobno posiekany"
+        },
+        {
+          "skladnik": "Oliwa z oliwek",
+          "ilosc": "1 łyżeczka",
+          "uwagi": "do smażenia"
+        },
+        {
+          "skladnik": "Oregano, bazylia, sól, pieprz",
+          "ilosc": "do smaku",
+          "uwagi": ""
+        }
       ],
       "kroki": [
         "Pokrój kurczaka, dopraw solą, pieprzem i oregano.",
@@ -250,7 +854,11 @@
         "Wlej passatę, dodaj bazylię. Duś na małym ogniu 8–10 min pod przykryciem.",
         "Podaj z ryżem Arborio 150g (ugotowanym osobno)."
       ],
-      "alert": { "typ": "info", "ikona": "💡", "tekst": "Ryż Arborio wrzuć do sosu na ostatnie 2 min — wchłonie pomidory i będzie kremowy." }
+      "alert": {
+        "typ": "info",
+        "ikona": "💡",
+        "tekst": "Ryż Arborio wrzuć do sosu na ostatnie 2 min — wchłonie pomidory i będzie kremowy."
+      }
     },
     {
       "nazwa": "🍮 Pudding z ryżem Arborio (II śniadanie — każdy dzień)",
@@ -258,9 +866,21 @@
       "makro_uwaga": "Środa: 20g ryżu → ~275 kcal · ~24g białka",
       "border": "rgba(59,130,246,0.4)",
       "skladniki": [
-        { "skladnik": "Ryż Arborio (suchy)", "ilosc": "30g (Środa: 20g)", "uwagi": "gotuj na 2–4 dni naraz" },
-        { "skladnik": "WPC Olimp Protein Complex", "ilosc": "20g", "uwagi": "" },
-        { "skladnik": "Jogurt naturalny Pilos", "ilosc": "200g", "uwagi": "zawsze 200g" }
+        {
+          "skladnik": "Ryż Arborio (suchy)",
+          "ilosc": "30g (Środa: 20g)",
+          "uwagi": "gotuj na 2–4 dni naraz"
+        },
+        {
+          "skladnik": "WPC Olimp Protein Complex",
+          "ilosc": "20g",
+          "uwagi": ""
+        },
+        {
+          "skladnik": "Jogurt naturalny Pilos",
+          "ilosc": "200g",
+          "uwagi": "zawsze 200g"
+        }
       ],
       "kroki": [
         "Gotowanie ryżu (na 2 dni — 60g suchego): 60g ryżu + 180ml wody — proporcja 1:3. Zagotuj, zmniejsz ogień, gotuj pod przykryciem 20–25 min mieszając co kilka minut.",
@@ -270,7 +890,11 @@
         "WPC 20g → wymieszaj z ryżem (proszek lepiej łączy się z gęstym ryżem).",
         "Jogurt Pilos 200g → wymieszaj. Gotowe."
       ],
-      "alert": { "typ": "warn", "ikona": "⚠️", "tekst": "<strong>Nie mieszaj wszystkiego z góry</strong> — jogurt z ryżem po 2–3 dniach robi się wodnisty. Ryż trzymaj osobno, składaj porcję na bieżąco." }
+      "alert": {
+        "typ": "warn",
+        "ikona": "⚠️",
+        "tekst": "<strong>Nie mieszaj wszystkiego z góry</strong> — jogurt z ryżem po 2–3 dniach robi się wodnisty. Ryż trzymaj osobno, składaj porcję na bieżąco."
+      }
     },
     {
       "nazwa": "🍚 Czarny ryż tajski (Wt + Czw obiad)",
@@ -278,8 +902,16 @@
       "makro_uwaga": "",
       "border": "rgba(59,130,246,0.4)",
       "skladniki": [
-        { "skladnik": "Czarny ryż tajski (suchy)", "ilosc": "Wt: 120g / Czw: 100g", "uwagi": "gotuj oba naraz" },
-        { "skladnik": "Woda", "ilosc": "Wt: ~360ml / Czw: ~300ml", "uwagi": "proporcja 1:3" }
+        {
+          "skladnik": "Czarny ryż tajski (suchy)",
+          "ilosc": "Wt: 120g / Czw: 100g",
+          "uwagi": "gotuj oba naraz"
+        },
+        {
+          "skladnik": "Woda",
+          "ilosc": "Wt: ~360ml / Czw: ~300ml",
+          "uwagi": "proporcja 1:3"
+        }
       ],
       "kroki": [
         "Opcjonalnie: namocz 30 min przed gotowaniem — przyspieszy gotowanie i poprawi teksturę.",
@@ -288,105 +920,381 @@
         "Odstaw na 10 min pod przykryciem — wchłonie resztę wody i nabierze właściwej tekstury.",
         "Gotuj na oba dni naraz (220g suchego). Ugotowany trzyma się w lodówce 4 dni."
       ],
-      "alert": { "typ": "info", "ikona": "🎨", "tekst": "Czarny ryż barwi wodę na ciemnofioletowo — normalne. Nie mieszaj z sosem pomidorowym (zarezerwuj Arborio do Niedzieli)." }
+      "alert": {
+        "typ": "info",
+        "ikona": "🎨",
+        "tekst": "Czarny ryż barwi wodę na ciemnofioletowo — normalne. Nie mieszaj z sosem pomidorowym (zarezerwuj Arborio do Niedzieli)."
+      }
     }
   ],
-
   "zakupy": [
     {
       "kategoria": "🥩 Białko",
       "produkty": [
-        { "nazwa": "Polędwiczki kurczaka Wipasz",       "ilosc": "600g",            "uwagi": "Pon 200g + Wt 200g + Nd 200g" },
-        { "nazwa": "Dorsz atlantycki Lidl (Targ Rybny)","ilosc": "400g",            "uwagi": "Śr 200g + Czw 200g" },
-        { "nazwa": "Łosoś atlantycki Lidl ze skórą",    "ilosc": "150g",            "uwagi": "Sob 150g" },
-        { "nazwa": "Calvo tuńczyk sos pomidorowy",      "ilosc": "2 puszki (320g)", "uwagi": "Pon 160g + Pt 160g" },
-        { "nazwa": "Jajka",                             "ilosc": "~18 szt",         "uwagi": "Pon(2)+Śr(3)+Czw(2)+Pt(4)+Sob(2)+Nd(2) + zapas" },
-        { "nazwa": "Szynka naturalna",                  "ilosc": "80g",             "uwagi": "Sob 40g + Nd 40g" }
+        {
+          "nazwa": "Polędwiczki kurczaka Wipasz",
+          "ilosc": "600g",
+          "uwagi": "Pon 200g + Wt 200g + Nd 200g"
+        },
+        {
+          "nazwa": "Dorsz atlantycki Lidl (Targ Rybny)",
+          "ilosc": "400g",
+          "uwagi": "Śr 200g + Czw 200g"
+        },
+        {
+          "nazwa": "Łosoś atlantycki Lidl ze skórą",
+          "ilosc": "150g",
+          "uwagi": "Sob 150g"
+        },
+        {
+          "nazwa": "Calvo tuńczyk sos pomidorowy",
+          "ilosc": "2 puszki (320g)",
+          "uwagi": "Pon 160g + Pt 160g"
+        },
+        {
+          "nazwa": "Jajka",
+          "ilosc": "~18 szt",
+          "uwagi": "Pon(2)+Śr(3)+Czw(2)+Pt(4)+Sob(2)+Nd(2) + zapas"
+        },
+        {
+          "nazwa": "Szynka naturalna",
+          "ilosc": "80g",
+          "uwagi": "Sob 40g + Nd 40g"
+        }
       ]
     },
     {
       "kategoria": "🥛 Nabiał",
       "produkty": [
-        { "nazwa": "Jogurt naturalny Pilos",    "ilosc": "~2000g (~10 szt)",   "uwagi": "Pudding 200g × 7 + kolacje treningowe 200g × 3" },
-        { "nazwa": "Twaróg chudy Pilos",        "ilosc": "450g",               "uwagi": "Wt 200g + Czw 50g + Nd 200g" },
-        { "nazwa": "Mleko Pilos High Protein",  "ilosc": "~1100ml (~2 kartony)","uwagi": "Shake 150ml × 7 dni" },
-        { "nazwa": "Mozzarella light Pilos",    "ilosc": "1 kulka (125g)",     "uwagi": "Śr ½ kulki (62g)" },
-        { "nazwa": "Ser Gouda",                 "ilosc": "40g",                "uwagi": "Sob 20g + Nd 20g" }
+        {
+          "nazwa": "Jogurt naturalny Pilos",
+          "ilosc": "~2000g (~10 szt)",
+          "uwagi": "Pudding 200g × 7 + kolacje treningowe 200g × 3"
+        },
+        {
+          "nazwa": "Twaróg chudy Pilos",
+          "ilosc": "450g",
+          "uwagi": "Wt 200g + Czw 50g + Nd 200g"
+        },
+        {
+          "nazwa": "Mleko Pilos High Protein",
+          "ilosc": "~1100ml (~2 kartony)",
+          "uwagi": "Shake 150ml × 7 dni"
+        },
+        {
+          "nazwa": "Mozzarella light Pilos",
+          "ilosc": "1 kulka (125g)",
+          "uwagi": "Śr ½ kulki (62g)"
+        },
+        {
+          "nazwa": "Ser Gouda",
+          "ilosc": "40g",
+          "uwagi": "Sob 20g + Nd 20g"
+        }
       ]
     },
     {
       "kategoria": "🏋️ Odżywki",
       "produkty": [
-        { "nazwa": "Olimp WPC Protein Complex",         "ilosc": "280g", "uwagi": "Śniadanie 20g × 7 + pudding 20g × 7" },
-        { "nazwa": "Olimp Whey Protein Xplode Powder",  "ilosc": "140g", "uwagi": "Shake 20g × 7 dni" }
+        {
+          "nazwa": "Olimp WPC Protein Complex",
+          "ilosc": "280g",
+          "uwagi": "Śniadanie 20g × 7 + pudding 20g × 7"
+        },
+        {
+          "nazwa": "Olimp Whey Protein Xplode Powder",
+          "ilosc": "140g",
+          "uwagi": "Shake 20g × 7 dni"
+        }
       ]
     },
     {
       "kategoria": "🌾 Zboża / Węglowodany",
       "produkty": [
-        { "nazwa": "Płatki owsiane zwykłe",   "ilosc": "280g",           "uwagi": "Śniadanie 40g × 7" },
-        { "nazwa": "Płatki orkiszowe",         "ilosc": "280g",           "uwagi": "Śniadanie 40g × 7" },
-        { "nazwa": "Płatki gryczane",          "ilosc": "210g",           "uwagi": "Śniadanie 30g × 7" },
-        { "nazwa": "Ryż Arborio (suchy)",      "ilosc": "~360g",          "uwagi": "Pudding 30g × 6 + Śr 20g + Nd obiad 150g" },
-        { "nazwa": "Czarny ryż tajski (suchy)","ilosc": "220g",           "uwagi": "Wt 120g + Czw 100g" },
-        { "nazwa": "Grahamka Putka",           "ilosc": "~3 szt (~210g)", "uwagi": "Wt 70g + Sob 70g + Nd 70g" },
-        { "nazwa": "Mąka pszenna",             "ilosc": "50g",            "uwagi": "Czw pancake" },
-        { "nazwa": "Tortille proteinowe Lidl", "ilosc": "2 szt",          "uwagi": "Pt obiad" }
+        {
+          "nazwa": "Płatki owsiane zwykłe",
+          "ilosc": "280g",
+          "uwagi": "Śniadanie 40g × 7"
+        },
+        {
+          "nazwa": "Płatki orkiszowe",
+          "ilosc": "280g",
+          "uwagi": "Śniadanie 40g × 7"
+        },
+        {
+          "nazwa": "Płatki gryczane",
+          "ilosc": "210g",
+          "uwagi": "Śniadanie 30g × 7"
+        },
+        {
+          "nazwa": "Ryż Arborio (suchy)",
+          "ilosc": "~360g",
+          "uwagi": "Pudding 30g × 6 + Śr 20g + Nd obiad 150g"
+        },
+        {
+          "nazwa": "Czarny ryż tajski (suchy)",
+          "ilosc": "220g",
+          "uwagi": "Wt 120g + Czw 100g"
+        },
+        {
+          "nazwa": "Grahamka Putka",
+          "ilosc": "~3 szt (~210g)",
+          "uwagi": "Wt 70g + Sob 70g + Nd 70g"
+        },
+        {
+          "nazwa": "Mąka pszenna",
+          "ilosc": "50g",
+          "uwagi": "Czw pancake"
+        },
+        {
+          "nazwa": "Tortille proteinowe Lidl",
+          "ilosc": "2 szt",
+          "uwagi": "Pt obiad"
+        }
       ]
     },
     {
       "kategoria": "🥦 Warzywa / Mrożonki",
       "produkty": [
-        { "nazwa": "Marchewka kostka (mrożona)",    "ilosc": "1 opak. (450g)",    "uwagi": "Pon 225g + Czw 225g" },
-        { "nazwa": "Warzywa na patelnię (mrożone)", "ilosc": "2 opak. (450g)",    "uwagi": "Wt 225g + Śr 225g + Sob 225g" },
-        { "nazwa": "Pomidory + cebula + papryka",   "ilosc": "~500g",             "uwagi": "Śr szakszuka" },
-        { "nazwa": "Passata pomidorowa",             "ilosc": "200ml",             "uwagi": "Nd kurczak w sosie" }
+        {
+          "nazwa": "Marchewka kostka (mrożona)",
+          "ilosc": "1 opak. (450g)",
+          "uwagi": "Pon 225g + Czw 225g"
+        },
+        {
+          "nazwa": "Warzywa na patelnię (mrożone)",
+          "ilosc": "2 opak. (450g)",
+          "uwagi": "Wt 225g + Śr 225g + Sob 225g"
+        },
+        {
+          "nazwa": "Pomidory + cebula + papryka",
+          "ilosc": "~500g",
+          "uwagi": "Śr szakszuka"
+        },
+        {
+          "nazwa": "Passata pomidorowa",
+          "ilosc": "200ml",
+          "uwagi": "Nd kurczak w sosie"
+        }
       ]
     },
     {
       "kategoria": "🍌 Owoce",
       "produkty": [
-        { "nazwa": "Banan",    "ilosc": "1 szt (~40g)", "uwagi": "Czw pancake" },
-        { "nazwa": "Borówki",  "ilosc": "60g",          "uwagi": "Czw pancake" }
+        {
+          "nazwa": "Banan",
+          "ilosc": "1 szt (~40g)",
+          "uwagi": "Czw pancake"
+        },
+        {
+          "nazwa": "Borówki",
+          "ilosc": "60g",
+          "uwagi": "Czw pancake"
+        }
       ]
     },
     {
       "kategoria": "🧂 Dodatki / Inne",
       "produkty": [
-        { "nazwa": "Pasta orzechowa (100%)",          "ilosc": "140g",              "uwagi": "Śniadanie 20g × 7" },
-        { "nazwa": "Rodzynki",                        "ilosc": "105g",              "uwagi": "Śniadanie 15g × 7" },
-        { "nazwa": "Miód",                            "ilosc": "~80g",              "uwagi": "Wt 15g + Nd 10g + ewentualnie Czw" },
-        { "nazwa": "Oliwa z oliwek",                  "ilosc": "butelka",           "uwagi": "Codziennie do smażenia/przyprawiania" },
-        { "nazwa": "Paluszki beskidzkie",             "ilosc": "1 opak. (100g)",    "uwagi": "Sob wieczór" },
-        { "nazwa": "Whiskey + Cola 0%",               "ilosc": "2 małe + 2 puszki", "uwagi": "Sob wieczór · 2× 60ml + 2× cola" },
-        { "nazwa": "Czosnek + zioła (oregano, bazylia)","ilosc": "—",              "uwagi": "Nd kurczak w passacie" }
+        {
+          "nazwa": "Pasta orzechowa (100%)",
+          "ilosc": "140g",
+          "uwagi": "Śniadanie 20g × 7"
+        },
+        {
+          "nazwa": "Rodzynki",
+          "ilosc": "105g",
+          "uwagi": "Śniadanie 15g × 7"
+        },
+        {
+          "nazwa": "Miód",
+          "ilosc": "~80g",
+          "uwagi": "Wt 15g + Nd 10g + ewentualnie Czw"
+        },
+        {
+          "nazwa": "Oliwa z oliwek",
+          "ilosc": "butelka",
+          "uwagi": "Codziennie do smażenia/przyprawiania"
+        },
+        {
+          "nazwa": "Paluszki beskidzkie",
+          "ilosc": "1 opak. (100g)",
+          "uwagi": "Sob wieczór"
+        },
+        {
+          "nazwa": "Whiskey + Cola 0%",
+          "ilosc": "2 małe + 2 puszki",
+          "uwagi": "Sob wieczór · 2× 60ml + 2× cola"
+        },
+        {
+          "nazwa": "Czosnek + zioła (oregano, bazylia)",
+          "ilosc": "—",
+          "uwagi": "Nd kurczak w passacie"
+        }
       ]
     }
   ],
-
   "produkty": [
-    { "nazwa": "Olimp WPC Protein Complex",           "porcja": "20g / 35g",            "kcal": "76 / 134",  "bialko": "15g / 26g",   "uwagi": "75g białka/100g ⭐" },
-    { "nazwa": "Olimp Whey Protein Xplode Powder",    "porcja": "20g (shake)",           "kcal": "81",        "bialko": "10,2g",       "uwagi": "15,3g białka/30g" },
-    { "nazwa": "Mleko Pilos High Protein (Lidl)",     "porcja": "100ml / 150ml",         "kcal": "54 / 80",   "bialko": "8g / 12g",    "uwagi": "8g białka/100ml ⭐ · ~7,99 zł/1L" },
-    { "nazwa": "Shake (20g Xplode + 150ml Pilos HP)", "porcja": "gotowy",                "kcal": "161",       "bialko": "22,2g",       "uwagi": "nowa receptura ⭐" },
-    { "nazwa": "Jogurt naturalny Pilos",              "porcja": "200g / 150g",           "kcal": "122 / 92",  "bialko": "8,6g / 6,5g", "uwagi": "61 kcal/100g · 4,3g białka/100g" },
-    { "nazwa": "Twaróg chudy Pilos",                  "porcja": "100g",                  "kcal": "89",        "bialko": "17g",          "uwagi": "17,4g białka/100g ⭐" },
-    { "nazwa": "Pasta orzechowa (100%)",               "porcja": "20g",                   "kcal": "123",       "bialko": "6g",           "uwagi": "613 kcal/100g" },
-    { "nazwa": "Calvo tuńczyk sos pomidorowy",         "porcja": "160g",                  "kcal": "298",       "bialko": "29g",          "uwagi": "olej słonecznikowy w sosie!" },
-    { "nazwa": "Rio Mare tuńczyk w oliwie",            "porcja": "160g (104g odsączone)", "kcal": "173",       "bialko": "29g",          "uwagi": "~166 kcal/100g odsączone" },
-    { "nazwa": "Grahamka Putka słonecznikowa",         "porcja": "70g / 35g",             "kcal": "209 / 105", "bialko": "7g / 3,5g",   "uwagi": "299 kcal/100g" },
-    { "nazwa": "Polędwiczki kurczaka Wipasz",          "porcja": "100g",                  "kcal": "116",       "bialko": "24g",          "uwagi": "" },
-    { "nazwa": "Dorsz atlantycki Lidl",                "porcja": "100g",                  "kcal": "83",        "bialko": "19g",          "uwagi": "bardzo chude białko ⭐" },
-    { "nazwa": "Mozzarella light Pilos",               "porcja": "125g / 62g",            "kcal": "196 / 98",  "bialko": "30g / 15g",   "uwagi": "24g białka/100g" },
-    { "nazwa": "Łosoś atlantycki Lidl ze skórą",       "porcja": "200g / 150g",           "kcal": "502 / 376", "bialko": "40g / 30g",   "uwagi": "251 kcal/100g ze skórą" },
-    { "nazwa": "Czarny ryż tajski (suchy)",            "porcja": "100g",                  "kcal": "350",       "bialko": "8g",           "uwagi": "niski IG=42 · do obiadów treningowych ⭐" },
-    { "nazwa": "Ryż Arborio (suchy)",                  "porcja": "100g",                  "kcal": "350",       "bialko": "7g",           "uwagi": "do puddingu i sosu ⭐" },
-    { "nazwa": "Tortilla proteinowa Lidl",             "porcja": "1 szt (~40g)",          "kcal": "118",       "bialko": "7,3g",         "uwagi": "18g białka/100g ⭐" },
-    { "nazwa": "Marchewka kostka (mrożona)",           "porcja": "100g",                  "kcal": "30",        "bialko": "0,9g",         "uwagi": "opakowanie 450g → 225g porcja" },
-    { "nazwa": "Warzywa na patelnię (mrożone)",        "porcja": "100g",                  "kcal": "46–69",     "bialko": "2,1–2,4g",    "uwagi": "opakowanie 450g → 225g porcja" },
-    { "nazwa": "Passata pomidorowa",                   "porcja": "100ml",                 "kcal": "~35",       "bialko": "~1,5g",        "uwagi": "do kurczaka w sosie" },
-    { "nazwa": "Paluszki beskidzkie",                  "porcja": "50g",                   "kcal": "193",       "bialko": "5g",           "uwagi": "opakowanie 100g" },
-    { "nazwa": "Frytki Aviko Original",                "porcja": "150g",                  "kcal": "218",       "bialko": "4g",           "uwagi": "145 kcal/100g" },
-    { "nazwa": "Makaron Lubella Pełne Ziarno",         "porcja": "100g suchy",            "kcal": "340",       "bialko": "15g",          "uwagi": "dużo białka jak na makaron" }
+    {
+      "nazwa": "Olimp WPC Protein Complex",
+      "porcja": "20g / 35g",
+      "kcal": "76 / 134",
+      "bialko": "15g / 26g",
+      "uwagi": "75g białka/100g ⭐"
+    },
+    {
+      "nazwa": "Olimp Whey Protein Xplode Powder",
+      "porcja": "20g (shake)",
+      "kcal": "81",
+      "bialko": "10,2g",
+      "uwagi": "15,3g białka/30g"
+    },
+    {
+      "nazwa": "Mleko Pilos High Protein (Lidl)",
+      "porcja": "100ml / 150ml",
+      "kcal": "54 / 80",
+      "bialko": "8g / 12g",
+      "uwagi": "8g białka/100ml ⭐ · ~7,99 zł/1L"
+    },
+    {
+      "nazwa": "Shake (20g Xplode + 150ml Pilos HP)",
+      "porcja": "gotowy",
+      "kcal": "161",
+      "bialko": "22,2g",
+      "uwagi": "nowa receptura ⭐"
+    },
+    {
+      "nazwa": "Jogurt naturalny Pilos",
+      "porcja": "200g / 150g",
+      "kcal": "122 / 92",
+      "bialko": "8,6g / 6,5g",
+      "uwagi": "61 kcal/100g · 4,3g białka/100g"
+    },
+    {
+      "nazwa": "Twaróg chudy Pilos",
+      "porcja": "100g",
+      "kcal": "89",
+      "bialko": "17g",
+      "uwagi": "17,4g białka/100g ⭐"
+    },
+    {
+      "nazwa": "Pasta orzechowa (100%)",
+      "porcja": "20g",
+      "kcal": "123",
+      "bialko": "6g",
+      "uwagi": "613 kcal/100g"
+    },
+    {
+      "nazwa": "Calvo tuńczyk sos pomidorowy",
+      "porcja": "160g",
+      "kcal": "298",
+      "bialko": "29g",
+      "uwagi": "olej słonecznikowy w sosie!"
+    },
+    {
+      "nazwa": "Rio Mare tuńczyk w oliwie",
+      "porcja": "160g (104g odsączone)",
+      "kcal": "173",
+      "bialko": "29g",
+      "uwagi": "~166 kcal/100g odsączone"
+    },
+    {
+      "nazwa": "Grahamka Putka słonecznikowa",
+      "porcja": "70g / 35g",
+      "kcal": "209 / 105",
+      "bialko": "7g / 3,5g",
+      "uwagi": "299 kcal/100g"
+    },
+    {
+      "nazwa": "Polędwiczki kurczaka Wipasz",
+      "porcja": "100g",
+      "kcal": "116",
+      "bialko": "24g",
+      "uwagi": ""
+    },
+    {
+      "nazwa": "Dorsz atlantycki Lidl",
+      "porcja": "100g",
+      "kcal": "83",
+      "bialko": "19g",
+      "uwagi": "bardzo chude białko ⭐"
+    },
+    {
+      "nazwa": "Mozzarella light Pilos",
+      "porcja": "125g / 62g",
+      "kcal": "196 / 98",
+      "bialko": "30g / 15g",
+      "uwagi": "24g białka/100g"
+    },
+    {
+      "nazwa": "Łosoś atlantycki Lidl ze skórą",
+      "porcja": "200g / 150g",
+      "kcal": "502 / 376",
+      "bialko": "40g / 30g",
+      "uwagi": "251 kcal/100g ze skórą"
+    },
+    {
+      "nazwa": "Czarny ryż tajski (suchy)",
+      "porcja": "100g",
+      "kcal": "350",
+      "bialko": "8g",
+      "uwagi": "niski IG=42 · do obiadów treningowych ⭐"
+    },
+    {
+      "nazwa": "Ryż Arborio (suchy)",
+      "porcja": "100g",
+      "kcal": "350",
+      "bialko": "7g",
+      "uwagi": "do puddingu i sosu ⭐"
+    },
+    {
+      "nazwa": "Tortilla proteinowa Lidl",
+      "porcja": "1 szt (~40g)",
+      "kcal": "118",
+      "bialko": "7,3g",
+      "uwagi": "18g białka/100g ⭐"
+    },
+    {
+      "nazwa": "Marchewka kostka (mrożona)",
+      "porcja": "100g",
+      "kcal": "30",
+      "bialko": "0,9g",
+      "uwagi": "opakowanie 450g → 225g porcja"
+    },
+    {
+      "nazwa": "Warzywa na patelnię (mrożone)",
+      "porcja": "100g",
+      "kcal": "46–69",
+      "bialko": "2,1–2,4g",
+      "uwagi": "opakowanie 450g → 225g porcja"
+    },
+    {
+      "nazwa": "Passata pomidorowa",
+      "porcja": "100ml",
+      "kcal": "~35",
+      "bialko": "~1,5g",
+      "uwagi": "do kurczaka w sosie"
+    },
+    {
+      "nazwa": "Paluszki beskidzkie",
+      "porcja": "50g",
+      "kcal": "193",
+      "bialko": "5g",
+      "uwagi": "opakowanie 100g"
+    },
+    {
+      "nazwa": "Frytki Aviko Original",
+      "porcja": "150g",
+      "kcal": "218",
+      "bialko": "4g",
+      "uwagi": "145 kcal/100g"
+    },
+    {
+      "nazwa": "Makaron Lubella Pełne Ziarno",
+      "porcja": "100g suchy",
+      "kcal": "340",
+      "bialko": "15g",
+      "uwagi": "dużo białka jak na makaron"
+    }
   ]
 }
