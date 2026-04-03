@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.30</title>
+<title>Marcin — Plan 2026 · v2.32</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -225,7 +225,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.30</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.32</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -1308,7 +1308,7 @@
       return expandRow(
         `<td style="font-size:10px;white-space:nowrap">${c.nr}</td>
          <td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
-         <td style="white-space:nowrap">${c.serie}</td>
+         <td style="white-space:nowrap;text-align:center">${c.serie}</td>
          <td style="white-space:nowrap;text-align:center">${c.powt}</td>`,
         detail,
         isBg
@@ -1381,58 +1381,54 @@
       `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
     ).join('');
 
-    // Przegląd etapów
-    const BADGE_CLS = {yellow:'badge-yellow', red:'badge-red', green:'badge-green', gray:'badge-gray'};
-    const etapyRows = m.etapy.map(e => {
-      const bc = BADGE_CLS[e.badge] || 'badge-gray';
-      const hl = e.aktywny ? 'background:rgba(34,211,238,0.05)' : e.ukończony ? 'background:rgba(34,197,94,0.04)' : '';
-      const wynikiHtml = e.ukończony
-        ? `<span style="color:var(--green);font-size:11px">✅ ${e.wynik_waga||''} · ${e.wynik_bf||''}</span>`
-        : e.aktywny
-          ? `<span style="color:var(--accent2);font-size:11px">▶ w toku</span>`
-          : `<span style="color:var(--text3);font-size:11px">—</span>`;
-      return `<tr${hl ? ' style="' + hl + '"' : ''}>
-        <td><span class="badge ${bc}">${e.nazwa}</span></td>
-        <td style="white-space:nowrap">${e.okres}</td>
-        <td style="white-space:nowrap">${e.czas}</td>
-        <td style="white-space:nowrap">${e.cel_waga}</td>
-        <td>${wynikiHtml}</td>
-      </tr>`;
-    }).join('');
-    const celRow = `<tr style="font-weight:600;border-top:2px solid var(--border)">
-      <td>🎯 Cel 2026</td>
-      <td>${m.cel_finalny.okres}</td>
-      <td>—</td>
-      <td style="color:var(--green)">${m.cel_finalny.cel_waga}</td>
-      <td style="color:var(--green);font-size:11px">BF ${m.cel_finalny.cel_bf} · LBM ${m.cel_finalny.cel_lbm}</td>
-    </tr>`;
-
-    // Etapy szczegółowe — zwijane sekcje
+    // Etapy szczegółowe — zwijane sekcje (bez osobnej tabeli przeglądu)
     const szczegoly = m.etapy_szczegoly || {};
     const ETAP_COLORS = {rekompozycja:'green', cut1:'red', bulk:'green', cut2:'red'};
+
+    // Dane z etapów (okres/czas/cel) dopasowane do kluczy szczegółów
+    const etapMeta = {};
+    m.etapy.forEach(e => {
+      const keyMap = {'✅ Rekompozycja':'rekompozycja','🔻 Mini cut #1':'cut1','📈 Mini bulk':'bulk','🔻 Mini cut #2':'cut2'};
+      const k = Object.entries(keyMap).find(([n]) => e.nazwa.includes(n.replace('✅ ','').replace('🔻 ','').replace('📈 ','')))?.[1]
+             || Object.values(keyMap)[m.etapy.indexOf(e)];
+      if (k) etapMeta[k] = { okres: e.okres, czas: e.czas, cel_waga: e.cel_waga, wynik_waga: e.wynik_waga, wynik_bf: e.wynik_bf };
+    });
+
     const etapDetails = Object.entries(szczegoly).map(([key, e]) => {
       const col = ETAP_COLORS[key] || 'text3';
       const border = `1px solid rgba(${col==='green'?'34,197,94':'239,68,68'},0.3)`;
-      const rows = Object.entries(e)
+      const meta = etapMeta[key] || {};
+
+      // Wiersze z metadanych tabeli (na górze)
+      const metaRows = [
+        meta.okres   ? `<tr><td style="color:var(--text3);white-space:nowrap;width:130px">Okres</td><td>${meta.okres}</td></tr>` : '',
+        meta.czas    ? `<tr><td style="color:var(--text3);white-space:nowrap">Czas</td><td>${meta.czas}</td></tr>` : '',
+        meta.cel_waga? `<tr><td style="color:var(--text3);white-space:nowrap">Cel wagowy</td><td>${meta.cel_waga}</td></tr>` : '',
+        (meta.wynik_waga||meta.wynik_bf) ? `<tr><td style="color:var(--text3);white-space:nowrap">Wynik</td><td style="color:var(--green)">✅ ${meta.wynik_waga||''} ${meta.wynik_bf||''}</td></tr>` : '',
+      ].filter(Boolean).join('');
+
+      const LABELS = {punkt_startowy:'Punkt startowy',punkt_koncowy:'Punkt końcowy',trening:'Trening',dieta:'Dieta',big4_start:'Big 4 start',big4_koniec:'Big 4 koniec',wnioski:'Wnioski',cel:'Cel',tdee:'TDEE',tempo:'Tempo',dieta_avg:'Dieta'};
+      const detailRows = Object.entries(e)
         .filter(([k]) => !['tytul','badge','aktywny','ukończony'].includes(k))
-        .map(([k, v]) => {
-          const labels = {punkt_startowy:'Punkt startowy',punkt_koncowy:'Punkt końcowy',trening:'Trening',dieta:'Dieta',big4_start:'Big 4 start',big4_koniec:'Big 4 koniec',wnioski:'Wnioski',cel:'Cel',tdee:'TDEE',tempo:'Tempo',dieta_avg:'Dieta'};
-          return `<tr><td style="color:var(--text3);white-space:nowrap;width:120px">${labels[k]||k}</td><td style="white-space:normal">${v}</td></tr>`;
-        }).join('');
-      const isUkonczone = e.ukończony;
-      const isAktywny = e.aktywny;
-      const statusBadge = isUkonczone
+        .map(([k, v]) =>
+          `<tr><td style="color:var(--text3);white-space:nowrap;width:130px">${LABELS[k]||k}</td><td style="white-space:normal">${v}</td></tr>`
+        ).join('');
+
+      const statusBadge = e.ukończony
         ? `<span class="badge badge-green">✅ ukończony</span>`
-        : isAktywny
+        : e.aktywny
           ? `<span class="badge badge-red">▶ w toku</span>`
           : `<span class="badge badge-gray">planowany</span>`;
+
+      const sep = metaRows && detailRows ? `<tr><td colspan="2" style="padding:0;border-top:1px solid var(--border)"></td></tr>` : '';
+
       return `<details style="margin-bottom:8px">
         <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:${border};border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none">
           <span>${e.tytul} &nbsp;${statusBadge}</span>
           <span style="font-size:10px;color:var(--text3)">▼</span>
         </summary>
         <div style="padding-top:8px"><div class="card">
-          <table><tr><th>Parametr</th><th>Wartość</th></tr>${rows}</table>
+          <table><tr><th>Parametr</th><th>Wartość</th></tr>${metaRows}${sep}${detailRows}</table>
         </div></div>
       </details>`;
     }).join('');
@@ -1442,13 +1438,6 @@
         <div class="card-title">📍 ${ps.tytul}</div>
         <div class="stat-grid">${statsHtml}</div>
         <div class="alert alert-info" style="margin-top:4px"><span class="alert-icon">💡</span><span>${ps.alert}</span></div>
-      </div>
-      <div class="card">
-        <div class="card-title">🗓️ Przegląd etapów — 2026</div>
-        <table>
-          <tr><th>Etap</th><th>Okres</th><th>Czas</th><th>Cel wagowy</th><th>Wynik</th></tr>
-          ${etapyRows}${celRow}
-        </table>
       </div>
       <div style="margin-top:4px">${etapDetails}</div>`;
   }
@@ -1556,8 +1545,8 @@
     const total_p = (b.UA.planowane||0) + (b.UB.planowane||0) + (b.L.planowane||0);
     const pct = total_p > 0 ? Math.round((total_z / total_p) * 100) : 0;
     const typy = [
-      { key:'UA', label:'Upper A', kolor:'var(--accent)' },
-      { key:'UB', label:'Upper B', kolor:'var(--green)' },
+      { key:'UA', label:'UA', kolor:'var(--accent)' },
+      { key:'UB', label:'UB', kolor:'var(--green)' },
       { key:'L',  label:'L',   kolor:'var(--yellow)' }
     ];
     const spans = typy.map(t =>
@@ -1714,13 +1703,13 @@
       <div class="card">
         <div class="card-title">📅 Menu tygodniowe — podsumowanie</div>
         <table>
-          <tr><th>Dzień</th><th>Kcal</th><th>Deficyt</th><th>Białko</th></tr>
+          <tr><th>Dzień</th><th style="width:1%;white-space:nowrap">Kcal</th><th style="width:1%;white-space:nowrap">Deficyt</th><th style="width:1%;white-space:nowrap">Białko</th></tr>
           ${rows}
           <tr style="font-weight:600;border-top:2px solid var(--border)">
             <td>Średnia</td>
-            <td style="color:var(--accent2)">${avgKcal}</td>
-            <td style="color:var(--green)">-${avgDeficyt}</td>
-            <td style="color:var(--green)">${avgBialko}g</td>
+            <td style="color:var(--accent2);text-align:center">${avgKcal}</td>
+            <td style="color:var(--green);text-align:center">-${avgDeficyt}</td>
+            <td style="color:var(--green);text-align:center">${avgBialko}g</td>
     
           </tr>
         </table>
@@ -1904,7 +1893,7 @@
       const rows = blok.rozgrzewka.map(r => expandRow(
         `<td style="white-space:nowrap">${r.nr}</td>
          <td style="white-space:normal;min-width:130px;word-break:break-word">${r.nazwa}</td>
-         <td style="white-space:nowrap">${r.serie_powt}</td>`,
+         <td style="white-space:nowrap;text-align:center">${r.serie_powt}</td>`,
         r.uwagi || '—'
       )).join('');
       rozgrzewkaHtml = `<div class="workout-table card" style="margin-bottom:12px">
@@ -1923,7 +1912,7 @@
       return expandRow(
         `<td style="font-size:11px;white-space:nowrap">${c.nr}</td>
          <td style="white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
-         <td style="white-space:nowrap">${c.serie_powt}</td>`,
+         <td style="white-space:nowrap;text-align:center">${c.serie_powt}</td>`,
         detail, bg
       );
     }).join('');
@@ -1973,6 +1962,14 @@
     document.body.appendChild(errDiv);
     setTimeout(() => errDiv.remove(), 10000);
   });
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/MTracker/service-worker.js')
+        .catch(err => console.warn('SW:', err));
+    });
+  }
 </script>
 </body>
 </html>
