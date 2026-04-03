@@ -1,101 +1,345 @@
 {
   "mapa": {
     "punkt_startowy": {
-      "tytul": "Punkt startowy — marzec 2026",
+      "tytul": "Punkt startowy — styczeń 2026",
       "stats": [
-        { "wartosc": "87 kg",  "label": "Waga",  "kolor": "accent2" },
-        { "wartosc": "19,4%",  "label": "BF%",   "kolor": "yellow" },
-        { "wartosc": "70 kg",  "label": "LBM",   "kolor": "green" }
+        {
+          "wartosc": "91,5 kg",
+          "label": "Waga max (wrz 2025)",
+          "kolor": "red"
+        },
+        {
+          "wartosc": "86,9 kg",
+          "label": "Waga (sty 2026)",
+          "kolor": "accent2"
+        },
+        {
+          "wartosc": "19,4%",
+          "label": "BF% (sty 2026)",
+          "kolor": "yellow"
+        },
+        {
+          "wartosc": "70,1 kg",
+          "label": "LBM (sty 2026)",
+          "kolor": "green"
+        }
       ],
-      "wskazniki": [
-        { "nazwa": "Waga",        "teraz": "87 kg",    "cel": "~83–84 kg",  "roznica": "-3–4 kg",   "roznica_kolor": "green" },
-        { "nazwa": "BF%",         "teraz": "19,4%",    "cel": "15%",        "roznica": "-4,4%",     "roznica_kolor": "green" },
-        { "nazwa": "Tłuszcz (kg)","teraz": "16,9 kg",  "cel": "~12,5 kg",   "roznica": "-4,4 kg",   "roznica_kolor": "green" },
-        { "nazwa": "LBM",         "teraz": "70,1 kg",  "cel": "~71–72 kg",  "roznica": "+1–2 kg",   "roznica_kolor": "green" }
-      ],
-      "alert": "Przy BF 15% i LBM ~71,6 kg (po bulku) waga wyniesie <strong>~84 kg</strong> — niżej niż teraz, mimo więcej mięśni. Klucz: bulk musi poprzedzać finalny cut."
+      "alert": "Start aktywnego planu: <strong>styczeń 2026</strong> — rekompozycja. Wcześniej (wrz–gru 2025): powrót do siłowni po przerwie, peak wagi 91,5 kg."
     },
     "etapy": [
-      { "nazwa": "⚪ Deload",      "badge": "yellow", "okres": "23–29.03",     "czas": "1 tyg",    "cel_waga": "~87 kg",    "cel_bf": "~19%",   "aktywny": false },
-      { "nazwa": "🔻 Mini cut #1", "badge": "red",    "okres": "kwi–maj",      "czas": "8 tyg",    "cel_waga": "84–85 kg",  "cel_bf": "16–17%", "aktywny": true },
-      { "nazwa": "📈 Mini bulk",   "badge": "green",  "okres": "cze–sie",      "czas": "10–12 tyg","cel_waga": "86–87 kg",  "cel_bf": "17–18%", "aktywny": false },
-      { "nazwa": "🔻 Mini cut #2", "badge": "red",    "okres": "wrz–paź",      "czas": "6–8 tyg",  "cel_waga": "83–84 kg",  "cel_bf": "15%",    "aktywny": false }
+      {
+        "nazwa": "✅ Rekompozycja",
+        "okres": "sty–mar 2026",
+        "czas": "10 tygodni",
+        "badge": "green",
+        "aktywny": false,
+        "ukończony": true,
+        "cel_waga": "85–87 kg",
+        "cel_bf": "18–19%",
+        "wynik_waga": "86,9 kg",
+        "wynik_bf": "19,4%",
+        "opis": "Budowa bazy siłowej, nauka techniki, stabilizacja wagi"
+      },
+      {
+        "nazwa": "🔻 Mini cut #1",
+        "okres": "kwi–maj 2026",
+        "czas": "8 tygodni",
+        "badge": "red",
+        "aktywny": true,
+        "ukończony": false,
+        "cel_waga": "84–85 kg",
+        "cel_bf": "16–17%",
+        "opis": "Deficyt ~350 kcal/dzień · białko ≥173g · Cykl 2"
+      },
+      {
+        "nazwa": "📈 Mini bulk",
+        "okres": "cze–sie 2026",
+        "czas": "10–12 tygodni",
+        "badge": "green",
+        "aktywny": false,
+        "ukończony": false,
+        "cel_waga": "86–87 kg",
+        "cel_bf": "17–18%",
+        "opis": "Nadwyżka ~200–300 kcal · budowa siły i masy"
+      },
+      {
+        "nazwa": "🔻 Mini cut #2",
+        "okres": "wrz–paź 2026",
+        "czas": "6–8 tygodni",
+        "badge": "red",
+        "aktywny": false,
+        "ukończony": false,
+        "cel_waga": "83–84 kg",
+        "cel_bf": "15%",
+        "opis": "Cel finalny 2026"
+      }
     ],
-    "cel_finalny": { "okres": "październik 2026", "cel_waga": "~83–84 kg", "cel_bf": "15%" },
-    "checkpoint_alert": "<strong>Checkpoint po deloadzie (~30.03):</strong> waga + BF% + obwody + zdjęcia. Decyzja o starcie Mini cut #1."
+    "cel_finalny": {
+      "cel_waga": "~83–84 kg",
+      "cel_bf": "15%",
+      "cel_lbm": "~71–72 kg",
+      "okres": "październik 2026"
+    },
+    "checkpoint_alert": "<strong>Checkpoint po deloadzie (~30.03):</strong> waga + BF% + obwody + zdjęcia. Decyzja o starcie Mini cut #1.",
+    "etapy_szczegoly": {
+      "rekompozycja": {
+        "tytul": "✅ Rekompozycja — sty–mar 2026",
+        "badge": "green",
+        "ukończony": true,
+        "punkt_startowy": "86,9 kg · BF 19,4% · LBM 70,1 kg",
+        "punkt_koncowy": "86,9 kg · BF ~19% · LBM ~70,5 kg (szacunek)",
+        "trening": "Cykl 1 · 28 sesji · UA + UB + Lower · 3×/tydzień",
+        "dieta": "~2524 kcal/dzień · ~182g białka · cyklowanie kalorii",
+        "big4_start": "Ławka 60 kg · Podciąganie -17,5 kg · Front Squat 60 kg · Trap Bar 75 kg",
+        "big4_koniec": "Ławka 70 kg · Podciąganie -12,5 kg · Front Squat 60 kg · Trap Bar 85 kg",
+        "wnioski": "Solidna baza siłowa zbudowana. Ławka +10 kg, Trap Bar +10 kg w 10 tygodniach. Waga stabilna — czysty efekt rekompozycji."
+      },
+      "cut1": {
+        "tytul": "🔻 Mini cut #1 — kwi–maj 2026",
+        "badge": "red",
+        "aktywny": true,
+        "punkt_startowy": "~86,9 kg · BF ~19% · LBM ~70,5 kg",
+        "cel": "84–85 kg · BF 16–17% · LBM utrzymana",
+        "trening": "Cykl 2 · 8 tygodni · UA + UB + Lower · Wt+Czw+Nd",
+        "dieta": "~2298 kcal/dzień · deficyt ~350 kcal · białko ≥173g",
+        "tdee": "~2648 kcal/dzień (Mifflin + smartwatch + 10 849 kroków/dzień)",
+        "tempo": "~0,3–0,35 kg/tydzień → ~2,0–2,5 kg w 8 tygodniach"
+      },
+      "bulk": {
+        "tytul": "📈 Mini bulk — cze–sie 2026",
+        "badge": "green",
+        "punkt_startowy": "~84–85 kg · BF ~17%",
+        "cel": "86–87 kg · BF ~18% · LBM +1–2 kg",
+        "trening": "Cykl 3 · 10–12 tygodni · hypertrofia",
+        "dieta": "Nadwyżka ~200–300 kcal · białko ≥180g",
+        "tempo": "~0,2–0,3 kg/tydzień"
+      },
+      "cut2": {
+        "tytul": "🔻 Mini cut #2 — wrz–paź 2026",
+        "badge": "red",
+        "punkt_startowy": "~86–87 kg · BF ~18%",
+        "cel": "83–84 kg · BF 15% — cel finalny 2026",
+        "trening": "Cykl 4 · 6–8 tygodni",
+        "dieta": "Deficyt ~300–400 kcal"
+      }
+    }
   },
-
   "big4": [
     {
       "nazwa": "⭐ Ławka sztanga",
-      "opis": "Start: 60 kg (sty 2026) → Teraz: 70 kg → Cel po bulku: 85 kg",
-      "start_kg": 60, "teraz_kg": 70, "cel_kg": 85,
-      "badge": "70 kg", "badge_kolor": "green",
-      "uwaga": "Rekompozycja/cut: utrzymać | Mini bulk: bić rekordy · ostatni: AMRAP 10 przy 67,5 kg (04.03)"
+      "opis": "Start C1: 60 kg (sty 2026) → Po rekompozycji: 70 kg → Cel po bulku: 85 kg",
+      "start_kg": 60,
+      "teraz_kg": 70,
+      "cel_kg": 85,
+      "badge": "+10 kg",
+      "badge_kolor": "green",
+      "sesje": [
+        {
+          "data": "sty 2026",
+          "kg": 60,
+          "uwaga": "start C1"
+        },
+        {
+          "data": "mar 2026",
+          "kg": 67.5,
+          "uwaga": "AMRAP 10"
+        },
+        {
+          "data": "31.03",
+          "kg": 72.5,
+          "uwaga": "★ start C2 · 5-5-5-6"
+        }
+      ],
+      "uwaga": "Cut: utrzymać siłę · Bulk: bić rekordy"
     },
     {
       "nazwa": "⭐ Podciąganie (asysta)",
-      "opis": "Start: -25 kg (sty 2026) → Teraz: -12 kg → Cel: BW (0 kg)",
-      "start_kg": 25, "teraz_kg": 13, "cel_kg": 25,
-      "label_start": "-25 kg", "label_teraz": "-12 kg ← teraz", "label_cel": "BW",
-      "badge": "-12 kg", "badge_kolor": "green",
-      "uwaga": "Na cutach: utrzymać | Na bulku: szybkie skoki · ostatni: -12 kg 5×8 ustabilizowane (22.03)"
+      "opis": "Start C1: -17,5 kg (sty 2026) → Po rekompozycji: -12,5 kg → Cel: BW",
+      "start_kg": -17.5,
+      "teraz_kg": -12.5,
+      "cel_kg": 0,
+      "badge": "+5 kg mniej asysty",
+      "badge_kolor": "green",
+      "sesje": [
+        {
+          "data": "sty 2026",
+          "kg": -17.5,
+          "uwaga": "start C1"
+        },
+        {
+          "data": "mar 2026",
+          "kg": -12.5,
+          "uwaga": "stabilizacja"
+        },
+        {
+          "data": "06.04",
+          "kg": -12.5,
+          "uwaga": "start C2"
+        }
+      ],
+      "uwaga": "Cel długoterminowy: BW (bez asysty)"
     },
     {
-      "nazwa": "⭐ Front squat",
-      "opis": "Start: ~50 kg → Teraz: 60 kg → Cel po bulku: 80 kg",
-      "start_kg": 50, "teraz_kg": 60, "cel_kg": 80,
-      "badge": "60 kg", "badge_kolor": "blue",
-      "uwaga": "Lędźwie priorytet — nigdy nie forsować przy dyskomforcie · ostatni: 60 kg 3×10 (06.03)"
+      "nazwa": "⭐ Front Squat",
+      "opis": "Start C1: 60 kg (sty 2026) → Po rekompozycji: 60 kg → Cel po bulku: 80 kg",
+      "start_kg": 60,
+      "teraz_kg": 65,
+      "cel_kg": 80,
+      "badge": "+5 kg (C2 tyg 1)",
+      "badge_kolor": "accent2",
+      "sesje": [
+        {
+          "data": "sty 2026",
+          "kg": 60,
+          "uwaga": "start C1 · faza stabilizacji"
+        },
+        {
+          "data": "mar 2026",
+          "kg": 60,
+          "uwaga": "ustabilizowany"
+        },
+        {
+          "data": "02.04",
+          "kg": 65,
+          "uwaga": "★ start C2 · 4×6"
+        }
+      ],
+      "uwaga": "Nowy zakres C2: 4×4–6 (siłowy) zamiast 3×10"
     },
     {
-      "nazwa": "⭐ Trap bar deadlift",
-      "opis": "Start: ~60 kg → Teraz: 85 kg → Cel po bulku: 100 kg",
-      "start_kg": 60, "teraz_kg": 85, "cel_kg": 100,
-      "badge": "85 kg", "badge_kolor": "green",
-      "uwaga": "Zamiennik dla RDL — bezpieczny dla lędźwi · ostatni: 85 kg 5×8 ★ rekord (17.03)"
+      "nazwa": "⭐ Trap Bar Deadlift",
+      "opis": "Start C1: 75 kg (sty 2026) → Po rekompozycji: 85 kg → Cel po bulku: 110 kg",
+      "start_kg": 75,
+      "teraz_kg": 85,
+      "cel_kg": 110,
+      "badge": "+10 kg",
+      "badge_kolor": "green",
+      "sesje": [
+        {
+          "data": "sty 2026",
+          "kg": 75,
+          "uwaga": "start C1"
+        },
+        {
+          "data": "mar 2026",
+          "kg": 85,
+          "uwaga": "stabilizacja"
+        },
+        {
+          "data": "02.04",
+          "kg": 80,
+          "uwaga": "kalibracja C2 · nowy zakres 4×4–6"
+        }
+      ],
+      "uwaga": "Nowy zakres C2: 4×4–6. Cel operacyjny: wrócić do 85 kg i rosnąć"
     }
   ],
-
   "fazy": {
-    "deload": {
-      "tytul": "⚪ Deload",
-      "badge": "23–29.03.2026 · 1 tydzień",
-      "border_kolor": "yellow",
-      "alert_info": "Prawdziwy odpoczynek — nie trening z mniejszymi ciężarami. Pełna regeneracja CNS, ścięgien i stawów po 10 tygodniach. Bez tego mini cut zaczyna się ze zmęczonym organizmem.",
-      "parametry": [
-        { "parametr": "Ciężary",          "normalnie": "100%",       "deload": "-40%",                  "deload_kolor": "yellow" },
-        { "parametr": "Serie per ćwicz.", "normalnie": "3–5",         "deload": "2",                     "deload_kolor": "yellow" },
-        { "parametr": "Tempo",            "normalnie": "3-1-1-0",     "deload": "2-1-2-0 (fokus technika)","deload_kolor": "yellow" },
-        { "parametr": "Czas treningu",    "normalnie": "75–90 min",   "deload": "45–55 min",             "deload_kolor": "yellow" },
-        { "parametr": "Dieta",            "normalnie": "bez zmian — utrzymaj kalorie i białko", "deload": null },
-        { "parametr": "Sen",              "normalnie": "priorytet — minimum 7–8h",              "deload": null, "normalnie_kolor": "green" }
-      ],
-      "alerty": [
-        { "typ": "warn",    "ikona": "⚠️", "tekst": "Typowa reakcja: po deloadzie czujesz się 'za świeży' i chcesz trenować mocniej. To dobry znak — wejdź w mini cut z tym zapasem energii, nie przepalaj go na deloadzie." },
-        { "typ": "success", "ikona": "🎯", "tekst": "<strong>Checkpoint ~30.03:</strong> waga + BF% + obwody + zdjęcia. Decyzja o starcie Mini cut #1." }
-      ]
-    },
     "cut1": {
       "tytul": "🔻 Mini cut #1",
       "badge": "kwiecień–maj 2026 · 8 tygodni",
       "border_kolor": "red",
       "stats": [
-        { "wartosc": "-384",   "label": "kcal deficyt/dzień", "kolor": "red" },
-        { "wartosc": "~2075",  "label": "kcal dni odpoczynku","kolor": "accent2" },
-        { "wartosc": "173g+",  "label": "białko / dzień",     "kolor": "green" }
+        {
+          "wartosc": "~2648",
+          "label": "TDEE kcal/dzień",
+          "kolor": "text2"
+        },
+        {
+          "wartosc": "-350",
+          "label": "deficyt/dzień",
+          "kolor": "red"
+        },
+        {
+          "wartosc": "~2298",
+          "label": "cel kcal/dzień",
+          "kolor": "accent2"
+        },
+        {
+          "wartosc": "≥173g",
+          "label": "białko min.",
+          "kolor": "green"
+        }
       ],
       "parametry": [
-        { "parametr": "Kalorie",      "trening": "~2650–2750 kcal (bez zmian)", "odpoczynek": "~2050–2100 kcal (-384)", "odpoczynek_kolor": "red" },
-        { "parametr": "Białko",       "trening": "≥173g",                       "odpoczynek": "≥173g (bez zmian!)",      "odpoczynek_kolor": "green", "trening_kolor": "green" },
-        { "parametr": "Węglowodany",  "trening": "bez zmian",                   "odpoczynek": "-węgle wieczorem",        "odpoczynek_kolor": "yellow" },
-        { "parametr": "Trening",      "trening": "bez zmian — te same ciężary i serie", "odpoczynek": null }
+        {
+          "parametr": "Kalorie",
+          "trening": "~2550–2700 kcal",
+          "odpoczynek": "~2050–2150 kcal (-350)",
+          "odpoczynek_kolor": "red"
+        },
+        {
+          "parametr": "Białko",
+          "trening": "≥173g",
+          "odpoczynek": "≥173g (bez zmian!)",
+          "odpoczynek_kolor": "green",
+          "trening_kolor": "green"
+        },
+        {
+          "parametr": "Węglowodany",
+          "trening": "bez zmian",
+          "odpoczynek": "-węgle wieczorem",
+          "odpoczynek_kolor": "yellow"
+        },
+        {
+          "parametr": "Trening",
+          "trening": "bez zmian — te same ciężary",
+          "odpoczynek": null
+        }
       ],
       "alerty": [
-        { "typ": "warn",    "ikona": "🎯", "tekst": "<strong>Ciąć z węgli i tłuszczów w dniach odpoczynku — nigdy z białka.</strong> Szczegółowe zmiany posiłków: Dieta → Mini cut." },
-        { "typ": "info",    "ikona": "📊", "tekst": "Tyg 1–2: szybki spadek ~0,5–1 kg (woda i glikogen). Tyg 3–8: ~0,32–0,35 kg/tydz. Łącznie: -2,5–2,8 kg." },
-        { "typ": "warn",    "ikona": "⚠️", "tekst": "<strong>Sygnały że cut za agresywny:</strong> siła spada >15% przez 2 tygodnie → dodaj 150 kcal w dniach odpoczynku. Waga nie spada 3 tyg z rzędu → odejmij 100 kcal." },
-        { "typ": "success", "ikona": "✅", "tekst": "Kreatyna 5g/dzień bez przerw — utrzymuje siłę i objętość mięśni na deficycie." }
+        {
+          "typ": "info",
+          "ikona": "📊",
+          "tekst": "<strong>Cel:</strong> zejście z ~86,9 kg → 84–85 kg w 8 tygodniach. Deficyt ~2450 kcal/tydz → ~0,3–0,35 kg tłuszczu/tydz → <strong>~2,0–2,5 kg w 8 tygodniach</strong> ✓"
+        },
+        {
+          "typ": "success",
+          "ikona": "✅",
+          "tekst": "<strong>Co działa na korzyść:</strong> dni treningowe bez głębokiego cięcia chronią siłę. Białko ≥173g przy każdym dniu chroni mięśnie. Sobota z drinkami wbudowana w plan."
+        },
+        {
+          "typ": "warn",
+          "ikona": "⚠️",
+          "tekst": "<strong>Sygnały że cut za agresywny:</strong> siła spada >15% przez 2 tyg z rzędu → +150 kcal w dniach odpoczynku. Waga nie spada 3 tyg → -100 kcal z dni odpoczynku."
+        },
+        {
+          "typ": "success",
+          "ikona": "💊",
+          "tekst": "Kreatyna 5g/dzień bez przerw — utrzymuje siłę i objętość mięśni na deficycie."
+        }
+      ],
+      "porownanie": [
+        {
+          "parametr": "Kcal dni odpoczynku",
+          "rekompozycja": "~2366 kcal",
+          "minicut": "~2050–2150 kcal",
+          "minicut_color": "red"
+        },
+        {
+          "parametr": "Kcal dni treningowe",
+          "rekompozycja": "~2718 kcal",
+          "minicut": "~2550–2700 kcal",
+          "minicut_color": "yellow"
+        },
+        {
+          "parametr": "Białko minimum",
+          "rekompozycja": "~182g średnio",
+          "minicut": "≥173g (2g/kg)",
+          "minicut_color": "green"
+        },
+        {
+          "parametr": "Efektywny deficyt",
+          "rekompozycja": "~0 (rekompozycja)",
+          "minicut": "~350 kcal/dzień",
+          "minicut_color": "red"
+        },
+        {
+          "parametr": "Tempo redukcji",
+          "rekompozycja": "stabilizacja wagi",
+          "minicut": "~0,3–0,35 kg/tydzień",
+          "minicut_color": "green"
+        }
       ]
     },
     "bulk": {
@@ -103,21 +347,69 @@
       "badge": "czerwiec–sierpień 2026 · 10–12 tygodni",
       "border_kolor": "green",
       "stats": [
-        { "wartosc": "+200",   "label": "kcal nadwyżka/dzień", "kolor": "green" },
-        { "wartosc": "~2700",  "label": "kcal dni treningowe", "kolor": "accent2" },
-        { "wartosc": "+1,5 kg","label": "cel LBM",             "kolor": "green" }
+        {
+          "wartosc": "+200",
+          "label": "kcal nadwyżka/dzień",
+          "kolor": "green"
+        },
+        {
+          "wartosc": "~2700",
+          "label": "kcal dni treningowe",
+          "kolor": "accent2"
+        },
+        {
+          "wartosc": "+1,5 kg",
+          "label": "cel LBM",
+          "kolor": "green"
+        }
       ],
       "parametry": [
-        { "parametr": "Kalorie",      "trening": "~2700–2800 kcal", "odpoczynek": "~2400 kcal", "trening_kolor": "green" },
-        { "parametr": "Białko",       "trening": "180–200g",         "odpoczynek": "180–200g",   "trening_kolor": "green", "odpoczynek_kolor": "green" },
-        { "parametr": "Węglowodany",  "trening": "więcej przed i po treningu", "odpoczynek": "umiarkowanie", "trening_kolor": "green" }
+        {
+          "parametr": "Kalorie",
+          "trening": "~2700–2800 kcal",
+          "odpoczynek": "~2400 kcal",
+          "trening_kolor": "green"
+        },
+        {
+          "parametr": "Białko",
+          "trening": "180–200g",
+          "odpoczynek": "180–200g",
+          "trening_kolor": "green",
+          "odpoczynek_kolor": "green"
+        },
+        {
+          "parametr": "Węglowodany",
+          "trening": "więcej przed i po treningu",
+          "odpoczynek": "umiarkowanie",
+          "trening_kolor": "green"
+        }
       ],
       "alerty": [
-        { "typ": "info",    "ikona": "💡", "tekst": "Wchodzisz z BF ~16–17% — dobry punkt startowy. Poniżej 15% organizm efektywniej buduje mięśnie zamiast tłuszczu. Nie czekaj do 12%." },
-        { "typ": "success", "ikona": "✅", "tekst": "<strong>Na bulku bij rekordy.</strong> Ławka, podciąganie, front squat — tu zobaczysz największe skoki. Celuj w +2,5 kg co 2–3 tygodnie." },
-        { "typ": "success", "ikona": "✅", "tekst": "Węglowodany okołotreningowe — banan lub ryż przed treningiem, węgle po." },
-        { "typ": "warn",    "ikona": "⚠️", "tekst": "BF% rośnie szybciej niż ~0,5%/tydz przez 2 tygodnie z rzędu → zmniejsz nadwyżkę o 100–150 kcal. Cel: max +2 kg wagi/miesiąc." },
-        { "typ": "info",    "ikona": "📊", "tekst": "Tyg 1–2: wzrost ~0,5–1 kg (woda i glikogen). Tyg 3–12: ~0,2–0,3 kg LBM/tydz. Łącznie: +1–1,5 kg mięśni." }
+        {
+          "typ": "info",
+          "ikona": "💡",
+          "tekst": "Wchodzisz z BF ~16–17% — dobry punkt startowy. Poniżej 15% organizm efektywniej buduje mięśnie zamiast tłuszczu. Nie czekaj do 12%."
+        },
+        {
+          "typ": "success",
+          "ikona": "✅",
+          "tekst": "<strong>Na bulku bij rekordy.</strong> Ławka, podciąganie, front squat — tu zobaczysz największe skoki. Celuj w +2,5 kg co 2–3 tygodnie."
+        },
+        {
+          "typ": "success",
+          "ikona": "✅",
+          "tekst": "Węglowodany okołotreningowe — banan lub ryż przed treningiem, węgle po."
+        },
+        {
+          "typ": "warn",
+          "ikona": "⚠️",
+          "tekst": "BF% rośnie szybciej niż ~0,5%/tydz przez 2 tygodnie z rzędu → zmniejsz nadwyżkę o 100–150 kcal. Cel: max +2 kg wagi/miesiąc."
+        },
+        {
+          "typ": "info",
+          "ikona": "📊",
+          "tekst": "Tyg 1–2: wzrost ~0,5–1 kg (woda i glikogen). Tyg 3–12: ~0,2–0,3 kg LBM/tydz. Łącznie: +1–1,5 kg mięśni."
+        }
       ]
     },
     "cut2": {
@@ -125,26 +417,44 @@
       "badge": "wrzesień–październik 2026 · 6–8 tygodni",
       "border_kolor": "red",
       "parametry": [
-        { "parametr": "Deficyt",      "wartosc": "-300–350 kcal/dzień (tak samo jak cut #1)", "kolor": "red" },
-        { "parametr": "Czas",         "wartosc": "6–8 tygodni — krócej bo mniej do zgubienia", "kolor": "" },
-        { "parametr": "Cel wagowy",   "wartosc": "83–84 kg",    "kolor": "green" },
-        { "parametr": "Cel BF%",      "wartosc": "15% 🎯",      "kolor": "green" },
-        { "parametr": "LBM po cucie", "wartosc": "~71–72 kg (+1–2 kg vs marzec 2026)", "kolor": "green" }
+        {
+          "parametr": "Deficyt",
+          "wartosc": "-300–350 kcal/dzień (tak samo jak cut #1)",
+          "kolor": "red"
+        },
+        {
+          "parametr": "Czas",
+          "wartosc": "6–8 tygodni — krócej bo mniej do zgubienia",
+          "kolor": ""
+        },
+        {
+          "parametr": "Cel wagowy",
+          "wartosc": "83–84 kg",
+          "kolor": "green"
+        },
+        {
+          "parametr": "Cel BF%",
+          "wartosc": "15% 🎯",
+          "kolor": "green"
+        },
+        {
+          "parametr": "LBM po cucie",
+          "wartosc": "~71–72 kg (+1–2 kg vs marzec 2026)",
+          "kolor": "green"
+        }
       ],
       "alerty": [
-        { "typ": "success", "ikona": "🏆", "tekst": "Wchodzisz z ~87 kg i ~17–18% BF po bulku — LBM ~71,5 kg. Ten cut to 'ostatnia mila' do 15%. Łatwiejszy niż cut #1 bo masz więcej mięśni = wyższe spalanie w spoczynku." },
-        { "typ": "info",    "ikona": "📊", "tekst": "W październiku 2026: ~83–84 kg przy BF 15% — wyglądasz lepiej niż w marcu mimo podobnej wagi, bo masz 1–2 kg więcej mięśni i 4–5 kg mniej tłuszczu." }
+        {
+          "typ": "success",
+          "ikona": "🏆",
+          "tekst": "Wchodzisz z ~87 kg i ~17–18% BF po bulku — LBM ~71,5 kg. Ten cut to 'ostatnia mila' do 15%. Łatwiejszy niż cut #1 bo masz więcej mięśni = wyższe spalanie w spoczynku."
+        },
+        {
+          "typ": "info",
+          "ikona": "📊",
+          "tekst": "W październiku 2026: ~83–84 kg przy BF 15% — wyglądasz lepiej niż w marcu mimo podobnej wagi, bo masz 1–2 kg więcej mięśni i 4–5 kg mniej tłuszczu."
+        }
       ]
     }
-  },
-
-  "zasady": [
-    { "zasada": "Białko nigdy poniżej 180g",              "kolor": "green",  "dlaczego": "Jedyna ochrona mięśni podczas deficytu. Przy 180g+ i treningu siłowym utrata LBM minimalna." },
-    { "zasada": "Trening siłowy przez wszystkie fazy",    "kolor": "green",  "dlaczego": "Cardio spala, ale sygnał do zachowania mięśni daje tylko trening z obciążeniem. Cardio opcjonalnie 1–2× tydzień 20–30 min." },
-    { "zasada": "Deficyt max -500 kcal/dzień",            "kolor": "green",  "dlaczego": "Agresywniejszy deficyt = szybsza utrata mięśni, gorsza regeneracja, ryzyko kontuzji. Wolniej = trwale." },
-    { "zasada": "Waga 2× w tygodniu, patrz na średnią 7-dniową", "kolor": "green", "dlaczego": "Wahania dobowe ±1 kg są normalne. Decyzje tylko na podstawie trendu tygodniowego, nie pojedynczego pomiaru." },
-    { "zasada": "Przerwa między cutami (bulk lub utrzymanie)", "kolor": "yellow","dlaczego": "Ciągły deficyt = adaptacja metaboliczna (organizm spowalnia spalanie). Przerwa resetuje metabolizm." },
-    { "zasada": "Deload co 8–10 tygodni",                 "kolor": "yellow", "dlaczego": "Regeneracja ścięgien i CNS. Bez deloadów narasta ryzyko kontuzji — szczególnie przy lędźwiach." },
-    { "zasada": "Obwody + zdjęcia co fazę",               "kolor": "yellow", "dlaczego": "Waga to jeden wskaźnik — obwody i zdjęcia pokazują rzeczywistą zmianę składu ciała. Pierwsze pomiary ~30.03." }
-  ]
+  }
 }

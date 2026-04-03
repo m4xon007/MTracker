@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.20</title>
+<title>Marcin — Plan 2026 · v2.21</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -70,6 +70,34 @@
   .workout-table table td:first-child {
     white-space:normal;min-width:120px;
   }
+
+  /* ── WORKOUT TABLE — Plan C2 ── */
+  /* #  */ .workout-table td:first-child,.workout-table th:first-child{width:22px;min-width:22px;max-width:28px;text-align:center;padding:5px 2px;white-space:nowrap;font-size:10px;}
+  /* Ćwiczenie */ .workout-table td:nth-child(2),.workout-table th:nth-child(2){white-space:normal;min-width:110px;max-width:150px;word-break:break-word;font-size:11px;}
+  /* Partia */ .workout-table td:nth-child(3),.workout-table th:nth-child(3){white-space:normal;min-width:70px;max-width:100px;word-break:break-word;font-size:10px;color:var(--text3);}
+  /* Serie/Powt/Przerwa/Start/Cel — nie zawijaj */
+  .workout-table td:nth-child(4),.workout-table th:nth-child(4),
+  .workout-table td:nth-child(5),.workout-table th:nth-child(5),
+  .workout-table td:nth-child(6),.workout-table th:nth-child(6),
+  .workout-table td:nth-child(7),.workout-table th:nth-child(7),
+  .workout-table td:nth-child(8),.workout-table th:nth-child(8){white-space:nowrap;}
+
+  /* ── POPRZEDNI — tabela ćwiczeń ── */
+  /* #  */ .next-table td:first-child,.next-table th:first-child{width:22px;min-width:22px;padding:5px 2px;white-space:nowrap;font-size:10px;text-align:center;}
+  /* Ćwiczenie */ .next-table td:nth-child(2),.next-table th:nth-child(2){white-space:normal;min-width:100px;max-width:140px;word-break:break-word;font-size:11px;}
+  /* Ciężar, Wynik, Ocena — nie zawijaj */
+  .next-table td:nth-child(3),.next-table th:nth-child(3),
+  .next-table td:nth-child(4),.next-table th:nth-child(4),
+  .next-table td:nth-child(5),.next-table th:nth-child(5){white-space:nowrap;}
+
+  /* ── ARCHIWUM historia — kluczowe wyniki jako tooltip-style ── */
+  .hist-wyniki{font-size:11px;color:var(--text3);white-space:normal;min-width:100px;max-width:160px;word-break:break-word;line-height:1.4;}
+
+  /* ── CORE — jak wykonać ── */
+  .core-table td:last-child{white-space:normal;min-width:100px;max-width:160px;word-break:break-word;font-size:11px;color:var(--text3);}
+  .core-table td:first-child{white-space:nowrap;width:28px;}
+  .core-table td:nth-child(2){white-space:normal;min-width:90px;word-break:break-word;font-weight:600;}
+  .core-table td:nth-child(3),.core-table td:nth-child(4),.core-table td:nth-child(5){white-space:nowrap;}
   .badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;}
 
   .filter-btn{padding:3px 10px;border-radius:5px;border:1px solid var(--border);background:var(--bg2);color:var(--text3);cursor:pointer;font-size:11px;}
@@ -124,7 +152,6 @@
 
   /* ── Global overflow protection ── */
   .app-content section { overflow-x: hidden; }
-  .app-content * { max-width: 100%; }
   .app-content img, .app-content canvas { max-width: 100%; height: auto; }
 
   /* ── Mobile table scroll — ALL tables in cards ── */
@@ -154,15 +181,12 @@
   /* ── Wrap all tables in scroll container ── */
   .tbl-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:8px; }
 
-  /* ── next-card fix ── */
+  /* ── next-card / next-table ── */
   .next-card { overflow-x: hidden; }
   .next-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .next-table table { min-width: 480px; }
-
-  /* ── Progresja tables ── */
   .prog-table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 
-  /* ── stat-grid mobile ── */
+  /* ── Mobile breakpoint ── */
   @media(max-width:480px) {
     .stat-grid { grid-template-columns: repeat(3,1fr); gap:8px; }
     .stat-num { font-size:20px; }
@@ -170,7 +194,7 @@
     h2 { font-size:14px; }
     h3 { font-size:12px; }
     .next-title { font-size:16px; }
-    td, th { padding:6px 8px; font-size:12px; }
+    td, th { padding:5px 6px; font-size:11px; }
     .tab-btn { font-size:11px; padding:4px 10px; }
     .alert { font-size:12px; padding:10px 12px; }
     .template-box { font-size:11px; }
@@ -196,7 +220,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.20</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.21</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -334,10 +358,7 @@
         <span class="alert-icon">🏠</span>
         <span>Sprzęt: <strong>mata + guma 15 kg</strong>. Za 2–3 tyg: guma 25 kg. Za 6–8 tyg: guma 35 kg.</span>
       </div>
-      <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt./Czas</th><th>Przerwa</th><th>Jak wykonać</th></tr>
-        <tr style="background:rgba(34,197,94,0.05)"><td colspan="6" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok A: Stabilizacja głęboka — ZAWSZE ──</td></tr>
-        <tr><td>A1</td><td><strong>Dead bug ⭐</strong></td><td>3</td><td>8/stronę</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">Leżysz na plecach, kolana 90°, ręce w górę. Opuszczasz prawą rękę + lewą nogę — lędźwie cały czas przy macie. 3 sek w dół, 1 sek w górę.</td></tr>
+      <table class="core-table"><td>3</td><td>8/stronę</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">Leżysz na plecach, kolana 90°, ręce w górę. Opuszczasz prawą rękę + lewą nogę — lędźwie cały czas przy macie. 3 sek w dół, 1 sek w górę.</td></tr>
         <tr><td>A2</td><td><strong>Bird-dog ⭐</strong></td><td>3</td><td>8/stronę</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">Na czworakach, plecy neutralne. Wyprost ręki + przeciwnej nogi — 2 sek zatrzymanie z napiętym brzuchem.</td></tr>
         <tr style="background:rgba(59,130,246,0.05)"><td colspan="6" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok B: Siła core ──</td></tr>
         <tr><td>B1</td><td><strong>Plank RKC</strong></td><td>3</td><td>20 sek</td><td>40 s</td><td style="font-size:11px;color:var(--text3)">Napinasz całe ciało — pośladki, brzuch, quad. Nie zwykły plank — RKC to napięcie maksymalne przez 20 sek.</td></tr>
@@ -658,6 +679,8 @@
     <div id="diet-minicut-odpoczynek"></div>
     <h3>Posiłki — dni treningowe</h3>
     <div id="diet-minicut-treningowe"></div>
+    <!-- LISTA ZAKUPÓW — tylko w mini cut -->
+    <div id="diet-zakupy" style="margin-top:8px"></div>
   </div><!-- /d-minicut -->
 
   <!-- TAB: PRODUKTY -->
@@ -673,9 +696,6 @@
     <div id="diet-przepisy"></div>
   </div><!-- /d-przepisy -->
 
-  <!-- LISTA ZAKUPÓW -->
-  <div id="diet-zakupy" style="margin-top:16px"></div>
-
 </section>
 
 <!-- ═══ PLAN 2026 ══════════════════════════════════════════════════ -->
@@ -687,20 +707,16 @@
   <div class="tab-row">
     <button class="tab-btn active" onclick="switchTab('rm-content','r-mapa',this)">🗓️ Mapa</button>
     <button class="tab-btn" onclick="switchTab('rm-content','r-big4',this)">💪 Big 4</button>
-    <button class="tab-btn" onclick="switchTab('rm-content','r-deload',this)">⚪ Deload</button>
     <button class="tab-btn" onclick="switchTab('rm-content','r-cut1',this)">🔻 Cut #1</button>
     <button class="tab-btn" onclick="switchTab('rm-content','r-bulk',this)">📈 Bulk</button>
     <button class="tab-btn" onclick="switchTab('rm-content','r-cut2',this)">🎯 Cut #2</button>
-    <button class="tab-btn" onclick="switchTab('rm-content','r-zasady',this)">📋 Zasady</button>
   </div>
 
-  <div id="r-mapa"    class="tab-panel active"></div>
-  <div id="r-big4"    class="tab-panel"></div>
-  <div id="r-deload"  class="tab-panel"></div>
-  <div id="r-cut1"    class="tab-panel"></div>
-  <div id="r-bulk"    class="tab-panel"></div>
-  <div id="r-cut2"    class="tab-panel"></div>
-  <div id="r-zasady"  class="tab-panel"></div>
+  <div id="r-mapa" class="tab-panel active"></div>
+  <div id="r-big4" class="tab-panel"></div>
+  <div id="r-cut1" class="tab-panel"></div>
+  <div id="r-bulk" class="tab-panel"></div>
+  <div id="r-cut2" class="tab-panel"></div>
 
   </div><!-- /rm-content -->
 </section>
@@ -1016,7 +1032,6 @@
         <td>${c.ciezar}</td>
         <td>${c.wynik}</td>
         <td><span class="badge" style="background:${bg};color:${fg}">${c.badge}</span></td>
-        <td style="color:var(--text3)">${c.plan}</td>
       </tr>`;
     }).join('');
     el.innerHTML = `
@@ -1024,7 +1039,7 @@
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:4px">
           <div>
             <div class="next-title">${p.tytul} <span style="font-size:13px;color:var(--green);font-weight:400">— ${p.ocena_tekst}</span></div>
-            <div class="next-date">${p.data} &nbsp;|&nbsp; ${p.czas} &nbsp;|&nbsp; ${p.kcal} kcal &nbsp;|&nbsp; Tętno: ${p.tetno} &nbsp;|&nbsp; Obciążenie: ${p.obciazenie}</div>
+            <div class="next-date">${p.data} &nbsp;|&nbsp; ${p.czas} &nbsp;|&nbsp; ${p.kcal} kcal &nbsp;|&nbsp; ❤️ ${p.tetno} &nbsp;|&nbsp; ⚡ ${p.obciazenie}</div>
           </div>
           <div style="text-align:right">
             <div style="font-size:22px;letter-spacing:2px;color:var(--green)">${stars}</div>
@@ -1034,7 +1049,7 @@
         ${p.alert_sukces ? alertBox('success','✅',p.alert_sukces) : ''}
         <div class="next-table" style="margin-top:12px">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Wynik</th><th>Ocena</th><th style="color:var(--accent2)">Progresja → plan</th></tr>
+            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Wynik</th><th>Ocena</th></tr>
             ${rows}
           </table>
         </div>
@@ -1088,12 +1103,12 @@
       ? `<span style="color:var(--yellow)">★×${r.ocena.replace('/10','')} <span style="color:var(--text3)">${r.ocena}</span></span>`
       : '<span style="color:var(--text3)">—</span>';
     return `<tr>
-      <td ${hl}>${r.data}</td>
+      <td style="white-space:nowrap" ${hl}>${r.data}</td>
       <td><span class="badge" style="background:${bg};color:${fg}">${r.typ}</span></td>
-      <td>${ocena}</td>
-      <td>${r.kcal||'—'}</td>
-      <td>${r.czas||'—'}</td>
-      <td style="font-size:12px;color:var(--text3)">${r.wyniki}</td>
+      <td style="white-space:nowrap">${ocena}</td>
+      <td style="white-space:nowrap">${r.kcal||'—'}</td>
+      <td style="white-space:nowrap">${r.czas||'—'}</td>
+      <td class="hist-wyniki">${r.wyniki}</td>
     </tr>`;
   }
 
@@ -1277,15 +1292,12 @@
   function renderRoadmap(d) {
     renderRoadmapMapa(d.mapa);
     renderRoadmapBig4(d.big4);
-    renderRoadmapFaza('r-deload', d.fazy.deload, 'deload');
-    renderRoadmapFaza('r-cut1',   d.fazy.cut1,   'cut');
-    renderRoadmapFaza('r-bulk',   d.fazy.bulk,   'bulk');
-    renderRoadmapFaza('r-cut2',   d.fazy.cut2,   'cut2');
-    renderRoadmapZasady(d.zasady);
+    if (d.fazy.cut1) renderRoadmapFaza('r-cut1', d.fazy.cut1, 'cut');
+    if (d.fazy.bulk) renderRoadmapFaza('r-bulk', d.fazy.bulk, 'bulk');
+    if (d.fazy.cut2) renderRoadmapFaza('r-cut2', d.fazy.cut2, 'cut2');
     document.getElementById('rm-loading').style.display = 'none';
     document.getElementById('rm-content').style.display = 'block';
-    // Jawnie ustaw stan zakładek po renderowaniu
-    ['r-mapa','r-big4','r-deload','r-cut1','r-bulk','r-cut2','r-zasady'].forEach((id, i) => {
+    ['r-mapa','r-big4','r-cut1','r-bulk','r-cut2'].forEach((id, i) => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', i === 0);
     });
@@ -1294,54 +1306,99 @@
   function renderRoadmapMapa(m) {
     const el = document.getElementById('r-mapa');
     const ps = m.punkt_startowy;
+
+    // Stat-boxy punktu startowego
     const statsHtml = ps.stats.map(s =>
-      `<div class="stat-box"><div class="stat-num" style="color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
-    ).join('');
-    const wsRow = ps.wskazniki.map(w =>
-      `<tr><td>${w.nazwa}</td><td>${w.teraz}</td><td>${w.cel}</td><td style="color:var(--${w.roznica_kolor})">${w.roznica}</td></tr>`
+      `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
     ).join('');
 
-    const BADGE_CLS = {yellow:'badge-yellow',red:'badge-red',green:'badge-green'};
+    // Przegląd etapów
+    const BADGE_CLS = {yellow:'badge-yellow', red:'badge-red', green:'badge-green', gray:'badge-gray'};
     const etapyRows = m.etapy.map(e => {
-      const bc = BADGE_CLS[e.badge]||'badge-gray';
-      const hl = e.aktywny ? 'style="font-weight:600;color:var(--accent2)"' : '';
-      return `<tr ${hl}><td><span class="badge ${bc}">${e.nazwa}</span></td><td>${e.okres}</td><td>${e.czas}</td><td>${e.cel_waga}</td><td>${e.cel_bf}</td></tr>`;
+      const bc = BADGE_CLS[e.badge] || 'badge-gray';
+      const hl = e.aktywny ? 'background:rgba(34,211,238,0.05)' : e.ukończony ? 'background:rgba(34,197,94,0.04)' : '';
+      const wynikiHtml = e.ukończony
+        ? `<span style="color:var(--green);font-size:11px">✅ ${e.wynik_waga||''} · ${e.wynik_bf||''}</span>`
+        : e.aktywny
+          ? `<span style="color:var(--accent2);font-size:11px">▶ w toku</span>`
+          : `<span style="color:var(--text3);font-size:11px">—</span>`;
+      return `<tr${hl ? ` style="${hl}"` : ''}>
+        <td><span class="badge ${bc}">${e.nazwa}</span></td>
+        <td style="white-space:nowrap">${e.okres}</td>
+        <td style="white-space:nowrap">${e.czas}</td>
+        <td style="white-space:nowrap">${e.cel_waga}</td>
+        <td>${wynikiHtml}</td>
+      </tr>`;
     }).join('');
-    const celRow = `<tr style="font-weight:600;border-top:2px solid var(--border)"><td>🎯 Cel</td><td>${m.cel_finalny.okres}</td><td>—</td><td>${m.cel_finalny.cel_waga}</td><td style="color:var(--green)">${m.cel_finalny.cel_bf}</td></tr>`;
+    const celRow = `<tr style="font-weight:600;border-top:2px solid var(--border)">
+      <td>🎯 Cel 2026</td>
+      <td>${m.cel_finalny.okres}</td>
+      <td>—</td>
+      <td style="color:var(--green)">${m.cel_finalny.cel_waga}</td>
+      <td style="color:var(--green);font-size:11px">BF ${m.cel_finalny.cel_bf} · LBM ${m.cel_finalny.cel_lbm}</td>
+    </tr>`;
+
+    // Etapy szczegółowe — zwijane sekcje
+    const szczegoly = m.etapy_szczegoly || {};
+    const ETAP_COLORS = {rekompozycja:'green', cut1:'red', bulk:'green', cut2:'red'};
+    const etapDetails = Object.entries(szczegoly).map(([key, e]) => {
+      const col = ETAP_COLORS[key] || 'text3';
+      const border = `1px solid rgba(${col==='green'?'34,197,94':'239,68,68'},0.3)`;
+      const rows = Object.entries(e)
+        .filter(([k]) => !['tytul','badge','aktywny','ukończony'].includes(k))
+        .map(([k, v]) => {
+          const labels = {punkt_startowy:'Punkt startowy',punkt_koncowy:'Punkt końcowy',trening:'Trening',dieta:'Dieta',big4_start:'Big 4 start',big4_koniec:'Big 4 koniec',wnioski:'Wnioski',cel:'Cel',tdee:'TDEE',tempo:'Tempo',dieta_avg:'Dieta'};
+          return `<tr><td style="color:var(--text3);white-space:nowrap;width:120px">${labels[k]||k}</td><td style="white-space:normal">${v}</td></tr>`;
+        }).join('');
+      const isUkonczone = e.ukończony;
+      const isAktywny = e.aktywny;
+      const statusBadge = isUkonczone
+        ? `<span class="badge badge-green">✅ ukończony</span>`
+        : isAktywny
+          ? `<span class="badge badge-red">▶ w toku</span>`
+          : `<span class="badge badge-gray">planowany</span>`;
+      return `<details style="margin-bottom:8px">
+        <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:${border};border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none">
+          <span>${e.tytul} &nbsp;${statusBadge}</span>
+          <span style="font-size:10px;color:var(--text3)">▼</span>
+        </summary>
+        <div style="padding-top:8px"><div class="card">
+          <table><tr><th>Parametr</th><th>Wartość</th></tr>${rows}</table>
+        </div></div>
+      </details>`;
+    }).join('');
 
     el.innerHTML = `
       <div class="card">
-        <div class="card-title">📊 ${ps.tytul}</div>
+        <div class="card-title">📍 ${ps.tytul}</div>
         <div class="stat-grid">${statsHtml}</div>
-        <table style="margin-top:4px">
-          <tr><th>Wskaźnik</th><th>Teraz</th><th>Cel końcowy</th><th>Różnica</th></tr>
-          ${wsRow}
-        </table>
-        <div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">💡</span><span>${ps.alert}</span></div>
+        <div class="alert alert-info" style="margin-top:4px"><span class="alert-icon">💡</span><span>${ps.alert}</span></div>
       </div>
       <div class="card">
         <div class="card-title">🗓️ Przegląd etapów — 2026</div>
         <table>
-          <tr><th>Etap</th><th>Okres</th><th>Czas</th><th>Cel wagowy</th><th>Cel BF%</th></tr>
+          <tr><th>Etap</th><th>Okres</th><th>Czas</th><th>Cel wagowy</th><th>Wynik</th></tr>
           ${etapyRows}${celRow}
         </table>
-        <div class="alert alert-success" style="margin-top:12px"><span class="alert-icon">🎯</span><span>${m.checkpoint_alert}</span></div>
-      </div>`;
+      </div>
+      <div style="margin-top:4px">${etapDetails}</div>`;
   }
 
   function renderRoadmapBig4(big4) {
     const el = document.getElementById('r-big4');
-    const BADGE_CLS = {green:'badge-green',blue:'badge-blue',yellow:'badge-yellow'};
+    if (!el || !big4) return;
+    const BADGE_CLS = {green:'badge-green', blue:'badge-blue', yellow:'badge-yellow', accent2:'badge-blue'};
     const cards = big4.map(b => {
-      const start = b.label_start || b.start_kg + ' kg';
-      const teraz = b.label_teraz || b.teraz_kg + ' kg ← teraz';
-      const cel   = b.label_cel   || b.cel_kg + ' kg';
-      const range = b.cel_kg - b.start_kg;
-      const prog  = b.label_teraz
-        ? Math.round((b.teraz_kg / b.start_kg) * 100) // asysta — odwrotna skala
-        : Math.round(((b.teraz_kg - b.start_kg) / range) * 100);
-      const pct = Math.min(Math.max(prog, 0), 100);
       const bc = BADGE_CLS[b.badge_kolor] || 'badge-gray';
+      // Progress bar — dla asysty (ujemne kg) liczymy inaczej
+      const range = Math.abs(b.cel_kg - b.start_kg);
+      const done  = Math.abs(b.teraz_kg - b.start_kg);
+      const pct   = range > 0 ? Math.min(Math.round((done / range) * 100), 100) : 0;
+
+      const sesjeRows = (b.sesje||[]).map(s =>
+        `<tr><td style="white-space:nowrap;color:var(--text3)">${s.data}</td><td style="white-space:nowrap;font-weight:600">${s.kg} kg</td><td style="white-space:normal;font-size:11px;color:var(--text3)">${s.uwaga}</td></tr>`
+      ).join('');
+
       return `<div class="goal-card">
         <div class="goal-header">
           <div><div class="goal-name">${b.nazwa}</div><div class="goal-sub">${b.opis}</div></div>
@@ -1349,13 +1406,15 @@
         </div>
         <div class="progress-wrap">
           <div class="progress-label">
-            <span style="color:var(--text3)">${start}</span>
-            <span style="color:var(--accent2)">${teraz}</span>
-            <span style="color:var(--green)">${cel}</span>
+            <span style="color:var(--text3);font-size:11px">${b.start_kg} kg</span>
+            <span style="color:var(--accent2);font-size:11px">teraz: ${b.teraz_kg} kg</span>
+            <span style="color:var(--green);font-size:11px">cel: ${b.cel_kg} kg</span>
           </div>
           <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px;text-align:right">${pct}% drogi do celu</div>
         </div>
-        <div style="font-size:11px;color:var(--text3)">${b.uwaga}</div>
+        ${sesjeRows ? `<table style="margin-top:8px"><tr><th>Data</th><th>Ciężar</th><th>Uwaga</th></tr>${sesjeRows}</table>` : ''}
+        <div style="font-size:11px;color:var(--text3);margin-top:8px">${b.uwaga}</div>
       </div>`;
     }).join('');
     el.innerHTML = `<div class="card"><div class="card-title">💪 Big 4 — tracker progresji 2026</div>${cards}</div>`;
@@ -1363,81 +1422,54 @@
 
   function renderRoadmapFaza(panelId, faza, typ) {
     const el = document.getElementById(panelId);
-    const BORDER = {yellow:'var(--yellow)',red:'var(--red)',green:'var(--green)'};
+    if (!el || !faza) return;
+    const BORDER = {yellow:'var(--yellow)', red:'var(--red)', green:'var(--green)'};
     const border = BORDER[faza.border_kolor] || 'var(--border)';
-
-    // Stats (cut/bulk)
-    let statsHtml = '';
-    if (faza.stats) {
-      statsHtml = `<div class="stat-grid" style="margin-bottom:12px">${
-        faza.stats.map(s => `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`).join('')
-      }</div>`;
-    }
-
-    // Alerts before table
-    const alertsBefore = (faza.alerty||[]).filter((_,i) => i === 0);
-    const alertsAfter  = (faza.alerty||[]).filter((_,i) => i > 0);
-    const renderAlerts = (arr) => arr.map(a => alertBox(a.typ, a.ikona, a.tekst)).join('');
-
-    // Parameters table
-    let tableHtml = '';
-    if (faza.parametry) {
-      if (typ === 'deload') {
-        const rows = faza.parametry.map(p => {
-          if (p.deload === null) {
-            const c = p.normalnie_kolor ? `style="color:var(--${p.normalnie_kolor})"` : '';
-            return `<tr><td>${p.parametr}</td><td colspan="2" ${c}>${p.normalnie}</td></tr>`;
-          }
-          const dc = p.deload_kolor ? `style="color:var(--${p.deload_kolor})"` : '';
-          return `<tr><td>${p.parametr}</td><td>${p.normalnie}</td><td ${dc}>${p.deload}</td></tr>`;
-        }).join('');
-        tableHtml = `<table><tr><th>Parametr</th><th>Normalnie</th><th style="color:var(--yellow)">Deload</th></tr>${rows}</table>`;
-      } else if (typ === 'cut' || typ === 'bulk') {
-        const rows = faza.parametry.map(p => {
-          if (!p.odpoczynek) return `<tr><td>${p.parametr}</td><td colspan="2">${p.trening}</td></tr>`;
-          const tc = p.trening_kolor ? `style="color:var(--${p.trening_kolor})"` : '';
-          const oc = p.odpoczynek_kolor ? `style="color:var(--${p.odpoczynek_kolor})"` : '';
-          return `<tr><td>${p.parametr}</td><td ${tc}>${p.trening}</td><td ${oc}>${p.odpoczynek}</td></tr>`;
-        }).join('');
-        tableHtml = `<table style="margin-top:12px"><tr><th>Parametr</th><th>Dni treningowe</th><th>Dni odpoczynku</th></tr>${rows}</table>`;
-        // Tabela porównawcza mini cut vs rekompozycja
-        if (faza.porownanie) {
-          const porRows = faza.porownanie.map(p => {
-            const mc = p.minicut_color ? `style="color:var(--${p.minicut_color})"` : '';
-            return `<tr><td>${p.parametr}</td><td>${p.rekompozycja}</td><td ${mc}>${p.minicut}</td></tr>`;
-          }).join('');
-          tableHtml += `<div class="card-title" style="margin-top:16px">📋 Strategia — mini cut vs rekompozycja</div>
-            <table><tr><th>Parametr</th><th>Rekompozycja</th><th style="color:var(--red)">Mini cut</th></tr>${porRows}</table>`;
-        }
-      } else if (typ === 'cut2') {
-        const rows = faza.parametry.map(p => {
-          const c = p.kolor ? `style="color:var(--${p.kolor})"` : '';
-          return `<tr><td>${p.parametr}</td><td ${c}>${p.wartosc}</td></tr>`;
-        }).join('');
-        tableHtml = `<table style="margin-top:12px"><tr><th>Parametr</th><th>Wartość</th></tr>${rows}</table>`;
-      }
-    }
-
-    const BADGE_CLS = {yellow:'badge-yellow',red:'badge-red',green:'badge-green'};
+    const BADGE_CLS = {yellow:'badge-yellow', red:'badge-red', green:'badge-green'};
     const bc = BADGE_CLS[faza.border_kolor] || 'badge-gray';
+
+    // Stats
+    const statsHtml = faza.stats
+      ? `<div class="stat-grid" style="margin-bottom:12px">${faza.stats.map(s =>
+          `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
+        ).join('')}</div>`
+      : '';
+
+    // Parametry cut/bulk
+    let tableHtml = '';
+    if (faza.parametry && (typ === 'cut' || typ === 'bulk')) {
+      const rows = faza.parametry.map(p => {
+        if (!p.odpoczynek) return `<tr><td>${p.parametr}</td><td colspan="2">${p.trening}</td></tr>`;
+        const tc = p.trening_kolor ? `style="color:var(--${p.trening_kolor})"` : '';
+        const oc = p.odpoczynek_kolor ? `style="color:var(--${p.odpoczynek_kolor})"` : '';
+        return `<tr><td>${p.parametr}</td><td ${tc}>${p.trening}</td><td ${oc}>${p.odpoczynek}</td></tr>`;
+      }).join('');
+      tableHtml = `<table style="margin-top:8px"><tr><th>Parametr</th><th>Dni treningowe</th><th>Dni odpoczynku</th></tr>${rows}</table>`;
+    } else if (faza.parametry && typ === 'cut2') {
+      const rows = faza.parametry.map(p => {
+        const c = p.kolor ? `style="color:var(--${p.kolor})"` : '';
+        return `<tr><td>${p.parametr}</td><td ${c}>${p.wartosc}</td></tr>`;
+      }).join('');
+      tableHtml = `<table style="margin-top:8px"><tr><th>Parametr</th><th>Wartość</th></tr>${rows}</table>`;
+    }
+
+    // Porównanie cut vs reko
+    let porHtml = '';
+    if (faza.porownanie) {
+      const porRows = faza.porownanie.map(p => {
+        const mc = p.minicut_color ? `style="color:var(--${p.minicut_color})"` : '';
+        return `<tr><td style="white-space:normal">${p.parametr}</td><td>${p.rekompozycja}</td><td ${mc}>${p.minicut}</td></tr>`;
+      }).join('');
+      porHtml = `<div class="card-title" style="margin-top:16px">📋 Strategia — mini cut vs rekompozycja</div>
+        <table><tr><th>Parametr</th><th>Rekompozycja</th><th style="color:var(--red)">Mini cut</th></tr>${porRows}</table>`;
+    }
+
+    // Alerty
+    const alertsHtml = (faza.alerty||[]).map(a => alertBox(a.typ, a.ikona, a.tekst)).join('');
 
     el.innerHTML = `<div class="card" style="border-left:3px solid ${border}">
       <div class="card-title">${faza.tytul} &nbsp;<span class="badge ${bc}">${faza.badge}</span></div>
-      ${statsHtml}
-      ${renderAlerts(alertsBefore)}
-      ${tableHtml}
-      ${renderAlerts(alertsAfter)}
-    </div>`;
-  }
-
-  function renderRoadmapZasady(zasady) {
-    const el = document.getElementById('r-zasady');
-    const rows = zasady.map(z => {
-      const c = {green:'var(--green)',yellow:'var(--yellow)'}[z.kolor] || 'var(--text)';
-      return `<tr><td style="color:${c};font-weight:600">${z.zasada}</td><td style="color:var(--text3);font-size:12px">${z.dlaczego}</td></tr>`;
-    }).join('');
-    el.innerHTML = `<div class="card"><div class="card-title">📋 Zasady wspólne — wszystkie etapy</div>
-      <table><tr><th>Zasada</th><th>Dlaczego</th></tr>${rows}</table>
+      ${statsHtml}${tableHtml}${porHtml}${alertsHtml}
     </div>`;
   }
 
