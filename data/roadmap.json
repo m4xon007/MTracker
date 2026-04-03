@@ -5,26 +5,26 @@
       "stats": [
         {
           "wartosc": "91,5 kg",
-          "label": "Waga max (wrz 2025)",
+          "label": "Szczyt (wrz 2025)",
           "kolor": "red"
         },
         {
           "wartosc": "86,9 kg",
-          "label": "Waga (sty 2026)",
+          "label": "Start reko (sty 2026)",
+          "kolor": "text2"
+        },
+        {
+          "wartosc": "85,3 kg",
+          "label": "Start mini cut (kwi)",
           "kolor": "accent2"
         },
         {
-          "wartosc": "19,4%",
-          "label": "BF% (sty 2026)",
+          "wartosc": "19,5%",
+          "label": "BF% (start reko)",
           "kolor": "yellow"
-        },
-        {
-          "wartosc": "70,1 kg",
-          "label": "LBM (sty 2026)",
-          "kolor": "green"
         }
       ],
-      "alert": "Start aktywnego planu: <strong>styczeń 2026</strong> — rekompozycja. Wcześniej (wrz–gru 2025): powrót do siłowni po przerwie, peak wagi 91,5 kg."
+      "alert": "Rekompozycja (sty–mar): waga stabilna 86–87 kg, siła rosła. <strong>Mini cut start: 85,3 kg (03.04.2026)</strong> — deficyt ~350 kcal, cel 84–85 kg do maja."
     },
     "etapy": [
       {
@@ -98,7 +98,7 @@
         "tytul": "🔻 Mini cut #1 — kwi–maj 2026",
         "badge": "red",
         "aktywny": true,
-        "punkt_startowy": "~86,9 kg · BF ~19% · LBM ~70,5 kg",
+        "punkt_startowy": "85,3 kg · BF ~18,9% (03.04.2026)",
         "cel": "84–85 kg · BF 16–17% · LBM utrzymana",
         "trening": "Cykl 2 · 8 tygodni · UA + UB + Lower · Wt+Czw+Nd",
         "dieta": "~2298 kcal/dzień · deficyt ~350 kcal · białko ≥173g",
