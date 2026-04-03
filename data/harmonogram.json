@@ -2,7 +2,6 @@
   "meta": {
     "nota": "Kalendarze są statyczne w index.html. Ten plik zawiera tylko dynamiczne dane: bilans treningów i listę zrealizowanych sesji do aktualizacji przez Claude po każdym treningu."
   },
-
   "cykl2": {
     "label": "Cykl 2 — Kwiecień–Maj 2026",
     "opis": "8 tyg · Mini cut · start 31.03",
@@ -10,50 +9,182 @@
     "deload": "19–25.05.2026",
     "checkpoint": "26.05.2026",
     "bilans": {
-      "UA": { "zrobione": 0, "planowane": 8 },
-      "UB": { "zrobione": 0, "planowane": 8 },
-      "L":  { "zrobione": 0, "planowane": 8 }
+      "UA": {
+        "zrobione": 1,
+        "planowane": 8
+      },
+      "UB": {
+        "zrobione": 0,
+        "planowane": 8
+      },
+      "L": {
+        "zrobione": 1,
+        "planowane": 8
+      }
     },
-    "sesje": []
+    "sesje": [
+      "31.03 UA",
+      "02.04 L"
+    ]
   },
-
   "cykl1": {
     "label": "Cykl 1 — Styczeń–Marzec 2026",
     "opis": "10 tyg · UA×8 · UB×8 · L×10 · deload 23–29.03",
     "bilans": {
-      "UA": { "zrobione": 8,  "planowane": 10 },
-      "UB": { "zrobione": 8,  "planowane": 9 },
-      "L":  { "zrobione": 10, "planowane": 12 }
+      "UA": {
+        "zrobione": 8,
+        "planowane": 10
+      },
+      "UB": {
+        "zrobione": 8,
+        "planowane": 9
+      },
+      "L": {
+        "zrobione": 10,
+        "planowane": 12
+      }
     },
     "sesje": [
-      { "data": "2026-03-22", "typ": "UB", "ocena": 8 },
-      { "data": "2026-03-19", "typ": "UA", "ocena": 9 },
-      { "data": "2026-03-17", "typ": "L",  "ocena": 9 },
-      { "data": "2026-03-15", "typ": "UB", "ocena": 9 },
-      { "data": "2026-03-12", "typ": "L",  "ocena": 8 },
-      { "data": "2026-03-10", "typ": "UA", "ocena": 10 },
-      { "data": "2026-03-08", "typ": "UB", "ocena": 9 },
-      { "data": "2026-03-06", "typ": "L",  "ocena": 8 },
-      { "data": "2026-03-04", "typ": "UA", "ocena": 7 },
-      { "data": "2026-03-01", "typ": "L",  "ocena": 8 },
-      { "data": "2026-02-26", "typ": "UB", "ocena": 7 },
-      { "data": "2026-02-24", "typ": "UA", "ocena": 6 },
-      { "data": "2026-02-22", "typ": "L",  "ocena": 9 },
-      { "data": "2026-02-19", "typ": "UB", "ocena": 8 },
-      { "data": "2026-02-17", "typ": "UA", "ocena": 4 },
-      { "data": "2026-02-16", "typ": "C",  "ocena": null },
-      { "data": "2026-02-12", "typ": "L",  "ocena": null },
-      { "data": "2026-02-10", "typ": "UB", "ocena": null },
-      { "data": "2026-02-08", "typ": "L",  "ocena": null },
-      { "data": "2026-02-06", "typ": "UA", "ocena": null },
-      { "data": "2026-02-03", "typ": "L",  "ocena": null },
-      { "data": "2026-02-01", "typ": "UB", "ocena": null },
-      { "data": "2026-01-26", "typ": "UB", "ocena": null },
-      { "data": "2026-01-21", "typ": "UA", "ocena": null },
-      { "data": "2026-01-19", "typ": "L",  "ocena": null },
-      { "data": "2026-01-18", "typ": "UB", "ocena": null },
-      { "data": "2026-01-15", "typ": "L",  "ocena": null },
-      { "data": "2026-01-13", "typ": "UA", "ocena": null }
+      {
+        "data": "2026-03-22",
+        "typ": "UB",
+        "ocena": 8
+      },
+      {
+        "data": "2026-03-19",
+        "typ": "UA",
+        "ocena": 9
+      },
+      {
+        "data": "2026-03-17",
+        "typ": "L",
+        "ocena": 9
+      },
+      {
+        "data": "2026-03-15",
+        "typ": "UB",
+        "ocena": 9
+      },
+      {
+        "data": "2026-03-12",
+        "typ": "L",
+        "ocena": 8
+      },
+      {
+        "data": "2026-03-10",
+        "typ": "UA",
+        "ocena": 10
+      },
+      {
+        "data": "2026-03-08",
+        "typ": "UB",
+        "ocena": 9
+      },
+      {
+        "data": "2026-03-06",
+        "typ": "L",
+        "ocena": 8
+      },
+      {
+        "data": "2026-03-04",
+        "typ": "UA",
+        "ocena": 7
+      },
+      {
+        "data": "2026-03-01",
+        "typ": "L",
+        "ocena": 8
+      },
+      {
+        "data": "2026-02-26",
+        "typ": "UB",
+        "ocena": 7
+      },
+      {
+        "data": "2026-02-24",
+        "typ": "UA",
+        "ocena": 6
+      },
+      {
+        "data": "2026-02-22",
+        "typ": "L",
+        "ocena": 9
+      },
+      {
+        "data": "2026-02-19",
+        "typ": "UB",
+        "ocena": 8
+      },
+      {
+        "data": "2026-02-17",
+        "typ": "UA",
+        "ocena": 4
+      },
+      {
+        "data": "2026-02-16",
+        "typ": "C",
+        "ocena": null
+      },
+      {
+        "data": "2026-02-12",
+        "typ": "L",
+        "ocena": null
+      },
+      {
+        "data": "2026-02-10",
+        "typ": "UB",
+        "ocena": null
+      },
+      {
+        "data": "2026-02-08",
+        "typ": "L",
+        "ocena": null
+      },
+      {
+        "data": "2026-02-06",
+        "typ": "UA",
+        "ocena": null
+      },
+      {
+        "data": "2026-02-03",
+        "typ": "L",
+        "ocena": null
+      },
+      {
+        "data": "2026-02-01",
+        "typ": "UB",
+        "ocena": null
+      },
+      {
+        "data": "2026-01-26",
+        "typ": "UB",
+        "ocena": null
+      },
+      {
+        "data": "2026-01-21",
+        "typ": "UA",
+        "ocena": null
+      },
+      {
+        "data": "2026-01-19",
+        "typ": "L",
+        "ocena": null
+      },
+      {
+        "data": "2026-01-18",
+        "typ": "UB",
+        "ocena": null
+      },
+      {
+        "data": "2026-01-15",
+        "typ": "L",
+        "ocena": null
+      },
+      {
+        "data": "2026-01-13",
+        "typ": "UA",
+        "ocena": null
+      }
     ]
   }
 }

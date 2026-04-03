@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.29</title>
+<title>Marcin — Plan 2026 · v2.30</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -225,7 +225,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.29</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.30</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -364,7 +364,7 @@
         <span>Sprzęt: <strong>mata + guma 15 kg</strong>. Za 2–3 tyg: guma 25 kg. Za 6–8 tyg: guma 35 kg.</span>
       </div>
       <table id="core-tbl">
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt./Czas</th><th>Przerwa</th></tr>
+        <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Serie</th><th style="text-align:center">Powt./Czas</th><th style="text-align:center">Przerwa</th></tr>
         <tr style="background:rgba(34,197,94,0.05)"><td colspan="5" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok A: Stabilizacja głęboka ──</td></tr>
         <tr style="cursor:pointer" data-expand="cx-a1"><td>A1</td><td><strong>Dead bug ⭐</strong> ▾</td><td>3</td><td>8/str</td><td>45 s</td></tr>
         <tr id="cx-a1" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Leżysz na plecach, kolana 90°, ręce w górę. Opuszczasz prawą rękę + lewą nogę — lędźwie cały czas przy macie. 3 sek w dół, 1 sek w górę.</td></tr>
@@ -1309,7 +1309,7 @@
         `<td style="font-size:10px;white-space:nowrap">${c.nr}</td>
          <td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
          <td style="white-space:nowrap">${c.serie}</td>
-         <td style="white-space:nowrap">${c.powt}</td>`,
+         <td style="white-space:nowrap;text-align:center">${c.powt}</td>`,
         detail,
         isBg
       );
@@ -1320,7 +1320,7 @@
       ${alertHtml}
       <div class="workout-table card">
         <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th></tr>
+          <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Serie</th><th style="text-align:center">Powt.</th></tr>
           ${rows}
         </table>
         <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć partię, przerwę, start i cel</div>
@@ -1344,7 +1344,7 @@
       return expandRow(
         `<td style="font-size:11px;white-space:nowrap">${c.nr}</td>
          <td style="white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
-         <td style="white-space:nowrap">${c.serie_powt}</td>`,
+         <td style="white-space:nowrap;text-align:center">${c.serie_powt}</td>`,
         detail,
         bg
       );
@@ -1558,7 +1558,7 @@
     const typy = [
       { key:'UA', label:'Upper A', kolor:'var(--accent)' },
       { key:'UB', label:'Upper B', kolor:'var(--green)' },
-      { key:'L',  label:'Lower',   kolor:'var(--yellow)' }
+      { key:'L',  label:'L',   kolor:'var(--yellow)' }
     ];
     const spans = typy.map(t =>
       `<span>${t.label} <strong style="color:${t.kolor}">${b[t.key].zrobione}</strong><span style="color:var(--text3)">/${b[t.key].planowane}</span></span>`
@@ -1689,7 +1689,7 @@
         <td style="color:${kcalColor}">${d.kcal}</td>
         <td style="color:${defColor};white-space:nowrap">${deficyt > 0 ? '-' : '+'}${Math.abs(deficyt)}</td>
         <td style="color:${bialkoColor}">${d.bialko}</td>
-        <td><span class="badge ${BC[d.typ_color]||'badge-gray'}">${d.typ}</span></td>
+
       </tr>`;
     }).join('');
 
@@ -1714,14 +1714,14 @@
       <div class="card">
         <div class="card-title">📅 Menu tygodniowe — podsumowanie</div>
         <table>
-          <tr><th>Dzień</th><th>Kcal</th><th>Deficyt</th><th>Białko</th><th>Typ</th></tr>
+          <tr><th>Dzień</th><th>Kcal</th><th>Deficyt</th><th>Białko</th></tr>
           ${rows}
           <tr style="font-weight:600;border-top:2px solid var(--border)">
             <td>Średnia</td>
             <td style="color:var(--accent2)">${avgKcal}</td>
             <td style="color:var(--green)">-${avgDeficyt}</td>
             <td style="color:var(--green)">${avgBialko}g</td>
-            <td style="font-size:11px;color:var(--text3)">✓ z menu</td>
+    
           </tr>
         </table>
       </div>`;
@@ -1835,8 +1835,8 @@
       return expandRow(
         `<td style="font-size:10px;white-space:nowrap">${c.nr}</td>
          <td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
-         <td style="white-space:nowrap">${c.serie}</td>
-         <td style="white-space:nowrap">${c.powt}</td>`,
+         <td style="white-space:nowrap;text-align:center">${c.serie}</td>
+         <td style="white-space:nowrap;text-align:center">${c.powt}</td>`,
         detail, bg
       );
     }).join('');
@@ -1845,7 +1845,7 @@
       <h3>${blok.label}${badge_extra} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
       <div class="workout-table card">
         <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th></tr>
+          <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Serie</th><th style="text-align:center">Powt.</th></tr>
           ${rows}
         </table>
         <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij aby zobaczyć partię, tempo, przerwę i ciężar</div>
@@ -1873,8 +1873,8 @@
         ].filter(Boolean).join(' &nbsp;·&nbsp; ');
         return expandRow(
           `<td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
-           <td style="white-space:nowrap">${c.serie}</td>
-           <td style="white-space:nowrap">${c.powt}</td>`,
+           <td style="white-space:nowrap;text-align:center">${c.serie}</td>
+           <td style="white-space:nowrap;text-align:center">${c.powt}</td>`,
           detail
         );
       }).join('');
@@ -1885,7 +1885,7 @@
       <div class="workout-table card">
         ${alertHtml}
         <table>
-          <tr><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th></tr>
+          <tr><th>Ćwiczenie</th><th style="text-align:center">Serie</th><th style="text-align:center">Powt.</th></tr>
           ${blokiRows}
         </table>
         <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij aby zobaczyć tempo, przerwę i ciężar</div>
