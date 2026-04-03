@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.22</title>
+<title>Marcin — Plan 2026 · v2.25</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -225,7 +225,7 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.22</div>
+  <div class="app-header-title">Marcin · Plan 2026 · v2.25</div>
   <div class="app-header-sub" id="last-update">22.03.2026 — Cykl 1 zakończony · Deload</div>
 </div>
 
@@ -363,50 +363,78 @@
         <span class="alert-icon">🏠</span>
         <span>Sprzęt: <strong>mata + guma 15 kg</strong>. Za 2–3 tyg: guma 25 kg. Za 6–8 tyg: guma 35 kg.</span>
       </div>
-      <table class="core-table"><td>3</td><td>8/stronę</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">Leżysz na plecach, kolana 90°, ręce w górę. Opuszczasz prawą rękę + lewą nogę — lędźwie cały czas przy macie. 3 sek w dół, 1 sek w górę.</td></tr>
-        <tr><td>A2</td><td><strong>Bird-dog ⭐</strong></td><td>3</td><td>8/stronę</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">Na czworakach, plecy neutralne. Wyprost ręki + przeciwnej nogi — 2 sek zatrzymanie z napiętym brzuchem.</td></tr>
-        <tr style="background:rgba(59,130,246,0.05)"><td colspan="6" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok B: Siła core ──</td></tr>
-        <tr><td>B1</td><td><strong>Plank RKC</strong></td><td>3</td><td>20 sek</td><td>40 s</td><td style="font-size:11px;color:var(--text3)">Napinasz całe ciało — pośladki, brzuch, quad. Nie zwykły plank — RKC to napięcie maksymalne przez 20 sek.</td></tr>
-        <tr><td>B2</td><td><strong>Hollow body hold</strong></td><td>3</td><td>20 sek</td><td>40 s</td><td style="font-size:11px;color:var(--text3)">Leżysz na plecach, ręce wzdłuż ciała lub nad głową. Lędźwie przy podłodze, uniesione ramiona i nogi tworzą "łódkę".</td></tr>
-        <tr style="background:rgba(245,158,11,0.05)"><td colspan="6" style="color:var(--yellow);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok C: Pośladki + stabilizacja boczna ──</td></tr>
-        <tr><td>C1</td><td><strong>Glute bridge z gumą</strong></td><td>3</td><td>12</td><td>45 s</td><td style="font-size:11px;color:var(--text3)">Guma ponad kolanami. 2 sek napięcie na górze — kolana nie "wpadają" do środka.</td></tr>
-        <tr><td>C2</td><td><strong>Side-lying hip abduction</strong></td><td>3</td><td>12/stronę</td><td>30 s</td><td style="font-size:11px;color:var(--text3)">Leżysz na boku, unosisz nogę powoli — bez rotacji biodra. Możesz dodać gumę.</td></tr>
+      <table id="core-tbl">
+        <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt./Czas</th><th>Przerwa</th></tr>
+        <tr style="background:rgba(34,197,94,0.05)"><td colspan="5" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok A: Stabilizacja głęboka ──</td></tr>
+        <tr style="cursor:pointer" data-expand="cx-a1"><td>A1</td><td><strong>Dead bug ⭐</strong> ▾</td><td>3</td><td>8/str</td><td>45 s</td></tr>
+        <tr id="cx-a1" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Leżysz na plecach, kolana 90°, ręce w górę. Opuszczasz prawą rękę + lewą nogę — lędźwie cały czas przy macie. 3 sek w dół, 1 sek w górę.</td></tr>
+        <tr style="cursor:pointer" data-expand="cx-a2"><td>A2</td><td><strong>Bird-dog ⭐</strong> ▾</td><td>3</td><td>8/str</td><td>45 s</td></tr>
+        <tr id="cx-a2" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Na czworakach, plecy neutralne. Wyprost ręki + przeciwnej nogi — 2 sek zatrzymanie z napiętym brzuchem.</td></tr>
+        <tr style="background:rgba(59,130,246,0.05)"><td colspan="5" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok B: Siła core ──</td></tr>
+        <tr style="cursor:pointer" data-expand="cx-b1"><td>B1</td><td><strong>Plank RKC</strong> ▾</td><td>3</td><td>20 sek</td><td>40 s</td></tr>
+        <tr id="cx-b1" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Napinasz całe ciało — pośladki, brzuch, quad. Nie zwykły plank — RKC to napięcie maksymalne przez 20 sek.</td></tr>
+        <tr style="cursor:pointer" data-expand="cx-b2"><td>B2</td><td><strong>Hollow body hold</strong> ▾</td><td>3</td><td>20 sek</td><td>40 s</td></tr>
+        <tr id="cx-b2" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Leżysz na plecach, ręce wzdłuż ciała lub nad głową. Lędźwie przy podłodze, uniesione ramiona i nogi tworzą "łódkę".</td></tr>
+        <tr style="background:rgba(245,158,11,0.05)"><td colspan="5" style="color:var(--yellow);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Blok C: Pośladki + stabilizacja boczna ──</td></tr>
+        <tr style="cursor:pointer" data-expand="cx-c1"><td>C1</td><td><strong>Glute bridge z gumą</strong> ▾</td><td>3</td><td>12</td><td>45 s</td></tr>
+        <tr id="cx-c1" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Guma ponad kolanami. 2 sek napięcie na górze — kolana nie "wpadają" do środka.</td></tr>
+        <tr style="cursor:pointer" data-expand="cx-c2"><td>C2</td><td><strong>Side-lying hip abduction</strong> ▾</td><td>3</td><td>12/str</td><td>30 s</td></tr>
+        <tr id="cx-c2" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="5" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal">Leżysz na boku, unosisz nogę powoli — bez rotacji biodra. Możesz dodać gumę.</td></tr>
       </table>
+      <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć opis</div>
     </div>
   </div>
 
   <div id="p-rozgrzewka" class="tab-panel">
-    <h3>🔄 Wersja Universal — Upper A / Upper B &nbsp;<span class="badge badge-gray">~10 min</span></h3>
+    <h3>🔄 Upper A / Upper B &nbsp;<span class="badge badge-gray">~10 min</span></h3>
     <div class="workout-table card">
       <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Powt.</th><th>Uwagi</th></tr>
-        <tr style="background:rgba(34,197,94,0.05)"><td colspan="4" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Bieżnia ──</td></tr>
-        <tr><td>0</td><td>Marsz / truchot</td><td>3–5 min</td><td style="font-size:11px;color:var(--text3)">Spokojne tempo</td></tr>
-        <tr style="background:rgba(59,130,246,0.05)"><td colspan="4" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Mobilizacja ──</td></tr>
-        <tr><td>1–3</td><td>Krążenia ramion (przód / tył / naprzemienne)</td><td>8 każde</td><td></td></tr>
-        <tr><td>4</td><td>Wykrok w klęku z przenoszeniem ciężaru</td><td>8/str</td><td style="font-size:11px;color:var(--text3)">Mobilizacja biodra</td></tr>
-        <tr><td>5</td><td>Rotacja tułowia w klęku z łokciem do ziemi</td><td>8/str</td><td style="font-size:11px;color:var(--text3)">Mobilizacja piersiowego</td></tr>
-        <tr><td>6</td><td>Bird-dog</td><td>8/str</td><td style="font-size:11px;color:var(--text3)">2 sek zatrzymanie — aktywacja core</td></tr>
-        <tr><td>7</td><td>Cobra stretch / Upward dog</td><td>8</td><td style="font-size:11px;color:var(--text3)">Rozciągnięcie zginaczy bioder</td></tr>
-        <tr><td>8</td><td>Downward dog</td><td>8</td><td style="font-size:11px;color:var(--text3)">Łydki + dwugłowe + kręgosłup</td></tr>
-        <tr><td>9</td><td>Cat-Cow</td><td>8</td><td style="font-size:11px;color:var(--text3)">Powolne — kręgosłup się budzi</td></tr>
-        <tr><td>10</td><td>Spiderman plank</td><td>20/str</td><td style="font-size:11px;color:var(--text3)">Core + mobilizacja bioder</td></tr>
-        <tr style="background:rgba(245,158,11,0.05)"><td colspan="4" style="color:var(--yellow);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Aktywacja barków z gumą ──</td></tr>
-        <tr><td>11</td><td>Band Pull-Apart</td><td>8</td><td style="font-size:11px;color:var(--text3)">Tylne wiązki naramiennych + rotatory</td></tr>
-        <tr><td>12</td><td>Band Shoulder Dislocates</td><td>8</td><td style="font-size:11px;color:var(--text3)">Nad głową — pełna mobilizacja obręcza</td></tr>
-        <tr><td>13</td><td>Krążenia gumą wokół głowy</td><td>8</td><td style="font-size:11px;color:var(--text3)">Kontrolowane</td></tr>
-        <tr><td>14</td><td>Band External Rotation</td><td>8</td><td style="font-size:11px;color:var(--text3)">Łokieć przy ciele — chroni staw barkowy</td></tr>
+        <tr><th>#</th><th>Ćwiczenie</th><th>Powt.</th></tr>
+        <tr style="background:rgba(34,197,94,0.05)"><td colspan="3" style="color:var(--green);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Bieżnia ──</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-0"><td>0</td><td>Marsz / truchot ▾</td><td>3–5 min</td></tr>
+        <tr id="rx-0" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Spokojne tempo — rozgrzanie stawów i podniesienie tętna.</td></tr>
+        <tr style="background:rgba(59,130,246,0.05)"><td colspan="3" style="color:var(--accent);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Mobilizacja ──</td></tr>
+        <tr><td>1–3</td><td>Krążenia ramion (przód / tył / naprzemienne)</td><td>8 każde</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-4"><td>4</td><td>Wykrok w klęku z przenoszeniem ciężaru ▾</td><td>8/str</td></tr>
+        <tr id="rx-4" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Mobilizacja biodra</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-5"><td>5</td><td>Rotacja tułowia w klęku z łokciem do ziemi ▾</td><td>8/str</td></tr>
+        <tr id="rx-5" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Mobilizacja piersiowego</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-6"><td>6</td><td>Bird-dog ▾</td><td>8/str</td></tr>
+        <tr id="rx-6" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">2 sek zatrzymanie — aktywacja core</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-7"><td>7</td><td>Cobra stretch / Upward dog ▾</td><td>8</td></tr>
+        <tr id="rx-7" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Rozciągnięcie zginaczy bioder</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-8"><td>8</td><td>Downward dog ▾</td><td>8</td></tr>
+        <tr id="rx-8" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Łydki + dwugłowe + kręgosłup</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-9"><td>9</td><td>Cat-Cow ▾</td><td>8</td></tr>
+        <tr id="rx-9" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Powolne — kręgosłup się budzi</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-10"><td>10</td><td>Spiderman plank ▾</td><td>20/str</td></tr>
+        <tr id="rx-10" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Core + mobilizacja bioder</td></tr>
+        <tr style="background:rgba(245,158,11,0.05)"><td colspan="3" style="color:var(--yellow);font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── Aktywacja barków z gumą ──</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-11"><td>11</td><td>Band Pull-Apart ▾</td><td>8</td></tr>
+        <tr id="rx-11" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Tylne wiązki naramiennych + rotatory</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-12"><td>12</td><td>Band Shoulder Dislocates ▾</td><td>8</td></tr>
+        <tr id="rx-12" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Nad głową — pełna mobilizacja obręcza</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-13"><td>13</td><td>Krążenia gumą wokół głowy ▾</td><td>8</td></tr>
+        <tr id="rx-13" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Kontrolowane</td></tr>
+        <tr style="cursor:pointer" data-expand="rx-14"><td>14</td><td>Band External Rotation ▾</td><td>8</td></tr>
+        <tr id="rx-14" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Łokieć przy ciele — chroni staw barkowy</td></tr>
       </table>
+      <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć opis</div>
     </div>
-    <h3>🦵 Wariant Lower — blok aktywacyjny</h3>
+    <h3>🦵 Wariant Lower</h3>
     <div class="workout-table card">
       <table>
-        <tr><th>#</th><th>Ćwiczenie</th><th>Serie × Powt.</th><th>Uwagi</th></tr>
-        <tr><td>A</td><td>Glute bridge BW</td><td>2×10</td><td style="font-size:11px;color:var(--text3)">2 sek napięcia na górze</td></tr>
-        <tr><td>B</td><td>Clamshell z gumą 15 kg</td><td>2×10/str</td><td style="font-size:11px;color:var(--text3)">Stabilizacja kolan przy squat</td></tr>
-        <tr><td>C</td><td>Przysiady BW</td><td>2×8</td><td style="font-size:11px;color:var(--text3)">Tempo 3-1-2, fokus na pozycję</td></tr>
-        <tr class="exercise-opt"><td>D</td><td>Goblet squat z gumą 25 kg <span class="badge badge-gray">za 3–4 tyg</span></td><td>2×8</td><td style="font-size:11px;color:var(--text3)">Gdy guma 25 kg dostępna</td></tr>
+        <tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th></tr>
+        <tr style="cursor:pointer" data-expand="rl-a"><td>A</td><td>Glute bridge BW ▾</td><td>2×10</td></tr>
+        <tr id="rl-a" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">2 sek napięcia na górze</td></tr>
+        <tr style="cursor:pointer" data-expand="rl-b"><td>B</td><td>Clamshell z gumą 15 kg ▾</td><td>2×10/str</td></tr>
+        <tr id="rl-b" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Stabilizacja kolan przy squat</td></tr>
+        <tr style="cursor:pointer" data-expand="rl-c"><td>C</td><td>Przysiady BW ▾</td><td>2×8</td></tr>
+        <tr id="rl-c" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Tempo 3-1-2, fokus na pozycję</td></tr>
+        <tr style="cursor:pointer;color:var(--text3);font-style:italic" data-expand="rl-d"><td>D</td><td>Goblet squat z gumą 25 kg <span class="badge badge-gray">za 3–4 tyg</span> ▾</td><td>2×8</td></tr>
+        <tr id="rl-d" style="display:none;background:rgba(34,211,238,0.04)"><td colspan="3" style="padding:8px 12px;font-size:11px;color:var(--text2)">Gdy guma 25 kg dostępna</td></tr>
       </table>
+      <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć opis</div>
     </div>
   </div>
 </section>
@@ -448,7 +476,7 @@
           <div style="display:grid;grid-template-columns:40px repeat(7,1fr);gap:3px;font-size:11px">
             <div class="cal-wk" style="color:var(--accent2);font-weight:700">T1</div>
             <div class="cal-d">31.03<br><span style="font-size:7px;color:var(--green)">★UA</span></div>
-            <div style="padding:5px;background:rgba(34,211,238,0.08);border:1px solid rgba(34,211,238,0.3);border-radius:6px;text-align:center;font-size:10px;color:var(--text3)">1<br><span style="font-size:8px;color:var(--text3)">odpoczynek</span></div>
+            <div class="cal-e"></div>
             <div style="padding:5px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);border-radius:6px;text-align:center;font-size:10px;color:var(--green);font-weight:600">2<br><span style="font-size:8px">✅ Lower</span></div>
             <div class="cal-d">3</div>
             <div class="cal-d">4</div>
@@ -978,14 +1006,41 @@
     });
   }
 
+  // ── HELPER: expandable row ────────────────────────────────────
+  let _eid = 0;
+  function expandRow(mainCells, detailHtml, rowStyle) {
+    const id = 'ex-' + (++_eid);
+    const style = rowStyle ? rowStyle + ';cursor:pointer' : 'cursor:pointer';
+    return `<tr style="${style}" data-expand="${id}">
+      ${mainCells}
+    </tr>
+    <tr id="${id}" style="display:none;background:rgba(34,211,238,0.04)">
+      <td colspan="99" style="padding:8px 12px;font-size:11px;color:var(--text2);white-space:normal;line-height:1.7">${detailHtml}</td>
+    </tr>`;
+  }
+
+  // Delegacja kliknięć dla expandable rows
+  document.addEventListener('click', function(e) {
+    const tr = e.target.closest('tr[data-expand]');
+    if (!tr) return;
+    const target = document.getElementById(tr.dataset.expand);
+    if (target) target.style.display = target.style.display === 'none' ? 'table-row' : 'none';
+  });
+
   function renderNastepny(n) {
     const el = document.getElementById('tr-nastepny-card');
     const alertHtml = n.alert
       ? `<div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">${n.alert.ikona}</span><span>${n.alert.tekst}</span></div>`
       : '';
-    const rows = n.cwiczenia.map(c =>
-      `<tr><td>${c.nr}</td><td>${c.nazwa}</td><td>${c.ciezar}</td><td>${c.serie}</td><td style="color:var(--text3);font-size:11px">${c.uwagi||''}</td></tr>`
-    ).join('');
+    const rows = n.cwiczenia.map(c => {
+      const detail = c.uwagi ? `💬 ${c.uwagi}` : '—';
+      const hasDetail = !!c.uwagi;
+      const arrow = hasDetail ? ' <span style="color:var(--text3);font-size:10px">▾</span>' : '';
+      return expandRow(
+        `<td>${c.nr}</td><td>${c.nazwa}${arrow}</td><td style="white-space:nowrap">${c.ciezar}</td><td style="white-space:nowrap">${c.serie}</td>`,
+        detail
+      );
+    }).join('');
     el.innerHTML = `
       <div class="next-card">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">
@@ -998,10 +1053,11 @@
         ${alertHtml}
         <div class="next-table" style="margin-top:12px">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Serie</th><th>Uwagi</th></tr>
+            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Serie</th></tr>
             ${rows}
           </table>
         </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć uwagi</div>
       </div>`;
 
     const kEl = document.getElementById('tr-kolejne');
@@ -1021,13 +1077,16 @@
     const stars = '★'.repeat(p.ocena_liczba);
     const rows = p.cwiczenia.map(c => {
       const [bg,fg]=BADGE_COLOR[c.badge_color]||BADGE_COLOR.gray;
-      return `<tr>
-        <td>${c.nr}</td>
-        <td>${c.nazwa}</td>
-        <td>${c.ciezar}</td>
-        <td>${c.wynik}</td>
-        <td><span class="badge" style="background:${bg};color:${fg}">${c.badge}</span></td>
-      </tr>`;
+      const emotka = {accent2:'★', green:'✅', yellow:'⚠️', blue:'→'}[c.badge_color] || '→';
+      const detail = `<span class="badge" style="background:${bg};color:${fg}">${c.badge}</span>${c.plan ? '&nbsp; → &nbsp;' + c.plan : ''}`;
+      return expandRow(
+        `<td style="white-space:nowrap;font-size:11px">${c.nr}</td>
+         <td style="white-space:normal;min-width:110px;word-break:break-word">${c.nazwa}</td>
+         <td style="white-space:nowrap"><span class="kg-badge">${c.ciezar}</span></td>
+         <td style="white-space:nowrap">${c.wynik}</td>
+         <td style="text-align:center;font-size:14px">${emotka}</td>`,
+        detail
+      );
     }).join('');
     el.innerHTML = `
       <div class="next-card">
@@ -1044,10 +1103,11 @@
         ${p.alert_sukces ? alertBox('success','✅',p.alert_sukces) : ''}
         <div class="next-table" style="margin-top:12px">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Wynik</th><th>Ocena</th></tr>
+            <tr><th>#</th><th>Ćwiczenie</th><th>Ciężar</th><th>Wynik</th><th>✓</th></tr>
             ${rows}
           </table>
         </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć ocenę i plan</div>
       </div>`;
 
     const wEl = document.getElementById('tr-wnioski');
@@ -1098,7 +1158,7 @@
       ? `<span style="color:var(--yellow)">★${r.ocena.replace('/10','')} <span style="color:var(--text3)">/ 10</span></span>`
       : '<span style="color:var(--text3)">—</span>';
     const uid = 'hr-' + Math.random().toString(36).slice(2,7);
-    return `<tr style="cursor:pointer" onclick="const e=document.getElementById('${uid}');e.style.display=e.style.display==='none'?'table-row':'none'">
+    return `<tr style="cursor:pointer" data-expand="${uid}">
       <td style="white-space:nowrap" ${hl}>${r.data}</td>
       <td><span class="badge" style="background:${bg};color:${fg}">${r.typ}</span></td>
       <td style="white-space:nowrap">${ocena}</td>
@@ -1140,7 +1200,7 @@
       `<th style="font-size:10px;min-width:72px">${s}</th>`
     ).join('');
 
-    const dataColorMap = {accent2:'var(--accent2)',green:'var(--green)',red:'var(--red)',text3:'var(--text3)','':`var(--text)`};
+    const dataColorMap = {accent2:'var(--accent2)',green:'var(--green)',red:'var(--red)',text3:'var(--text3)','':'var(--text)'};
     const rows = p.cwiczenia.map(c => {
       const cells = c.dane.map(d => {
         const col = dataColorMap[d.c] || 'var(--text)';
@@ -1231,19 +1291,22 @@
       const isMain = c.glowne;
       const isSS   = c.ss;
       const isBg   = c.opcjonalny ? 'background:rgba(100,116,139,0.05)' : isSS ? 'background:rgba(59,130,246,0.04)' : '';
+      const nameStyle = isMain ? 'color:var(--accent2);font-weight:600' : c.opcjonalny ? 'color:var(--text3);font-style:italic' : '';
       const celColor = { accent2:'var(--accent2)', text3:'var(--text3)' }[c.cel_color] || 'var(--text3)';
-      const nameStyle = isMain ? 'color:var(--accent2);font-weight:600' : '';
-      const partiaCell = c.partia ? `<td style="font-size:11px;color:var(--text3)">${c.partia}</td>` : '<td></td>';
-      return `<tr${isBg ? ` style="${isBg}"` : ''}>
-        <td>${c.nr}</td>
-        <td style="${nameStyle}">${c.nazwa}</td>
-        ${partiaCell}
-        <td>${c.serie}</td>
-        <td>${c.powt}</td>
-        <td>${c.przerwa}</td>
-        <td><span class="kg-badge">${c.start}</span></td>
-        <td style="font-size:11px;color:${celColor}">${c.cel}</td>
-      </tr>`;
+      const detail = [
+        c.partia ? `<span style="color:var(--text3)">Partia:</span> ${c.partia}` : '',
+        `<span style="color:var(--text3)">Przerwa:</span> ${c.przerwa}`,
+        `<span style="color:var(--text3)">Start:</span> <span class="kg-badge">${c.start}</span>`,
+        showCel && c.cel ? `<span style="color:var(--text3)">Cel C2:</span> <span style="color:${celColor}">${c.cel}</span>` : ''
+      ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+      return expandRow(
+        `<td style="font-size:10px;white-space:nowrap">${c.nr}</td>
+         <td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
+         <td style="white-space:nowrap">${c.serie}</td>
+         <td style="white-space:nowrap">${c.powt}</td>`,
+        detail,
+        isBg
+      );
     }).join('');
 
     el.innerHTML = `
@@ -1251,10 +1314,11 @@
       ${alertHtml}
       <div class="workout-table card">
         <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th style="font-size:11px">Partia</th><th>Serie</th><th>Powt.</th><th>Przerwa</th><th>Start</th><th>Cel C2</th></tr>
+          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th></tr>
           ${rows}
         </table>
-        <div style="margin-top:10px;font-size:12px;color:${blok.uwaga&&blok.uwaga.startsWith('⚠️')?'var(--yellow)':'var(--text3)'}">${blok.uwaga||''}</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć partię, przerwę, start i cel</div>
+        <div style="margin-top:8px;font-size:12px;color:${blok.uwaga&&blok.uwaga.startsWith('⚠️')?'var(--yellow)':'var(--text3)'}">${blok.uwaga||''}</div>
       </div>`;
   }
 
@@ -1266,23 +1330,28 @@
     const rows = blok.cwiczenia.map(c => {
       const isSS = c.ss;
       const bg = isSS ? 'background:rgba(59,130,246,0.04)' : '';
-      return `<tr${bg ? ` style="${bg}"` : ''}>
-        <td>${c.nr}</td>
-        <td>${c.nazwa}</td>
-        <td>${c.serie_powt}</td>
-        <td>${c.tempo||'—'}</td>
-        <td>${c.przerwa}</td>
-        <td style="font-size:11px;color:var(--text3)">${c.cel}</td>
-      </tr>`;
+      const detail = [
+        c.tempo ? `<span style="color:var(--text3)">Tempo:</span> ${c.tempo}` : '',
+        `<span style="color:var(--text3)">Przerwa:</span> ${c.przerwa}`,
+        c.cel ? `<span style="color:var(--text3)">Cel:</span> <span style="color:var(--accent2)">${c.cel}</span>` : ''
+      ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+      return expandRow(
+        `<td style="font-size:11px;white-space:nowrap">${c.nr}</td>
+         <td style="white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
+         <td style="white-space:nowrap">${c.serie_powt}</td>`,
+        detail,
+        bg
+      );
     }).join('');
     el.innerHTML = `
       <h3>${blok.label} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
       ${alertHtml}
       <div class="workout-table card">
         <table>
-          <tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th><th>Tempo</th><th>Przerwa</th><th>Progresja</th></tr>
+          <tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th></tr>
           ${rows}
         </table>
+        <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć tempo, przerwę i cel</div>
       </div>`;
   }
 
@@ -1316,7 +1385,7 @@
         : e.aktywny
           ? `<span style="color:var(--accent2);font-size:11px">▶ w toku</span>`
           : `<span style="color:var(--text3);font-size:11px">—</span>`;
-      return `<tr${hl ? ` style="${hl}"` : ''}>
+      return `<tr${hl ? ' style="' + hl + '"' : ''}>
         <td><span class="badge ${bc}">${e.nazwa}</span></td>
         <td style="white-space:nowrap">${e.okres}</td>
         <td style="white-space:nowrap">${e.czas}</td>
@@ -1407,7 +1476,7 @@
           <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
           <div style="font-size:10px;color:var(--text3);margin-top:3px;text-align:right">${pct}% drogi do celu</div>
         </div>
-        ${sesjeRows ? `<table style="margin-top:8px"><tr><th>Data</th><th>Ciężar</th><th>Uwaga</th></tr>${sesjeRows}</table>` : ''}
+        ${sesjeRows ? '<table style="margin-top:8px"><tr><th>Data</th><th>Ciężar</th><th>Uwaga</th></tr>' + sesjeRows + '</table>' : ''}
         <div style="font-size:11px;color:var(--text3);margin-top:8px">${b.uwaga}</div>
       </div>`;
     }).join('');
@@ -1744,29 +1813,34 @@
     const el = document.getElementById(panelId);
     if (!el) return;
     const hasPartia = typ === 'ub';
-    const header = hasPartia
-      ? `<tr><th>#</th><th>Ćwiczenie</th><th>Partia</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th></tr>`
-      : `<tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th></tr>`;
     const rows = blok.cwiczenia.map(c => {
       const isSS = c.ss;
       const bg = isSS ? 'background:rgba(59,130,246,0.04)' : '';
       const nameStyle = c.glowne ? 'color:var(--accent2);font-weight:600' : '';
-      const partiaCell = hasPartia ? `<td style="font-size:11px;color:var(--text3)">${c.partia||''}</td>` : '';
-      return `<tr${bg ? ` style="${bg}"` : ''}>
-        <td>${c.nr}</td>
-        <td style="${nameStyle}">${c.nazwa}</td>
-        ${partiaCell}
-        <td>${c.serie}</td><td>${c.powt}</td>
-        <td>${c.tempo}</td><td>${c.przerwa}</td>
-        <td><span class="kg-badge">${c.ciezar}</span></td>
-      </tr>`;
+      const detail = [
+        hasPartia && c.partia ? `<span style="color:var(--text3)">Partia:</span> ${c.partia}` : '',
+        `<span style="color:var(--text3)">Tempo:</span> ${c.tempo}`,
+        `<span style="color:var(--text3)">Przerwa:</span> ${c.przerwa}`,
+        `<span style="color:var(--text3)">Ciężar:</span> <span class="kg-badge">${c.ciezar}</span>`
+      ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+      return expandRow(
+        `<td style="font-size:10px;white-space:nowrap">${c.nr}</td>
+         <td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
+         <td style="white-space:nowrap">${c.serie}</td>
+         <td style="white-space:nowrap">${c.powt}</td>`,
+        detail, bg
+      );
     }).join('');
     const badge_extra = blok.badge_extra ? `&nbsp;<span class="badge badge-yellow">${blok.badge_extra}</span>` : '';
     el.innerHTML = `
       <h3>${blok.label}${badge_extra} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
       <div class="workout-table card">
-        <table>${header}${rows}</table>
-        <div style="margin-top:10px;font-size:12px;color:var(--text3)">${blok.uwaga||''}</div>
+        <table>
+          <tr><th>#</th><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th></tr>
+          ${rows}
+        </table>
+        <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij aby zobaczyć partię, tempo, przerwę i ciężar</div>
+        <div style="margin-top:8px;font-size:12px;color:var(--text3)">${blok.uwaga||''}</div>
       </div>`;
   }
 
@@ -1777,30 +1851,36 @@
     const alertHtml = lower.alert
       ? `<div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">ℹ</span><span><strong>Filozofia fazy:</strong> ${lower.alert}</span></div>`
       : '';
-    const bloки = lower.bloki.map(b => {
+    const blokiRows = lower.bloki.map(b => {
       const col = BLOK_COLORS[b.kolor] || 'var(--text3)';
-      const headerRow = `<tr style="background:rgba(0,0,0,0.03)"><td colspan="7" style="color:${col};font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── ${b.nazwa} ──</td></tr>`;
+      const header = `<tr style="background:rgba(0,0,0,0.03)"><td colspan="99" style="color:${col};font-size:11px;font-weight:600;padding:6px 10px;text-transform:uppercase">── ${b.nazwa} ──</td></tr>`;
       const cwRows = b.cwiczenia.map(c => {
         const nameStyle = c.glowne ? 'color:var(--accent2);font-weight:600' : c.opcjonalny ? 'color:var(--text3);font-style:italic' : '';
-        return `<tr>
-          <td style="${nameStyle}">${c.nazwa}</td>
-          <td>${c.serie}</td><td>${c.powt}</td>
-          <td>${c.tempo}</td><td>${c.przerwa}</td>
-          <td><span class="kg-badge">${c.ciezar}</span></td>
-          <td style="font-size:11px;color:var(--text3)">${c.uwagi||''}</td>
-        </tr>`;
+        const detail = [
+          `<span style="color:var(--text3)">Tempo:</span> ${c.tempo}`,
+          `<span style="color:var(--text3)">Przerwa:</span> ${c.przerwa}`,
+          `<span style="color:var(--text3)">Ciężar:</span> <span class="kg-badge">${c.ciezar}</span>`,
+          c.uwagi ? `<span style="color:var(--text3)">Uwagi:</span> ${c.uwagi}` : ''
+        ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+        return expandRow(
+          `<td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
+           <td style="white-space:nowrap">${c.serie}</td>
+           <td style="white-space:nowrap">${c.powt}</td>`,
+          detail
+        );
       }).join('');
-      return headerRow + cwRows;
+      return header + cwRows;
     }).join('');
     el.innerHTML = `
-      <h3>${lower.label} &nbsp;<span class="badge badge-gray">${lower.czas}</span>${lower.badge_extra ? `&nbsp;<span class="badge badge-yellow">${lower.badge_extra}</span>` : ''}</h3>
+      <h3>${lower.label} &nbsp;<span class="badge badge-gray">${lower.czas}</span>${lower.badge_extra ? '&nbsp;<span class="badge badge-yellow">' + lower.badge_extra + '</span>' : ''}</h3>
       <div class="workout-table card">
         ${alertHtml}
         <table>
-          <tr><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th><th>Tempo</th><th>Przerwa</th><th>Ciężar</th><th>Uwagi</th></tr>
-          ${bloки}
+          <tr><th>Ćwiczenie</th><th>Serie</th><th>Powt.</th></tr>
+          ${blokiRows}
         </table>
-        <div style="margin-top:10px;font-size:12px;color:var(--yellow)">${lower.uwaga||''}</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij aby zobaczyć tempo, przerwę i ciężar</div>
+        <div style="margin-top:8px;font-size:12px;color:var(--yellow)">${lower.uwaga||''}</div>
       </div>`;
   }
 
@@ -1810,32 +1890,41 @@
     const alertHtml = blok.alert
       ? `<div class="alert alert-info"><span class="alert-icon">💡</span><span>${blok.alert}</span></div>`
       : '';
-    // Rozgrzewka (only for ebl)
     let rozgrzewkaHtml = '';
     if (blok.rozgrzewka) {
-      const rows = blok.rozgrzewka.map(r =>
-        `<tr><td>${r.nr}</td><td>${r.nazwa}</td><td>${r.serie_powt}</td><td style="font-size:11px;color:var(--text3)">${r.uwagi}</td></tr>`
-      ).join('');
+      const rows = blok.rozgrzewka.map(r => expandRow(
+        `<td style="white-space:nowrap">${r.nr}</td>
+         <td style="white-space:normal;min-width:130px;word-break:break-word">${r.nazwa}</td>
+         <td style="white-space:nowrap">${r.serie_powt}</td>`,
+        r.uwagi || '—'
+      )).join('');
       rozgrzewkaHtml = `<div class="workout-table card" style="margin-bottom:12px">
         <div class="card-title">🟡 Rozgrzewka z gumą — 8–10 min</div>
-        <table><tr><th>#</th><th>Ćwiczenie</th><th>Serie × Powt.</th><th>Uwagi</th></tr>${rows}</table>
+        <table><tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th></tr>${rows}</table>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij aby zobaczyć uwagi</div>
       </div>`;
     }
     const rows = blok.cwiczenia.map(c => {
       const bg = c.ss ? 'background:rgba(59,130,246,0.04)' : '';
-      return `<tr${bg ? ` style="${bg}"` : ''}>
-        <td>${c.nr}</td><td>${c.nazwa}</td>
-        <td>${c.serie_powt}</td><td>${c.tempo||'—'}</td>
-        <td>${c.przerwa}</td>
-        <td style="font-size:11px;color:var(--text3)">${c.cel}</td>
-      </tr>`;
+      const detail = [
+        c.tempo ? `<span style="color:var(--text3)">Tempo:</span> ${c.tempo}` : '',
+        `<span style="color:var(--text3)">Przerwa:</span> ${c.przerwa}`,
+        c.cel ? `<span style="color:var(--text3)">Cel:</span> <span style="color:var(--accent2)">${c.cel}</span>` : ''
+      ].filter(Boolean).join(' &nbsp;·&nbsp; ');
+      return expandRow(
+        `<td style="font-size:11px;white-space:nowrap">${c.nr}</td>
+         <td style="white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
+         <td style="white-space:nowrap">${c.serie_powt}</td>`,
+        detail, bg
+      );
     }).join('');
     el.innerHTML = `
       <h3>${blok.label} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
       ${alertHtml}
       ${rozgrzewkaHtml}
       <div class="workout-table card">
-        <table><tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th><th>Tempo</th><th>Przerwa</th><th>Progresja</th></tr>${rows}</table>
+        <table><tr><th>#</th><th>Ćwiczenie</th><th>Serie×Powt.</th></tr>${rows}</table>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij aby zobaczyć tempo, przerwę i cel</div>
       </div>`;
   }
 
