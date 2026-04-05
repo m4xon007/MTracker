@@ -25,6 +25,180 @@
     "sesje": [
       "31.03 UA",
       "02.04 L"
+    ],
+    "plan": [
+      {
+        "data": "2026-03-31",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": true
+      },
+      {
+        "data": "2026-04-02",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": true
+      },
+      {
+        "data": "2026-04-05",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-07",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-09",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-12",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-14",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-16",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-19",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-21",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-23",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-26",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-28",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-04-30",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-03",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-05",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-07",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-10",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-12",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-14",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-17",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-19",
+        "typ": "D·UA",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-21",
+        "typ": "D·L",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-24",
+        "typ": "D·UB",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-26",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-28",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-31",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      }
+    ],
+    "plan_dni": [
+      1,
+      3,
+      6
+    ],
+    "rotacja": [
+      "UA",
+      "L",
+      "UB"
     ]
   },
   "cykl1": {
