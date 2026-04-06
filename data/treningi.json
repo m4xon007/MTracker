@@ -6,7 +6,7 @@
     "badge_color": "accent",
     "alert": {
       "ikona": "💡",
-      "tekst": "Ławka — kontynuuj 70kg. Sprawdź czy Seated Row idzie na 42,5kg (bez skoku — to będzie progresja z UB)."
+      "tekst": "Nowa struktura UA! SS4: Lateral Raise + DB Triceps Ext. (ta sama ławka). SS8: Cable Triceps + Face Pull. Smith CGBP i Lat Pulldown odpадают. HS Seated Row — kalibracja."
     },
     "cwiczenia": [
       {
@@ -19,7 +19,7 @@
         "nr": 2,
         "nazwa": "HS Incline Press",
         "ciezar": "40 kg",
-        "serie": "4×8-12"
+        "serie": "4×8-10"
       },
       {
         "nr": 3,
@@ -28,22 +28,29 @@
         "serie": "3×8-12"
       },
       {
-        "nr": 4,
-        "nazwa": "Lateral Raise",
-        "ciezar": "10 kg",
+        "nr": "4a",
+        "nazwa": "SS · Lateral Raise (chest supp.)",
+        "ciezar": "8 kg",
         "serie": "4×12-15"
+      },
+      {
+        "nr": "4b",
+        "nazwa": "SS · DB Triceps Extension (chest supp.)",
+        "ciezar": "8 kg",
+        "serie": "4×10-15"
       },
       {
         "nr": 5,
         "nazwa": "HS High Row",
         "ciezar": "90 kg",
-        "serie": "4×8-12"
+        "serie": "4×8-10"
       },
       {
         "nr": 6,
-        "nazwa": "Smith CGBP",
-        "ciezar": "50 kg",
-        "serie": "3×8-12"
+        "nazwa": "HS Seated Row",
+        "ciezar": "42,5 kg",
+        "serie": "4×8-12",
+        "uwagi": "Nowe ćwiczenie — kalibracja. Zmiana z Cable Row na HS maszynę, wektor poziomy."
       },
       {
         "nr": 7,
@@ -52,23 +59,16 @@
         "serie": "3×10-12"
       },
       {
-        "nr": 8,
-        "nazwa": "Seated Cable Row",
-        "ciezar": "42,5 kg",
-        "serie": "4×10-12",
-        "uwagi": "Progresja z UB — pierwsza próba 42,5kg"
-      },
-      {
-        "nr": 9,
-        "nazwa": "Cable Triceps",
+        "nr": "8a",
+        "nazwa": "SS · Cable Triceps Ext. (overhead)",
         "ciezar": "21,5 kg",
-        "serie": "3×12-15"
+        "serie": "3×10-15"
       },
       {
-        "nr": 10,
-        "nazwa": "Face Pull",
+        "nr": "8b",
+        "nazwa": "SS · Face Pull",
         "ciezar": "15 kg",
-        "serie": "3×15-20"
+        "serie": "3×10-15"
       }
     ],
     "kolejne": [
@@ -83,8 +83,8 @@
         "data": "Nd 12.04",
         "tytul": "Upper B",
         "badge_color": "green",
-        "szczegoly": "Podciąganie BW · Smith Incline 50kg · Australian · Dipy\nButterfly 68kg ×4 serie · Reverse Pec Deck 59kg ×4 serie\nSeated Row 42,5kg · Hammer Curl 17,5kg",
-        "uwaga": "Wróć do 4 serii Butterfly i Reverse. Progresja Seated Row i Hammer Curl."
+        "szczegoly": "Podciąganie -12,5kg · Smith Incline 50kg · Australian BW · Dipy BW\nButterfly 68kg (solo) · Crossover 10kg (solo) · Arnold SS Reverse Fly\nCable Lateral 7,5kg · Seated Row 40kg · Skull Crusher 22,5kg · Hammer Curl",
+        "uwaga": "Butterfly i Crossover — osobne ćwiczenia (nie SS). Wróć do 4 serii Butterfly."
       }
     ]
   },
@@ -142,34 +142,34 @@
         "wynik": "10-10-10",
         "badge": "⚠️ 3 serie",
         "badge_color": "yellow",
-        "plan": "Wróć do 4 serii"
+        "plan": "Wróć do 4 serii (solo — nie SS)"
       },
       {
         "nr": 6,
-        "nazwa": "Reverse Pec Deck",
-        "ciezar": "59 kg",
-        "wynik": "10-10-10",
-        "badge": "⚠️ 3 serie",
-        "badge_color": "yellow",
-        "plan": "Wróć do 4 serii"
-      },
-      {
-        "nr": 7,
         "nazwa": "Cable Crossover",
         "ciezar": "10 kg",
         "wynik": "10-10-10",
         "badge": "✅ ok",
         "badge_color": "green",
-        "plan": "Gdy 3×12 → +2,5kg"
+        "plan": "Osobne ćwiczenie (nie SS). Gdy 3×12 → +2,5kg"
       },
       {
-        "nr": 8,
+        "nr": 7,
         "nazwa": "Arnold Press",
         "ciezar": "17,5 kg",
         "wynik": "10-10-8",
         "badge": "→ plateau",
         "badge_color": "gray",
-        "plan": "Utrzymaj 17,5kg, cel: 3×10"
+        "plan": "SS z Seated Reverse Fly. Utrzymaj 17,5kg, cel: 3×10"
+      },
+      {
+        "nr": 8,
+        "nazwa": "Seated DB Reverse Fly",
+        "ciezar": "6 kg",
+        "wynik": "—",
+        "badge": "→ nowe",
+        "badge_color": "gray",
+        "plan": "SS z Arnold Press. Start 6kg, cel: 3×15"
       },
       {
         "nr": 9,
@@ -178,7 +178,7 @@
         "wynik": "12-10-10",
         "badge": "→ plateau",
         "badge_color": "gray",
-        "plan": "Utrzymaj 7,5kg, cel: 3×12"
+        "plan": "Osobne ćwiczenie. Utrzymaj 7,5kg, cel: 4×12"
       },
       {
         "nr": 10,
@@ -227,7 +227,12 @@
       {
         "typ": "warn",
         "ikona": "⚠️",
-        "tekst": "Butterfly i Reverse Pec Deck — tylko 3 serie zamiast 4. Na następnym UB wróć do 4 serii."
+        "tekst": "Butterfly i Reverse Pec Deck — tylko 3 serie zamiast 4. Na następnym UB wróć do 4 serii Butterfly (solo, bez SS)."
+      },
+      {
+        "typ": "info",
+        "ikona": "ℹ️",
+        "tekst": "<strong>Aktualizacja planu UB:</strong> Butterfly → solo (nie SS z Crossover). Nowe SS: Arnold + Seated DB Reverse Fly. Crossover → osobne ćwiczenie."
       }
     ]
   },
@@ -526,7 +531,7 @@
           {
             "nazwa": "⭐ Ławka sztanga",
             "zakres": "4×5–8",
-            "cel": "2/3 w górnym → +2,5kg · cel 75–77,5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 75–77,5kg",
             "dane": [
               {
                 "v": "72,5×5-5-5-6",
@@ -537,8 +542,8 @@
           },
           {
             "nazwa": "HS ISO Lateral Incline Press",
-            "zakres": "4×8–12",
-            "cel": "2/3 w górnym → +5kg · cel 50–55kg",
+            "zakres": "4×8–10",
+            "cel": "2/3 w górnym przez 2 sesje → +5kg · cel 50–55kg",
             "dane": [
               {
                 "v": "40×12-10-10-8",
@@ -550,7 +555,7 @@
           {
             "nazwa": "Half-Kneeling Landmine Press",
             "zakres": "3×8–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 30–32,5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 30–32,5kg",
             "dane": [
               {
                 "v": "25×12-12-12",
@@ -560,9 +565,9 @@
             ]
           },
           {
-            "nazwa": "Chest Supported Lateral Raise",
+            "nazwa": "SS4a · Chest Supported Lateral Raise",
             "zakres": "4×12–15",
-            "cel": "2/3 w górnym → +1kg",
+            "cel": "2/3 w górnym przez 2 sesje → +1kg",
             "dane": [
               {
                 "v": "8×12-12-12-10",
@@ -572,9 +577,20 @@
             ]
           },
           {
+            "nazwa": "SS4b · Chest Supported DB Triceps Ext.",
+            "zakres": "4×10–15",
+            "cel": "2/3 w górnym przez 2 sesje → +1kg",
+            "dane": [
+              {
+                "v": "—",
+                "c": "text3"
+              }
+            ]
+          },
+          {
             "nazwa": "⭐ HS ISO Lateral High Row",
-            "zakres": "4×8–12",
-            "cel": "2/3 w górnym → +5kg · cel 100–105kg",
+            "zakres": "4×8–10",
+            "cel": "2/3 w górnym przez 2 sesje → +5kg · cel 100–105kg",
             "dane": [
               {
                 "v": "70×12-12-12-12",
@@ -584,45 +600,20 @@
             ]
           },
           {
-            "nazwa": "Ściąganie drążka podchwytem",
-            "zakres": "3×8–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 67,5–70kg",
+            "nazwa": "HS Select Seated Row",
+            "zakres": "4×8–12",
+            "cel": "2/3 w górnym przez 2 sesje → +5kg",
             "dane": [
               {
                 "v": "—",
-                "i": "",
                 "c": "text3"
-              }
-            ]
-          },
-          {
-            "nazwa": "Smith CGBP",
-            "zakres": "3×6–10",
-            "cel": "2/3 w górnym → +2,5kg · cel 57,5–60kg",
-            "dane": [
-              {
-                "v": "20×10-10-10",
-                "i": "★",
-                "c": "accent2"
-              }
-            ]
-          },
-          {
-            "nazwa": "Kneeling Overhead Cable Triceps",
-            "zakres": "3×10–15",
-            "cel": "2/3 w górnym → +2,5kg",
-            "dane": [
-              {
-                "v": "21,5×10-9-9",
-                "i": "★",
-                "c": "accent2"
               }
             ]
           },
           {
             "nazwa": "Uginanie hantlami z rotacją",
             "zakres": "3×10–12",
-            "cel": "2/3 w górnym → +1kg",
+            "cel": "2/3 w górnym przez 2 sesje → +1kg",
             "dane": [
               {
                 "v": "20×9-8-8",
@@ -632,9 +623,21 @@
             ]
           },
           {
-            "nazwa": "SS · Face pull półklęcząc",
+            "nazwa": "SS8a · Standing Overhead Cable Triceps",
             "zakres": "3×10–15",
-            "cel": "2/3 w górnym → +2,5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg",
+            "dane": [
+              {
+                "v": "21,5×10-9-9",
+                "i": "★",
+                "c": "accent2"
+              }
+            ]
+          },
+          {
+            "nazwa": "SS8b · Face Pull półklęcząc",
+            "zakres": "3×10–15",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg",
             "dane": [
               {
                 "v": "15×15-15-12",
@@ -655,10 +658,10 @@
           {
             "nazwa": "⭐ Podciąganie (asysta)",
             "zakres": "5×6–8",
-            "cel": "5×8 → -2,5kg asysty · cel -7,5 lub -5kg",
+            "cel": "2/3 przez 2 sesje → -2,5kg asysty",
             "dane": [
               {
-                "v": "BW 8-6-6",
+                "v": "BW 8-6-6-6-6",
                 "c": "accent2"
               }
             ]
@@ -680,8 +683,8 @@
             "cel": "2/3 w górnym → obniż drążek lub +obciążenie",
             "dane": [
               {
-                "v": "BW 8-6-6",
-                "c": "accent2"
+                "v": "BW 12-12-10",
+                "c": "green"
               }
             ]
           },
@@ -691,15 +694,15 @@
             "cel": "2/3 w górnym → +obciążenie (pas)",
             "dane": [
               {
-                "v": "10-10-10",
+                "v": "BW 10-10-10",
                 "c": "green"
               }
             ]
           },
           {
-            "nazwa": "SS4a · Rozpiętki Butterfly",
-            "zakres": "3×10–12",
-            "cel": "2/3 w górnym → +5kg",
+            "nazwa": "Butterfly (solo)",
+            "zakres": "4×10–12",
+            "cel": "2/3 w górnym przez 2 sesje → +5kg",
             "dane": [
               {
                 "v": "68×3×10",
@@ -708,20 +711,9 @@
             ]
           },
           {
-            "nazwa": "SS4b · Odwrotne rozpiętki",
-            "zakres": "3×12–15",
-            "cel": "2/3 w górnym → +5kg",
-            "dane": [
-              {
-                "v": "—",
-                "c": "text3"
-              }
-            ]
-          },
-          {
-            "nazwa": "Cable Crossover",
+            "nazwa": "Cable Crossover (solo)",
             "zakres": "3×10–15",
-            "cel": "2/3 w górnym → +2,5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg",
             "dane": [
               {
                 "v": "10×3×10",
@@ -730,12 +722,23 @@
             ]
           },
           {
-            "nazwa": "Arnoldki",
+            "nazwa": "SS5a · Arnoldki",
             "zakres": "3×8–10",
-            "cel": "2/3 w górnym → +2,5kg · cel 20–22,5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 20–22,5kg",
             "dane": [
               {
-                "v": "17,5×10",
+                "v": "17,5×10-10-8",
+                "c": "text3"
+              }
+            ]
+          },
+          {
+            "nazwa": "SS5b · Seated DB Reverse Fly",
+            "zakres": "3×12–15",
+            "cel": "2/3 w górnym przez 2 sesje → +1kg",
+            "dane": [
+              {
+                "v": "—",
                 "c": "text3"
               }
             ]
@@ -743,21 +746,21 @@
           {
             "nazwa": "Cable Lateral Raise",
             "zakres": "4×10–12",
-            "cel": "2/3 w górnym → +1kg",
+            "cel": "2/3 w górnym przez 2 sesje → +1kg",
             "dane": [
               {
-                "v": "7,5×12",
+                "v": "7,5×12-10-10",
                 "c": "text3"
               }
             ]
           },
           {
-            "nazwa": "HS Seated Row",
+            "nazwa": "Seated Cable Row",
             "zakres": "4×8–12",
-            "cel": "2/3 w górnym → +5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg",
             "dane": [
               {
-                "v": "40×4×12",
+                "v": "40×12-12-12-10",
                 "c": "green"
               }
             ]
@@ -765,10 +768,10 @@
           {
             "nazwa": "EZ-bar Skull Crusher",
             "zakres": "3×8–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 27,5–30kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 27,5–30kg",
             "dane": [
               {
-                "v": "22,5×10",
+                "v": "22,5×10-10-10",
                 "c": "text3"
               }
             ]
@@ -776,10 +779,10 @@
           {
             "nazwa": "Hammer Curl",
             "zakres": "3×10–12",
-            "cel": "2/3 w górnym → +2,5kg · cel 20–22,5kg",
+            "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 20–22,5kg",
             "dane": [
               {
-                "v": "15×12",
+                "v": "15×12-12-12",
                 "c": "green"
               }
             ]
@@ -2472,10 +2475,10 @@
     }
   },
   "szablony_c2": {
-    "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1. Ławka sztanga       [4×5-8 · 70kg]:      __ kg × __-__-__-__\n2. HS Incline Press    [4×8-12 · 40kg]:     __ kg × __-__-__-__\n3. Landmine Press      [3×8-12 · 25kg]:     __ kg × __-__-__\n4. Lateral Raise       [4×12-15 · 10kg]:    __ kg × __-__-__-__\n5. HS High Row         [4×8-12 · 90kg]:     __ kg × __-__-__-__\n6. Smith CGBP          [3×8-12 · 50kg]:     __ kg × __-__-__\n7. Rotation Curl       [3×10-12 · 20kg]:    __ kg × __-__-__\n8. Seated Cable Row    [4×10-12 · 42,5kg]:  __ kg × __-__-__-__\n9. Cable Triceps       [3×12-15 · 21,5kg]:  __ kg × __-__-__\n10. Face Pull           [3×15-20 · 15kg]:    __ kg × __-__-__\n\nWnioski / uwagi:",
-    "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1. Podciąganie (asysta) [4×6-8 · -12,5kg]:  __-__-__-__\n2. Smith Incline Press  [4×8-12 · 50kg]:    __ kg × __-__-__-__\n3. Australian Pull-up   [3×AMRAP · BW]:     __-__-__\n4. Dipy na poręczach    [3×AMRAP · BW]:     __-__-__\n5. Butterfly            [4×10-12 · 68kg]:   __ kg × __-__-__-__\n6. Reverse Pec Deck     [4×12-15 · 59kg]:   __ kg × __-__-__-__\n7. Cable Crossover      [3×12-15 · 10kg]:   __ kg × __-__-__\n8. Arnold Press         [3×8-10 · 17,5kg]:  __ kg × __-__-__\n9. Cable Lateral        [3×12-15 · 7,5kg]:  __ kg × __-__-__\n10. Seated Row           [4×10-12 · 40kg]:   __ kg × __-__-__-__\n11. Skull Crusher        [3×10-12 · 22,5kg]: __ kg × __-__-__\n12. Hammer Curl          [3×10-12 · 15kg]:   __ kg × __-__-__\n\nWnioski / uwagi:",
+    "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.   Ławka sztanga              [4×5-8 · 70kg]:       __ kg × __-__-__-__\n2.   HS Incline Press           [4×8-10 · 40kg]:      __ kg × __-__-__-__\n3.   Landmine Press             [3×8-12 · 25kg]:      __ kg × __-__-__\nSS4a. Lateral Raise (chest)     [4×12-15 · 8kg]:      __ kg × __-__-__-__\nSS4b. DB Triceps Ext. (chest)   [4×10-15 · 8kg]:      __ kg × __-__-__-__\n5.   HS High Row                [4×8-10 · 90kg]:      __ kg × __-__-__-__\n6.   HS Seated Row              [4×8-12 · 42,5kg]:    __ kg × __-__-__-__\n7.   Rotation Curl              [3×10-12 · 20kg]:     __ kg × __-__-__\nSS8a. Cable Triceps (overhead)  [3×10-15 · 21,5kg]:   __ kg × __-__-__\nSS8b. Face Pull                 [3×10-15 · 15kg]:     __ kg × __-__-__\n\nWnioski / uwagi:",
+    "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.  Podciąganie (asysta)     [5×6-8 · -12,5kg]:  __-__-__-__-__\n2.  Smith Incline Press      [3×6-8 · 50kg]:     __ kg × __-__-__\nSS3a. Australian Pull-up    [3×8-12 · BW]:      __-__-__\nSS3b. Dipy                  [3×8-12 · BW]:      __-__-__\n4.  Butterfly                [4×10-12 · 68kg]:   __ kg × __-__-__-__\n5.  Cable Crossover          [3×10-15 · 10kg]:   __ kg × __-__-__\nSS5a. Arnold Press          [3×8-10 · 17,5kg]:  __ kg × __-__-__\nSS5b. Seated DB Reverse Fly [3×12-15 · 6kg]:    __ kg × __-__-__\n6.  Cable Lateral Raise      [4×10-12 · 7,5kg]:  __ kg × __-__-__-__\n7.  Seated Cable Row         [4×8-12 · 40kg]:    __ kg × __-__-__-__\n8.  Skull Crusher EZ         [3×8-12 · 22,5kg]:  __ kg × __-__-__\n9.  Hammer Curl              [3×10-12 · 17,5kg]: __ kg × __-__-__\n\nWnioski / uwagi:",
     "lower": "Lower [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1. Front Squat         [4×4-6 · 60kg]:   __ kg × __-__-__-__\n2. Trap Bar Deadlift   [4×4-6 · 85kg]:   __ kg × __-__-__-__\n3. Hack Squat          [4×8-12 · 90kg]:  __ kg × __-__-__-__\n4. Leg Press ⚡         [3×12-15]:        __ kg × __-__-__\n5. Seated Leg Curl     [4×10-12 · 70kg]: __ kg × __-__-__-__\n6. Kneeling Leg Curl   [3×10-12 · 40kg]: __ kg × __-__-__\n7. Calf Raise SS       [4×15 · 50kg]:    __ kg × __-__-__-__\n8. Cable Crunch SS     [3× · 25kg]:      __ kg × __-__-__\n9. Pallof Press SS     [3× · 10kg/str]:  __ kg × __-__-__\n\nWnioski / uwagi:",
-    "prompt": "Nowy raport treningowy — zaktualizuj TYLKO plik treningi.json.\n\n[WKLEJ RAPORT TUTAJ]\n\n════ CO ZAKTUALIZOWAĆ W treningi.json ════\n\n1. nastepny — zmień na kolejny zaplanowany trening (typ, data, ciężary po ewentualnej progresji)\n2. poprzedni — zastąp w całości danymi z tego raportu, pola:\n   - tytul, data, czas, kcal, tetno, obciazenie\n   - ocena_liczba (1-10), ocena_tekst\n   - alert_sukces (jeśli był rekord/przełom — opcjonalne)\n   - cwiczenia[]: nr, nazwa, ciezar, wynik (np. \"5-5-5-6\"), badge, badge_color, plan\n     badge_color: \"accent2\"=★rekord | \"green\"=✅ok | \"yellow\"=⚠️ | \"gray\"=→\n   - wnioski[]: typ (success/warn/info), ikona, tekst\n3. archiwum.historia_c2 — dodaj nowy wpis na początku:\n   - data (np. \"02.04\"), typ (UA|UB|L), typ_color (accent|green|yellow)\n   - ocena (\"7/10\"), kcal, czas, wyniki (krótki opis kluczowych wyników)\n   WAŻNE: typ = \"L\" nie \"Lower\"\n4. Jeśli trening UA/UB/L:\n   - archiwum.progresja_c2.[ua|ub|lower].sesje — dodaj datę na początku (np. \"06.04\")\n   - archiwum.progresja_c2.[ua|ub|lower].cwiczenia[].dane — dodaj kolumnę z wynikiem\n     format: {\"v\": \"72,5×4\", \"c\": \"accent2\"} gdzie c: accent2=★ | green=↑ | text3=→ | red=↓\n5. harmonogram.json (osobny plik!) — zaktualizuj bilans C2:\n   - UA.zrobione / UB.zrobione / L.zrobione — zwiększ o 1\n   - sesje[] — dodaj wpis np. \"06.04 UB\"\n\n════ ZASADY LAYOUTU (nie zmieniaj w treningi.json) ════\n\nRENDER nastepny:  kolumny #|Ćwiczenie|Ciężar(kg-badge,center)|Serie(center)\nRENDER poprzedni: kolumny #|Ćwiczenie|Ciężar(kg-badge,center)|Wynik(center)|✓(emotka)\n                  kliknięcie = badge oceny + plan progresji\nRENDER historia:  kolumny Data|Trening|Ocena|Kcal|Czas — kliknięcie = wyniki\nRENDER progresja: lista Ćwiczenie|Zakres — kliknięcie = wartości z sesji\n\n════ NASTĘPNY TRENING — układ ════\n\nnastepny.cwiczenia[]: nr, nazwa, ciezar, serie, uwagi(opcjonalne — pojawi się po kliknięciu)\n\n════ AKTUALNE CIĘŻARY REFERENCYJNE C2 ════\n\nUA:    Ławka 70kg | HS Incline 40kg | Landmine 25kg | Lateral Raise 10kg\n       High Row 90kg | Smith CGBP 50kg | Rotation Curl 20kg\n       Seated Row 42,5kg | Cable Triceps 21,5kg | Face Pull 15kg\n\nUB:    Podciąganie -12,5kg | Smith Incline 50kg | Australian Pull-up BW\n       Dipy BW | Butterfly 68kg | Reverse Pec Deck 59kg | Crossover 10kg\n       Arnold 17,5kg | Cable Lateral 7,5kg | Seated Row 40kg\n       Skull Crusher 22,5kg | Hammer Curl 15kg\n\nLower: Front Squat 60kg | Trap Bar 85kg | Hack Squat 90kg\n       Seated Curl 70kg | Kneeling Curl 40kg | Calf Raise 50kg\n       Cable Crunch 25kg | Pallof Press 10kg\n",
+    "prompt": "Nowy raport treningowy — zaktualizuj TYLKO plik treningi.json.\n\n[WKLEJ RAPORT TUTAJ]\n\n════ CO ZAKTUALIZOWAĆ W treningi.json ════\n\n1. nastepny — zmień na kolejny zaplanowany trening (typ, data, ciężary po ewentualnej progresji)\n2. poprzedni — zastąp w całości danymi z tego raportu, pola:\n   - tytul, data, czas, kcal, tetno, obciazenie\n   - ocena_liczba (1-10), ocena_tekst\n   - alert_sukces (jeśli był rekord/przełom — opcjonalne)\n   - cwiczenia[]: nr, nazwa, ciezar, wynik (np. \"5-5-5-6\"), badge, badge_color, plan\n     badge_color: \"accent2\"=★rekord | \"green\"=✅ok | \"yellow\"=⚠️ | \"gray\"=→\n   - wnioski[]: typ (success/warn/info), ikona, tekst\n3. archiwum.historia_c2 — dodaj nowy wpis na początku:\n   - data (np. \"02.04\"), typ (UA|UB|L), typ_color (accent|green|yellow)\n   - ocena (\"7/10\"), kcal, czas, wyniki (krótki opis kluczowych wyników)\n   WAŻNE: typ = \"L\" nie \"Lower\"\n4. Jeśli trening UA/UB/L:\n   - archiwum.progresja_c2.[ua|ub|lower].sesje — dodaj datę na początku (np. \"06.04\")\n   - archiwum.progresja_c2.[ua|ub|lower].cwiczenia[].dane — dodaj kolumnę z wynikiem\n     format: {\"v\": \"72,5×4\", \"c\": \"accent2\"} gdzie c: accent2=★ | green=↑ | text3=→ | red=↓\n5. harmonogram.json (osobny plik!) — zaktualizuj bilans C2:\n   - UA.zrobione / UB.zrobione / L.zrobione — zwiększ o 1\n   - sesje[] — dodaj wpis np. \"06.04 UB\"\n\n════ ZASADY LAYOUTU (nie zmieniaj w treningi.json) ════\n\nRENDER nastepny:  kolumny #|Ćwiczenie|Ciężar(kg-badge,center)|Serie(center)\nRENDER poprzedni: kolumny #|Ćwiczenie|Ciężar(kg-badge,center)|Wynik(center)|✓(emotka)\n                  kliknięcie = badge oceny + plan progresji\nRENDER historia:  kolumny Data|Trening|Ocena|Kcal|Czas — kliknięcie = wyniki\nRENDER progresja: lista Ćwiczenie|Zakres — kliknięcie = wartości z sesji\n\n════ NASTĘPNY TRENING — układ ════\n\nnastepny.cwiczenia[]: nr, nazwa, ciezar, serie, uwagi(opcjonalne — pojawi się po kliknięciu)\n\n════ AKTUALNE CIĘŻARY REFERENCYJNE C2 ════\n\nUA:    Ławka 70kg | HS Incline 40kg | Landmine 25kg\n       SS4: Lateral Raise 8kg · DB Triceps Ext. 8kg\n       High Row 90kg | HS Seated Row 42,5kg | Rotation Curl 20kg\n       SS8: Cable Triceps 21,5kg · Face Pull 15kg\n\nUB:    Podciąganie -12,5kg | Smith Incline 50kg\n       SS3: Australian BW · Dipy BW\n       Butterfly 68kg (solo) | Cable Crossover 10kg (solo)\n       SS5: Arnold 17,5kg · Seated DB Reverse Fly 6kg\n       Cable Lateral 7,5kg | Seated Row 40kg\n       Skull Crusher 22,5kg | Hammer Curl 17,5kg\n\nLower: Front Squat 60kg | Trap Bar 85kg | Hack Squat 90kg\n       Seated Curl 70kg | Kneeling Curl 40kg | Calf Raise 50kg\n       Cable Crunch 25kg | Pallof Press 10kg",
     "ebl": "EB+L [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___\n(Barki + Lędźwie · extra · min. 1 dzień buforu przed UA/UB/Lower)\n\n1. Face Pull High [3×15–20]: __ kg×__-__-__\n2. Cable Reverse Fly jednorącz [3×15–20/str]: __ kg×__-__-__\n3. Cable External Rotation (rotatory) [3×15–20/str]: __ kg×__-__-__\n4. Crossbody Cable Lateral Raise [3×15–20/str]: __ kg×__-__-__\n5. Cable Pull-Through [3×15–20]: __ kg×__-__-__\n6. Seated Cable Good Morning [3×15–20]: __ kg×__-__-__\n7. TRX Fallout [3×15–20]: BW×__-__-__\n\nUwagi: _____________________________________________",
     "erb": "ER+B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___\n(Ramiona + Brzuch · extra · min. 1 dzień buforu przed UA/UB)\n\nSS1a. HS Biceps Curl [3×10–12]: __ kg×__-__-__\nSS1b. HS Triceps Extension [3×10–12]: __ kg×__-__-__\nSS2a. Cable Curl straight bar [3×12–15]: __ kg×__-__-__\nSS2b. Tricep Pushdown D-handle [3×12–15]: __ kg×__-__-__\n3. HS Abdominal Crunch [3×12–15]: __ kg×__-__-__\n4. Rotary Torso Machine [3×12–15/str]: __ kg×__-__-__\n5. TRX Knee Raise [3×12–15]: BW×__-__-__\n\nUwagi: _____________________________________________",
     "cardio": "Cardio [DATA] | Czas: ___ | Kcal: ___ | Tętno śr.: ___\nTyp: [ ] Rower  [ ] Orbitrek  [ ] Bieżnia  [ ] Inne: ___\n\nIntensywność: [ ] Lekka (tętno <120)  [ ] Umiarkowana (120–140)  [ ] Interwały\nCzas ciągły: ___ min  |  Dystans/opór: ___\n\nUwagi: _____________________________________________"
