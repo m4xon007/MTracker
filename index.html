@@ -281,8 +281,6 @@
     </div>
     <div id="t-nastepny" class="tab-panel active">
       <div id="tr-nastepny-card"></div>
-      <h3>Kolejne treningi</h3>
-      <div id="tr-kolejne" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
     </div>
     <div id="t-poprzedni" class="tab-panel">
       <div id="tr-poprzedni-card"></div>
@@ -700,15 +698,6 @@
   </button>
 </nav>
 
-<!-- ── Changelog modal ── -->
-<div id="changelog-modal" onclick="if(event.target===this)closeChangelog()">
-  <div id="changelog-inner">
-    <h4>📋 Historia wersji MTracker</h4>
-    <div id="changelog-list"><div style="color:var(--text3);font-size:13px;padding:8px 0">Ładowanie…</div></div>
-    <button id="changelog-close" onclick="closeChangelog()">✕ Zamknij</button>
-  </div>
-</div>
-
 <script>
   // ── DANE WAGI + TRENINGI — ładowane z JSON ────────────────────
   let RAW = [];
@@ -1022,16 +1011,6 @@
         <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć uwagi</div>
       </div>`;
 
-    const kEl = document.getElementById('tr-kolejne');
-    kEl.innerHTML = n.kolejne.map(k => {
-      const [bg,fg]=BADGE_COLOR[k.badge_color]||BADGE_COLOR.gray;
-      return `<div class="card" style="margin-bottom:0">
-        <div style="font-size:11px;color:var(--text3);text-transform:uppercase;margin-bottom:6px">${k.data}</div>
-        <div style="font-size:15px;font-weight:700;color:${fg};margin-bottom:8px">${k.tytul}</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.9">${k.szczegoly.replace(/\n/g,'<br>')}</div>
-        <div style="margin-top:8px;font-size:11px;color:var(--text3)">${k.uwaga}</div>
-      </div>`;
-    }).join('');
   }
 
   function renderPoprzedni(p) {
