@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Marcin">
 <link rel="manifest" href="manifest.json">
-<title>Marcin — Plan 2026 · v2.36</title>
+<title>Marcin — Plan 2026 · v2.40</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -216,7 +216,37 @@
   .cal-e{padding:5px;opacity:0.1;text-align:center}
   .cal-d{padding:5px;opacity:0.3;text-align:center;font-size:11px}
   .cal-wk{font-size:9px;text-align:center;display:flex;align-items:center;justify-content:center;padding:2px}
-</style>
+
+  /* ── Wersja — klikalny badge ── */
+  .app-version{
+    display:inline-block;
+    font-size:11px;font-weight:500;color:var(--text3);
+    background:var(--bg3);border:1px solid var(--border);
+    padding:1px 7px;border-radius:4px;
+    cursor:pointer;transition:all 0.15s;
+    user-select:none;-webkit-tap-highlight-color:transparent;
+    position:relative;
+  }
+  .app-version:hover,.app-version:active{color:var(--accent2);border-color:var(--accent2);}
+  /* ── Changelog tooltip ── */
+  .version-tooltip{
+    display:none;position:absolute;
+    top:calc(100% + 8px);right:0;width:280px;
+    background:var(--bg2);border:1px solid var(--accent2);
+    border-radius:8px;padding:12px;font-size:11px;
+    color:var(--text2);z-index:999;
+    box-shadow:0 8px 32px rgba(0,0,0,0.5);
+    white-space:normal;line-height:1.7;
+  }
+  .version-tooltip.open{display:block;}
+  .version-tooltip-title{font-size:12px;font-weight:700;color:var(--accent2);margin-bottom:8px;border-bottom:1px solid var(--border);padding-bottom:6px;}
+  .version-tooltip-row{display:flex;gap:8px;padding:3px 0;border-bottom:1px solid rgba(42,50,69,0.4);}
+  .version-tooltip-row:last-child{border-bottom:none;}
+  .version-tooltip-v{color:var(--accent2);font-weight:600;min-width:34px;flex-shrink:0;}
+  .version-tooltip-date{color:var(--text3);min-width:54px;flex-shrink:0;}
+  .version-tooltip-msg{color:var(--text2);}
+  /* ── Header layout ── */
+  .app-header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;}</style>
 </head>
 <body>
 
@@ -224,7 +254,16 @@
 
 <!-- ── Header ── -->
 <div class="app-header">
-  <div class="app-header-title">Marcin · Plan 2026 · v2.36</div>
+  <div class="app-header-inner">
+    <div class="app-header-title">Marcin · Plan 2026</div>
+    <div style="position:relative">
+      <span class="app-version" id="app-version-badge" onclick="toggleChangelog(this)" title="Kliknij aby zobaczyć changelog">v2.40</span>
+      <div class="version-tooltip" id="version-tooltip">
+        <div class="version-tooltip-title">📋 Changelog</div>
+        <div id="version-changelog-rows"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ── Content ── -->
@@ -588,39 +627,33 @@
     <button class="tab-btn" onclick="switchTab('dieta','d-przepisy',this)">👨‍🍳 Przepisy</button>
   </div>
 
-  <!-- TAB: REKOMPOZYCJA -->
-  <!-- TAB: REKOMPOZYCJA -->
   <div id="d-rekompozycja" class="tab-panel">
     <div id="diet-reko-stats"></div>
     <h3>Posiłki — dni odpoczynku</h3>
     <div id="diet-reko-odpoczynek"></div>
     <h3>Posiłki — dni treningowe</h3>
     <div id="diet-reko-treningowe"></div>
-  </div><!-- /d-rekompozycja -->
+  </div>
 
-  <!-- TAB: MINI CUT -->
   <div id="d-minicut" class="tab-panel active">
     <div id="diet-minicut-stats"></div>
     <h3>Posiłki — dni odpoczynku</h3>
     <div id="diet-minicut-odpoczynek"></div>
     <h3>Posiłki — dni treningowe</h3>
     <div id="diet-minicut-treningowe"></div>
-    <!-- LISTA ZAKUPÓW — tylko w mini cut -->
     <div id="diet-zakupy" style="margin-top:8px"></div>
-  </div><!-- /d-minicut -->
+  </div>
 
-  <!-- TAB: PRODUKTY -->
   <div id="d-produkty" class="tab-panel">
     <div class="card">
       <div class="card-title">🧪 Zweryfikowane produkty — makro z etykiet</div>
       <div id="diet-produkty-table"></div>
     </div>
-  </div><!-- /d-produkty -->
+  </div>
 
-  <!-- TAB: PRZEPISY -->
   <div id="d-przepisy" class="tab-panel">
     <div id="diet-przepisy"></div>
-  </div><!-- /d-przepisy -->
+  </div>
 
 </section>
 
@@ -634,7 +667,7 @@
     <div id="r-cut1"></div>
     <div id="r-bulk"></div>
     <div id="r-cut2"></div>
-  </div><!-- /rm-content -->
+  </div>
 </section>
 
 </div><!-- /app-content -->
@@ -667,14 +700,20 @@
   </button>
 </nav>
 
-
+<!-- ── Changelog modal ── -->
+<div id="changelog-modal" onclick="if(event.target===this)closeChangelog()">
+  <div id="changelog-inner">
+    <h4>📋 Historia wersji MTracker</h4>
+    <div id="changelog-list"><div style="color:var(--text3);font-size:13px;padding:8px 0">Ładowanie…</div></div>
+    <button id="changelog-close" onclick="closeChangelog()">✕ Zamknij</button>
+  </div>
+</div>
 
 <script>
   // ── DANE WAGI + TRENINGI — ładowane z JSON ────────────────────
   let RAW = [];
   let PLAN_DATE = '2026-01-12';
   const MONTHS_PL = ['','Sty','Lut','Mar','Kwi','Maj','Cze','Lip','Sie','Wrz','Paź','Lis','Gru'];
-
 
   function fmtFull(iso) { const [y,m,d]=iso.split('-'); return d+'.'+m+'.'+y; }
   function monthLabel(iso) { const [y,m]=iso.split('-'); return MONTHS_PL[+m]+"'"+y.slice(2); }
@@ -784,7 +823,6 @@
     document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     if (btn) btn.classList.add('active');
-    // scroll content to top on tab change
     document.querySelector('.app-content').scrollTop = 0;
     if (id==='waga') {
       if (RAW.length > 0 && !chartInitialized) {
@@ -799,13 +837,10 @@
   // ── ZAKŁADKI WEWNĘTRZNE ────────────────────────────────────────
   function switchTab(sectionId, panelId, btn) {
     const section = document.getElementById(sectionId);
-    // Znajdź wspólnego rodzica tab-row i tab-paneli
-    // btn.closest('.tab-row') daje nam dokładny .tab-row który zawiera kliknięty przycisk
     const tabRow = btn.closest('.tab-row');
     if (tabRow) {
       tabRow.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     }
-    // Ukryj bezpośrednie tab-panele wewnątrz sectionId
     section.querySelectorAll(':scope > .tab-panel').forEach(el => el.classList.remove('active'));
     document.getElementById(panelId).classList.add('active');
     btn.classList.add('active');
@@ -818,16 +853,50 @@
     const rows = table.querySelectorAll('tr');
     rows.forEach(row => {
       const cells = row.querySelectorAll('td, th');
-      // first 3 cols always visible (name, zakres, cel)
       cells.forEach((cell, i) => {
         if (i < 3) { cell.style.display = ''; return; }
-        const colIdx = i - 3; // 0 = newest
+        const colIdx = i - 3;
         cell.style.display = (n === 'all' || colIdx < n) ? '' : 'none';
       });
     });
-    // update active button
     const btns = table.closest('.card').querySelectorAll('.filter-btn');
     btns.forEach(b => b.classList.toggle('active', b.dataset.n == n));
+  }
+
+  // ── WERSJA — version.json ─────────────────────────────────────
+  // ══════════════════════════════════════════════════════════════
+  // WERSJA — ładowana z data/version.json
+  // ══════════════════════════════════════════════════════════════
+  function renderVersion(data) {
+    const badge = document.getElementById('app-version-badge');
+    const rows  = document.getElementById('version-changelog-rows');
+    if (!badge || !data) return;
+    badge.textContent = 'v' + data.v;
+    document.title = 'Marcin — Plan 2026 · v' + data.v;
+    if (rows && Array.isArray(data.changelog)) {
+      rows.innerHTML = data.changelog.map(e =>
+        `<div class="version-tooltip-row">
+          <span class="version-tooltip-v">v${e.v}</span>
+          <span class="version-tooltip-date">${e.date}</span>
+          <span class="version-tooltip-msg">${e.msg}</span>
+        </div>`
+      ).join('');
+    }
+  }
+
+  function toggleChangelog(el) {
+    const tooltip = document.getElementById('version-tooltip');
+    tooltip.classList.toggle('open');
+    if (tooltip.classList.contains('open')) {
+      setTimeout(() => {
+        document.addEventListener('click', function closeTooltip(e) {
+          if (!el.contains(e.target)) {
+            tooltip.classList.remove('open');
+            document.removeEventListener('click', closeTooltip);
+          }
+        });
+      }, 10);
+    }
   }
 
   // ── KOPIOWANIE SZABLONÓW ───────────────────────────────────────
@@ -899,7 +968,6 @@
     });
   }
 
-  // ── HELPER: expandable row ────────────────────────────────────
   let _eid = 0;
   function expandRow(mainCells, detailHtml, rowStyle) {
     const id = 'ex-' + (++_eid);
@@ -912,7 +980,6 @@
     </tr>`;
   }
 
-  // Delegacja kliknięć dla expandable rows
   document.addEventListener('click', function(e) {
     const tr = e.target.closest('tr[data-expand]');
     if (!tr) return;
@@ -1010,25 +1077,18 @@
   }
 
   function renderArchiwum(arch) {
-    // Historia C2
     const hc2 = document.getElementById('tr-hist-c2');
     if (arch.historia_c2.length === 0) {
       hc2.innerHTML += `<tr><td colspan="5" style="text-align:center;color:var(--text3);font-size:12px;padding:16px">Treningi pojawią się tutaj po starcie Cyklu 2 (31.03.2026)</td></tr>`;
     } else {
       arch.historia_c2.forEach(r => hc2.innerHTML += renderHistRow(r, true));
     }
-
-    // Historia C1
     const hc1 = document.getElementById('tr-hist-c1');
     arch.historia_c1.forEach(r => hc1.innerHTML += renderHistRow(r, false));
-
-    // Progresja C2
     const pc2 = document.getElementById('tr-prog-c2');
     ['ua','ub','lower'].forEach(k => {
       pc2.innerHTML += renderProgresja(arch.progresja_c2[k], false);
     });
-
-    // Progresja C1 — z legendą i filter buttons
     const pc1 = document.getElementById('tr-prog-c1');
     pc1.innerHTML = `
       <div class="card" style="margin-bottom:12px">
@@ -1071,7 +1131,6 @@
     const hasDane = p.cwiczenia[0] && p.cwiczenia[0].dane;
 
     if (!hasDane) {
-      // C2 — lista ćwiczeń, zakres, po kliknięciu placeholder
       const rows = p.cwiczenia.map(c => expandRow(
         `<td style="white-space:normal;word-break:break-word;font-weight:600;font-size:12px">${c.nazwa}</td>
          <td style="white-space:nowrap;font-size:11px;color:var(--text3);width:1%">${c.zakres}</td>`,
@@ -1087,7 +1146,6 @@
       </div>`;
     }
 
-    // C1/C2 z danymi — lista ćwiczeń, po kliknięciu wiersz z wartościami sesji
     const dataColorMap = {accent2:'var(--accent2)',green:'var(--green)',red:'var(--red)',text3:'var(--text3)','':`var(--text)`};
     const sesjeLabel = p.sesje ? p.sesje.join(' · ') : '';
 
@@ -1106,10 +1164,6 @@
         detail
       );
     }).join('');
-
-    const filterBtns = withFilters && key
-      ? `<div style="display:flex;gap:4px"><button class="filter-btn active" onclick="">Last 5</button><button class="filter-btn" onclick="">All</button></div>`
-      : '';
 
     return `<div class="card" style="margin-bottom:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px">
@@ -1173,7 +1227,6 @@
     renderPlanTabSimple('pc2-erb', data.erb);
     document.getElementById('plan-loading').style.display = 'none';
     document.getElementById('plan-c2-content').style.display = 'block';
-    // Jawnie ustaw stan zakładek po renderowaniu
     ['pc2-ua','pc2-ub','pc2-lower','pc2-ebl','pc2-erb','pc2-szablony'].forEach((id, i) => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', i === 0);
@@ -1185,7 +1238,6 @@
     const alertHtml = blok.alert
       ? `<div class="alert alert-info" style="margin-bottom:12px"><span class="alert-icon">🆕</span><span>${blok.alert}</span></div>`
       : '';
-
     const rows = blok.cwiczenia.map(c => {
       const isMain = c.glowne;
       const isSS   = c.ss;
@@ -1203,11 +1255,9 @@
          <td style="${nameStyle};white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
          <td style="white-space:nowrap;text-align:center">${c.serie}</td>
          <td style="white-space:nowrap;text-align:center">${c.powt}</td>`,
-        detail,
-        isBg
+        detail, isBg
       );
     }).join('');
-
     el.innerHTML = `
       <h3>${blok.label} &nbsp;<span class="badge badge-gray">${blok.czas}</span></h3>
       ${alertHtml}
@@ -1238,8 +1288,7 @@
         `<td style="font-size:11px;white-space:nowrap">${c.nr}</td>
          <td style="white-space:normal;min-width:150px;word-break:break-word">${c.nazwa}</td>
          <td style="white-space:nowrap;text-align:center">${c.serie_powt}</td>`,
-        detail,
-        bg
+        detail, bg
       );
     }).join('');
     el.innerHTML = `
@@ -1268,17 +1317,11 @@
   function renderRoadmapMapa(m) {
     const el = document.getElementById('r-mapa');
     const ps = m.punkt_startowy;
-
-    // Stat-boxy punktu startowego
     const statsHtml = ps.stats.map(s =>
       `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
     ).join('');
-
-    // Etapy szczegółowe — zwijane sekcje (bez osobnej tabeli przeglądu)
     const szczegoly = m.etapy_szczegoly || {};
     const ETAP_COLORS = {rekompozycja:'green', cut1:'red', bulk:'green', cut2:'red'};
-
-    // Dane z etapów (okres/czas/cel) dopasowane do kluczy szczegółów
     const etapMeta = {};
     m.etapy.forEach(e => {
       const keyMap = {'✅ Rekompozycja':'rekompozycja','🔻 Mini cut #1':'cut1','📈 Mini bulk':'bulk','🔻 Mini cut #2':'cut2'};
@@ -1286,46 +1329,35 @@
              || Object.values(keyMap)[m.etapy.indexOf(e)];
       if (k) etapMeta[k] = { okres: e.okres, czas: e.czas, cel_waga: e.cel_waga, wynik_waga: e.wynik_waga, wynik_bf: e.wynik_bf };
     });
-
     const etapDetails = Object.entries(szczegoly).map(([key, e]) => {
       const col = ETAP_COLORS[key] || 'text3';
       const border = `1px solid rgba(${col==='green'?'34,197,94':'239,68,68'},0.3)`;
       const meta = etapMeta[key] || {};
-
-      // Wiersze z metadanych tabeli (na górze)
       const metaRows = [
         meta.okres   ? `<tr><td style="color:var(--text3);white-space:nowrap;width:130px">Okres</td><td>${meta.okres}</td></tr>` : '',
         meta.czas    ? `<tr><td style="color:var(--text3);white-space:nowrap">Czas</td><td>${meta.czas}</td></tr>` : '',
         meta.cel_waga? `<tr><td style="color:var(--text3);white-space:nowrap">Cel wagowy</td><td>${meta.cel_waga}</td></tr>` : '',
         (meta.wynik_waga||meta.wynik_bf) ? `<tr><td style="color:var(--text3);white-space:nowrap">Wynik</td><td style="color:var(--green)">✅ ${meta.wynik_waga||''} ${meta.wynik_bf||''}</td></tr>` : '',
       ].filter(Boolean).join('');
-
       const LABELS = {punkt_startowy:'Punkt startowy',punkt_koncowy:'Punkt końcowy',trening:'Trening',dieta:'Dieta',big4_start:'Big 4 start',big4_koniec:'Big 4 koniec',wnioski:'Wnioski',cel:'Cel',tdee:'TDEE',tempo:'Tempo',dieta_avg:'Dieta'};
       const detailRows = Object.entries(e)
         .filter(([k]) => !['tytul','badge','aktywny','ukończony'].includes(k))
         .map(([k, v]) =>
           `<tr><td style="color:var(--text3);white-space:nowrap;width:130px">${LABELS[k]||k}</td><td style="white-space:normal">${v}</td></tr>`
         ).join('');
-
       const statusBadge = e.ukończony
         ? `<span class="badge badge-green">✅ ukończony</span>`
-        : e.aktywny
-          ? `<span class="badge badge-red">▶ w toku</span>`
-          : `<span class="badge badge-gray">planowany</span>`;
-
+        : e.aktywny ? `<span class="badge badge-red">▶ w toku</span>` : `<span class="badge badge-gray">planowany</span>`;
       const sep = metaRows && detailRows ? `<tr><td colspan="2" style="padding:0;border-top:1px solid var(--border)"></td></tr>` : '';
-
       return `<details style="margin-bottom:8px">
         <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:${border};border-radius:8px;font-size:13px;color:var(--text2);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none">
-          <span>${e.tytul} &nbsp;${statusBadge}</span>
-          <span style="font-size:10px;color:var(--text3)">▼</span>
+          <span>${e.tytul} &nbsp;${statusBadge}</span><span style="font-size:10px;color:var(--text3)">▼</span>
         </summary>
         <div style="padding-top:8px"><div class="card">
           <table><tr><th>Parametr</th><th>Wartość</th></tr>${metaRows}${sep}${detailRows}</table>
         </div></div>
       </details>`;
     }).join('');
-
     el.innerHTML = `
       <div class="card">
         <div class="card-title">📍 ${ps.tytul}</div>
@@ -1341,15 +1373,12 @@
     const BADGE_CLS = {green:'badge-green', blue:'badge-blue', yellow:'badge-yellow', accent2:'badge-blue'};
     const cards = big4.map(b => {
       const bc = BADGE_CLS[b.badge_kolor] || 'badge-gray';
-      // Progress bar — dla asysty (ujemne kg) liczymy inaczej
       const range = Math.abs(b.cel_kg - b.start_kg);
       const done  = Math.abs(b.teraz_kg - b.start_kg);
       const pct   = range > 0 ? Math.min(Math.round((done / range) * 100), 100) : 0;
-
       const sesjeRows = (b.sesje||[]).map(s =>
         `<tr><td style="white-space:nowrap;color:var(--text3)">${s.data}</td><td style="white-space:nowrap;font-weight:600">${s.kg} kg</td><td style="white-space:normal;font-size:11px;color:var(--text3)">${s.uwaga}</td></tr>`
       ).join('');
-
       return `<div class="goal-card">
         <div class="goal-header">
           <div><div class="goal-name">${b.nazwa}</div><div class="goal-sub">${b.opis}</div></div>
@@ -1378,15 +1407,11 @@
     const border = BORDER[faza.border_kolor] || 'var(--border)';
     const BADGE_CLS = {yellow:'badge-yellow', red:'badge-red', green:'badge-green'};
     const bc = BADGE_CLS[faza.border_kolor] || 'badge-gray';
-
-    // Stats
     const statsHtml = faza.stats
       ? `<div class="stat-grid" style="margin-bottom:12px">${faza.stats.map(s =>
           `<div class="stat-box"><div class="stat-num" style="font-size:18px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
         ).join('')}</div>`
       : '';
-
-    // Parametry cut/bulk
     let tableHtml = '';
     if (faza.parametry && (typ === 'cut' || typ === 'bulk')) {
       const rows = faza.parametry.map(p => {
@@ -1403,8 +1428,6 @@
       }).join('');
       tableHtml = `<table style="margin-top:8px"><tr><th>Parametr</th><th>Wartość</th></tr>${rows}</table>`;
     }
-
-    // Porównanie cut vs reko
     let porHtml = '';
     if (faza.porownanie) {
       const porRows = faza.porownanie.map(p => {
@@ -1414,17 +1437,14 @@
       porHtml = `<div class="card-title" style="margin-top:16px">📋 Strategia — mini cut vs rekompozycja</div>
         <table><tr><th>Parametr</th><th>Rekompozycja</th><th style="color:var(--red)">Mini cut</th></tr>${porRows}</table>`;
     }
-
-    // Alerty
     const alertsHtml = (faza.alerty||[]).map(a => alertBox(a.typ, a.ikona, a.tekst)).join('');
-
     el.innerHTML = `<div class="card" style="border-left:3px solid ${border}">
       <div class="card-title">${faza.tytul} &nbsp;<span class="badge ${bc}">${faza.badge}</span></div>
       ${statsHtml}${tableHtml}${porHtml}${alertsHtml}
     </div>`;
   }
 
-  // ── RENDERER HARMONOGRAMU (bilans) ───────────────────────────
+  // ── RENDERER HARMONOGRAMU ────────────────────────────────────
   function renderHarmonogram(d) {
     renderBilans('harm-bilans-c2', d.cykl2);
     renderBilans('harm-bilans-c1', d.cykl1);
@@ -1434,7 +1454,6 @@
   function renderCalC2(elId, cykl) {
     const el = document.getElementById(elId);
     if (!el) return;
-
     const TYP_STYLE = {
       'UA':   { bg:'rgba(59,130,246,0.12)',  col:'var(--accent)',  bold:false },
       'UB':   { bg:'rgba(34,197,94,0.12)',   col:'var(--green)',   bold:false },
@@ -1443,12 +1462,8 @@
       'D·L':  { bg:'rgba(245,158,11,0.22)',  col:'var(--yellow)',  bold:true  },
       'D·UB': { bg:'rgba(245,158,11,0.22)',  col:'var(--yellow)',  bold:true  },
     };
-
-    // Zbuduj mapę data → sesja
     const planMap = {};
     (cykl.plan || []).forEach(s => { planMap[s.data] = s; });
-
-    // Grupuj sesje po miesiącach
     const miesiace = {};
     (cykl.plan || []).forEach(s => {
       const [y, m] = s.data.split('-');
@@ -1456,95 +1471,51 @@
       if (!miesiace[key]) miesiace[key] = [];
       miesiace[key].push(s);
     });
-
     const MIESIAC_PL = ['','Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
-    const DNI_PL = ['Pn','Wt','Śr','Czw','Pt','Sob','Nd'];
-
-    let html = '';
-
-    // Dla każdego miesiąca buduj kalendarz
     const today = new Date().toISOString().slice(0,10);
-
+    let html = '';
     Object.entries(miesiace).sort().forEach(([ym, sesje]) => {
       const [year, mon] = ym.split('-').map(Number);
       const miesiacLabel = MIESIAC_PL[mon];
-
-      // Pierwszy dzień miesiąca (0=Nd, 1=Pn... → dostosuj do Pn=0)
       const firstDay = new Date(year, mon-1, 1);
-      const startWd = (firstDay.getDay() + 6) % 7; // 0=Pn
+      const startWd = (firstDay.getDay() + 6) % 7;
       const daysInMonth = new Date(year, mon, 0).getDate();
-
-      // Generuj komórki
       let cells = [];
-      // Puste przed 1-szym
       for (let i = 0; i < startWd; i++) cells.push(null);
-      // Dni miesiąca
       for (let day = 1; day <= daysInMonth; day++) {
         const dateStr = `${year}-${String(mon).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
         cells.push({ day, dateStr, sesja: planMap[dateStr] || null });
       }
-      // Uzupełnij do pełnych tygodni
       while (cells.length % 7 !== 0) cells.push(null);
-
-      // Numery tygodni
-      let tydzien = 1;
-      if (year === 2026 && mon === 3) tydzien = 1; // marzec = T1 (31.03)
-      else if (year === 2026 && mon === 4) tydzien = 1; // kwiecień kontynuacja
-
-      // Policz numer tygodnia od startu cyklu (31.03 = T1)
       const cyklStart = new Date('2026-03-31');
-
       let rows = '';
       for (let i = 0; i < cells.length; i += 7) {
         const week = cells.slice(i, i+7);
-        // Znajdź numer tygodnia dla tego rzędu
         const firstCell = week.find(c => c !== null);
-        let wkLabel = '';
-        let wkColor = 'var(--accent2)';
+        let wkLabel = '', wkColor = 'var(--accent2)';
         if (firstCell) {
           const d = new Date(firstCell.dateStr);
           const diffDays = Math.floor((d - cyklStart) / 86400000);
           const wkNum = Math.floor(diffDays / 7) + 1;
-          if (wkNum >= 1 && wkNum <= 8) {
-            wkLabel = `T${wkNum}`;
-          } else if (week.some(c => c?.sesja?.deload)) {
-            wkLabel = 'DL'; wkColor = 'var(--yellow)';
-          } else if (wkNum > 8) {
-            wkLabel = '★'; wkColor = 'var(--red)';
-          }
+          if (wkNum >= 1 && wkNum <= 8) { wkLabel = `T${wkNum}`; }
+          else if (week.some(c => c?.sesja?.deload)) { wkLabel = 'DL'; wkColor = 'var(--yellow)'; }
+          else if (wkNum > 8) { wkLabel = '★'; wkColor = 'var(--red)'; }
         }
-
         const dayCells = week.map(c => {
           if (!c) return '<div class="cal-e"></div>';
           if (!c.sesja) return `<div class="cal-d">${c.day}</div>`;
-
           const s = c.sesja;
           const st = TYP_STYLE[s.typ] || { bg:'rgba(100,116,139,0.12)', col:'var(--text3)', bold:false };
           const isToday = c.dateStr === today;
           const isDone = s.ukonczone;
-
-          let border = '';
-          let color = st.col;
-          let label = s.typ;
-          let prefix = '';
-
-          if (isDone) {
-            border = `border:1px solid ${st.col};`;
-            color = 'var(--green)';
-            prefix = '✅ ';
-          } else if (isToday) {
-            border = `border:2px solid var(--accent2);`;
-          }
-
-          // Dla 31.03 pokaż datę zamiast dnia
+          let border = '', color = st.col, prefix = '';
+          if (isDone) { border = `border:1px solid ${st.col};`; color = 'var(--green)'; prefix = '✅ '; }
+          else if (isToday) { border = `border:2px solid var(--accent2);`; }
           const dayLabel = (c.day === 31 && mon === 3) ? '31.03' : c.day;
-
-          return `<div style="padding:5px;background:${st.bg};${border}border-radius:6px;text-align:center;font-size:10px;color:${color};font-weight:${st.bold||isDone?'700':'500'}">${dayLabel}<br><span style="font-size:8px">${prefix}${label}</span></div>`;
+          return `<div style="padding:5px;background:${st.bg};${border}border-radius:6px;text-align:center;font-size:10px;color:${color};font-weight:${st.bold||isDone?'700':'500'}">${dayLabel}<br><span style="font-size:8px">${prefix}${s.typ}</span></div>`;
         }).join('');
-
         rows += `<div class="cal-wk" style="color:${wkColor};font-weight:700">${wkLabel}</div>${dayCells}`;
       }
-
       html += `<div class="card" style="margin-bottom:12px">
         <div class="card-title">🗓️ ${miesiacLabel} ${year}</div>
         <div style="display:grid;grid-template-columns:40px repeat(7,1fr);gap:3px;text-align:center;font-size:10px;color:var(--text3);margin-bottom:4px;font-weight:600">
@@ -1554,7 +1525,6 @@
         <div style="font-size:11px;color:var(--text3);margin-top:8px">💡 UA · UB · L · ✅ ukończony · DL = Deload</div>
       </div>`;
     });
-
     el.innerHTML = html;
   }
 
@@ -1598,7 +1568,6 @@
       const el = document.getElementById('diet-minicut-stats');
       if (el) el.innerHTML = '<div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Błąd renderera: ' + errors.join(' | ') + '</span></div>';
     }
-    // aktywna faza jako domyślna zakładka
     const aktywna = d.meta && d.meta.aktywna_faza === 'minicut' ? 'd-minicut' : 'd-rekompozycja';
     ['d-rekompozycja','d-minicut','d-produkty','d-przepisy'].forEach(id => {
       const el = document.getElementById(id);
@@ -1636,16 +1605,12 @@
     const el = document.getElementById('diet-reko-stats');
     if (!el) return;
     const BC = { gray:'badge-gray', blue:'badge-blue' };
-
-    // Oblicz średnie
     const dni = r.dni || [];
     const avgKcal = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.kcal.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
     const avgBialko = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.bialko.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
-
     const rows = dni.map(d =>
       `<tr><td>${d.dzien}</td><td>${d.kcal}</td><td>${d.bialko}</td><td><span class="badge ${BC[d.typ_color]||'badge-gray'}">${d.typ}</span></td></tr>`
     ).join('');
-
     el.innerHTML = `
       <div class="card">
         <div class="card-title">📊 Makroskładniki — ${r.label}</div>
@@ -1664,8 +1629,6 @@
           </tr>
         </table>
       </div>`;
-
-    // Posiłki chronologicznie Pon→Nd
     const ORDER = ['Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
     const wszystkie = [...(r.posilki_odpoczynek||[]), ...(r.posilki_treningowe||[])];
     wszystkie.sort((a, b) =>
@@ -1680,11 +1643,7 @@
   function renderDietaMinicut(m) {
     const el = document.getElementById('diet-minicut-stats');
     if (!el) return;
-
-    const BC = { gray:'badge-gray', blue:'badge-blue' };
     const tdee = m.tdee || {};
-
-    // Tabela dni Pon→Nd z kolumną deficytu
     const TDEE_DZIEN = parseInt((tdee.tdee||'2648').replace(/[^0-9]/g,'')) || 2648;
     const dni = m.dni || m.podsumowanie_dni || [];
     const rows = dni.map(d => {
@@ -1699,15 +1658,11 @@
         <td style="color:${kcalColor}">${d.kcal}</td>
         <td style="color:${defColor};white-space:nowrap">${deficyt > 0 ? '-' : '+'}${Math.abs(deficyt)}</td>
         <td style="color:${bialkoColor}">${d.bialko}</td>
-
       </tr>`;
     }).join('');
-
-    // Oblicz średnie z menu
     const avgKcal = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.kcal.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
     const avgBialko = dni.length ? Math.round(dni.reduce((s,d) => s + parseInt(d.bialko.replace(/[^0-9]/g,'')), 0) / dni.length) : 0;
     const avgDeficyt = TDEE_DZIEN - avgKcal;
-
     el.innerHTML = `
       <div class="card">
         <div class="card-title">📊 Makroskładniki — ${m.label}</div>
@@ -1731,12 +1686,9 @@
             <td style="color:var(--accent2);text-align:center">${avgKcal}</td>
             <td style="color:var(--green);text-align:center">-${avgDeficyt}</td>
             <td style="color:var(--green);text-align:center">${avgBialko}g</td>
-    
           </tr>
         </table>
       </div>`;
-
-    // Posiłki chronologicznie Pon→Nd
     const ORDER = ['Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
     const wszystkie = [...(m.posilki_odpoczynek||[]), ...(m.posilki_treningowe||[])];
     wszystkie.sort((a, b) =>
@@ -1963,8 +1915,9 @@
     fetchJSON('roadmap.json'),
     fetchJSON('harmonogram.json'),
     fetchJSON('dieta.json'),
-    fetchJSON('plan_c1.json')
-  ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData, planC1Data]) => {
+    fetchJSON('plan_c1.json'),
+    fetchJSON('version.json')
+  ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData, planC1Data, versionData]) => {
     renderWaga(wagaData);
     renderTreningi(treningiData);
     renderPlanC2(planC2Data);
@@ -1974,9 +1927,9 @@
     renderRoadmap(roadmapData);
     renderHarmonogram(harmData);
     renderDieta(dietaData);
+    renderVersion(versionData);
   }).catch(err => {
     console.error('FETCH ERROR:', err);
-    // Pokaż błąd widocznie na stronie
     const errDiv = document.createElement('div');
     errDiv.style.cssText = 'position:fixed;top:60px;left:0;right:0;background:#ef4444;color:white;padding:12px 16px;font-size:13px;z-index:999;font-family:monospace';
     errDiv.textContent = '⚠️ ' + err.message;
