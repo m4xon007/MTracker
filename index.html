@@ -246,7 +246,25 @@
   .version-tooltip-date{color:var(--text3);min-width:54px;flex-shrink:0;}
   .version-tooltip-msg{color:var(--text2);}
   /* ── Header layout ── */
-  .app-header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;}</style>
+  .app-header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;}
+  /* ── Formularz treningowy inline ── */
+  .workout-form{display:none;padding:10px 12px;background:rgba(34,211,238,0.04);border-top:1px solid var(--border);border-radius:0 0 8px 8px;}
+  .workout-form.open{display:block;}
+  .wf-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+  .wf-label{font-size:11px;color:var(--text3);min-width:50px;}
+  .wf-kg{width:70px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:13px;font-weight:600;padding:5px 8px;text-align:center;}
+  .wf-kg:focus{outline:none;border-color:var(--accent2);}
+  .wf-sets{display:flex;gap:6px;flex-wrap:wrap;}
+  .wf-rep{width:38px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:13px;font-weight:600;padding:5px 4px;text-align:center;}
+  .wf-rep:focus{outline:none;border-color:var(--accent2);}
+  .wf-done{background:rgba(34,197,94,0.15);border:1px solid var(--green);border-radius:6px;padding:4px 12px;color:var(--green);font-family:inherit;font-size:12px;cursor:pointer;font-weight:600;}
+  .wf-done:active{transform:scale(.95);}
+  .wf-saved{font-size:11px;color:var(--green);margin-left:4px;}
+  /* Przycisk WhatsApp */
+  .wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:13px;background:rgba(37,211,102,0.15);border:1px solid #25d366;border-radius:10px;color:#25d366;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.15s;-webkit-tap-highlight-color:transparent;}
+  .wa-btn:active{background:rgba(37,211,102,0.25);transform:scale(.98);}
+  .wa-btn:disabled{opacity:0.4;cursor:not-allowed;}
+</style>
 </head>
 <body>
 
@@ -662,9 +680,7 @@
   <div id="rm-content" style="display:none">
     <div id="r-mapa"></div>
     <div id="r-big4"></div>
-    <div id="r-cut1"></div>
-    <div id="r-bulk"></div>
-    <div id="r-cut2"></div>
+
   </div>
 </section>
 
@@ -981,17 +997,93 @@
     const alertHtml = n.alert
       ? `<div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">${n.alert.ikona}</span><span>${n.alert.tekst}</span></div>`
       : '';
-    const rows = n.cwiczenia.map(c => {
-      const detail = c.uwagi ? `💬 ${c.uwagi}` : '—';
-      const arrow = c.uwagi ? ' <span style="color:var(--text3);font-size:10px">▾</span>' : '';
-      return expandRow(
-        `<td style="font-size:10px;white-space:nowrap;text-align:center">${c.nr}</td>
-         <td>${c.nazwa}${arrow}</td>
-         <td style="text-align:center;white-space:nowrap"><span class="kg-badge">${c.ciezar}</span></td>
-         <td style="text-align:center;white-space:nowrap">${c.serie}</td>`,
-        detail
-      );
+
+    const PROG_MAP = {
+      'up2':  { icon:'⬆️', color:'var(--accent2)', tip:'Progresja — zwiększ ciężar' },
+      'up':   { icon:'↑',  color:'var(--green)',   tip:'Progresja — zwiększ ciężar' },
+      'same': { icon:'→',  color:'var(--text3)',   tip:'Utrzymaj ciężar' },
+      'down': { icon:'↓',  color:'var(--red)',     tip:'Zmniejsz ciężar' },
+      'warn': { icon:'⚠️', color:'var(--yellow)',  tip:'Zwróć uwagę' },
+      'new':  { icon:'🆕', color:'var(--accent2)', tip:'Nowe ćwiczenie — kalibracja' },
+    };
+
+    // ── Stan formularza ─────────────────────────────────────────
+    // wyniki[nr] = { kg: string, reps: [string, ...] }
+    window._workoutData = window._workoutData || { tytul: n.tytul, data: n.data, wyniki: {} };
+    if (window._workoutData.tytul !== n.tytul) {
+      window._workoutData = { tytul: n.tytul, data: n.data, wyniki: {} };
+    }
+
+    // ── Parsuj liczbę serii z c.serie np "4×5-8" → 4 ───────────
+    function parseSeries(serie) {
+      const m = serie.match(/^(\d+)/);
+      return m ? parseInt(m[1]) : 3;
+    }
+
+    // ── Buduj wiersz tabeli + formularz pod spodem ───────────────
+    const rows = n.cwiczenia.map((c, idx) => {
+      const prog = PROG_MAP[c.progresja] || PROG_MAP['same'];
+      const nrStr = String(c.nr);
+      const formId = 'wf-' + nrStr.replace(/[^a-z0-9]/gi,'');
+      const numSets = parseSeries(c.serie);
+
+      // Pola na powtórzenia
+      const repFields = Array.from({length: numSets}, (_, i) =>
+        `<input class="wf-rep" type="number" min="0" max="99" placeholder="—"
+          id="${formId}-r${i}" inputmode="numeric"
+          onchange="window._wfChange('${nrStr}','${formId}','${n.tytul}','${n.data}')">`
+      ).join('');
+
+      const formHtml = `
+        <div class="workout-form" id="${formId}">
+          <div class="wf-row">
+            <span class="wf-label">kg</span>
+            <input class="wf-kg" type="number" min="0" max="999" step="0.5" placeholder="${c.ciezar.replace(' kg','')}"
+              id="${formId}-kg" inputmode="decimal"
+              onchange="window._wfChange('${nrStr}','${formId}','${n.tytul}','${n.data}')">
+            <span style="font-size:11px;color:var(--text3)">${c.serie}</span>
+          </div>
+          <div class="wf-row">
+            <span class="wf-label">powt.</span>
+            <div class="wf-sets">${repFields}</div>
+            <button class="wf-done" onclick="window._wfSave('${nrStr}','${formId}')">✓ Zapisz</button>
+            <span class="wf-saved" id="${formId}-saved"></span>
+          </div>
+        </div>`;
+
+      // Główny wiersz tabeli — kliknięcie toggleuje formularz
+      const rowHtml = `
+        <tr style="cursor:pointer" onclick="window._wfToggle('${formId}', this)">
+          <td style="white-space:normal;word-break:break-word;font-size:11px">
+            ${c.nazwa} <span style="color:var(--text3);font-size:9px" id="${formId}-indicator">▾</span>
+          </td>
+          <td style="text-align:center;white-space:nowrap">
+            <span class="kg-badge" style="font-size:11px" id="${formId}-result">${c.ciezar}</span>
+          </td>
+          <td style="text-align:center;font-size:16px;width:28px" title="${prog.tip}">
+            <span style="color:${prog.color}">${prog.icon}</span>
+          </td>
+          <td style="text-align:center;white-space:nowrap;font-size:11px;color:var(--text3)">${c.serie}</td>
+        </tr>
+        <tr id="${formId}-row" style="display:none">
+          <td colspan="4" style="padding:0">${formHtml}</td>
+        </tr>`;
+
+      // Dołącz uwagi/progresja_uwaga po formularzu jeśli są
+      const hasHint = c.uwagi || c.progresja_uwaga;
+      if (hasHint) {
+        const hintTxt = [
+          c.uwagi           ? `💬 ${c.uwagi}` : '',
+          c.progresja_uwaga ? `📈 ${c.progresja_uwaga}` : '',
+        ].filter(Boolean).join('<br>');
+        return rowHtml + `
+          <tr id="${formId}-hint" style="display:none;background:rgba(34,211,238,0.04)">
+            <td colspan="4" style="padding:6px 12px;font-size:11px;color:var(--text2);white-space:normal;line-height:1.7">${hintTxt}</td>
+          </tr>`;
+      }
+      return rowHtml;
     }).join('');
+
     el.innerHTML = `
       <div class="next-card">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">
@@ -1002,30 +1094,157 @@
           ${badge(n.badge, n.badge_color)}
         </div>
         ${alertHtml}
-        <div class="next-table" style="margin-top:12px">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 6px;font-size:11px;align-items:center">
+          <span style="color:var(--text3);font-weight:600">Progresja:</span>
+          <span style="color:var(--accent2)">⬆️ zwiększ</span>
+          <span style="color:var(--green)">↑ progresja</span>
+          <span style="color:var(--text3)">→ utrzymaj</span>
+          <span style="color:var(--red)">↓ zmniejsz</span>
+        </div>
+        <div class="next-table">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Ciężar</th><th style="text-align:center">Serie</th></tr>
+            <tr><th>Ćwiczenie</th><th style="text-align:center">Poprzedni</th><th style="text-align:center;width:28px">📈</th><th style="text-align:center">Serie</th></tr>
             ${rows}
           </table>
         </div>
-        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć uwagi</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie — wpisz kg i powtórzenia</div>
+        <button class="wa-btn" id="wa-send-btn" style="display:none" onclick="window._sendWhatsApp()">
+          <span style="font-size:20px">📤</span> Wyślij raport przez WhatsApp
+        </button>
       </div>`;
 
+    // ── Handlery formularza ──────────────────────────────────────
+    window._wfToggle = function(formId, row) {
+      const form    = document.getElementById(formId);
+      const formRow = document.getElementById(formId + '-row');
+      const hint    = document.getElementById(formId + '-hint');
+      const ind     = document.getElementById(formId + '-indicator');
+      const isOpen  = formRow.style.display !== 'none';
+      formRow.style.display = isOpen ? 'none' : 'table-row';
+      if (form) form.classList.toggle('open', !isOpen);
+      if (hint) hint.style.display = isOpen ? 'none' : 'table-row';
+      if (ind)  ind.textContent = isOpen ? '▾' : '▴';
+    };
+
+    window._wfChange = function(nr, formId, tytul, data) {
+      // Zapisz draft na bieżąco
+      const kg  = document.getElementById(formId + '-kg')?.value || '';
+      window._workoutData = window._workoutData || { tytul, data, wyniki: {} };
+      window._workoutData.wyniki[nr] = window._workoutData.wyniki[nr] || { kg:'', reps:[] };
+      window._workoutData.wyniki[nr].kg = kg;
+    };
+
+    window._wfSave = function(nr, formId) {
+      const kgEl  = document.getElementById(formId + '-kg');
+      const kg    = kgEl?.value?.trim() || '';
+      const reps  = [];
+      let i = 0;
+      while (true) {
+        const el = document.getElementById(formId + '-r' + i);
+        if (!el) break;
+        reps.push(el.value.trim() || '—');
+        i++;
+      }
+
+      if (!kg && reps.every(r => r === '—')) return;
+
+      // Zapisz w state
+      window._workoutData.wyniki[nr] = { kg, reps };
+
+      // Zaktualizuj badge wyników w tabeli
+      const resultEl = document.getElementById(formId + '-result');
+      if (resultEl) {
+        const repsStr = reps.filter(r => r !== '—').join('-');
+        resultEl.textContent = kg ? `${kg}kg × ${repsStr}` : repsStr;
+        resultEl.style.background = 'rgba(34,197,94,0.15)';
+        resultEl.style.color = 'var(--green)';
+        resultEl.style.borderColor = 'var(--green)';
+      }
+
+      // Pokaż saved
+      const savedEl = document.getElementById(formId + '-saved');
+      if (savedEl) { savedEl.textContent = '✓'; setTimeout(() => savedEl.textContent = '', 1500); }
+
+      // Zamknij formularz
+      const formRow = document.getElementById(formId + '-row');
+      const hint    = document.getElementById(formId + '-hint');
+      const ind     = document.getElementById(formId + '-indicator');
+      const form    = document.getElementById(formId);
+      if (formRow) formRow.style.display = 'none';
+      if (hint)    hint.style.display    = 'none';
+      if (form)    form.classList.remove('open');
+      if (ind)     ind.textContent       = '▾';
+
+      // Pokaż przycisk WA jeśli cokolwiek zapisane
+      const waBtn = document.getElementById('wa-send-btn');
+      if (waBtn && Object.keys(window._workoutData.wyniki).length > 0) {
+        waBtn.style.display = 'flex';
+      }
+    };
+
+    window._sendWhatsApp = function() {
+      const wd = window._workoutData;
+      if (!wd) return;
+
+      // Buduj tekst raportu — format szablonu
+      const today = new Date();
+      const dateStr = wd.data || today.toLocaleDateString('pl-PL');
+      let msg = `${wd.tytul} ${dateStr} | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___
+Ocena: __/10 — ___
+
+`;
+
+      // Pobierz ćwiczenia w kolejności z tabeli
+      const cwiczenia = window._nastepnyCwiczenia || [];
+      cwiczenia.forEach(c => {
+        const nr = String(c.nr);
+        const w  = wd.wyniki[nr];
+        const prefix = nr.match(/[a-z]/i) ? nr + '.' : nr + '.  ';
+        if (w && (w.kg || w.reps.some(r => r !== '—'))) {
+          const repsStr = w.reps.filter(r => r !== '—').join('-');
+          const kgPart  = w.kg ? `${w.kg} kg × ` : '';
+          msg += `${prefix} ${c.nazwa}: ${kgPart}${repsStr}
+`;
+        } else {
+          msg += `${prefix} ${c.nazwa}: ___
+`;
+        }
+      });
+
+      msg += '
+Wnioski / uwagi:
+';
+
+      // Otwórz WhatsApp
+      const encoded = encodeURIComponent(msg);
+      window.open('https://wa.me/?text=' + encoded, '_blank');
+    };
+
+    // Zapisz referencję do ćwiczeń dla WhatsApp
+    window._nastepnyCwiczenia = n.cwiczenia;
   }
 
   function renderPoprzedni(p) {
     const el = document.getElementById('tr-poprzedni-card');
     const stars = '★'.repeat(p.ocena_liczba);
+    const PROG_ICON = {
+      accent2: { icon:'★', color:'var(--accent2)', tip:'Rekord' },
+      green:   { icon:'✅', color:'var(--green)',   tip:'Progresja' },
+      yellow:  { icon:'⚠️', color:'var(--yellow)',  tip:'Uwaga' },
+      gray:    { icon:'→',  color:'var(--text3)',   tip:'Bez zmiany' },
+      blue:    { icon:'→',  color:'var(--text3)',   tip:'Bez zmiany' },
+    };
     const rows = p.cwiczenia.map(c => {
       const [bg,fg]=BADGE_COLOR[c.badge_color]||BADGE_COLOR.gray;
-      const emotka = {accent2:'★', green:'✅', yellow:'⚠️', blue:'→'}[c.badge_color] || '→';
-      const detail = `<span class="badge" style="background:${bg};color:${fg}">${c.badge}</span>${c.plan ? '&nbsp; → &nbsp;' + c.plan : ''}`;
+      const pi = PROG_ICON[c.badge_color] || PROG_ICON.gray;
+      const detail = `<span class="badge" style="background:${bg};color:${fg}">${c.badge}</span>`
+        + (c.plan ? `&nbsp;→&nbsp;${c.plan}` : '')
+        + `&nbsp;&nbsp;<span style="color:var(--text3);font-size:11px">⚖️ ${c.ciezar}</span>`;
       return expandRow(
-        `<td style="white-space:nowrap;font-size:11px;text-align:center">${c.nr}</td>
-         <td style="white-space:normal;min-width:110px;word-break:break-word">${c.nazwa}</td>
-         <td style="white-space:nowrap;text-align:center"><span class="kg-badge">${c.ciezar}</span></td>
-         <td style="white-space:nowrap;text-align:center;font-weight:600">${c.wynik}</td>
-         <td style="text-align:center;font-size:14px">${emotka}</td>`,
+        `<td style="white-space:nowrap;font-size:10px;text-align:center;width:18px">${c.nr}</td>
+         <td style="white-space:normal;word-break:break-word;font-size:11px">${c.nazwa}</td>
+         <td style="white-space:nowrap;text-align:center;font-weight:600;font-size:12px">${c.wynik}</td>
+         <td style="text-align:center;font-size:15px;width:24px" title="${pi.tip}">${pi.icon}</td>`,
         detail
       );
     }).join('');
@@ -1042,13 +1261,20 @@
           </div>
         </div>
         ${p.alert_sukces ? alertBox('success','✅',p.alert_sukces) : ''}
-        <div class="next-table" style="margin-top:12px">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 6px;font-size:11px;align-items:center">
+          <span style="color:var(--text3);font-weight:600">Legenda:</span>
+          <span style="color:var(--accent2)">★ rekord</span>
+          <span style="color:var(--green)">✅ progresja</span>
+          <span style="color:var(--yellow)">⚠️ uwaga</span>
+          <span style="color:var(--text3)">→ bez zmiany</span>
+        </div>
+        <div class="next-table">
           <table>
-            <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Ciężar</th><th style="text-align:center">Wynik</th><th>✓</th></tr>
+            <tr><th style="width:18px">#</th><th>Ćwiczenie</th><th style="text-align:center">Wynik</th><th style="width:24px;text-align:center">✓</th></tr>
             ${rows}
           </table>
         </div>
-        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć ocenę i plan</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie aby zobaczyć ocenę, plan i ciężar</div>
       </div>`;
 
     const wEl = document.getElementById('tr-wnioski');
@@ -1286,9 +1512,7 @@
   function renderRoadmap(d) {
     renderRoadmapMapa(d.mapa);
     renderRoadmapBig4(d.big4);
-    if (d.fazy.cut1) renderRoadmapFaza('r-cut1', d.fazy.cut1, 'cut');
-    if (d.fazy.bulk) renderRoadmapFaza('r-bulk', d.fazy.bulk, 'bulk');
-    if (d.fazy.cut2) renderRoadmapFaza('r-cut2', d.fazy.cut2, 'cut2');
+
     document.getElementById('rm-loading').style.display = 'none';
     document.getElementById('rm-content').style.display = 'block';
   }
