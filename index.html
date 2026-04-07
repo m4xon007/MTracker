@@ -1054,11 +1054,11 @@
       // Główny wiersz tabeli — kliknięcie toggleuje formularz
       const rowHtml = `
         <tr style="cursor:pointer" onclick="window._wfToggle('${formId}', this)">
-          <td style="white-space:normal;word-break:break-word;font-size:11px">
+          <td style="white-space:normal;word-break:break-word;font-size:11px;width:45%">
             ${c.nazwa} <span style="color:var(--text3);font-size:9px" id="${formId}-indicator">▾</span>
           </td>
-          <td style="text-align:center;white-space:nowrap">
-            <span class="kg-badge" style="font-size:11px" id="${formId}-result">${c.ciezar}</span>
+          <td style="text-align:center;white-space:nowrap;width:68px">
+            <span class="kg-badge" style="font-size:11px;padding:2px 5px" id="${formId}-result">${c.ciezar}</span>
           </td>
           <td style="text-align:center;font-size:16px;width:28px" title="${prog.tip}">
             <span style="color:${prog.color}">${prog.icon}</span>
@@ -1103,7 +1103,7 @@
         </div>
         <div class="next-table">
           <table>
-            <tr><th>Ćwiczenie</th><th style="text-align:center">Poprzedni</th><th style="text-align:center;width:28px">📈</th><th style="text-align:center">Serie</th></tr>
+            <tr><th style="width:45%">Ćwiczenie</th><th style="text-align:center;width:68px">Poprzedni</th><th style="text-align:center;width:28px">📈</th><th style="text-align:center">Serie</th></tr>
             ${rows}
           </table>
         </div>
