@@ -1,263 +1,251 @@
 {
   "nastepny": {
-    "tytul": "Upper A",
-    "data": "Wt 07.04.2026",
-    "badge": "UA",
-    "badge_color": "accent",
+    "tytul": "Lower",
+    "data": "Czw 09.04.2026",
+    "badge": "L",
+    "badge_color": "yellow",
     "alert": {
       "ikona": "💡",
-      "tekst": "Nowa struktura UA: SS4 (Lateral Raise + DB Triceps Ext.), SS8 (Cable Triceps + Face Pull). HS Seated Row — kalibracja 42,5kg."
+      "tekst": "Front Squat — cel 4×6 przy 60kg. Trap Bar — utrzymaj 80kg, cel stabilne 4×6. Hack Squat — progresja do 70kg."
     },
     "cwiczenia": [
       {
         "nr": 1,
-        "nazwa": "Ławka sztanga",
-        "ciezar": "70 kg",
-        "serie": "4×5-8",
+        "nazwa": "Front Squat",
+        "ciezar": "60 kg",
+        "serie": "4×4-6",
         "progresja": "same",
-        "progresja_uwaga": "Ławka 70kg — poprzednie 72,5kg×5-5-5-6. Kryterium: 2/3 serii w górnym zakresie (7-8 powt.) → +2,5kg"
+        "progresja_uwaga": "Poprzedni (02.04) 65kg 4×6 — był reset C2 do 60kg. Kryterium: 4×6 czystych → +2,5kg"
+      },
+      {
+        "nr": 2,
+        "nazwa": "Trap Bar Deadlift",
+        "ciezar": "80 kg",
+        "serie": "4×4-6",
+        "progresja": "same",
+        "progresja_uwaga": "Poprzedni 80kg 4×6 — kalibracja C2. Kryterium: 4×6 w górnym zakresie → +2,5kg"
+      },
+      {
+        "nr": 3,
+        "nazwa": "Hack Squat",
+        "ciezar": "60 kg",
+        "serie": "4×6-10",
+        "progresja": "up",
+        "progresja_uwaga": "Poprzedni 60kg 4×10 ✅ — kryterium spełnione. Cel: 70kg"
+      },
+      {
+        "nr": 4,
+        "nazwa": "Leg Press ⚡ (opcja)",
+        "ciezar": "—",
+        "serie": "3×12-15",
+        "progresja": "new",
+        "progresja_uwaga": "Opcjonalne — tylko jeśli masz czas/energię"
+      },
+      {
+        "nr": 5,
+        "nazwa": "Seated Leg Curl",
+        "ciezar": "68 kg",
+        "serie": "4×10-12",
+        "progresja": "up",
+        "progresja_uwaga": "Poprzedni 68kg 4×12 ★ — kryterium spełnione. Cel: 70kg"
+      },
+      {
+        "nr": 6,
+        "nazwa": "Kneeling Leg Curl",
+        "ciezar": "15 kg",
+        "serie": "3×10-12",
+        "progresja": "up",
+        "progresja_uwaga": "Poprzedni 15kg 3×12 ✅ — kryterium spełnione. Cel: 17,5-20kg"
+      },
+      {
+        "nr": 7,
+        "nazwa": "Calf Raise (SS)",
+        "ciezar": "50 kg",
+        "serie": "4×12-15",
+        "progresja": "same",
+        "progresja_uwaga": "Poprzedni 50kg 4×15 ✅ — kryterium: 4×15 → +5kg"
+      },
+      {
+        "nr": "8a",
+        "nazwa": "SS · Hanging Knee Raise",
+        "ciezar": "BW",
+        "serie": "3×12-15",
+        "progresja": "up",
+        "progresja_uwaga": "Poprzedni BW×20-15-15 ✅ — cel: Hanging Leg Raise"
+      },
+      {
+        "nr": "8b",
+        "nazwa": "SS · Cable Crunch",
+        "ciezar": "stos 5",
+        "serie": "3×12-15",
+        "progresja": "same",
+        "progresja_uwaga": "Poprzedni stos5×15-15-15 ✅ — kryterium: 3×15 → +stos"
+      },
+      {
+        "nr": 9,
+        "nazwa": "Pallof Press (SS)",
+        "ciezar": "stos 2",
+        "serie": "3×10-12",
+        "progresja": "same",
+        "progresja_uwaga": "Poprzedni stos2×12-12-12 ✅ — kryterium: 3×12 → +stos"
+      }
+    ],
+    "kolejne": [
+      {
+        "data": "Nd 12.04",
+        "tytul": "Upper B",
+        "badge_color": "green",
+        "szczegoly": "Podciąganie BW · Smith Incline 50kg · Australian BW · Dipy BW\nButterfly 68kg (4 serie) · Crossover 10kg · SS Arnold+Reverse Fly\nCable Lateral 7,5kg · Seated Row 40kg · Skull Crusher 22,5kg · Hammer Curl 17,5kg",
+        "uwaga": "Butterfly wróć do 4 serii. Seated Row → 42,5kg. Hammer Curl → 17,5kg."
+      }
+    ]
+  },
+  "poprzedni": {
+    "tytul": "Upper A",
+    "data": "Wt 07.04.2026",
+    "czas": "1:35",
+    "kcal": 789,
+    "tetno": "111",
+    "obciazenie": "2.1",
+    "ocena_liczba": 9,
+    "ocena_tekst": "Bardzo dobry",
+    "alert_sukces": "HS High Row 75kg 4×10 ★ — progresja +5kg od 70kg",
+    "cwiczenia": [
+      {
+        "nr": 1,
+        "nazwa": "Ławka sztanga",
+        "ciezar": "75 kg",
+        "wynik": "5-5-5-4-3",
+        "badge": "⚠️ 75kg — za duży skok",
+        "badge_color": "yellow",
+        "plan": "Wróć do 72,5kg. Kryterium: 3/4 serii w górnym zakresie (7-8 powt.) → +2,5kg"
       },
       {
         "nr": 2,
         "nazwa": "HS Incline Press",
         "ciezar": "40 kg",
-        "serie": "4×8-10",
-        "progresja": "same",
-        "progresja_uwaga": "HS Incline 40kg — poprzednie 40×12-10-10-8. Kryterium: 2/3 serii w górnym zakresie (9-10 powt.) → +5kg"
+        "wynik": "10-10-10-8",
+        "badge": "→ bez zmiany",
+        "badge_color": "gray",
+        "plan": "Utrzymaj 40kg — poprzedni 40×12-10-10-8, tym razem nieco słabiej. Kryterium: 3/4×10 → +5kg"
       },
       {
         "nr": 3,
         "nazwa": "Landmine Press",
-        "ciezar": "25 kg",
-        "serie": "3×8-12",
-        "progresja": "same",
-        "progresja_uwaga": "Landmine 25kg — poprzednie 25×12-12-12. Kryterium: 2/3 serii w górnym zakresie (11-12 powt.) → +2,5kg"
+        "ciezar": "30 kg",
+        "wynik": "12-10-10",
+        "badge": "★ +5kg",
+        "badge_color": "accent2",
+        "plan": "Utrzymaj 30kg — tylko 1/3 serii w górnym zakresie. Kryterium: 3×12 → następny krok"
       },
       {
         "nr": "4a",
-        "nazwa": "SS · Lateral Raise (chest supp.)",
-        "ciezar": "8 kg",
-        "serie": "4×12-15",
-        "progresja": "same",
-        "progresja_uwaga": "Lateral Raise 8kg — pierwsze UA z SS. Kalibracja nowej superserii z Triceps Ext."
+        "nazwa": "SS · Lateral Raise (chest)",
+        "ciezar": "6 kg",
+        "wynik": "15-15-12-12",
+        "badge": "→ kalibracja",
+        "badge_color": "gray",
+        "plan": "Poprzedni 8kg×12-12-12-10. Zmiana ciężaru w dół — ustal stały ciężar startowy. Kryterium: 4×15 → +1kg"
       },
       {
         "nr": "4b",
-        "nazwa": "SS · DB Triceps Extension (chest supp.)",
-        "ciezar": "8 kg",
-        "serie": "4×10-15",
-        "progresja": "new",
-        "progresja_uwaga": "NOWE: Chest Supp. DB Triceps Ext. 8kg — kalibracja. Zastępuje Smith CGBP."
+        "nazwa": "SS · DB Triceps Ext. (chest)",
+        "ciezar": "20 kg",
+        "wynik": "—",
+        "badge": "⚠️ pominięte",
+        "badge_color": "yellow",
+        "plan": "Poprzedni 20kg×10-10-10 (30.03). Wykonaj wszystkie 4 serie na następnym UA"
       },
       {
         "nr": 5,
         "nazwa": "HS High Row",
-        "ciezar": "90 kg",
-        "serie": "4×8-10",
-        "progresja": "same",
-        "progresja_uwaga": "HS High Row 90kg — poprzednie 70×12-12-12-12 (reset z C1 na 90kg). Kryterium: 2/3 w górnym → +5kg"
+        "ciezar": "75 kg",
+        "wynik": "10-10-10-10",
+        "badge": "★ +5kg progresja",
+        "badge_color": "accent2",
+        "plan": "Następny → 80kg. Kryterium spełnione: 4/4 w górnym zakresie"
       },
       {
         "nr": 6,
         "nazwa": "HS Seated Row",
-        "ciezar": "42,5 kg",
-        "serie": "4×8-12",
-        "uwagi": "Nowe ćwiczenie — kalibracja. Zmiana z Cable Row na HS maszynę, wektor poziomy.",
-        "progresja": "new",
-        "progresja_uwaga": "NOWE: HS Seated Row 42,5kg — kalibracja. Zastępuje Lat Pulldown + Cable Row."
+        "ciezar": "47 kg",
+        "wynik": "10-10-10",
+        "badge": "⚠️ cofnięcie vs 57kg",
+        "badge_color": "yellow",
+        "plan": "Poprzedni 57kg×12-12-12. Sprawdź czy zmiana maszyny/uchwytu. Ustal stały ciężar referencyjny."
       },
       {
         "nr": 7,
         "nazwa": "Rotation Curl",
         "ciezar": "20 kg",
-        "serie": "3×10-12",
-        "progresja": "same",
-        "progresja_uwaga": "Rotation Curl 20kg — poprzednie 20×9-8-8. Kryterium: 2/3 serii w górnym zakresie (11-12 powt.) → +1kg"
+        "wynik": "9-9-8",
+        "badge": "→ bez zmiany",
+        "badge_color": "gray",
+        "plan": "Utrzymaj 20kg — poprzedni 20×9-8-8, minimalnie lepiej. Kryterium: 3×10 → +1kg"
       },
       {
         "nr": "8a",
-        "nazwa": "SS · Cable Triceps Ext. (overhead)",
+        "nazwa": "SS · Cable Triceps (overhead)",
         "ciezar": "21,5 kg",
-        "serie": "3×10-15",
-        "progresja": "same",
-        "progresja_uwaga": "Cable Triceps 21,5kg — poprzednie 21,5×10-9-9. Kryterium: 2/3 w górnym zakresie (13-15 powt.) → +2,5kg"
+        "wynik": "10-10-9",
+        "badge": "→ bez zmiany",
+        "badge_color": "gray",
+        "plan": "Utrzymaj 21,5kg — identycznie jak poprzedni. Kryterium: 3×13-15 → +2,5kg"
       },
       {
         "nr": "8b",
         "nazwa": "SS · Face Pull",
         "ciezar": "15 kg",
-        "serie": "3×10-15",
-        "progresja": "same",
-        "progresja_uwaga": "Face Pull 15kg — poprzednie 15×15-15-12. Kryterium: 2/3 w górnym zakresie (18-20 powt.) → +2,5kg"
-      }
-    ],
-    "kolejne": [
-      {
-        "data": "Czw 09.04",
-        "tytul": "Lower",
-        "badge_color": "yellow",
-        "szczegoly": "Front Squat 60kg · Trap Bar 85kg · Hack Squat 90kg\nSeated Curl 70kg · Kneeling Curl 40kg · Calf Raise 50kg\nCable Crunch SS + Pallof Press SS",
-        "uwaga": "Fokus na Front Squat — cel 4×6 przy 60kg"
-      },
-      {
-        "data": "Nd 12.04",
-        "tytul": "Upper B",
-        "badge_color": "green",
-        "szczegoly": "Podciąganie -12,5kg · Smith Incline 50kg · Australian BW · Dipy BW\nButterfly 68kg (solo) · Crossover 10kg (solo) · Arnold SS Reverse Fly\nCable Lateral 7,5kg · Seated Row 40kg · Skull Crusher 22,5kg · Hammer Curl",
-        "uwaga": "Butterfly i Crossover — osobne ćwiczenia (nie SS). Wróć do 4 serii Butterfly."
-      }
-    ]
-  },
-  "poprzedni": {
-    "tytul": "Upper B",
-    "data": "Nd 05.04.2026",
-    "czas": "1:46",
-    "kcal": 875,
-    "tetno": "113",
-    "obciazenie": "2.5",
-    "ocena_liczba": 8,
-    "ocena_tekst": "Bardzo dobry",
-    "alert_sukces": "Podciąganie bez asysty — BW 8 powt. w pierwszej serii! ★",
-    "cwiczenia": [
-      {
-        "nr": 1,
-        "nazwa": "Podciąganie (asysta)",
-        "ciezar": "BW",
-        "wynik": "8-6-6-6-6",
-        "badge": "★ BW bez asysty!",
-        "badge_color": "accent2",
-        "plan": "Kontynuuj BW, cel: 4×6+ czystych"
-      },
-      {
-        "nr": 2,
-        "nazwa": "Smith Incline Press",
-        "ciezar": "50 kg",
-        "wynik": "8-8-8",
-        "badge": "✅ 3×8",
-        "badge_color": "green",
-        "plan": "Dodaj 4. serię gdy 4×8 stabilnie"
-      },
-      {
-        "nr": 3,
-        "nazwa": "Australian Pull-up",
-        "ciezar": "BW",
-        "wynik": "12-12-10",
-        "badge": "✅ ok",
-        "badge_color": "green",
-        "plan": "Cel: 3×12"
-      },
-      {
-        "nr": 4,
-        "nazwa": "Dipy",
-        "ciezar": "BW",
-        "wynik": "10-10-10",
-        "badge": "✅ stabilnie",
-        "badge_color": "green",
-        "plan": "Gdy 3×12 → rozważ obciążenie"
-      },
-      {
-        "nr": 5,
-        "nazwa": "Butterfly",
-        "ciezar": "68 kg",
-        "wynik": "10-10-10",
-        "badge": "⚠️ 3 serie",
-        "badge_color": "yellow",
-        "plan": "Wróć do 4 serii (solo — nie SS)"
-      },
-      {
-        "nr": 6,
-        "nazwa": "Cable Crossover",
-        "ciezar": "10 kg",
-        "wynik": "10-10-10",
-        "badge": "✅ ok",
-        "badge_color": "green",
-        "plan": "Osobne ćwiczenie (nie SS). Gdy 3×12 → +2,5kg"
-      },
-      {
-        "nr": 7,
-        "nazwa": "Arnold Press",
-        "ciezar": "17,5 kg",
-        "wynik": "10-10-8",
-        "badge": "→ plateau",
+        "wynik": "15-15-12",
+        "badge": "→ bez zmiany",
         "badge_color": "gray",
-        "plan": "SS z Seated Reverse Fly. Utrzymaj 17,5kg, cel: 3×10"
-      },
-      {
-        "nr": 8,
-        "nazwa": "Seated DB Reverse Fly",
-        "ciezar": "6 kg",
-        "wynik": "—",
-        "badge": "→ nowe",
-        "badge_color": "gray",
-        "plan": "SS z Arnold Press. Start 6kg, cel: 3×15"
-      },
-      {
-        "nr": 9,
-        "nazwa": "Cable Lateral",
-        "ciezar": "7,5 kg",
-        "wynik": "12-10-10",
-        "badge": "→ plateau",
-        "badge_color": "gray",
-        "plan": "Osobne ćwiczenie. Utrzymaj 7,5kg, cel: 4×12"
-      },
-      {
-        "nr": 10,
-        "nazwa": "Seated Row",
-        "ciezar": "40 kg",
-        "wynik": "12-12-12-10",
-        "badge": "✅ progresja",
-        "badge_color": "green",
-        "plan": "Następny → 42,5kg"
-      },
-      {
-        "nr": 11,
-        "nazwa": "Skull Crusher",
-        "ciezar": "22,5 kg",
-        "wynik": "10-10-10",
-        "badge": "✅ stabilnie",
-        "badge_color": "green",
-        "plan": "Gdy 3×12 → +2,5kg"
-      },
-      {
-        "nr": 12,
-        "nazwa": "Hammer Curl",
-        "ciezar": "15 kg",
-        "wynik": "12-12-12",
-        "badge": "✅ progresja",
-        "badge_color": "green",
-        "plan": "Następny → 17,5kg"
+        "plan": "Utrzymaj 15kg — identycznie jak poprzedni 15×15-15-12. Kryterium: 3×18-20 → +2,5kg"
       }
     ],
     "wnioski": [
       {
         "typ": "success",
         "ikona": "★",
-        "tekst": "<strong>Podciąganie bez asysty — BW!</strong> 8 powt. w pierwszej serii to przełom. Cykl 1 zaczął się od -17,5kg asysty."
+        "tekst": "<strong>HS High Row 75kg 4×10</strong> — solidna progresja +5kg od 70kg. Następny: 80kg."
       },
       {
         "typ": "success",
-        "ikona": "✅",
-        "tekst": "<strong>Seated Row 40kg 4×12</strong> — progresja do 42,5kg na następny UB."
-      },
-      {
-        "typ": "success",
-        "ikona": "✅",
-        "tekst": "<strong>Hammer Curl 15kg 3×12</strong> — progresja do 17,5kg na następny UB."
+        "ikona": "★",
+        "tekst": "<strong>Landmine 30kg</strong> — odważny skok +5kg, pierwsze powtórzenia dobre (12). Utrzymaj 30kg do stabilizacji 3×12."
       },
       {
         "typ": "warn",
         "ikona": "⚠️",
-        "tekst": "Butterfly i Reverse Pec Deck — tylko 3 serie zamiast 4. Na następnym UB wróć do 4 serii Butterfly (solo, bez SS)."
+        "tekst": "<strong>Ławka 75kg</strong> — brak talerzy 1.25kg wymusił skok 72,5→75kg. Prawidłowy krok to +2,5kg, wróć do 72,5kg na następnym UA."
+      },
+      {
+        "typ": "warn",
+        "ikona": "⚠️",
+        "tekst": "<strong>HS Seated Row 47kg</strong> — cofnięcie vs poprzednie 57kg. Upewnij się że używasz tej samej maszyny i uchwytu co 30.03."
+      },
+      {
+        "typ": "warn",
+        "ikona": "⚠️",
+        "tekst": "<strong>DB Triceps Ext.</strong> — pominięte. Poprzedni 20kg×10-10-10 (30.03). Na następnym UA wykonaj wszystkie 4 serie."
       },
       {
         "typ": "info",
         "ikona": "ℹ️",
-        "tekst": "<strong>Aktualizacja planu UB:</strong> Butterfly → solo (nie SS z Crossover). Nowe SS: Arnold + Seated DB Reverse Fly. Crossover → osobne ćwiczenie."
+        "tekst": "HS Incline, Rotation Curl, Cable Triceps, Face Pull — bez zmiany. Kryterium progresji jeszcze nie spełnione."
       }
     ]
   },
   "archiwum": {
     "historia_c2": [
+      {
+        "data": "07.04",
+        "typ": "UA",
+        "typ_color": "accent",
+        "ocena": "9/10",
+        "kcal": 789,
+        "czas": "1:35",
+        "wyniki": "HS High Row 75kg 4×10 ★ +5kg | Landmine 30kg +5kg ★ | Ławka 75kg ⚠️ brak 1.25kg talerzy (wróć do 72,5kg) | Seated Row 47kg ⚠️ cofnięcie vs 57kg | DB Triceps pominięte ⚠️"
+      },
       {
         "data": "05.04",
         "typ": "UB",
@@ -545,6 +533,7 @@
         "kolor": "accent",
         "label": "🔵 Upper A — Cykl 2",
         "sesje": [
+          "07.04",
           "31.03"
         ],
         "cwiczenia": [
@@ -553,6 +542,11 @@
             "zakres": "4×5–8",
             "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 75–77,5kg",
             "dane": [
+              {
+                "v": "75×5-5-5-4-3",
+                "i": "⚠️",
+                "c": "yellow"
+              },
               {
                 "v": "72,5×5-5-5-6",
                 "i": "★",
@@ -566,6 +560,11 @@
             "cel": "2/3 w górnym przez 2 sesje → +5kg · cel 50–55kg",
             "dane": [
               {
+                "v": "40×10-10-10-8",
+                "i": "→",
+                "c": "text3"
+              },
+              {
                 "v": "40×12-10-10-8",
                 "i": "★",
                 "c": "accent2"
@@ -578,6 +577,11 @@
             "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 30–32,5kg",
             "dane": [
               {
+                "v": "30×12-10-10",
+                "i": "★",
+                "c": "accent2"
+              },
+              {
                 "v": "25×12-12-12",
                 "i": "★",
                 "c": "accent2"
@@ -589,6 +593,11 @@
             "zakres": "4×12–15",
             "cel": "2/3 w górnym przez 2 sesje → +1kg",
             "dane": [
+              {
+                "v": "6×15-15-12-12",
+                "i": "→",
+                "c": "text3"
+              },
               {
                 "v": "8×12-12-12-10",
                 "i": "★",
@@ -603,6 +612,11 @@
             "dane": [
               {
                 "v": "—",
+                "i": "⚠️",
+                "c": "yellow"
+              },
+              {
+                "v": "—",
                 "c": "text3"
               }
             ]
@@ -612,6 +626,11 @@
             "zakres": "4×8–10",
             "cel": "2/3 w górnym przez 2 sesje → +5kg · cel 100–105kg",
             "dane": [
+              {
+                "v": "75×10-10-10-10",
+                "i": "★",
+                "c": "accent2"
+              },
               {
                 "v": "70×12-12-12-12",
                 "i": "★",
@@ -625,6 +644,11 @@
             "cel": "2/3 w górnym przez 2 sesje → +5kg",
             "dane": [
               {
+                "v": "47×10-10-10",
+                "i": "⚠️",
+                "c": "yellow"
+              },
+              {
                 "v": "—",
                 "c": "text3"
               }
@@ -635,6 +659,11 @@
             "zakres": "3×10–12",
             "cel": "2/3 w górnym przez 2 sesje → +1kg",
             "dane": [
+              {
+                "v": "20×9-9-8",
+                "i": "→",
+                "c": "text3"
+              },
               {
                 "v": "20×9-8-8",
                 "i": "★",
@@ -648,6 +677,11 @@
             "cel": "2/3 w górnym przez 2 sesje → +2,5kg",
             "dane": [
               {
+                "v": "21,5×10-10-9",
+                "i": "→",
+                "c": "text3"
+              },
+              {
                 "v": "21,5×10-9-9",
                 "i": "★",
                 "c": "accent2"
@@ -659,6 +693,11 @@
             "zakres": "3×10–15",
             "cel": "2/3 w górnym przez 2 sesje → +2,5kg",
             "dane": [
+              {
+                "v": "15×15-15-12",
+                "i": "→",
+                "c": "text3"
+              },
               {
                 "v": "15×15-15-12",
                 "i": "★",
