@@ -961,9 +961,10 @@
     return `<div class="alert alert-${typ}"><span class="alert-icon">${ikona}</span><span>${tekst}</span></div>`;
   }
 
-  function renderTreningi(data) {
-    renderNastepny(data.nastepny);
+  function renderTreningi(data, planData) {
+    renderNastepny(data.nastepny, planData);
     renderPoprzedni(data.poprzedni);
+    window._progresjaC2 = data.archiwum.progresja_c2;
     renderArchiwum(data.archiwum);
     document.getElementById('tr-loading').style.display='none';
     document.getElementById('tr-content').style.display='block';
@@ -992,7 +993,7 @@
     if (target) target.style.display = target.style.display === 'none' ? 'table-row' : 'none';
   });
 
-  function renderNastepny(n) {
+  function renderNastepny(n, planData) {
     const el = document.getElementById('tr-nastepny-card');
     const alertHtml = n.alert
       ? `<div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">${n.alert.ikona}</span><span>${n.alert.tekst}</span></div>`
@@ -1007,27 +1008,82 @@
       'new':  { icon:'🆕', color:'var(--accent2)', tip:'Nowe ćwiczenie — kalibracja' },
     };
 
-    // ── Stan formularza ─────────────────────────────────────────
-    // wyniki[nr] = { kg: string, reps: [string, ...] }
+    // ── Pobierz dane z plan_c2 dla bieżącego typu treningu ────────
+    const typMap = { 'Upper A':'upper_a', 'Upper B':'upper_b', 'Lower':'lower' };
+    const planKey = typMap[n.tytul] || null;
+    const planCwiczenia = (planData && planKey) ? (planData[planKey]?.cwiczenia || []) : [];
+
+    // Zbuduj mapę plan: nr → {serie, powt, przerwa}
+    const planMap = {};
+    planCwiczenia.forEach(c => { planMap[String(c.nr)] = c; });
+
+    // ── Pobierz ostatni ciężar z progresja_c2 ────────────────────
+    // window._progresjaC2 ustawiane przez renderTreningi
+    const progMap = {};
+    if (window._progresjaC2 && planKey) {
+      const klucz = planKey === 'upper_a' ? 'ua' : planKey === 'upper_b' ? 'ub' : 'lower';
+      const prog = window._progresjaC2[klucz];
+      if (prog && prog.cwiczenia) {
+        prog.cwiczenia.forEach(cw => {
+          if (cw.dane && cw.dane.length > 0) {
+            // dane[0] = najnowszy wynik, wyciągnij ciężar (format "75×10-10" → "75")
+            const v = cw.dane[0].v || '';
+            const m = v.match(/^([\d,\.]+)/);
+            const kg = m ? m[1] + ' kg' : v;
+            progMap[cw.nazwa] = kg;
+          }
+        });
+      }
+    }
+
+    // ── Pomocnik: znajdź ciężar dla ćwiczenia ─────────────────────
+    function getCiezar(c) {
+      // 1. Szukaj w progMap po fragmencie nazwy
+      for (const [progNazwa, kg] of Object.entries(progMap)) {
+        // Dopasuj jeśli nazwy mają wspólny rdzeń (ignoruj emoji, prefix SS)
+        const clean = s => s.replace(/[⭐★🆕SS·\s]/g,'').toLowerCase();
+        if (clean(progNazwa).includes(clean(c.nazwa).slice(0,12)) ||
+            clean(c.nazwa).includes(clean(progNazwa).slice(0,12))) {
+          return kg;
+        }
+      }
+      // 2. Fallback: z nastepny.cwiczenia
+      return c.ciezar || '—';
+    }
+
+    // ── Parsuj serie z planu (integer) ────────────────────────────
+    function getSerie(c) {
+      const nrStr = String(c.nr);
+      // Szukaj w planie po nr
+      const planC = planMap[nrStr];
+      if (planC && planC.serie) return parseInt(planC.serie);
+      // Fallback: parsuj z c.serie w nastepny (np. "4×5-8" → 4)
+      const m = String(c.serie || '').match(/^(\d+)/);
+      return m ? parseInt(m[1]) : 3;
+    }
+
+    // ── Pobierz zakres powt z planu ───────────────────────────────
+    function getPowt(c) {
+      const planC = planMap[String(c.nr)];
+      return planC ? planC.powt : (String(c.serie || '').split('×')[1] || '');
+    }
+
+    // ── Stan formularza ───────────────────────────────────────────
     window._workoutData = window._workoutData || { tytul: n.tytul, data: n.data, wyniki: {} };
     if (window._workoutData.tytul !== n.tytul) {
       window._workoutData = { tytul: n.tytul, data: n.data, wyniki: {} };
     }
 
-    // ── Parsuj liczbę serii z c.serie np "4×5-8" → 4 ───────────
-    function parseSeries(serie) {
-      const m = serie.match(/^(\d+)/);
-      return m ? parseInt(m[1]) : 3;
-    }
+    // ── Buduj wiersze ─────────────────────────────────────────────
+    const rows = n.cwiczenia.map((c) => {
+      const prog     = PROG_MAP[c.progresja] || PROG_MAP['same'];
+      const nrStr    = String(c.nr);
+      const formId   = 'wf-' + nrStr.replace(/[^a-z0-9]/gi,'');
+      const numSets  = getSerie(c);
+      const powt     = getPowt(c);
+      const ciezar   = getCiezar(c);
+      const serieStr = numSets + '×' + powt;
 
-    // ── Buduj wiersz tabeli + formularz pod spodem ───────────────
-    const rows = n.cwiczenia.map((c, idx) => {
-      const prog = PROG_MAP[c.progresja] || PROG_MAP['same'];
-      const nrStr = String(c.nr);
-      const formId = 'wf-' + nrStr.replace(/[^a-z0-9]/gi,'');
-      const numSets = parseSeries(c.serie);
-
-      // Pola na powtórzenia
       const repFields = Array.from({length: numSets}, (_, i) =>
         `<input class="wf-rep" type="number" min="0" max="99" placeholder="—"
           id="${formId}-r${i}" inputmode="numeric"
@@ -1038,10 +1094,11 @@
         <div class="workout-form" id="${formId}">
           <div class="wf-row">
             <span class="wf-label">kg</span>
-            <input class="wf-kg" type="number" min="0" max="999" step="0.5" placeholder="${c.ciezar.replace(' kg','')}"
+            <input class="wf-kg" type="number" min="0" max="999" step="0.5"
+              placeholder="${ciezar.replace(' kg','').replace('—','')}"
               id="${formId}-kg" inputmode="decimal"
               onchange="window._wfChange('${nrStr}','${formId}','${n.tytul}','${n.data}')">
-            <span style="font-size:11px;color:var(--text3)">${c.serie}</span>
+            <span style="font-size:11px;color:var(--text3)">${serieStr}</span>
           </div>
           <div class="wf-row">
             <span class="wf-label">powt.</span>
@@ -1051,36 +1108,33 @@
           </div>
         </div>`;
 
-      // Główny wiersz tabeli — kliknięcie toggleuje formularz
+      const hasHint  = c.uwagi || c.progresja_uwaga;
+      const hintTxt  = [
+        c.uwagi            ? `💬 ${c.uwagi}` : '',
+        c.progresja_uwaga  ? `📈 ${c.progresja_uwaga}` : '',
+      ].filter(Boolean).join('<br>');
+      const arrow = hasHint ? ' <span style="color:var(--text3);font-size:9px">▾</span>' : '';
+
       const rowHtml = `
         <tr style="cursor:pointer" onclick="window._wfToggle('${formId}', this)">
           <td style="white-space:normal;word-break:break-word;font-size:11px;width:45%">
-            ${c.nazwa} <span style="color:var(--text3);font-size:9px" id="${formId}-indicator">▾</span>
+            ${c.nazwa}${arrow} <span style="color:var(--text3);font-size:9px" id="${formId}-indicator">▾</span>
           </td>
           <td style="text-align:center;white-space:nowrap;width:68px">
-            <span class="kg-badge" style="font-size:11px;padding:2px 5px" id="${formId}-result">${c.ciezar}</span>
+            <span class="kg-badge" style="font-size:11px;padding:2px 5px" id="${formId}-result">${ciezar}</span>
           </td>
           <td style="text-align:center;font-size:16px;width:28px" title="${prog.tip}">
             <span style="color:${prog.color}">${prog.icon}</span>
           </td>
-          <td style="text-align:center;white-space:nowrap;font-size:11px;color:var(--text3)">${c.serie}</td>
+          <td style="text-align:center;white-space:nowrap;font-size:11px;color:var(--text3)">${serieStr}</td>
         </tr>
         <tr id="${formId}-row" style="display:none">
           <td colspan="4" style="padding:0">${formHtml}</td>
-        </tr>`;
+        </tr>` + (hasHint ? `
+        <tr id="${formId}-hint" style="display:none;background:rgba(34,211,238,0.04)">
+          <td colspan="4" style="padding:6px 12px;font-size:11px;color:var(--text2);white-space:normal;line-height:1.7">${hintTxt}</td>
+        </tr>` : '');
 
-      // Dołącz uwagi/progresja_uwaga po formularzu jeśli są
-      const hasHint = c.uwagi || c.progresja_uwaga;
-      if (hasHint) {
-        const hintTxt = [
-          c.uwagi           ? `💬 ${c.uwagi}` : '',
-          c.progresja_uwaga ? `📈 ${c.progresja_uwaga}` : '',
-        ].filter(Boolean).join('<br>');
-        return rowHtml + `
-          <tr id="${formId}-hint" style="display:none;background:rgba(34,211,238,0.04)">
-            <td colspan="4" style="padding:6px 12px;font-size:11px;color:var(--text2);white-space:normal;line-height:1.7">${hintTxt}</td>
-          </tr>`;
-      }
       return rowHtml;
     }).join('');
 
@@ -1113,31 +1167,29 @@
         </button>
       </div>`;
 
-    // ── Handlery formularza ──────────────────────────────────────
+    // Handlery formularza (bez zmian)
     window._wfToggle = function(formId, row) {
-      const form    = document.getElementById(formId);
       const formRow = document.getElementById(formId + '-row');
       const hint    = document.getElementById(formId + '-hint');
       const ind     = document.getElementById(formId + '-indicator');
-      const isOpen  = formRow.style.display !== 'none';
-      formRow.style.display = isOpen ? 'none' : 'table-row';
-      if (form) form.classList.toggle('open', !isOpen);
-      if (hint) hint.style.display = isOpen ? 'none' : 'table-row';
-      if (ind)  ind.textContent = isOpen ? '▾' : '▴';
+      const form    = document.getElementById(formId);
+      const isOpen  = formRow && formRow.style.display !== 'none';
+      if (formRow) formRow.style.display = isOpen ? 'none' : 'table-row';
+      if (form)    form.classList.toggle('open', !isOpen);
+      if (hint)    hint.style.display = isOpen ? 'none' : 'table-row';
+      if (ind)     ind.textContent = isOpen ? '▾' : '▴';
     };
 
     window._wfChange = function(nr, formId, tytul, data) {
-      // Zapisz draft na bieżąco
-      const kg  = document.getElementById(formId + '-kg')?.value || '';
+      const kg = document.getElementById(formId + '-kg')?.value || '';
       window._workoutData = window._workoutData || { tytul, data, wyniki: {} };
       window._workoutData.wyniki[nr] = window._workoutData.wyniki[nr] || { kg:'', reps:[] };
       window._workoutData.wyniki[nr].kg = kg;
     };
 
     window._wfSave = function(nr, formId) {
-      const kgEl  = document.getElementById(formId + '-kg');
-      const kg    = kgEl?.value?.trim() || '';
-      const reps  = [];
+      const kg   = document.getElementById(formId + '-kg')?.value?.trim() || '';
+      const reps = [];
       let i = 0;
       while (true) {
         const el = document.getElementById(formId + '-r' + i);
@@ -1145,27 +1197,18 @@
         reps.push(el.value.trim() || '—');
         i++;
       }
-
       if (!kg && reps.every(r => r === '—')) return;
-
-      // Zapisz w state
       window._workoutData.wyniki[nr] = { kg, reps };
-
-      // Zaktualizuj badge wyników w tabeli
       const resultEl = document.getElementById(formId + '-result');
       if (resultEl) {
         const repsStr = reps.filter(r => r !== '—').join('-');
-        resultEl.textContent = kg ? `${kg}kg × ${repsStr}` : repsStr;
-        resultEl.style.background = 'rgba(34,197,94,0.15)';
-        resultEl.style.color = 'var(--green)';
+        resultEl.textContent = kg ? `${kg}kg×${repsStr}` : repsStr;
+        resultEl.style.background  = 'rgba(34,197,94,0.15)';
+        resultEl.style.color       = 'var(--green)';
         resultEl.style.borderColor = 'var(--green)';
       }
-
-      // Pokaż saved
       const savedEl = document.getElementById(formId + '-saved');
       if (savedEl) { savedEl.textContent = '✓'; setTimeout(() => savedEl.textContent = '', 1500); }
-
-      // Zamknij formularz
       const formRow = document.getElementById(formId + '-row');
       const hint    = document.getElementById(formId + '-hint');
       const ind     = document.getElementById(formId + '-indicator');
@@ -1174,8 +1217,6 @@
       if (hint)    hint.style.display    = 'none';
       if (form)    form.classList.remove('open');
       if (ind)     ind.textContent       = '▾';
-
-      // Pokaż przycisk WA jeśli cokolwiek zapisane
       const waBtn = document.getElementById('wa-send-btn');
       if (waBtn && Object.keys(window._workoutData.wyniki).length > 0) {
         waBtn.style.display = 'flex';
@@ -1185,42 +1226,25 @@
     window._sendWhatsApp = function() {
       const wd = window._workoutData;
       if (!wd) return;
-
-      // Buduj tekst raportu — format szablonu
-      const today = new Date();
-      const dateStr = wd.data || today.toLocaleDateString('pl-PL');
-      let msg = `${wd.tytul} ${dateStr} | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___
-Ocena: __/10 — ___
-
-`;
-
-      // Pobierz ćwiczenia w kolejności z tabeli
-      const cwiczenia = window._nastepnyCwiczenia || [];
-      cwiczenia.forEach(c => {
-        const nr = String(c.nr);
-        const w  = wd.wyniki[nr];
-        const prefix = nr.match(/[a-z]/i) ? nr + '.' : nr + '.  ';
+      let msg = `${wd.tytul} ${wd.data || ''} | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n`;
+      (window._nastepnyCwiczenia || []).forEach(c => {
+        const nr  = String(c.nr);
+        const w   = wd.wyniki[nr];
+        const pre = nr.match(/[a-zA-Z]/) ? nr + '. ' : nr + '.  ';
         if (w && (w.kg || w.reps.some(r => r !== '—'))) {
           const repsStr = w.reps.filter(r => r !== '—').join('-');
-          const kgPart  = w.kg ? `${w.kg} kg × ` : '';
-          msg += `${prefix} ${c.nazwa}: ${kgPart}${repsStr}
-`;
+          msg += `${pre}${c.nazwa}: ${w.kg ? w.kg+' kg × ' : ''}${repsStr}\n`;
         } else {
-          msg += `${prefix} ${c.nazwa}: ___
-`;
+          msg += `${pre}${c.nazwa}: ___\n`;
         }
       });
-
       msg += '\nWnioski / uwagi:\n';
-
-      // Otwórz WhatsApp
-      const encoded = encodeURIComponent(msg);
-      window.open('https://wa.me/?text=' + encoded, '_blank');
+      window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
     };
 
-    // Zapisz referencję do ćwiczeń dla WhatsApp
     window._nastepnyCwiczenia = n.cwiczenia;
   }
+
 
   function renderPoprzedni(p) {
     const el = document.getElementById('tr-poprzedni-card');
@@ -2120,7 +2144,7 @@ Ocena: __/10 — ___
     fetchJSON('version.json')
   ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData, planC1Data, versionData]) => {
     renderWaga(wagaData);
-    renderTreningi(treningiData);
+    renderTreningi(treningiData, planC2Data);
     renderPlanC2(planC2Data);
     renderPlanC1(planC1Data);
     renderSzablony('tr-szablony-c2', treningiData.szablony_c2, 'C2');
