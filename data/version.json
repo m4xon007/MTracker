@@ -1,8 +1,13 @@
 {
-  "v": "2.43",
-  "updated": "2026-04-07",
+  "v": "2.5",
+  "updated": "2026-04-09",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.5",
+      "date": "09.04",
+      "msg": "Force refresh — cache bust"
+    },
     {
       "v": "2.43",
       "date": "07.04",
