@@ -1,8 +1,13 @@
 {
-  "v": "2.54",
+  "v": "2.55",
   "updated": "2026-04-12",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.55",
+      "date": "12.04",
+      "msg": "Formularz nagłówka treningu — czas, kcal, tętno, obciążenie, ocena"
+    },
     {
       "v": "2.54",
       "date": "12.04",
@@ -47,11 +52,6 @@
       "v": "2.40",
       "date": "2026-04-06",
       "msg": "version.json — dynamiczny numer wersji w UI z changelog modalem. UA C2 restruktura: SS4 Lateral+DBTriceps, HS Seated Row, SS8 CableTriceps+FacePull."
-    },
-    {
-      "v": "2.38",
-      "date": "2026-04-06",
-      "msg": "UB C2 restruktura: Butterfly solo, Cable Crossover solo, SS5 Arnold+Seated DB Reverse Fly, Hammer Curl 17,5kg."
     }
   ]
 }

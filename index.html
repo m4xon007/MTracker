@@ -264,6 +264,18 @@
   .wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:13px;background:rgba(37,211,102,0.15);border:1px solid #25d366;border-radius:10px;color:#25d366;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.15s;-webkit-tap-highlight-color:transparent;}
   .wa-btn:active{background:rgba(37,211,102,0.25);transform:scale(.98);}
   .wa-btn:disabled{opacity:0.4;cursor:not-allowed;}
+
+  /* ── Formularz nagłówka treningu ── */
+  .header-form{margin-top:14px;padding:12px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;}
+  .header-form-title{font-size:11px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;}
+  .header-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .header-form-field{display:flex;flex-direction:column;gap:3px;}
+  .header-form-label{font-size:10px;color:var(--text3);}
+  .header-form-input{background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:13px;font-weight:600;padding:6px 8px;width:100%;}
+  .header-form-input:focus{outline:none;border-color:var(--accent2);}
+  .ocena-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;}
+  .ocena-btn{width:32px;height:32px;border-radius:6px;border:1px solid var(--border);background:var(--bg2);color:var(--text3);font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;-webkit-tap-highlight-color:transparent;}
+  .ocena-btn.active{background:var(--accent2);border-color:var(--accent2);color:#0f1117;}
 </style>
 </head>
 <body>
@@ -1141,6 +1153,35 @@
           </table>
         </div>
         <div style="font-size:10px;color:var(--text3);margin-top:6px">▾ kliknij ćwiczenie — wpisz kg i powtórzenia</div>
+        <div class="header-form" id="header-form" style="display:none">
+          <div class="header-form-title">📋 Dane treningu</div>
+          <div class="header-form-grid">
+            <div class="header-form-field">
+              <span class="header-form-label">⏱ Czas (np. 1:35)</span>
+              <input class="header-form-input" type="text" id="hf-czas" placeholder="1:30" inputmode="text">
+            </div>
+            <div class="header-form-field">
+              <span class="header-form-label">🔥 Kcal</span>
+              <input class="header-form-input" type="number" id="hf-kcal" placeholder="800" inputmode="numeric">
+            </div>
+            <div class="header-form-field">
+              <span class="header-form-label">❤️ Tętno śr.</span>
+              <input class="header-form-input" type="number" id="hf-tetno" placeholder="110" inputmode="numeric">
+            </div>
+            <div class="header-form-field">
+              <span class="header-form-label">⚡ Obciążenie</span>
+              <input class="header-form-input" type="number" id="hf-obciazenie" placeholder="2.0" step="0.1" inputmode="decimal">
+            </div>
+          </div>
+          <div style="margin-top:10px">
+            <div class="header-form-label" style="margin-bottom:6px">⭐ Ocena treningu</div>
+            <div class="ocena-row" id="hf-ocena-row">
+              ${[1,2,3,4,5,6,7,8,9,10].map(n =>
+                `<button class="ocena-btn" data-ocena="${n}" onclick="window._setOcena(${n})">${n}</button>`
+              ).join('')}
+            </div>
+          </div>
+        </div>
         <button class="wa-btn" id="wa-send-btn" style="display:none" onclick="window._sendWhatsApp()">
           <span style="font-size:20px">📤</span> Wyślij raport przez WhatsApp
         </button>
@@ -1197,15 +1238,29 @@
       if (form)    form.classList.remove('open');
       if (ind)     ind.textContent       = '▾';
       const waBtn = document.getElementById('wa-send-btn');
-      if (waBtn && Object.keys(window._workoutData.wyniki).length > 0) {
-        waBtn.style.display = 'flex';
+      const hForm = document.getElementById('header-form');
+      if (Object.keys(window._workoutData.wyniki).length > 0) {
+        if (waBtn)  waBtn.style.display  = 'flex';
+        if (hForm)  hForm.style.display  = 'block';
       }
+    };
+
+    window._setOcena = function(n) {
+      window._workoutData.ocena = n;
+      document.querySelectorAll('.ocena-btn').forEach(b => {
+        b.classList.toggle('active', parseInt(b.dataset.ocena) <= n);
+      });
     };
 
     window._sendWhatsApp = function() {
       const wd = window._workoutData;
       if (!wd) return;
-      let msg = `${wd.tytul} ${wd.data || ''} | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n`;
+      const czas       = document.getElementById('hf-czas')?.value       || '___';
+      const kcal       = document.getElementById('hf-kcal')?.value       || '___';
+      const tetno      = document.getElementById('hf-tetno')?.value      || '___';
+      const obciazenie = document.getElementById('hf-obciazenie')?.value || '___';
+      const ocena      = wd.ocena ? `${wd.ocena}/10` : '__/10';
+      let msg = `${wd.tytul} ${wd.data || ''} | Czas: ${czas} | Kcal: ${kcal} | Tętno: ${tetno} | Obciążenie: ${obciazenie}\nOcena: ${ocena} — ___\n\n`;
       (window._nastepnyCwiczenia || []).forEach(c => {
         const nr  = String(c.nr);
         const w   = wd.wyniki[nr];
