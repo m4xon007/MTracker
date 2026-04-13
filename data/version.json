@@ -1,8 +1,13 @@
 {
-  "v": "2.52",
+  "v": "2.53",
   "updated": "2026-04-09",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.53",
+      "date": "09.04",
+      "msg": "Architektura: ostatni_[typ] + podwójna progresja + serie z plan_c2"
+    },
     {
       "v": "2.52",
       "date": "09.04",
@@ -47,11 +52,6 @@
       "v": "2.37",
       "date": "2026-03-31",
       "msg": "Start Cyklu 2 — UA 31.03 ✅. Nowy plan UA/UB/Lower C2, szablony, progresja C2."
-    },
-    {
-      "v": "2.36",
-      "date": "2026-03-22",
-      "msg": "Koniec Cyklu 1 — UB 22.03 ✅. Podciąganie -12kg 5×8, hantle płaska 30kg."
     }
   ]
 }

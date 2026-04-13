@@ -962,9 +962,11 @@
   }
 
   function renderTreningi(data, planData) {
+    window._progresjaC2 = data.archiwum?.progresja_c2 || {};
+    const _typMapRT = { 'Upper A': data.ostatni_ua, 'Upper B': data.ostatni_ub, 'Lower': data.ostatni_lower };
+    window._ostatniTyp = _typMapRT[data.nastepny?.tytul] || {};
     renderNastepny(data.nastepny, planData);
     renderPoprzedni(data.poprzedni);
-    window._progresjaC2 = data.archiwum.progresja_c2;
     renderArchiwum(data.archiwum);
     document.getElementById('tr-loading').style.display='none';
     document.getElementById('tr-content').style.display='block';
@@ -1008,64 +1010,41 @@
       'new':  { icon:'🆕', color:'var(--accent2)', tip:'Nowe ćwiczenie — kalibracja' },
     };
 
-    // ── Pobierz dane z plan_c2 dla bieżącego typu treningu ────────
+    // ── Source of truth: plan_c2 dla aktualnego typu ──────────────
     const typMap = { 'Upper A':'upper_a', 'Upper B':'upper_b', 'Lower':'lower' };
     const planKey = typMap[n.tytul] || null;
     const planCwiczenia = (planData && planKey) ? (planData[planKey]?.cwiczenia || []) : [];
 
-    // Zbuduj mapę plan: nr → {serie, powt, przerwa}
+    // Mapa plan: nr(string) → {serie, powt, przerwa}
     const planMap = {};
     planCwiczenia.forEach(c => { planMap[String(c.nr)] = c; });
 
-    // ── Pobierz ostatni ciężar z progresja_c2 ────────────────────
-    // window._progresjaC2 ustawiane przez renderTreningi
-    const progMap = {};
-    if (window._progresjaC2 && planKey) {
-      const klucz = planKey === 'upper_a' ? 'ua' : planKey === 'upper_b' ? 'ub' : 'lower';
-      const prog = window._progresjaC2[klucz];
-      if (prog && prog.cwiczenia) {
-        prog.cwiczenia.forEach(cw => {
-          if (cw.dane && cw.dane.length > 0) {
-            // dane[0] = najnowszy wynik, wyciągnij ciężar (format "75×10-10" → "75")
-            const v = cw.dane[0].v || '';
-            const m = v.match(/^([\d,\.]+)/);
-            const kg = m ? m[1] + ' kg' : v;
-            progMap[cw.nazwa] = kg;
-          }
-        });
-      }
-    }
+    // ── Source of truth: ostatni_[typ] dla ciężarów ───────────────
+    // Ustawiane przez renderTreningi jako window._ostatniTyp
+    const ostatni = window._ostatniTyp || {};
+    const ostatniCw = ostatni.cwiczenia || {};
 
-    // ── Pomocnik: znajdź ciężar dla ćwiczenia ─────────────────────
-    function getCiezar(c) {
-      // 1. Szukaj w progMap po fragmencie nazwy
-      for (const [progNazwa, kg] of Object.entries(progMap)) {
-        // Dopasuj jeśli nazwy mają wspólny rdzeń (ignoruj emoji, prefix SS)
-        const clean = s => s.replace(/[⭐★🆕SS·\s]/g,'').toLowerCase();
-        if (clean(progNazwa).includes(clean(c.nazwa).slice(0,12)) ||
-            clean(c.nazwa).includes(clean(progNazwa).slice(0,12))) {
-          return kg;
-        }
-      }
-      // 2. Fallback: z nastepny.cwiczenia
-      return c.ciezar || '—';
-    }
-
-    // ── Parsuj serie z planu (integer) ────────────────────────────
+    // ── Pomocniki ─────────────────────────────────────────────────
     function getSerie(c) {
-      const nrStr = String(c.nr);
-      // Szukaj w planie po nr
-      const planC = planMap[nrStr];
+      const planC = planMap[String(c.nr)];
       if (planC && planC.serie) return parseInt(planC.serie);
-      // Fallback: parsuj z c.serie w nastepny (np. "4×5-8" → 4)
       const m = String(c.serie || '').match(/^(\d+)/);
       return m ? parseInt(m[1]) : 3;
     }
 
-    // ── Pobierz zakres powt z planu ───────────────────────────────
     function getPowt(c) {
       const planC = planMap[String(c.nr)];
-      return planC ? planC.powt : (String(c.serie || '').split('×')[1] || '');
+      return planC ? String(planC.powt) : (String(c.serie || '').split('×')[1] || '');
+    }
+
+    function getCiezar(c) {
+      const nrStr = String(c.nr);
+      const last = ostatniCw[nrStr];
+      if (last && last.kg && last.kg !== '—') {
+        const kg = String(last.kg);
+        return /^[\d.,]+$/.test(kg) ? kg + ' kg' : kg;
+      }
+      return c.ciezar || '—';
     }
 
     // ── Stan formularza ───────────────────────────────────────────
@@ -1108,10 +1087,10 @@
           </div>
         </div>`;
 
-      const hasHint  = c.uwagi || c.progresja_uwaga;
-      const hintTxt  = [
-        c.uwagi            ? `💬 ${c.uwagi}` : '',
-        c.progresja_uwaga  ? `📈 ${c.progresja_uwaga}` : '',
+      const hasHint = c.uwagi || c.progresja_uwaga;
+      const hintTxt = [
+        c.uwagi           ? `💬 ${c.uwagi}` : '',
+        c.progresja_uwaga ? `📈 ${c.progresja_uwaga}` : '',
       ].filter(Boolean).join('<br>');
       const arrow = hasHint ? ' <span style="color:var(--text3);font-size:9px">▾</span>' : '';
 
@@ -1167,7 +1146,7 @@
         </button>
       </div>`;
 
-    // Handlery formularza (bez zmian)
+    // ── Handlery formularza ───────────────────────────────────────
     window._wfToggle = function(formId, row) {
       const formRow = document.getElementById(formId + '-row');
       const hint    = document.getElementById(formId + '-hint');
@@ -1192,9 +1171,9 @@
       const reps = [];
       let i = 0;
       while (true) {
-        const el = document.getElementById(formId + '-r' + i);
-        if (!el) break;
-        reps.push(el.value.trim() || '—');
+        const repEl = document.getElementById(formId + '-r' + i);
+        if (!repEl) break;
+        reps.push(repEl.value.trim() || '—');
         i++;
       }
       if (!kg && reps.every(r => r === '—')) return;
@@ -1230,7 +1209,7 @@
       (window._nastepnyCwiczenia || []).forEach(c => {
         const nr  = String(c.nr);
         const w   = wd.wyniki[nr];
-        const pre = nr.match(/[a-zA-Z]/) ? nr + '. ' : nr + '.  ';
+        const pre = String(nr).match(/[a-zA-Z]/) ? nr + '. ' : nr + '.  ';
         if (w && (w.kg || w.reps.some(r => r !== '—'))) {
           const repsStr = w.reps.filter(r => r !== '—').join('-');
           msg += `${pre}${c.nazwa}: ${w.kg ? w.kg+' kg × ' : ''}${repsStr}\n`;
