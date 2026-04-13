@@ -1,8 +1,13 @@
 {
-  "v": "2.53",
-  "updated": "2026-04-09",
+  "v": "2.54",
+  "updated": "2026-04-12",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.54",
+      "date": "12.04",
+      "msg": "UB 12.04 — kalibracja nowej siłowni | plan UB zaktualizowany | harmonogram Pn/Śr/Pt od 20.04"
+    },
     {
       "v": "2.53",
       "date": "09.04",
@@ -47,11 +52,6 @@
       "v": "2.38",
       "date": "2026-04-06",
       "msg": "UB C2 restruktura: Butterfly solo, Cable Crossover solo, SS5 Arnold+Seated DB Reverse Fly, Hammer Curl 17,5kg."
-    },
-    {
-      "v": "2.37",
-      "date": "2026-03-31",
-      "msg": "Start Cyklu 2 — UA 31.03 ✅. Nowy plan UA/UB/Lower C2, szablony, progresja C2."
     }
   ]
 }

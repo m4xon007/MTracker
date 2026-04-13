@@ -150,12 +150,12 @@
       },
       {
         "nr": "2",
-        "nazwa": "Smith Machine Incline Barbell Press",
+        "nazwa": "Incline Barbell Press (Wyciskanie na ławce skośnej)",
         "partia": "Klatka górna",
         "serie": 3,
         "powt": "6–8",
         "przerwa": "180 s",
-        "start": "50 kg",
+        "start": "40 kg",
         "cel": "3×8",
         "cel_color": "accent2"
       },
@@ -244,7 +244,7 @@
         "nr": "10",
         "nazwa": "Seated Cable Row — V-bar (Wiosłowanie na wyciągu siedząc)",
         "partia": "Plecy (środek)",
-        "serie": 4,
+        "serie": 3,
         "powt": "8–12",
         "przerwa": "120 s",
         "start": "40 kg",

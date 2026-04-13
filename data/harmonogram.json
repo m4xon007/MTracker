@@ -14,7 +14,7 @@
         "planowane": 8
       },
       "UB": {
-        "zrobione": 1,
+        "zrobione": 2,
         "planowane": 8
       },
       "L": {
@@ -23,6 +23,7 @@
       }
     },
     "sesje": [
+      "12.04 UB",
       "09.04 L",
       "07.04 UA",
       "31.03 UA",
@@ -64,7 +65,7 @@
         "data": "2026-04-12",
         "typ": "UB",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-04-14",
@@ -85,74 +86,80 @@
         "ukonczone": false
       },
       {
-        "data": "2026-04-21",
+        "data": "2026-04-20",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-04-23",
+        "data": "2026-04-22",
         "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-04-26",
+        "data": "2026-04-24",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-04-28",
+        "data": "2026-04-27",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-04-30",
+        "data": "2026-04-29",
         "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-03",
+        "data": "2026-05-01",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-05",
+        "data": "2026-05-04",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-07",
+        "data": "2026-05-06",
         "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-10",
+        "data": "2026-05-08",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-12",
+        "data": "2026-05-11",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-14",
+        "data": "2026-05-13",
         "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-17",
+        "data": "2026-05-15",
         "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-18",
+        "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
@@ -169,40 +176,41 @@
         "ukonczone": false
       },
       {
-        "data": "2026-05-24",
+        "data": "2026-05-23",
         "typ": "D·UB",
         "deload": true,
         "ukonczone": false
       },
       {
-        "data": "2026-05-26",
+        "data": "2026-05-27",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-28",
+        "data": "2026-05-29",
         "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-31",
+        "data": "2026-06-01",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
       }
     ],
     "plan_dni": [
-      1,
-      3,
-      6
+      0,
+      2,
+      4
     ],
     "rotacja": [
       "UA",
       "L",
       "UB"
-    ]
+    ],
+    "uwaga_harmonogram": "Od 20.04.2026 — Poniedziałek, Środa, Piątek"
   },
   "cykl1": {
     "label": "Cykl 1 — Styczeń–Marzec 2026",
