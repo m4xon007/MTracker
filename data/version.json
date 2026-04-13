@@ -1,8 +1,13 @@
 {
-  "v": "2.55",
+  "v": "2.56",
   "updated": "2026-04-12",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.56",
+      "date": "12.04",
+      "msg": "Fix formularz nagłówka — przyciski oceny, oninput, przywracanie stanu"
+    },
     {
       "v": "2.55",
       "date": "12.04",
@@ -47,11 +52,6 @@
       "v": "2.41",
       "date": "06.04",
       "msg": "Szablony UA/UB/Lower — czysty formularz, progresja w nastepny[], nowy prompt"
-    },
-    {
-      "v": "2.40",
-      "date": "2026-04-06",
-      "msg": "version.json — dynamiczny numer wersji w UI z changelog modalem. UA C2 restruktura: SS4 Lateral+DBTriceps, HS Seated Row, SS8 CableTriceps+FacePull."
     }
   ]
 }

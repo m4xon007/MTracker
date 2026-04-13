@@ -1158,27 +1158,34 @@
           <div class="header-form-grid">
             <div class="header-form-field">
               <span class="header-form-label">⏱ Czas (np. 1:35)</span>
-              <input class="header-form-input" type="text" id="hf-czas" placeholder="1:30" inputmode="text">
+              <input class="header-form-input" type="text" id="hf-czas" placeholder="1:30" inputmode="text" oninput="window._workoutData=window._workoutData||{};window._workoutData.czas=this.value">
             </div>
             <div class="header-form-field">
               <span class="header-form-label">🔥 Kcal</span>
-              <input class="header-form-input" type="number" id="hf-kcal" placeholder="800" inputmode="numeric">
+              <input class="header-form-input" type="number" id="hf-kcal" placeholder="800" inputmode="numeric" oninput="window._workoutData=window._workoutData||{};window._workoutData.kcal=this.value">
             </div>
             <div class="header-form-field">
               <span class="header-form-label">❤️ Tętno śr.</span>
-              <input class="header-form-input" type="number" id="hf-tetno" placeholder="110" inputmode="numeric">
+              <input class="header-form-input" type="number" id="hf-tetno" placeholder="110" inputmode="numeric" oninput="window._workoutData=window._workoutData||{};window._workoutData.tetno=this.value">
             </div>
             <div class="header-form-field">
               <span class="header-form-label">⚡ Obciążenie</span>
-              <input class="header-form-input" type="number" id="hf-obciazenie" placeholder="2.0" step="0.1" inputmode="decimal">
+              <input class="header-form-input" type="number" id="hf-obciazenie" placeholder="2.0" step="0.1" inputmode="decimal" oninput="window._workoutData=window._workoutData||{};window._workoutData.obciazenie=this.value">
             </div>
           </div>
           <div style="margin-top:10px">
             <div class="header-form-label" style="margin-bottom:6px">⭐ Ocena treningu</div>
             <div class="ocena-row" id="hf-ocena-row">
-              ${[1,2,3,4,5,6,7,8,9,10].map(n =>
-                `<button class="ocena-btn" data-ocena="${n}" onclick="window._setOcena(${n})">${n}</button>`
-              ).join('')}
+              <button class="ocena-btn" data-ocena="1" onclick="window._setOcena(1)">1</button>
+              <button class="ocena-btn" data-ocena="2" onclick="window._setOcena(2)">2</button>
+              <button class="ocena-btn" data-ocena="3" onclick="window._setOcena(3)">3</button>
+              <button class="ocena-btn" data-ocena="4" onclick="window._setOcena(4)">4</button>
+              <button class="ocena-btn" data-ocena="5" onclick="window._setOcena(5)">5</button>
+              <button class="ocena-btn" data-ocena="6" onclick="window._setOcena(6)">6</button>
+              <button class="ocena-btn" data-ocena="7" onclick="window._setOcena(7)">7</button>
+              <button class="ocena-btn" data-ocena="8" onclick="window._setOcena(8)">8</button>
+              <button class="ocena-btn" data-ocena="9" onclick="window._setOcena(9)">9</button>
+              <button class="ocena-btn" data-ocena="10" onclick="window._setOcena(10)">10</button>
             </div>
           </div>
         </div>
@@ -1246,8 +1253,10 @@
     };
 
     window._setOcena = function(n) {
+      window._workoutData = window._workoutData || {};
       window._workoutData.ocena = n;
-      document.querySelectorAll('.ocena-btn').forEach(b => {
+      const form = document.getElementById('hf-ocena-row');
+      if (form) form.querySelectorAll('.ocena-btn').forEach(b => {
         b.classList.toggle('active', parseInt(b.dataset.ocena) <= n);
       });
     };
@@ -1277,6 +1286,21 @@
     };
 
     window._nastepnyCwiczenia = n.cwiczenia;
+
+    // Przywróć stan formularza nagłówka jeśli już wypełniony
+    const _wd = window._workoutData;
+    if (_wd && Object.keys(_wd.wyniki || {}).length > 0) {
+      const hForm = document.getElementById('header-form');
+      const waBtn = document.getElementById('wa-send-btn');
+      if (hForm) hForm.style.display = 'block';
+      if (waBtn) waBtn.style.display = 'flex';
+      // Przywróć wartości pól
+      if (_wd.czas)       { const el = document.getElementById('hf-czas');       if(el) el.value = _wd.czas; }
+      if (_wd.kcal)       { const el = document.getElementById('hf-kcal');       if(el) el.value = _wd.kcal; }
+      if (_wd.tetno)      { const el = document.getElementById('hf-tetno');      if(el) el.value = _wd.tetno; }
+      if (_wd.obciazenie) { const el = document.getElementById('hf-obciazenie'); if(el) el.value = _wd.obciazenie; }
+      if (_wd.ocena)      window._setOcena(_wd.ocena);
+    }
   }
 
 
