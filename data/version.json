@@ -1,8 +1,18 @@
 {
-  "v": "2.57",
+  "v": "2.71",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.71",
+      "date": "14.04",
+      "msg": "Prompt aktualizacji — ostatni_prev + nastepny tylko nr/nazwa"
+    },
+    {
+      "v": "2.7",
+      "date": "14.04",
+      "msg": "Auto-progresja: calcProgresja() w JS + ostatni_[typ]_prev — koniec ręcznej oceny"
+    },
     {
       "v": "2.57",
       "date": "14.04",
@@ -42,16 +52,6 @@
       "v": "2.5",
       "date": "09.04",
       "msg": "Force refresh — cache bust"
-    },
-    {
-      "v": "2.43",
-      "date": "07.04",
-      "msg": "UA 07.04 — Landmine 30kg ★, HS Incline →45kg, High Row →80kg, Seated Row →50kg"
-    },
-    {
-      "v": "2.42",
-      "date": "06.04",
-      "msg": "Formularz treningowy inline + wysyłka raportu przez WhatsApp"
     }
   ]
 }

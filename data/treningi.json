@@ -11,63 +11,43 @@
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Front Squat",
-        "progresja": "up",
-        "progresja_uwaga": "09.04: 70kg 4×6 ✅ w zakresie. Poprzedni (02.04): 65kg 4×6 ✅ — wzrost kg = nowe ref. → 72,5kg lub 75kg. Cel: 4×4–6"
+        "nazwa": "Front Squat"
       },
       {
         "nr": "2",
-        "nazwa": "Trap Bar Deadlift",
-        "progresja": "up",
-        "progresja_uwaga": "09.04: 85kg 4×6 ✅ w zakresie. Poprzedni 80kg ✅ — dwie sesje rosnące w zakresie → +2,5kg: 87,5kg. Cel: 4×4–6"
+        "nazwa": "Trap Bar Deadlift"
       },
       {
         "nr": "3",
-        "nazwa": "Hack Squat HS",
-        "progresja": "up",
-        "progresja_uwaga": "09.04: 65kg 4×10 ✅ w zakresie. Utrzymaj lub +5kg → 70kg. Cel: 4×6–10"
+        "nazwa": "Hack Squat HS"
       },
       {
         "nr": "4⚡",
-        "nazwa": "Leg Press (opcjonalny)",
-        "progresja": "new",
-        "progresja_uwaga": "Pominięty 09.04 ⚡ — opcjonalny. Jeśli masz energię i sesja <100 min"
+        "nazwa": "Leg Press (opcjonalny)"
       },
       {
         "nr": "5",
-        "nazwa": "HS Seated Leg Curl",
-        "progresja": "up",
-        "progresja_uwaga": "09.04: 75kg 4×12 ✅ w zakresie. → +5kg: 80kg. Cel: 4×10–12"
+        "nazwa": "HS Seated Leg Curl"
       },
       {
         "nr": "6",
-        "nazwa": "HS Kneeling Leg Curl",
-        "progresja": "up",
-        "progresja_uwaga": "09.04: 20kg 4×12 ✅ w zakresie. → +2,5kg lub następna maszyna. Cel: 4×10–12"
+        "nazwa": "HS Kneeling Leg Curl"
       },
       {
         "nr": "SS7",
-        "nazwa": "SS · Calf Raise (Smith)",
-        "progresja": "same",
-        "progresja_uwaga": "09.04: 60kg 15-15-15-12 — 3/4 w zakresie. Utrzymaj 60kg, cel: 4×15"
+        "nazwa": "SS · Calf Raise (Smith)"
       },
       {
         "nr": "SS8",
-        "nazwa": "SS · Hanging Knee Raise",
-        "progresja": "same",
-        "progresja_uwaga": "09.04: BW 20-20-15-12 — 2/4 w zakresie. Utrzymaj, cel: 4×15"
+        "nazwa": "SS · Hanging Knee Raise"
       },
       {
         "nr": "SS9",
-        "nazwa": "SS · Cable Crunch",
-        "progresja": "same",
-        "progresja_uwaga": "09.04: 3/4 nie w pełnym zakresie. Utrzymaj ciężar, cel: 3×15"
+        "nazwa": "SS · Cable Crunch"
       },
       {
         "nr": "SS10",
-        "nazwa": "SS · Pallof Press",
-        "progresja": "same",
-        "progresja_uwaga": "09.04: 12-12-10-10 — nie w zakresie. Utrzymaj ciężar, cel: 3×12/str"
+        "nazwa": "SS · Pallof Press"
       }
     ]
   },
@@ -2640,7 +2620,7 @@
     "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.   Ławka sztanga:              __ kg × __-__-__-__\n2.   HS Incline Press:           __ kg × __-__-__-__\n3.   Landmine Press:             __ kg × __-__-__\nSS4a. Lateral Raise (chest):     __ kg × __-__-__-__\nSS4b. DB Triceps Ext. (chest):   __ kg × __-__-__-__\n5.   HS High Row:                __ kg × __-__-__-__\n6.   HS Seated Row:              __ kg × __-__-__-__\n7.   Rotation Curl:              __ kg × __-__-__\nSS8a. Cable Triceps (overhead):  __ kg × __-__-__\nSS8b. Face Pull:                 __ kg × __-__-__\n\nWnioski / uwagi:",
     "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.    Podciąganie (asysta):        __-__-__-__-__\n2.    Smith Incline Press:         __ kg × __-__-__\nSS3a. Australian Pull-up:          __-__-__\nSS3b. Dipy:                        __-__-__\n4.    Butterfly:                   __ kg × __-__-__-__\n5.    Cable Crossover:             __ kg × __-__-__\nSS5a. Arnold Press:                __ kg × __-__-__\nSS5b. Seated DB Reverse Fly:       __ kg × __-__-__\n6.    Cable Lateral Raise:         __ kg × __-__-__-__\n7.    Seated Cable Row:            __ kg × __-__-__-__\n8.    Skull Crusher EZ:            __ kg × __-__-__\n9.    Hammer Curl:                 __ kg × __-__-__\n\nWnioski / uwagi:",
     "lower": "Lower [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1. Front Squat:          __ kg × __-__-__-__\n2. Trap Bar Deadlift:    __ kg × __-__-__-__\n3. Hack Squat:           __ kg × __-__-__-__\n4. Leg Press ⚡ (opcja):  __ kg × __-__-__\n5. Seated Leg Curl:      __ kg × __-__-__-__\n6. Kneeling Leg Curl:    __ kg × __-__-__\n7. Calf Raise (SS):      __ kg × __-__-__-__\n8. Cable Crunch (SS):    __ kg × __-__-__\n9. Pallof Press (SS):    __ kg × __-__-__\n\nWnioski / uwagi:",
-    "prompt": "Nowy raport treningowy — zaktualizuj pliki treningi.json + harmonogram.json + version.json + service-worker.js\n\n[WKLEJ RAPORT TUTAJ]\n\n════ ARCHITEKTURA DANYCH — przeczytaj przed analizą ════\n\nSource of truth:\n  plan_c2.json          → serie (liczba), zakresy powt, kolejność ćwiczeń (NIEZMIENNE)\n  treningi.json\n    ostatni_ua/ub/lower → wyniki ostatniego treningu danego typu (kg, wynik, w_zakresie)\n    nastepny            → tylko: tytul, data, badge, progresja per ćwiczenie\n    poprzedni           → pełne dane ostatniego treningu (do wyświetlenia)\n\nPrzy każdym raporcie:\n  1. Nadpisz ostatni_[typ] wynikami z tego raportu\n  2. Dla każdego ćwiczenia oblicz w_zakresie (wszystkie serie >= górny zakres z planu)\n  3. Ustaw nastepny na kolejny trening w rotacji (UA→L→UB→UA...)\n\n════ ZASADA PODWÓJNEJ PROGRESJI ════\n\nProgresja ciężaru TYLKO gdy spełnione OBA warunki:\n  A. Bieżąca sesja: w_zakresie = true (wszystkie serie >= górna granica zakresu)\n  B. Poprzednia sesja tego samego typu: w_zakresie = true PRZY TYM SAMYM ciężarze\n\nSkąd wziąć dane:\n  → ostatni_[typ].cwiczenia[nr].w_zakresie = bieżąca sesja (właśnie nadpisana)\n  → poprzednia sesja = dane[1] w archiwum.progresja_c2.[typ].cwiczenia[].dane\n    (dane[0] = bieżąca, dane[1] = poprzednia — porównaj kg i w_zakresie)\n\nWartości progresja:\n  \"up2\" = ⬆️ oba warunki spełnione + skok ≥5kg lub wyjątkowy wynik\n  \"up\"  = ↑  oba warunki spełnione → +ciężar na następnym treningu\n  \"same\"= →  tylko jeden warunek lub żaden → utrzymaj ciężar\n  \"down\"= ↓  regresja / kontuzja\n  \"warn\"= ⚠️ uwaga na technikę lub ból\n  \"new\" = 🆕 pierwsze wykonanie / kalibracja\n\nWyjątek: pierwsze wykonanie przy danym ciężarze zawsze \"same\" (trzeba potwierdzić)\n\n════ CO ZAKTUALIZOWAĆ W treningi.json ════\n\n1. ostatni_[typ] — nadpisz CAŁOŚĆ wynikami z raportu:\n   format: {\n     \"data\": \"09.04\",\n     \"ocena\": 10,\n     \"cwiczenia\": {\n       \"1\":  { \"kg\": \"70\", \"wynik\": \"6-6-6-6\", \"gorny_zakres\": 6, \"w_zakresie\": true },\n       \"SS7\":{ \"kg\": \"60\", \"wynik\": \"15-15-15-12\", \"gorny_zakres\": 15, \"w_zakresie\": false },\n       ...\n     }\n   }\n   gorny_zakres = górna liczba z zakresu powt w plan_c2 (np. \"4-6\" → 6, \"10-12\" → 12)\n   w_zakresie   = wszystkie serie >= gorny_zakres\n\n2. nastepny — zmień na kolejny trening w rotacji:\n   - tytul, data, badge, badge_color, alert\n   - cwiczenia[]: TYLKO nr, nazwa, progresja, progresja_uwaga (opcjonalnie uwagi)\n   - NIE wpisuj serie ani ciezar — JS pobiera je dynamicznie z plan_c2 i ostatni_[typ]\n   - progresja: oceniaj wg zasady podwójnej progresji (patrz wyżej)\n   - progresja_uwaga: wyjaśnij decyzję (np. \"Pierwsze wykonanie 70kg — czekamy na potwierdzenie\")\n\n3. poprzedni — zastąp danymi z raportu:\n   - tytul, data, czas, kcal, tetno, obciazenie\n   - ocena_liczba (1-10), ocena_tekst\n   - alert_sukces (jeśli rekord/przełom)\n   - cwiczenia[]: nr, nazwa, ciezar, wynik, badge, badge_color, plan\n     badge_color: \"accent2\"=★ | \"green\"=✅ | \"yellow\"=⚠️ | \"gray\"=→\n   - wnioski[]: typ (success/warn/info), ikona, tekst\n\n4. archiwum.historia_c2 — dodaj na początku:\n   - data, typ (UA|UB|L), typ_color, ocena, kcal, czas, wyniki\n\n5. archiwum.progresja_c2.[ua|ub|lower]:\n   - sesje[] — dodaj datę na początku\n   - cwiczenia[].dane — dodaj na początku: {\"v\":\"70×6-6-6-6\",\"c\":\"accent2\"}\n     c: accent2=★ | green=↑ | text3=→ | red=↓ | yellow=⚠️\n\n════ CO ZAKTUALIZOWAĆ W harmonogram.json ════\n\n6. bilans [typ].zrobione +1\n   sesje[] — dodaj np. \"09.04 L\"\n   plan[] — ukonczone:true dla tej daty\n\n════ CO ZAKTUALIZOWAĆ W version.json + service-worker.js ════\n\n7. version.json: podbij v, updated, dodaj changelog[]\n8. service-worker.js: CACHE_VERSION = mtracker-v{numer}\n\n════ RENDER — struktura pól (nie zmieniaj) ════\n\nnastepny.cwiczenia[]: nr, nazwa, progresja, progresja_uwaga, uwagi\n  → serie: z plan_c2[typ].cwiczenia[nr].serie (integer)\n  → ciezar: z ostatni_[typ].cwiczenia[nr].kg\n  → JS obsługuje to automatycznie\n\npoprzedni: nr, nazwa, ciezar, wynik, badge, badge_color, plan\nhistoria: data, typ, ocena, kcal, czas, wyniki\nprogresja: cwiczenia[].dane[] = {v, c, i(opcjonalnie)}\n",
+    "prompt": "Nowy raport treningowy — zaktualizuj pliki treningi.json + harmonogram.json + version.json + service-worker.js\n\n[WKLEJ RAPORT TUTAJ]\n\n════ ARCHITEKTURA DANYCH — przeczytaj przed analizą ════\n\nSource of truth:\n  plan_c2.json          → serie (liczba), zakresy powt, kolejność ćwiczeń (NIEZMIENNE)\n  treningi.json\n    ostatni_[typ]       → wyniki ostatniego treningu danego typu (kg, wynik, w_zakresie)\n    ostatni_[typ]_prev  → wyniki przedostatniego treningu tego samego typu\n    nastepny            → tytul, data, badge — cwiczenia: TYLKO nr i nazwa\n    poprzedni           → pełne dane ostatniego treningu (do wyświetlenia)\n\n════ ZASADA PODWÓJNEJ PROGRESJI ════\n\nProgresja jest obliczana AUTOMATYCZNIE przez JS (funkcja calcProgresja).\nTwoja rola: dostarczyć poprawne dane w ostatni_[typ] i ostatni_[typ]_prev.\n\nAlgorytm JS (nie musisz go stosować ręcznie — tylko dostarcz dane):\n  - up   = ostatni i prev: ten sam kg, oba w_zakresie = true\n  - same = inny kg niż prev, LUB ostatni w_zakresie = false, LUB brak prev\n  - new  = brak danych w ostatni\n\n════ CO ZAKTUALIZOWAĆ W treningi.json ════\n\n1. ostatni_[typ]_prev — PRZED nadpisaniem ostatni_[typ]:\n   Skopiuj CAŁOŚĆ obecnego ostatni_[typ] → ostatni_[typ]_prev\n\n2. ostatni_[typ] — nadpisz wynikami z raportu:\n   format: {\n     \"data\": \"14.04\",\n     \"ocena\": 8,\n     \"cwiczenia\": {\n       \"1\":   { \"kg\": \"70\", \"wynik\": \"6-6-6-5\", \"gorny_zakres\": 6, \"w_zakresie\": false },\n       \"SS7\": { \"kg\": \"60\", \"wynik\": \"15-15-15-12\", \"gorny_zakres\": 15, \"w_zakresie\": false }\n     }\n   }\n   gorny_zakres = górna liczba z zakresu powt w plan_c2 (np. \"4–6\" → 6, \"10–12\" → 12)\n   w_zakresie   = true TYLKO gdy WSZYSTKIE serie >= gorny_zakres\n\n3. nastepny — kolejny trening w rotacji (UA→L→UB→UA…):\n   - tytul, data, badge, badge_color, alert\n   - cwiczenia[]: TYLKO nr i nazwa — nic więcej!\n     Przykład: [{ \"nr\": \"1\", \"nazwa\": \"Front Squat\" }, ...]\n   - NIE wpisuj progresja, progresja_uwaga, serie, ciezar — JS pobiera automatycznie\n\n4. poprzedni — zastąp danymi z raportu:\n   - tytul, data, czas, kcal, tetno, obciazenie\n   - ocena_liczba (1–10), ocena_tekst\n   - alert_sukces (jeśli rekord/przełom)\n   - cwiczenia[]: nr, nazwa, ciezar, wynik, badge, badge_color, plan\n     badge_color: \"accent2\"=★ | \"green\"=✅ | \"yellow\"=⚠️ | \"gray\"=→\n   - wnioski[]: typ (success/warn/info), ikona, tekst\n\n5. archiwum.historia_c2 — dodaj na początku:\n   { data, typ (UA|UB|L), typ_color, ocena, kcal, czas, wyniki }\n\n6. archiwum.progresja_c2.[ua|ub|lower]:\n   - sesje[]        — dodaj datę na początku\n   - cwiczenia[].dane — dodaj na początku: {\"v\":\"70×6-6-6-6\",\"c\":\"accent2\"}\n     c: accent2=★ | green=↑ | text3=→ | red=↓ | yellow=⚠️\n\n════ CO ZAKTUALIZOWAĆ W harmonogram.json ════\n\n7. bilans [typ].zrobione +1\n   sesje[]  — dodaj np. \"14.04 L\" na początku\n   plan[]   — ukonczone: true dla tej daty\n\n════ CO ZAKTUALIZOWAĆ W version.json + service-worker.js ════\n\n8. version.json: podbij v o 0.01, zaktualizuj updated, dodaj wpis w changelog[]\n9. service-worker.js: CACHE_VERSION = mtracker-v{nowy_numer}",
     "ebl": "EB+L [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___\n(Barki + Lędźwie · extra · min. 1 dzień buforu przed UA/UB/Lower)\n\n1. Face Pull High [3×15–20]: __ kg×__-__-__\n2. Cable Reverse Fly jednorącz [3×15–20/str]: __ kg×__-__-__\n3. Cable External Rotation (rotatory) [3×15–20/str]: __ kg×__-__-__\n4. Crossbody Cable Lateral Raise [3×15–20/str]: __ kg×__-__-__\n5. Cable Pull-Through [3×15–20]: __ kg×__-__-__\n6. Seated Cable Good Morning [3×15–20]: __ kg×__-__-__\n7. TRX Fallout [3×15–20]: BW×__-__-__\n\nUwagi: _____________________________________________",
     "erb": "ER+B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___\n(Ramiona + Brzuch · extra · min. 1 dzień buforu przed UA/UB)\n\nSS1a. HS Biceps Curl [3×10–12]: __ kg×__-__-__\nSS1b. HS Triceps Extension [3×10–12]: __ kg×__-__-__\nSS2a. Cable Curl straight bar [3×12–15]: __ kg×__-__-__\nSS2b. Tricep Pushdown D-handle [3×12–15]: __ kg×__-__-__\n3. HS Abdominal Crunch [3×12–15]: __ kg×__-__-__\n4. Rotary Torso Machine [3×12–15/str]: __ kg×__-__-__\n5. TRX Knee Raise [3×12–15]: BW×__-__-__\n\nUwagi: _____________________________________________",
     "cardio": "Cardio [DATA] | Czas: ___ | Kcal: ___ | Tętno śr.: ___\nTyp: [ ] Rower  [ ] Orbitrek  [ ] Bieżnia  [ ] Inne: ___\n\nIntensywność: [ ] Lekka (tętno <120)  [ ] Umiarkowana (120–140)  [ ] Interwały\nCzas ciągły: ___ min  |  Dystans/opór: ___\n\nUwagi: _____________________________________________"
@@ -2857,6 +2837,149 @@
         "wynik": "8-8-8",
         "gorny_zakres": 12,
         "w_zakresie": false
+      }
+    }
+  },
+  "ostatni_lower_prev": {
+    "data": "02.04",
+    "cwiczenia": {
+      "1": {
+        "kg": "65",
+        "w_zakresie": true
+      },
+      "2": {
+        "kg": "80",
+        "w_zakresie": null
+      },
+      "3": {
+        "kg": "60",
+        "w_zakresie": null
+      },
+      "4⚡": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "5": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "6": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "SS7": {
+        "kg": "50",
+        "w_zakresie": true
+      },
+      "SS8": {
+        "kg": "BW",
+        "w_zakresie": null
+      },
+      "SS9": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "SS10": {
+        "kg": "—",
+        "w_zakresie": null
+      }
+    }
+  },
+  "ostatni_ua_prev": {
+    "data": "31.03",
+    "cwiczenia": {
+      "1": {
+        "kg": "72.5",
+        "w_zakresie": false
+      },
+      "2": {
+        "kg": "40",
+        "w_zakresie": null
+      },
+      "3": {
+        "kg": "25",
+        "w_zakresie": true
+      },
+      "4": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "5": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "6": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "7": {
+        "kg": "57",
+        "w_zakresie": null
+      },
+      "8": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "9": {
+        "kg": "—",
+        "w_zakresie": null
+      },
+      "10": {
+        "kg": "—",
+        "w_zakresie": null
+      }
+    }
+  },
+  "ostatni_ub_prev": {
+    "data": "05.04",
+    "cwiczenia": {
+      "1": {
+        "kg": "-12.5",
+        "w_zakresie": null
+      },
+      "2": {
+        "kg": "40",
+        "w_zakresie": null
+      },
+      "SS3a": {
+        "kg": "BW",
+        "w_zakresie": null
+      },
+      "SS3b": {
+        "kg": "BW",
+        "w_zakresie": null
+      },
+      "SS4a": {
+        "kg": "68",
+        "w_zakresie": null
+      },
+      "SS4b": {
+        "kg": "59",
+        "w_zakresie": null
+      },
+      "7": {
+        "kg": "10",
+        "w_zakresie": null
+      },
+      "8": {
+        "kg": "15",
+        "w_zakresie": null
+      },
+      "9": {
+        "kg": "7.5",
+        "w_zakresie": null
+      },
+      "10": {
+        "kg": "35",
+        "w_zakresie": null
+      },
+      "11": {
+        "kg": "20",
+        "w_zakresie": null
+      },
+      "12": {
+        "kg": "15",
+        "w_zakresie": null
       }
     }
   }
