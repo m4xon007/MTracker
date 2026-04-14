@@ -306,7 +306,7 @@
   <h2>💪 Treningi</h2>
   <div id="tr-loading" style="color:var(--text3);font-size:13px;padding:20px 0">Ładowanie danych treningów…</div>
   <div id="tr-content" style="display:none">
-    <div class="tab-row">
+    <div class="tab-row" style="flex-wrap:wrap;gap:6px">
       <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
       <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
       <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
@@ -355,6 +355,13 @@
         <div style="padding-top:8px" id="tr-prog-c1"></div>
       </details>
     </div>
+    <div id="t-szablony" class="tab-panel">
+      <div class="alert alert-info" style="margin-bottom:16px">
+        <span class="alert-icon">💡</span>
+        <span>Skopiuj prompt, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>treningi.json</strong>.</span>
+      </div>
+      <div id="tr-szablony-c2"></div>
+    </div>
   </div>
 </section>
 
@@ -387,13 +394,6 @@
         <div id="pc2-erb"      class="tab-panel"></div>
 
       </div>
-    </div>
-    <div id="t-szablony" class="tab-panel">
-      <div class="alert alert-info" style="margin-bottom:16px">
-        <span class="alert-icon">💡</span>
-        <span>Skopiuj prompt, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
-      </div>
-      <div id="tr-szablony-c2"></div>
     </div>
   </div>
 
