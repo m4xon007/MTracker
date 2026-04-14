@@ -977,8 +977,10 @@
 
   function renderTreningi(data, planData) {
     window._progresjaC2 = data.archiwum?.progresja_c2 || {};
-    const _typMapRT = { 'Upper A': data.ostatni_ua, 'Upper B': data.ostatni_ub, 'Lower': data.ostatni_lower };
-    window._ostatniTyp = _typMapRT[data.nastepny?.tytul] || {};
+    const _typMapRT   = { 'Upper A': data.ostatni_ua,      'Upper B': data.ostatni_ub,      'Lower': data.ostatni_lower };
+    const _typMapPrev = { 'Upper A': data.ostatni_ua_prev, 'Upper B': data.ostatni_ub_prev, 'Lower': data.ostatni_lower_prev };
+    window._ostatniTyp = _typMapRT[data.nastepny?.tytul]   || {};
+    window._prevTyp    = _typMapPrev[data.nastepny?.tytul] || {};
     renderNastepny(data.nastepny, planData);
     renderPoprzedni(data.poprzedni);
     renderArchiwum(data.archiwum);
@@ -1033,10 +1035,51 @@
     const planMap = {};
     planCwiczenia.forEach(c => { planMap[String(c.nr)] = c; });
 
-    // ── Source of truth: ostatni_[typ] dla ciężarów ───────────────
-    // Ustawiane przez renderTreningi jako window._ostatniTyp
-    const ostatni = window._ostatniTyp || {};
-    const ostatniCw = ostatni.cwiczenia || {};
+    // ── Source of truth: ostatni_[typ] i prev dla progresji ────────
+    const ostatni   = window._ostatniTyp || {};
+    const ostatniCw = ostatni.cwiczenia  || {};
+    const prev      = window._prevTyp    || {};
+    const prevCw    = prev.cwiczenia     || {};
+
+    // ── calcProgresja — deterministyczna podwójna progresja ──────────
+    // Zasada: progresja ciężaru TYLKO gdy ostatni i prev mają ten sam kg
+    //         ORAZ oba w_zakresie === true.
+    //         Pierwsze wykonanie przy nowym ciężarze (brak prev lub inny kg) → always "same".
+    function calcProgresja(nr) {
+      const nrStr = String(nr);
+      const last  = ostatniCw[nrStr];
+      const prv   = prevCw[nrStr];
+
+      if (!last || last.kg === '—' || last.kg == null) return 'new';
+
+      const lastInRange = last.w_zakresie === true;
+      const sameKg      = prv && String(prv.kg) === String(last.kg);
+      const prevInRange = prv && prv.w_zakresie === true;
+
+      if (!lastInRange)              return 'same'; // nie osiągnął zakresu
+      if (!sameKg || !prevInRange)   return 'same'; // pierwsze wykonanie lub prev nie w zakresie
+      return 'up';                                   // obie sesje ✅ przy tym samym kg → progresja
+    }
+
+    function calcProgresjaUwaga(nr, progresja) {
+      const nrStr = String(nr);
+      const last  = ostatniCw[nrStr];
+      const prv   = prevCw[nrStr];
+      if (!last || last.kg === '—') return '';
+      const kg    = last.kg + (String(last.kg).includes('kg') ? '' : ' kg');
+      const wynik = last.wynik || '';
+      if (progresja === 'up') {
+        return `${prv?.data||''} + ${last.data||ostatni.data||''}: ${kg} oba ✅ → zwiększ ciężar`;
+      }
+      if (!last.w_zakresie) {
+        return `Poprzedni ${kg} ${wynik} — nie w górnym zakresie. Utrzymaj`;
+      }
+      const sameKg = prv && String(prv.kg) === String(last.kg);
+      if (!sameKg) {
+        return `Poprzedni ${kg} ${wynik} ✅ — pierwsze wykonanie. Utrzymaj, czekamy na potwierdzenie`;
+      }
+      return `Poprzedni ${kg} ${wynik} ✅ — utrzymaj, czekamy na potwierdzenie`;
+    }
 
     // ── Pomocniki ─────────────────────────────────────────────────
     function getSerie(c) {
@@ -1069,7 +1112,11 @@
 
     // ── Buduj wiersze ─────────────────────────────────────────────
     const rows = n.cwiczenia.map((c) => {
-      const prog     = PROG_MAP[c.progresja] || PROG_MAP['same'];
+      const _progKey  = c.progresja === 'warn' || c.progresja === 'down'
+                          ? c.progresja                  // zachowaj ręczne warn/down z JSON
+                          : calcProgresja(c.nr);         // auto: up / same / new
+      const _progUwaga = c.progresja_uwaga || calcProgresjaUwaga(c.nr, _progKey);
+      const prog       = PROG_MAP[_progKey] || PROG_MAP['same'];
       const nrStr    = String(c.nr);
       const formId   = 'wf-' + nrStr.replace(/[^a-z0-9]/gi,'');
       const numSets  = getSerie(c);
@@ -1101,10 +1148,10 @@
           </div>
         </div>`;
 
-      const hasHint = c.uwagi || c.progresja_uwaga;
+      const hasHint = c.uwagi || _progUwaga;
       const hintTxt = [
-        c.uwagi           ? `💬 ${c.uwagi}` : '',
-        c.progresja_uwaga ? `📈 ${c.progresja_uwaga}` : '',
+        c.uwagi    ? `💬 ${c.uwagi}` : '',
+        _progUwaga ? `📈 ${_progUwaga}` : '',
       ].filter(Boolean).join('<br>');
       const arrow = hasHint ? ' <span style="color:var(--text3);font-size:9px">▾</span>' : '';
 
