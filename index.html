@@ -310,6 +310,7 @@
       <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
       <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
       <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)">📝 Szablony</button>
     </div>
     <div id="t-nastepny" class="tab-panel active">
       <div id="tr-nastepny-card"></div>
@@ -376,7 +377,7 @@
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-lower',this)">Lower</button>
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-ebl',this)">🔵 EB+L</button>
         <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-erb',this)">🟠 ER+B</button>
-        <button class="tab-btn" onclick="switchTab('plan-c2-inner','pc2-szablony',this)">📝 Szablony</button>
+
       </div>
       <div id="plan-c2-inner">
         <div id="pc2-ua"       class="tab-panel active"></div>
@@ -384,14 +385,15 @@
         <div id="pc2-lower"    class="tab-panel"></div>
         <div id="pc2-ebl"      class="tab-panel"></div>
         <div id="pc2-erb"      class="tab-panel"></div>
-        <div id="pc2-szablony" class="tab-panel">
-          <div class="alert alert-info" style="margin-bottom:16px">
-            <span class="alert-icon">💡</span>
-            <span>Skopiuj prompt, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
-          </div>
-          <div id="tr-szablony-c2"></div>
-        </div>
+
       </div>
+    </div>
+    <div id="t-szablony" class="tab-panel">
+      <div class="alert alert-info" style="margin-bottom:16px">
+        <span class="alert-icon">💡</span>
+        <span>Skopiuj prompt, wklej raport treningowy i wyślij do Claude — zaktualizuje <strong>wyłącznie treningi.json</strong>.</span>
+      </div>
+      <div id="tr-szablony-c2"></div>
     </div>
   </div>
 
@@ -986,7 +988,7 @@
     renderArchiwum(data.archiwum);
     document.getElementById('tr-loading').style.display='none';
     document.getElementById('tr-content').style.display='block';
-    ['t-nastepny','t-poprzedni','t-archiwum'].forEach((id, i) => {
+    ['t-nastepny','t-poprzedni','t-archiwum','t-szablony'].forEach((id, i) => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', i === 0);
     });

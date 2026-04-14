@@ -1,8 +1,13 @@
 {
-  "v": "2.71",
+  "v": "2.72",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.72",
+      "date": "14.04",
+      "msg": "Szablony przeniesione z Plan→Cykl2 do Treningi"
+    },
     {
       "v": "2.71",
       "date": "14.04",
@@ -47,11 +52,6 @@
       "v": "2.51",
       "date": "09.04",
       "msg": "Serie i ciężar dynamicznie z plan_c2.json i progresja_c2 — koniec hardcode"
-    },
-    {
-      "v": "2.5",
-      "date": "09.04",
-      "msg": "Force refresh — cache bust"
     }
   ]
 }
