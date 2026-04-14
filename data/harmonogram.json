@@ -7,7 +7,7 @@
     "opis": "8 tyg · Mini cut · start 31.03",
     "plan_wt_czw_nd": true,
     "deload": "18–22.05.2026",
-    "checkpoint": "26.05.2026",
+    "checkpoint": "01.06.2026",
     "bilans": {
       "UA": {
         "zrobione": 2,
@@ -111,38 +111,44 @@
         "ukonczone": false
       },
       {
-        "data": "2026-05-04",
+        "data": "2026-05-01",
         "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-04",
+        "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-06",
-        "typ": "UA",
+        "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-08",
-        "typ": "L",
-        "deload": false,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-11",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-13",
+        "data": "2026-05-11",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-15",
+        "data": "2026-05-13",
         "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-15",
+        "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
@@ -193,7 +199,7 @@
       "L",
       "UB"
     ],
-    "uwaga_harmonogram": "Od 20.04.2026 — Poniedziałek, Środa, Piątek. Deload: 18–22.05.2026"
+    "uwaga_harmonogram": "T1–T3: Wt/Czw/Nd → od T4 (20.04): Pn/Śr/Pt. Deload T8: 18–22.05.2026"
   },
   "cykl1": {
     "label": "Cykl 1 — Styczeń–Marzec 2026",

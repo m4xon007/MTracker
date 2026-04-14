@@ -1015,9 +1015,7 @@
 
   function renderNastepny(n, planData) {
     const el = document.getElementById('tr-nastepny-card');
-    const alertHtml = n.alert
-      ? `<div class="alert alert-info" style="margin-top:12px"><span class="alert-icon">${n.alert.ikona}</span><span>${n.alert.tekst}</span></div>`
-      : '';
+    const alertHtml = '';
 
     const PROG_MAP = {
       'up2':  { icon:'⬆️', color:'var(--accent2)', tip:'Progresja — zwiększ ciężar' },
@@ -1821,7 +1819,7 @@
         cells.push({ day, dateStr, sesja: planMap[dateStr] || null });
       }
       while (cells.length % 7 !== 0) cells.push(null);
-      const cyklStart = new Date('2026-03-31');
+      const cyklStart = new Date('2026-03-30'); // Pn tygodnia T1 (start cyklu 31.03)
       let rows = '';
       for (let i = 0; i < cells.length; i += 7) {
         const week = cells.slice(i, i+7);

@@ -1,8 +1,23 @@
 {
-  "v": "2.76",
+  "v": "2.79",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.79",
+      "date": "14.04",
+      "msg": "Harmonogram fix: cyklStart 30.03 | T8=deload 18–22.05 | T9=po deloadzie"
+    },
+    {
+      "v": "2.78",
+      "date": "14.04",
+      "msg": "Harmonogram: deload T6 (18–22.05 Pn/Śr/Pt) | cyklStart fix"
+    },
+    {
+      "v": "2.77",
+      "date": "14.04",
+      "msg": "Nastepny — usunięto zbędny alert/komentarz"
+    },
     {
       "v": "2.76",
       "date": "14.04",
@@ -37,21 +52,6 @@
       "v": "2.7",
       "date": "14.04",
       "msg": "Auto-progresja: calcProgresja() w JS + ostatni_[typ]_prev — koniec ręcznej oceny"
-    },
-    {
-      "v": "2.57",
-      "date": "14.04",
-      "msg": "Harmonogram swap: 14.04 L + 16.04 UB | nastepny → Lower"
-    },
-    {
-      "v": "2.56",
-      "date": "12.04",
-      "msg": "Fix formularz nagłówka — przyciski oceny, oninput, przywracanie stanu"
-    },
-    {
-      "v": "2.55",
-      "date": "12.04",
-      "msg": "Formularz nagłówka treningu — czas, kcal, tętno, obciążenie, ocena"
     }
   ]
 }
