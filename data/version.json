@@ -1,8 +1,13 @@
 {
-  "v": "2.73",
+  "v": "2.74",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.74",
+      "date": "14.04",
+      "msg": "Tab-row Treningi — jedna linia (flex:1)"
+    },
     {
       "v": "2.73",
       "date": "14.04",
@@ -47,11 +52,6 @@
       "v": "2.53",
       "date": "09.04",
       "msg": "Architektura: ostatni_[typ] + podwójna progresja + serie z plan_c2"
-    },
-    {
-      "v": "2.52",
-      "date": "09.04",
-      "msg": "Lower 09.04 — Front Squat 70kg ★, Trap Bar 85kg ★, Kneeling Curl 20kg ★, 10/10"
     }
   ]
 }

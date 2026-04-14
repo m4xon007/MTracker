@@ -306,11 +306,11 @@
   <h2>💪 Treningi</h2>
   <div id="tr-loading" style="color:var(--text3);font-size:13px;padding:20px 0">Ładowanie danych treningów…</div>
   <div id="tr-content" style="display:none">
-    <div class="tab-row" style="flex-wrap:wrap;gap:6px">
-      <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)">▶ Następny</button>
-      <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)">⏮ Poprzedni</button>
-      <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)">📋 Archiwum</button>
-      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)">📝 Szablony</button>
+    <div class="tab-row" style="flex-wrap:nowrap;gap:4px">
+      <button class="tab-btn active" onclick="switchTab('tr-content','t-nastepny',this)" style="flex:1;text-align:center;padding:5px 4px">▶ Następny</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-poprzedni',this)" style="flex:1;text-align:center;padding:5px 4px">⏮ Poprzedni</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-archiwum',this)" style="flex:1;text-align:center;padding:5px 4px">📋 Archiwum</button>
+      <button class="tab-btn" onclick="switchTab('tr-content','t-szablony',this)" style="flex:1;text-align:center;padding:5px 4px">📝 Szablony</button>
     </div>
     <div id="t-nastepny" class="tab-panel active">
       <div id="tr-nastepny-card"></div>
