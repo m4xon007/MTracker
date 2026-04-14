@@ -1,8 +1,13 @@
 {
-  "v": "2.74",
+  "v": "2.75",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.75",
+      "date": "14.04",
+      "msg": "Lower 14.04 — Front Squat+Trap Bar ★★ podwójna progresja odblokowana"
+    },
     {
       "v": "2.74",
       "date": "14.04",
@@ -47,11 +52,6 @@
       "v": "2.54",
       "date": "12.04",
       "msg": "UB 12.04 — kalibracja nowej siłowni | plan UB zaktualizowany | harmonogram Pn/Śr/Pt od 20.04"
-    },
-    {
-      "v": "2.53",
-      "date": "09.04",
-      "msg": "Architektura: ostatni_[typ] + podwójna progresja + serie z plan_c2"
     }
   ]
 }
