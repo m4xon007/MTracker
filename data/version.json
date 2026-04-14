@@ -1,8 +1,13 @@
 {
-  "v": "2.56",
-  "updated": "2026-04-12",
+  "v": "2.57",
+  "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.57",
+      "date": "14.04",
+      "msg": "Harmonogram swap: 14.04 L + 16.04 UB | nastepny → Lower"
+    },
     {
       "v": "2.56",
       "date": "12.04",
@@ -47,11 +52,6 @@
       "v": "2.42",
       "date": "06.04",
       "msg": "Formularz treningowy inline + wysyłka raportu przez WhatsApp"
-    },
-    {
-      "v": "2.41",
-      "date": "06.04",
-      "msg": "Szablony UA/UB/Lower — czysty formularz, progresja w nastepny[], nowy prompt"
     }
   ]
 }

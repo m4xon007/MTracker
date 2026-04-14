@@ -1,73 +1,73 @@
 {
   "nastepny": {
-    "tytul": "Upper A",
+    "tytul": "Lower",
     "data": "Wt 14.04.2026",
-    "badge": "UA",
+    "badge": "L",
     "badge_color": "accent",
     "alert": {
       "ikona": "💡",
-      "tekst": "Ostatni UA przed zmianą harmonogramu na Pn/Śr/Pt (od 20.04). Ławka 72,5kg — poprzedni 75kg nieudany. Wróć do prawidłowego kroku +2,5kg."
+      "tekst": "Swap z UA — dziś nogi. Big 4 progresja: Front Squat → 72,5kg, Trap Bar → 87,5kg. ⚠️ Lędźwie >3/10 przy Trap Bar → Leg Press."
     },
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Ławka sztanga",
-        "progresja": "same",
-        "progresja_uwaga": "Poprzedni 75kg 5-5-5-4-3 ⚠️ — wróć do 72,5kg (+2,5kg od referencyjnych 70kg). Kryterium: 2 sesje z 4×7-8 → +2,5kg"
+        "nazwa": "Front Squat",
+        "progresja": "up",
+        "progresja_uwaga": "09.04: 70kg 4×6 ✅ w zakresie. Poprzedni (02.04): 65kg 4×6 ✅ — wzrost kg = nowe ref. → 72,5kg lub 75kg. Cel: 4×4–6"
       },
       {
         "nr": "2",
-        "nazwa": "HS ISO Lateral Incline Press",
-        "progresja": "same",
-        "progresja_uwaga": "Poprzedni 40kg 10-10-10-8 — nie w górnym zakresie. Utrzymaj 40kg"
+        "nazwa": "Trap Bar Deadlift",
+        "progresja": "up",
+        "progresja_uwaga": "09.04: 85kg 4×6 ✅ w zakresie. Poprzedni 80kg ✅ — dwie sesje rosnące w zakresie → +2,5kg: 87,5kg. Cel: 4×4–6"
       },
       {
         "nr": "3",
-        "nazwa": "Half-Kneeling Landmine Press",
-        "progresja": "same",
-        "progresja_uwaga": "Poprzedni 30kg 12-10-10 — 1/3 w górnym zakresie. Utrzymaj 30kg, cel: 3×12"
+        "nazwa": "Hack Squat HS",
+        "progresja": "up",
+        "progresja_uwaga": "09.04: 65kg 4×10 ✅ w zakresie. Utrzymaj lub +5kg → 70kg. Cel: 4×6–10"
       },
       {
-        "nr": "4",
-        "nazwa": "Chest Supported Lateral Raise",
-        "progresja": "same",
-        "progresja_uwaga": "Poprzedni 6kg 15-15-12-12 — 2/4 w górnym zakresie. Utrzymaj 6kg, cel: 4×15"
+        "nr": "4⚡",
+        "nazwa": "Leg Press (opcjonalny)",
+        "progresja": "new",
+        "progresja_uwaga": "Pominięty 09.04 ⚡ — opcjonalny. Jeśli masz energię i sesja <100 min"
       },
       {
         "nr": "5",
-        "nazwa": "DB Triceps Ext. (chest supp.)",
-        "progresja": "new",
-        "progresja_uwaga": "Poprzedni pominięte ⚠️ — wykonaj wszystkie 4 serie. Start 8kg (lub powróć do 20kg z 30.03)"
+        "nazwa": "HS Seated Leg Curl",
+        "progresja": "up",
+        "progresja_uwaga": "09.04: 75kg 4×12 ✅ w zakresie. → +5kg: 80kg. Cel: 4×10–12"
       },
       {
         "nr": "6",
-        "nazwa": "HS ISO Lateral High Row",
-        "progresja": "same",
-        "progresja_uwaga": "Poprzedni 75kg 4×10 ✅ — pierwsze wykonanie. Utrzymaj 75kg, czekamy na potwierdzenie → 80kg"
+        "nazwa": "HS Kneeling Leg Curl",
+        "progresja": "up",
+        "progresja_uwaga": "09.04: 20kg 4×12 ✅ w zakresie. → +2,5kg lub następna maszyna. Cel: 4×10–12"
       },
       {
-        "nr": "7",
-        "nazwa": "HS Select Seated Row",
+        "nr": "SS7",
+        "nazwa": "SS · Calf Raise (Smith)",
         "progresja": "same",
-        "progresja_uwaga": "Poprzedni 47kg 3×10 — pierwsze wykonanie. Utrzymaj 47kg"
+        "progresja_uwaga": "09.04: 60kg 15-15-15-12 — 3/4 w zakresie. Utrzymaj 60kg, cel: 4×15"
       },
       {
-        "nr": "8",
-        "nazwa": "Rotation Curl",
+        "nr": "SS8",
+        "nazwa": "SS · Hanging Knee Raise",
         "progresja": "same",
-        "progresja_uwaga": "Poprzedni 20kg 9-9-8 — nie w górnym zakresie. Utrzymaj 20kg, cel: 3×10"
+        "progresja_uwaga": "09.04: BW 20-20-15-12 — 2/4 w zakresie. Utrzymaj, cel: 4×15"
       },
       {
-        "nr": "9",
-        "nazwa": "SS · Cable Triceps (overhead)",
+        "nr": "SS9",
+        "nazwa": "SS · Cable Crunch",
         "progresja": "same",
-        "progresja_uwaga": "Poprzedni 21,5kg 10-10-9 — nie w górnym zakresie. Utrzymaj"
+        "progresja_uwaga": "09.04: 3/4 nie w pełnym zakresie. Utrzymaj ciężar, cel: 3×15"
       },
       {
-        "nr": "10",
-        "nazwa": "SS · Face Pull",
+        "nr": "SS10",
+        "nazwa": "SS · Pallof Press",
         "progresja": "same",
-        "progresja_uwaga": "Poprzedni 15kg 15-15-12 — 2/3 w górnym zakresie. Utrzymaj 15kg"
+        "progresja_uwaga": "09.04: 12-12-10-10 — nie w zakresie. Utrzymaj ciężar, cel: 3×12/str"
       }
     ]
   },

@@ -69,13 +69,13 @@
       },
       {
         "data": "2026-04-14",
-        "typ": "UA",
+        "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-04-16",
-        "typ": "L",
+        "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
