@@ -6,7 +6,7 @@
     "label": "Cykl 2 — Kwiecień–Maj 2026",
     "opis": "8 tyg · Mini cut · start 31.03",
     "plan_wt_czw_nd": true,
-    "deload": "19–25.05.2026",
+    "deload": "18–22.05.2026",
     "checkpoint": "26.05.2026",
     "bilans": {
       "UA": {
@@ -81,12 +81,6 @@
         "ukonczone": false
       },
       {
-        "data": "2026-04-19",
-        "typ": "UB",
-        "deload": false,
-        "ukonczone": false
-      },
-      {
         "data": "2026-04-20",
         "typ": "UA",
         "deload": false,
@@ -117,85 +111,73 @@
         "ukonczone": false
       },
       {
-        "data": "2026-05-01",
-        "typ": "UB",
-        "deload": false,
-        "ukonczone": false
-      },
-      {
         "data": "2026-05-04",
-        "typ": "UA",
+        "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-06",
-        "typ": "L",
+        "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-08",
-        "typ": "UB",
+        "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-11",
-        "typ": "UA",
-        "deload": false,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-13",
-        "typ": "L",
-        "deload": false,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-15",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-18",
+        "data": "2026-05-13",
         "typ": "UA",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-05-19",
-        "typ": "D·UA",
-        "deload": true,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-21",
-        "typ": "D·L",
-        "deload": true,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-23",
-        "typ": "D·UB",
-        "deload": true,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-27",
-        "typ": "UA",
-        "deload": false,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-05-29",
+        "data": "2026-05-15",
         "typ": "L",
         "deload": false,
         "ukonczone": false
       },
       {
-        "data": "2026-06-01",
+        "data": "2026-05-18",
+        "typ": "D·UA",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-20",
+        "typ": "D·L",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-22",
+        "typ": "D·UB",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-25",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-27",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-29",
         "typ": "UB",
         "deload": false,
         "ukonczone": false
@@ -211,7 +193,7 @@
       "L",
       "UB"
     ],
-    "uwaga_harmonogram": "Od 20.04.2026 — Poniedziałek, Środa, Piątek"
+    "uwaga_harmonogram": "Od 20.04.2026 — Poniedziałek, Środa, Piątek. Deload: 18–22.05.2026"
   },
   "cykl1": {
     "label": "Cykl 1 — Styczeń–Marzec 2026",

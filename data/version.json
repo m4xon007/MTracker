@@ -1,8 +1,13 @@
 {
-  "v": "2.75",
+  "v": "2.76",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.76",
+      "date": "14.04",
+      "msg": "Plan/Dieta tabs jedna linia | Harmonogram months details | deload fix Pn/Śr/Pt | brak 19.04"
+    },
     {
       "v": "2.75",
       "date": "14.04",
@@ -47,11 +52,6 @@
       "v": "2.55",
       "date": "12.04",
       "msg": "Formularz nagłówka treningu — czas, kcal, tętno, obciążenie, ocena"
-    },
-    {
-      "v": "2.54",
-      "date": "12.04",
-      "msg": "UB 12.04 — kalibracja nowej siłowni | plan UB zaktualizowany | harmonogram Pn/Śr/Pt od 20.04"
     }
   ]
 }

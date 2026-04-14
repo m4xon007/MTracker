@@ -368,11 +368,11 @@
 <!-- ═══ PLAN ══════════════════════════════════════════════════════ -->
 <section id="plan">
   <h2>🏋️ Plan Treningowy</h2>
-  <div class="tab-row">
-    <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)">🆕 Cykl 2</button>
-    <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)">📦 Cykl 1 (archiwum)</button>
-    <button class="tab-btn" onclick="switchTab('plan','p-core',this)">🏠 Core</button>
-    <button class="tab-btn" onclick="switchTab('plan','p-rozgrzewka',this)">🔥 Rozgrzewka</button>
+  <div class="tab-row" style="flex-wrap:nowrap;gap:4px">
+    <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)" style="flex:1;text-align:center;padding:5px 4px">🆕 C2</button>
+    <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)" style="flex:1;text-align:center;padding:5px 4px">📦 C1</button>
+    <button class="tab-btn" onclick="switchTab('plan','p-core',this)" style="flex:1;text-align:center;padding:5px 4px">🏠 Core</button>
+    <button class="tab-btn" onclick="switchTab('plan','p-rozgrzewka',this)" style="flex:1;text-align:center;padding:5px 4px">🔥 Rozgrzewka</button>
   </div>
 
   <div id="p-cykl2" class="tab-panel active">
@@ -652,11 +652,11 @@
 <section id="dieta">
   <h2>🥗 Dieta</h2>
 
-  <div class="tab-row">
-    <button class="tab-btn" onclick="switchTab('dieta','d-rekompozycja',this)">Rekompozycja</button>
-    <button class="tab-btn active" onclick="switchTab('dieta','d-minicut',this)">🔻 Mini cut</button>
-    <button class="tab-btn" onclick="switchTab('dieta','d-produkty',this)">🧪 Produkty</button>
-    <button class="tab-btn" onclick="switchTab('dieta','d-przepisy',this)">👨‍🍳 Przepisy</button>
+  <div class="tab-row" style="flex-wrap:nowrap;gap:4px">
+    <button class="tab-btn" onclick="switchTab('dieta','d-rekompozycja',this)" style="flex:1;text-align:center;padding:5px 4px">Reko</button>
+    <button class="tab-btn active" onclick="switchTab('dieta','d-minicut',this)" style="flex:1;text-align:center;padding:5px 4px">🔻 Cut</button>
+    <button class="tab-btn" onclick="switchTab('dieta','d-produkty',this)" style="flex:1;text-align:center;padding:5px 4px">🧪 Produkty</button>
+    <button class="tab-btn" onclick="switchTab('dieta','d-przepisy',this)" style="flex:1;text-align:center;padding:5px 4px">👨‍🍳 Przepisy</button>
   </div>
 
   <div id="d-rekompozycja" class="tab-panel">
@@ -1850,14 +1850,19 @@
         }).join('');
         rows += `<div class="cal-wk" style="color:${wkColor};font-weight:700">${wkLabel}</div>${dayCells}`;
       }
-      html += `<div class="card" style="margin-bottom:12px">
-        <div class="card-title">🗓️ ${miesiacLabel} ${year}</div>
-        <div style="display:grid;grid-template-columns:40px repeat(7,1fr);gap:3px;text-align:center;font-size:10px;color:var(--text3);margin-bottom:4px;font-weight:600">
-          <div></div><div>Pn</div><div>Wt</div><div>Śr</div><div>Czw</div><div>Pt</div><div>Sob</div><div>Nd</div>
-        </div>
-        <div style="display:grid;grid-template-columns:40px repeat(7,1fr);gap:3px;font-size:11px">${rows}</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:8px">💡 UA · UB · L · ✅ ukończony · DL = Deload</div>
-      </div>`;
+      const isCurrentMonth = (mon === new Date().getMonth()+1 && year === new Date().getFullYear());
+      html += `<details style="margin-bottom:12px" ${isCurrentMonth ? 'open' : ''}>
+        <summary style="cursor:pointer;padding:12px 16px;background:var(--bg2);border:1px solid ${isCurrentMonth ? 'var(--accent2)' : 'var(--border)'};border-radius:8px;font-size:13px;color:${isCurrentMonth ? 'var(--accent2)' : 'var(--text2)'};list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;font-weight:${isCurrentMonth ? '700' : '400'}">
+          <span>🗓️ ${miesiacLabel} ${year}</span><span style="font-size:10px;color:var(--text3)">▼</span>
+        </summary>
+        <div style="padding-top:8px"><div class="card">
+          <div style="display:grid;grid-template-columns:40px repeat(7,1fr);gap:3px;text-align:center;font-size:10px;color:var(--text3);margin-bottom:4px;font-weight:600">
+            <div></div><div>Pn</div><div>Wt</div><div>Śr</div><div>Czw</div><div>Pt</div><div>Sob</div><div>Nd</div>
+          </div>
+          <div style="display:grid;grid-template-columns:40px repeat(7,1fr);gap:3px;font-size:11px">${rows}</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:8px">💡 UA · UB · L · ✅ ukończony · DL = Deload</div>
+        </div></div>
+      </details>`;
     });
     el.innerHTML = html;
   }
