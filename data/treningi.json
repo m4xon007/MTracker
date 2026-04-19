@@ -1,57 +1,49 @@
 {
   "nastepny": {
-    "tytul": "Upper B",
-    "data": "Pt 16.04.2026",
-    "badge": "UB",
-    "badge_color": "green",
+    "tytul": "Upper A",
+    "data": "Pn 20.04.2026",
+    "badge": "UA",
+    "badge_color": "accent",
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Podciąganie nachwytem"
+        "nazwa": "Ławka sztanga"
       },
       {
         "nr": "2",
-        "nazwa": "Incline Barbell Press"
+        "nazwa": "HS ISO Lateral Incline Chest Press"
       },
       {
-        "nr": "SS3a",
-        "nazwa": "Australian Pull-up"
+        "nr": "3",
+        "nazwa": "Half-Kneeling Landmine Press"
       },
       {
-        "nr": "SS3b",
-        "nazwa": "Parallel Bar Dips"
+        "nr": "4",
+        "nazwa": "Chest Supported Lateral Raise"
       },
       {
-        "nr": "SS4a",
-        "nazwa": "Butterfly Chest Fly"
+        "nr": "5",
+        "nazwa": "HS ISO Lateral High Row"
       },
       {
-        "nr": "SS4b",
-        "nazwa": "Reverse Pec Deck"
+        "nr": "6",
+        "nazwa": "SS · Smith Machine Close Grip Bench Press"
       },
       {
         "nr": "7",
-        "nazwa": "Cable Crossover"
+        "nazwa": "SS · Dumbbell Rotation Curl"
       },
       {
         "nr": "8",
-        "nazwa": "Arnold Press"
+        "nazwa": "HS Select Seated Row"
       },
       {
         "nr": "9",
-        "nazwa": "Cable Lateral Raise"
+        "nazwa": "SS · Overhead Cable Triceps Extension"
       },
       {
         "nr": "10",
-        "nazwa": "Seated Cable Row"
-      },
-      {
-        "nr": "11",
-        "nazwa": "EZ-bar Skull Crusher"
-      },
-      {
-        "nr": "12",
-        "nazwa": "Hammer Curl"
+        "nazwa": "SS · Half-Kneeling Face Pull"
       }
     ]
   },

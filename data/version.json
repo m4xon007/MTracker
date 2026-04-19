@@ -1,8 +1,13 @@
 {
-  "v": "2.80",
+  "v": "2.81",
   "updated": "2026-04-14",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.81",
+      "date": "14.04",
+      "msg": "Fix nastepny: UA Pn 20.04 (było UB)"
+    },
     {
       "v": "2.80",
       "date": "14.04",
@@ -47,11 +52,6 @@
       "v": "2.72",
       "date": "14.04",
       "msg": "Szablony przeniesione z Plan→Cykl2 do Treningi"
-    },
-    {
-      "v": "2.71",
-      "date": "14.04",
-      "msg": "Prompt aktualizacji — ostatni_prev + nastepny tylko nr/nazwa"
     }
   ]
 }
