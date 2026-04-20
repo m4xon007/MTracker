@@ -1015,6 +1015,7 @@
 
   function renderNastepny(n, planData) {
     const el = document.getElementById('tr-nastepny-card');
+    if (!n || !el) { if (el) el.innerHTML = '<div style="color:var(--text3);padding:20px">Brak danych następnego treningu.</div>'; return; }
     const alertHtml = '';
 
     const PROG_MAP = {

@@ -1,8 +1,13 @@
 {
-  "v": "2.82",
+  "v": "2.83",
   "updated": "2026-04-20",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.83",
+      "date": "20.04",
+      "msg": "Fix: guard undefined nastepny + fetchJSON error handling"
+    },
     {
       "v": "2.82",
       "date": "20.04",
@@ -47,11 +52,6 @@
       "v": "2.74",
       "date": "14.04",
       "msg": "Tab-row Treningi — jedna linia (flex:1)"
-    },
-    {
-      "v": "2.73",
-      "date": "14.04",
-      "msg": "Szablony — fix: przeniesione do tr-content + flex-wrap tab-row"
     }
   ]
 }
