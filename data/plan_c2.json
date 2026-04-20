@@ -27,7 +27,7 @@
       },
       {
         "nr": "2",
-        "nazwa": "HS ISO Lateral Incline Chest Press",
+        "nazwa": "Wyciskanie na maszynie skos (HS ISO Lateral Incline Chest Press)",
         "partia": "Klatka górna",
         "serie": 4,
         "powt": "8–12",
@@ -49,7 +49,7 @@
       },
       {
         "nr": "4",
-        "nazwa": "Chest Supported Lateral Raise",
+        "nazwa": "Unoszenie ramion na ławce (Chest Supported Lateral Raise)",
         "partia": "Barki boczne",
         "serie": 4,
         "powt": "12–15",
@@ -60,7 +60,18 @@
       },
       {
         "nr": "5",
-        "nazwa": "HS ISO Lateral High Row",
+        "nazwa": "Prostowanie ramion w oparciu o ławeczkę (Chest Supported DB Triceps Extension)",
+        "partia": "Triceps",
+        "serie": 3,
+        "powt": "10–15",
+        "przerwa": "90 s",
+        "start": "—",
+        "cel": "kalibracja",
+        "cel_color": "text3"
+      },
+      {
+        "nr": "6",
+        "nazwa": "Ściąganie drążka na maszynie (HS ISO Lateral High Row)",
         "partia": "Plecy (laty, środek)",
         "serie": 4,
         "powt": "8–12",
@@ -70,28 +81,15 @@
         "cel_color": "accent2"
       },
       {
-        "nr": "6",
-        "nazwa": "SS · Smith Machine Close Grip Bench Press",
-        "partia": "Triceps (głowa boczna)",
-        "serie": 3,
-        "powt": "6–10",
-        "przerwa": "90 s",
-        "start": "50 kg",
-        "cel": "3×10",
-        "cel_color": "accent2",
-        "ss": true
-      },
-      {
         "nr": "7",
-        "nazwa": "SS · Dumbbell Rotation Curl",
+        "nazwa": "Uginanie ramion hantlami z rotacją (Dumbbell Rotation Curl)",
         "partia": "Biceps",
         "serie": 3,
         "powt": "10–12",
         "przerwa": "60 s",
         "start": "20 kg",
         "cel": "3×12",
-        "cel_color": "text3",
-        "ss": true
+        "cel_color": "text3"
       },
       {
         "nr": "8",
@@ -106,7 +104,7 @@
       },
       {
         "nr": "9",
-        "nazwa": "SS · Overhead Cable Triceps Extension",
+        "nazwa": "SS · Prostowanie ramion na wyciągu (Overhead Cable Triceps Extension)",
         "partia": "Triceps (głowa długa)",
         "serie": 3,
         "powt": "10–15",
@@ -118,7 +116,7 @@
       },
       {
         "nr": "10",
-        "nazwa": "SS · Half-Kneeling Face Pull with rope",
+        "nazwa": "SS · Face pull półklęcząc ze sznurkiem (Half-Kneeling Face Pull with rope)",
         "partia": "Barki tylne + rotatory",
         "serie": 3,
         "powt": "10–15",
