@@ -2693,16 +2693,16 @@
         "w_zakresie": false
       },
       "5": {
+        "kg": "—",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
+      },
+      "6": {
         "kg": "75",
         "wynik": "10-10-10-10",
         "gorny_zakres": 12,
         "w_zakresie": false
-      },
-      "6": {
-        "kg": "47",
-        "wynik": "10-10-10",
-        "gorny_zakres": 10,
-        "w_zakresie": true
       },
       "7": {
         "kg": "20",
@@ -2711,22 +2711,22 @@
         "w_zakresie": false
       },
       "8": {
-        "kg": "21.5",
-        "wynik": "10-10-9",
+        "kg": "47",
+        "wynik": "10-10-10",
         "gorny_zakres": 12,
         "w_zakresie": false
       },
       "9": {
-        "kg": "15",
-        "wynik": "15-15-12",
+        "kg": "21.5",
+        "wynik": "10-10-9",
         "gorny_zakres": 15,
         "w_zakresie": false
       },
       "10": {
-        "kg": "—",
-        "wynik": "—",
+        "kg": "15",
+        "wynik": "15-15-12",
         "gorny_zakres": 15,
-        "w_zakresie": null
+        "w_zakresie": false
       }
     }
   },
@@ -2968,7 +2968,7 @@
         "w_zakresie": null
       },
       "7": {
-        "kg": "57",
+        "kg": "—",
         "w_zakresie": null
       },
       "8": {
