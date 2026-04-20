@@ -1582,8 +1582,7 @@
       const detail = [
         c.partia ? `<span style="color:var(--text3)">Partia:</span> ${c.partia}` : '',
         `<span style="color:var(--text3)">Przerwa:</span> ${c.przerwa}`,
-        `<span style="color:var(--text3)">Start:</span> <span class="kg-badge">${c.start}</span>`,
-        showCel && c.cel ? `<span style="color:var(--text3)">Cel C2:</span> <span style="color:${celColor}">${c.cel}</span>` : ''
+        `<span style="color:var(--text3)">Start:</span> <span class="kg-badge">${c.start}</span>`
       ].filter(Boolean).join(' &nbsp;·&nbsp; ');
       return expandRow(
         `<td style="font-size:10px;white-space:nowrap">${c.nr}</td>
@@ -1601,7 +1600,7 @@
           <tr><th>#</th><th>Ćwiczenie</th><th style="text-align:center">Serie</th><th style="text-align:center">Powt.</th></tr>
           ${rows}
         </table>
-        <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie aby zobaczyć partię, przerwę, start i cel</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:8px">▾ kliknij ćwiczenie — partia, przerwa, ciężar startowy</div>
         <div style="margin-top:8px;font-size:12px;color:${blok.uwaga&&blok.uwaga.startsWith('⚠️')?'var(--yellow)':'var(--text3)'}">${blok.uwaga||''}</div>
       </div>`;
   }
