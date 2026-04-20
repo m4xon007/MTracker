@@ -1,8 +1,13 @@
 {
-  "v": "2.84",
+  "v": "2.85",
   "updated": "2026-04-20",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.85",
+      "date": "20.04",
+      "msg": "UA 20.04 — Ławka 75kg ⚠️ | DB Triceps 🆕 | High Row 75kg 4×10"
+    },
     {
       "v": "2.84",
       "date": "20.04",
@@ -47,11 +52,6 @@
       "v": "2.76",
       "date": "14.04",
       "msg": "Plan/Dieta tabs jedna linia | Harmonogram months details | deload fix Pn/Śr/Pt | brak 19.04"
-    },
-    {
-      "v": "2.75",
-      "date": "14.04",
-      "msg": "Lower 14.04 — Front Squat+Trap Bar ★★ podwójna progresja odblokowana"
     }
   ]
 }
