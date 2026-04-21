@@ -1,8 +1,13 @@
 {
-  "v": "2.88",
+  "v": "2.89",
   "updated": "2026-04-20",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.89",
+      "date": "20.04",
+      "msg": "Prompt aktualizacji: JSON + SQL do Supabase"
+    },
     {
       "v": "2.88",
       "date": "20.04",
@@ -47,11 +52,6 @@
       "v": "2.80",
       "date": "14.04",
       "msg": "Dieta: nowy rytm Pn/Śr/Pt treningi, Wt/Czw/Sob/Nd odpoczynek"
-    },
-    {
-      "v": "2.79",
-      "date": "14.04",
-      "msg": "Harmonogram fix: cyklStart 30.03 | T8=deload 18–22.05 | T9=po deloadzie"
     }
   ]
 }
