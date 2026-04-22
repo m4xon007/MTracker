@@ -1,8 +1,13 @@
 {
-  "v": "2.90",
+  "v": "2.91",
   "updated": "2026-04-22",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.91",
+      "date": "22.04",
+      "msg": "Prompt: SQL jako CTE — jeden Run bez kopiowania UUID"
+    },
     {
       "v": "2.90",
       "date": "22.04",
@@ -47,11 +52,6 @@
       "v": "2.82",
       "date": "20.04",
       "msg": "UA plan_c2: nowa kolejność + Chest Supported DB Triceps Extension (nr5)"
-    },
-    {
-      "v": "2.81",
-      "date": "14.04",
-      "msg": "Fix nastepny: UA Pn 20.04 (było UB)"
     }
   ]
 }
