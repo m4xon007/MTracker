@@ -18,11 +18,12 @@
         "planowane": 8
       },
       "L": {
-        "zrobione": 3,
+        "zrobione": 4,
         "planowane": 8
       }
     },
     "sesje": [
+      "22.04 L",
       "20.04 UA",
       "14.04 L",
       "12.04 UB",
@@ -91,7 +92,7 @@
         "data": "2026-04-22",
         "typ": "L",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-04-24",
