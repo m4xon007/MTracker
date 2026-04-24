@@ -1,8 +1,13 @@
 {
-  "v": "2.91",
+  "v": "2.92",
   "updated": "2026-04-22",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.92",
+      "date": "22.04",
+      "msg": "Prompt: JOIN exercises.short_name + mapa nazw UA/UB/Lower"
+    },
     {
       "v": "2.91",
       "date": "22.04",
@@ -47,11 +52,6 @@
       "v": "2.83",
       "date": "20.04",
       "msg": "Fix: guard undefined nastepny + fetchJSON error handling"
-    },
-    {
-      "v": "2.82",
-      "date": "20.04",
-      "msg": "UA plan_c2: nowa kolejność + Chest Supported DB Triceps Extension (nr5)"
     }
   ]
 }
