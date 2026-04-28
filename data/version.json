@@ -1,8 +1,13 @@
 {
-  "v": "2.94",
+  "v": "2.95",
   "updated": "2026-04-27",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.95",
+      "date": "27.04",
+      "msg": "UA Ławka: 4 serie 5–8 ostatnia AMRAP (nie 5 serii)"
+    },
     {
       "v": "2.94",
       "date": "27.04",
@@ -47,11 +52,6 @@
       "v": "2.86",
       "date": "20.04",
       "msg": "plan_c2 UA+UB: górna granica powt → max 12 (było 15)"
-    },
-    {
-      "v": "2.85",
-      "date": "20.04",
-      "msg": "UA 20.04 — Ławka 75kg ⚠️ | DB Triceps 🆕 | High Row 75kg 4×10"
     }
   ]
 }

@@ -17,14 +17,14 @@
         "nr": "1",
         "nazwa": "⭐ Ławka sztanga (Barbell Bench Press)",
         "partia": "Klatka środkowa",
-        "serie": 5,
+        "serie": 4,
         "powt": "5–8 (ostatnia AMRAP)",
         "przerwa": "180 s",
         "start": "70 kg",
         "cel": "AMRAP ≥8",
         "cel_color": "accent2",
         "glowne": true,
-        "uwaga": "Serie 1–4: 5–8 powt · seria 5: AMRAP (max powt z zachowaniem techniki)"
+        "uwaga": "Serie 1–3: 5–8 powt · seria 4: AMRAP (max powt z zachowaniem techniki)"
       },
       {
         "nr": "2",
