@@ -2869,10 +2869,10 @@
         "w_zakresie": false
       },
       "7": {
-        "kg": "20",
-        "wynik": "10-10-7",
+        "kg": "—",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": null
       },
       "8": {
         "kg": "47",
@@ -3145,10 +3145,10 @@
         "w_zakresie": false
       },
       "7": {
-        "kg": "20",
-        "wynik": "9-9-8",
+        "kg": "—",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": null
       },
       "8": {
         "kg": "47",

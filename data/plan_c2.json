@@ -17,13 +17,14 @@
         "nr": "1",
         "nazwa": "⭐ Ławka sztanga (Barbell Bench Press)",
         "partia": "Klatka środkowa",
-        "serie": 4,
-        "powt": "5–8",
+        "serie": 5,
+        "powt": "5–8 (ostatnia AMRAP)",
         "przerwa": "180 s",
         "start": "70 kg",
         "cel": "AMRAP ≥8",
         "cel_color": "accent2",
-        "glowne": true
+        "glowne": true,
+        "uwaga": "Serie 1–4: 5–8 powt · seria 5: AMRAP (max powt z zachowaniem techniki)"
       },
       {
         "nr": "2",
@@ -82,12 +83,12 @@
       },
       {
         "nr": "7",
-        "nazwa": "Uginanie ramion hantlami z rotacją (Dumbbell Rotation Curl)",
+        "nazwa": "Uginanie ramion EZ-bar (EZ-bar Biceps Curl)",
         "partia": "Biceps",
         "serie": 3,
-        "powt": "10–12",
+        "powt": "8–12",
         "przerwa": "60 s",
-        "start": "20 kg",
+        "start": "—",
         "cel": "3×12",
         "cel_color": "text3"
       },
