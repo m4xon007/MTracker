@@ -1,8 +1,13 @@
 {
-  "v": "2.96",
+  "v": "2.97",
   "updated": "2026-04-28",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "2.97",
+      "date": "28.04",
+      "msg": "fix: Ławka powt 5–8 (AMRAP w uwaga, nie w tabeli) — naprawa rozjeżdżania kolumny"
+    },
     {
       "v": "2.96",
       "date": "28.04",
@@ -47,11 +52,6 @@
       "v": "2.88",
       "date": "20.04",
       "msg": "Waga: +11 pomiarów kwiecień (02–20.04) | meta zaktualizowane"
-    },
-    {
-      "v": "2.87",
-      "date": "20.04",
-      "msg": "Plan C2: usunięto Cel C2 z rozwijalnego detalu ćwiczenia"
     }
   ]
 }
