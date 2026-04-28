@@ -10,7 +10,7 @@
     "checkpoint": "01.06.2026",
     "bilans": {
       "UA": {
-        "zrobione": 3,
+        "zrobione": 4,
         "planowane": 8
       },
       "UB": {
@@ -23,6 +23,7 @@
       }
     },
     "sesje": [
+      "27.04 UA",
       "24.04 UB",
       "22.04 L",
       "20.04 UA",
@@ -105,7 +106,7 @@
         "data": "2026-04-27",
         "typ": "UA",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-04-29",
