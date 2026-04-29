@@ -1,17 +1,22 @@
 {
-  "v": "3.00",
+  "v": "3.01",
   "updated": "2026-04-29",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.01",
+      "date": "29.04",
+      "msg": "prompt: wymagane klucze JSON — checklist przed wysłaniem pliku"
+    },
+    {
       "v": "3.00",
       "date": "29.04",
-      "msg": "fix: szablony_c1 — brak powodował .ua crash w renderSzablony"
+      "msg": "fix: szablony_c1 + harmonogram cykl1 — naprawa .ua/.bilans crash"
     },
     {
       "v": "2.99",
       "date": "29.04",
-      "msg": "fix: progresja_c1 pełne dane + historia_c1 — naprawa forEach/ua crash"
+      "msg": "fix: progresja_c1 pełne dane + historia_c1"
     },
     {
       "v": "2.98",
@@ -47,11 +52,6 @@
       "v": "2.92",
       "date": "22.04",
       "msg": "Prompt: JOIN exercises.short_name + mapa nazw UA/UB/Lower"
-    },
-    {
-      "v": "2.91",
-      "date": "22.04",
-      "msg": "Prompt: SQL jako CTE — jeden Run bez kopiowania UUID"
     }
   ]
 }
