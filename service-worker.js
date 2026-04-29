@@ -1,7 +1,6 @@
 // service-worker.js
 // MTracker PWA — offline cache
-// Zmień CACHE_VERSION przy każdym deployu żeby wymusić odświeżenie cache
-const CACHE_VERSION = 'mtracker-v2.98';
+const CACHE_VERSION = 'mtracker-v2.99';
 const CACHE_NAME = CACHE_VERSION;
 
 const PRECACHE_URLS = [
