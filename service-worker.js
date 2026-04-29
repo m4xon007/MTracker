@@ -1,6 +1,6 @@
 // service-worker.js
 // MTracker PWA — offline cache
-const CACHE_VERSION = 'mtracker-v2.99';
+const CACHE_VERSION = 'mtracker-v3.00';
 const CACHE_NAME = CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -43,10 +43,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
-
   if (request.method !== 'GET') return;
   if (url.protocol === 'chrome-extension:') return;
-
   const isCDN = (
     url.hostname.includes('googleapis.com') ||
     url.hostname.includes('gstatic.com') ||
@@ -54,12 +52,10 @@ self.addEventListener('fetch', (event) => {
     url.hostname.includes('cdnjs.cloudflare.com') ||
     url.hostname.includes('unpkg.com')
   );
-
   if (isCDN) {
     event.respondWith(staleWhileRevalidate(request, CDN_CACHE_NAME));
     return;
   }
-
   event.respondWith(cacheFirst(request, CACHE_NAME));
 });
 
