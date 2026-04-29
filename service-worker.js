@@ -1,6 +1,6 @@
 // service-worker.js
 // MTracker PWA — offline cache
-const CACHE_VERSION = 'mtracker-v3.01';
+const CACHE_VERSION = 'mtracker-v3.02';
 const CACHE_NAME = CACHE_VERSION;
 
 const PRECACHE_URLS = [

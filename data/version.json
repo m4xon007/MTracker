@@ -1,8 +1,13 @@
 {
-  "v": "3.01",
+  "v": "3.02",
   "updated": "2026-04-29",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.02",
+      "date": "29.04",
+      "msg": "Lower 29.04 — Trap Bar 4×6 ✅ | Hack Squat 75kg | Seated Curl ★★ | Kneeling fix 20→22,5kg | nastepny: UB 01.05"
+    },
     {
       "v": "3.01",
       "date": "29.04",
@@ -47,11 +52,6 @@
       "v": "2.93",
       "date": "24.04",
       "msg": "UB 24.04 — Incline 50kg ★ | Seated Row ★★"
-    },
-    {
-      "v": "2.92",
-      "date": "22.04",
-      "msg": "Prompt: JOIN exercises.short_name + mapa nazw UA/UB/Lower"
     }
   ]
 }
