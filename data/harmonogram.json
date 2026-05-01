@@ -14,7 +14,7 @@
         "planowane": 8
       },
       "UB": {
-        "zrobione": 3,
+        "zrobione": 4,
         "planowane": 8
       },
       "L": {
@@ -23,6 +23,7 @@
       }
     },
     "sesje": [
+      "01.05 UB",
       "29.04 L",
       "27.04 UA",
       "24.04 UB",
@@ -119,7 +120,7 @@
         "data": "2026-05-01",
         "typ": "UB",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-05-04",

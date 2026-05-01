@@ -1,12 +1,17 @@
 {
-  "v": "3.02",
-  "updated": "2026-04-29",
+  "v": "3.03",
+  "updated": "2026-05-01",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.03",
+      "date": "01.05",
+      "msg": "UB 01.05 — Arnold ★★ +2kg | Seated Row ★★ +5kg | nastepny: UA 04.05"
+    },
+    {
       "v": "3.02",
       "date": "29.04",
-      "msg": "Lower 29.04 — Trap Bar 4×6 ✅ | Hack Squat 75kg | Seated Curl ★★ | Kneeling fix 20→22,5kg | nastepny: UB 01.05"
+      "msg": "Lower 29.04 — Trap Bar 4×6 ✅ | Hack Squat 75kg | Seated Curl ★★ | fix Kneeling 20kg"
     },
     {
       "v": "3.01",
@@ -47,11 +52,6 @@
       "v": "2.94",
       "date": "27.04",
       "msg": "UA plan_c2: Ławka 5 serii AMRAP | nr7 Rotation Curl → EZ-bar Biceps Curl"
-    },
-    {
-      "v": "2.93",
-      "date": "24.04",
-      "msg": "UB 24.04 — Incline 50kg ★ | Seated Row ★★"
     }
   ]
 }
