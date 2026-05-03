@@ -1,8 +1,13 @@
 {
-  "v": "3.03",
+  "v": "3.04",
   "updated": "2026-05-01",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.04",
+      "date": "01.05",
+      "msg": "Dieta Pt: kolacja kasza manna + banan przekąska · 2661kcal/221g · zakupy + przepis · prompt update"
+    },
     {
       "v": "3.03",
       "date": "01.05",
@@ -47,11 +52,6 @@
       "v": "2.95",
       "date": "27.04",
       "msg": "UA Ławka: 4 serie 5–8 ostatnia AMRAP (nie 5 serii)"
-    },
-    {
-      "v": "2.94",
-      "date": "27.04",
-      "msg": "UA plan_c2: Ławka 5 serii AMRAP | nr7 Rotation Curl → EZ-bar Biceps Curl"
     }
   ]
 }
