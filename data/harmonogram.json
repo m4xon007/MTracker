@@ -3,26 +3,27 @@
     "nota": "Kalendarze są statyczne w index.html. Ten plik zawiera tylko dynamiczne dane: bilans treningów i listę zrealizowanych sesji do aktualizacji przez Claude po każdym treningu."
   },
   "cykl2": {
-    "label": "Cykl 2 — Kwiecień–Maj 2026",
-    "opis": "8 tyg · Mini cut · start 31.03",
+    "label": "Cykl 2 — Kwiecień–Maj 2026 (przedłużony)",
+    "opis": "10 tyg · Mini cut · start 31.03 · deload 25–31.05",
     "plan_wt_czw_nd": true,
-    "deload": "18–22.05.2026",
+    "deload": "25–31.05.2026",
     "checkpoint": "01.06.2026",
     "bilans": {
       "UA": {
-        "zrobione": 5,
-        "planowane": 8
+        "zrobione": 6,
+        "planowane": 9
       },
       "UB": {
         "zrobione": 4,
-        "planowane": 8
+        "planowane": 9
       },
       "L": {
         "zrobione": 5,
-        "planowane": 8
+        "planowane": 9
       }
     },
     "sesje": [
+      "04.05 UA",
       "01.05 UB",
       "29.04 L",
       "27.04 UA",
@@ -126,7 +127,7 @@
         "data": "2026-05-04",
         "typ": "UA",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-05-06",
@@ -172,6 +173,24 @@
       },
       {
         "data": "2026-05-22",
+        "typ": "UB",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-25",
+        "typ": "UA",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-27",
+        "typ": "L",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-05-29",
         "typ": "UB",
         "deload": true,
         "ukonczone": false

@@ -1,169 +1,151 @@
 {
   "nastepny": {
-    "tytul": "Upper A",
-    "data": "Pn 04.05.2026",
-    "badge": "UA",
-    "badge_color": "accent",
+    "tytul": "Lower",
+    "data": "Śr 06.05.2026",
+    "badge": "L",
+    "badge_color": "yellow",
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Ławka sztanga"
+        "nazwa": "Front Squat"
       },
       {
         "nr": "2",
-        "nazwa": "Wyciskanie na maszynie skos"
+        "nazwa": "Trap Bar Deadlift"
       },
       {
         "nr": "3",
-        "nazwa": "Half-Kneeling Landmine Press"
+        "nazwa": "Hack Squat HS"
       },
       {
-        "nr": "4",
-        "nazwa": "Unoszenie ramion na ławce"
+        "nr": "4⚡",
+        "nazwa": "Leg Press (opcjonalny)"
       },
       {
         "nr": "5",
-        "nazwa": "Prostowanie ramion w oparciu o ławeczkę"
+        "nazwa": "HS Seated Leg Curl"
       },
       {
         "nr": "6",
-        "nazwa": "Ściąganie drążka na maszynie"
+        "nazwa": "HS Kneeling Leg Curl"
       },
       {
-        "nr": "7",
-        "nazwa": "EZ-bar Biceps Curl"
+        "nr": "SS7",
+        "nazwa": "SS · Calf Raise (Smith)"
       },
       {
-        "nr": "8",
-        "nazwa": "HS Select Seated Row"
+        "nr": "SS8",
+        "nazwa": "SS · Hanging Knee Raise"
       },
       {
-        "nr": "9",
-        "nazwa": "SS · Prostowanie ramion na wyciągu"
+        "nr": "SS9",
+        "nazwa": "SS · Cable Crunch"
       },
       {
-        "nr": "10",
-        "nazwa": "SS · Face pull półklęcząc"
+        "nr": "SS10",
+        "nazwa": "SS · Pallof Press"
       }
     ]
   },
   "poprzedni": {
-    "tytul": "Upper B",
-    "data": "Pt 01.05.2026",
-    "czas": "1:35",
-    "kcal": 850,
-    "tetno": 124,
-    "obciazenie": 2.9,
-    "ocena_liczba": 8,
-    "ocena_tekst": "Arnold ★★ up | Seated Row ★★ up | Podciąganie 8-7-6-5-5 → stabilnie",
+    "tytul": "Upper A",
+    "data": "Pn 04.05.2026",
+    "czas": "1:38",
+    "kcal": 921,
+    "tetno": 119,
+    "obciazenie": 2.7,
+    "ocena_liczba": 9,
+    "ocena_tekst": "Ławka 75kg 7-6-5-4 ↑ | DB Triceps ★★ →+2kg | Face Pull ★★ →+2,5kg | High Row 4×12 ✅ | Cable Triceps 3×12 ✅",
     "alert_sukces": null,
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Podciąganie nachwytem",
-        "ciezar": "BW",
-        "wynik": "8-7-6-5-5",
+        "nazwa": "Ławka sztanga",
+        "ciezar": "75 kg",
+        "wynik": "7-6-5-4",
         "badge": "→",
         "badge_color": "gray",
-        "plan": "5×6–8"
+        "plan": "4×5–8"
       },
       {
         "nr": "2",
-        "nazwa": "Incline Barbell Press",
-        "ciezar": "50 kg",
-        "wynik": "6-6-6",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×6–8"
+        "nazwa": "Wyciskanie na maszynie skos",
+        "ciezar": "40 kg",
+        "wynik": "12-12-12-12",
+        "badge": "✅ 4×12",
+        "badge_color": "green",
+        "plan": "4×8–10"
       },
       {
-        "nr": "SS3a",
-        "nazwa": "SS · Australian Pull-up",
-        "ciezar": "+5 kg",
-        "wynik": "12-12-10",
-        "badge": "→",
-        "badge_color": "gray",
+        "nr": "3",
+        "nazwa": "Half-Kneeling Landmine Press",
+        "ciezar": "27.5 kg",
+        "wynik": "12-12-12",
+        "badge": "✅ 3×12",
+        "badge_color": "green",
         "plan": "3×8–12"
       },
       {
-        "nr": "SS3b",
-        "nazwa": "SS · Parallel Bar Dips",
-        "ciezar": "BW",
-        "wynik": "12-12-10",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×8–12"
-      },
-      {
-        "nr": "SS4a",
-        "nazwa": "SS · Butterfly Chest Fly",
-        "ciezar": "68 kg",
-        "wynik": "12-12-10",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×10–12"
-      },
-      {
-        "nr": "SS4b",
-        "nazwa": "SS · Reverse Pec Deck",
-        "ciezar": "6 kg",
-        "wynik": "12-12-10",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×10–12"
-      },
-      {
-        "nr": "7",
-        "nazwa": "Cable Crossover",
-        "ciezar": "10 kg",
-        "wynik": "12-10-10",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×10–12"
-      },
-      {
-        "nr": "8",
-        "nazwa": "Arnold Press",
-        "ciezar": "18 kg",
-        "wynik": "10-10-10",
-        "badge": "★★ →+2kg",
-        "badge_color": "accent2",
-        "plan": "3×8–10"
-      },
-      {
-        "nr": "9",
-        "nazwa": "Cable Lateral Raise",
-        "ciezar": "5 kg",
-        "wynik": "12-12-10-10",
-        "badge": "→",
+        "nr": "SS4",
+        "nazwa": "SS · Unoszenie ramion na ławce",
+        "ciezar": "7 kg",
+        "wynik": "10-10-10-10",
+        "badge": "→ +1kg",
         "badge_color": "gray",
         "plan": "4×10–12"
       },
       {
-        "nr": "10",
-        "nazwa": "Seated Cable Row",
-        "ciezar": "30 kg",
-        "wynik": "12-12-12",
-        "badge": "★★ →+5kg",
+        "nr": "SS5",
+        "nazwa": "SS · Prostowanie ramion w op. ławeczkę",
+        "ciezar": "8 kg",
+        "wynik": "12-12-12-12",
+        "badge": "★★ →+2kg",
+        "badge_color": "accent2",
+        "plan": "4×10–12"
+      },
+      {
+        "nr": "6",
+        "nazwa": "Ściąganie drążka na maszynie",
+        "ciezar": "75 kg",
+        "wynik": "12-12-12-12",
+        "badge": "✅ 4×12",
+        "badge_color": "green",
+        "plan": "4×8–12"
+      },
+      {
+        "nr": "7",
+        "nazwa": "HS Select SE Full Biceps Curl",
+        "ciezar": "53 kg",
+        "wynik": "10-10-10",
+        "badge": "🆕",
         "badge_color": "accent2",
         "plan": "3×8–12"
       },
       {
-        "nr": "11",
-        "nazwa": "EZ-bar Skull Crusher",
-        "ciezar": "25 kg",
-        "wynik": "12-12-10",
-        "badge": "→",
+        "nr": "8",
+        "nazwa": "HS Select Seated Row",
+        "ciezar": "61 kg",
+        "wynik": "10-10-10",
+        "badge": "→ +7kg",
         "badge_color": "gray",
         "plan": "3×8–12"
       },
       {
-        "nr": "12",
-        "nazwa": "Hammer Curl",
-        "ciezar": "17.5 kg",
-        "wynik": "8-8-8",
-        "badge": "→",
-        "badge_color": "gray",
+        "nr": "9",
+        "nazwa": "SS · Prostowanie ramion na wyciągu",
+        "ciezar": "21.5 kg",
+        "wynik": "12-12-12",
+        "badge": "✅ 3×12",
+        "badge_color": "green",
+        "plan": "3×10–12"
+      },
+      {
+        "nr": "10",
+        "nazwa": "SS · Face pull półklęcząc",
+        "ciezar": "15 kg",
+        "wynik": "12-12-12",
+        "badge": "★★ →+2,5kg",
+        "badge_color": "accent2",
         "plan": "3×10–12"
       }
     ],
@@ -171,92 +153,31 @@
       {
         "typ": "success",
         "ikona": "★★",
-        "tekst": "Arnold 18kg i Seated Row 30kg drugi raz w zakresie — JS odblokuje progresję: Arnold →20kg, Seated Row →35kg."
+        "tekst": "DB Triceps 8kg i Face Pull 15kg — drugi raz w zakresie → JS odblokuje progresję: Triceps →10kg, Face Pull →17,5kg."
+      },
+      {
+        "typ": "success",
+        "ikona": "✅",
+        "tekst": "High Row 75kg 4×12 — pierwszy raz pełny zakres po długim czasie. Dobra baza do następnej progresji."
+      },
+      {
+        "typ": "info",
+        "ikona": "🆕",
+        "tekst": "HS Select SE Full Biceps Curl 53kg 3×10 — nowe ćwiczenie zamiast EZ-bar. Kalibracja zakresu — na kolejnej UA cel 3×12."
       },
       {
         "typ": "info",
         "ikona": "💡",
-        "tekst": "Podciąganie BW 8-7-6-5-5 — pierwsza seria w zakresie, reszta spada. Normalne przy mini cut. Fokus na utrzymanie jakości."
+        "tekst": "Ławka 75kg 7-6-5-4 — pierwsza seria AMRAP dała 7 powt. Trend wzrostowy vs 72,5kg. Zostań przy 75kg do osiągnięcia 4×8."
       },
       {
-        "typ": "warn",
-        "ikona": "⚠️",
-        "tekst": "Reverse Pec Deck — zmiana z 59kg na 6kg sugeruje zmianę maszyny lub błąd zapisu. Zweryfikuj na następnym UB."
-      },
-      {
-        "typ": "info",
-        "ikona": "💡",
-        "tekst": "Cable Lateral Raise zejście z 7,5kg na 5kg — dobra decyzja, lepsza technika ważniejsza niż ciężar przy izolacji."
+        "typ": "success",
+        "ikona": "✅",
+        "tekst": "Incline maszyna 4×12 — zakres zmieniony na 8–10, więc zestaw jest w górnym zakresie. Przy kolejnej sesji: cel 4×10 jako nowy punkt odniesienia."
       }
     ]
   },
   "ostatni_ua_prev": {
-    "data": "20.04",
-    "ocena": 8,
-    "cwiczenia": {
-      "1": {
-        "kg": "75",
-        "wynik": "5-5-5-3",
-        "gorny_zakres": 8,
-        "w_zakresie": false
-      },
-      "2": {
-        "kg": "40",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "3": {
-        "kg": "27.5",
-        "wynik": "12-12-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "4": {
-        "kg": "6",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "5": {
-        "kg": "8",
-        "wynik": "10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "6": {
-        "kg": "75",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "7": {
-        "kg": "—",
-        "wynik": "—",
-        "gorny_zakres": 12,
-        "w_zakresie": null
-      },
-      "8": {
-        "kg": "47",
-        "wynik": "12-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "9": {
-        "kg": "21.5",
-        "wynik": "12-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "10": {
-        "kg": "15",
-        "wynik": "15-15-12",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      }
-    }
-  },
-  "ostatni_ua": {
     "data": "27.04",
     "ocena": 8,
     "cwiczenia": {
@@ -313,6 +234,72 @@
         "wynik": "12-12-10",
         "gorny_zakres": 12,
         "w_zakresie": false
+      },
+      "10": {
+        "kg": "15",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      }
+    }
+  },
+  "ostatni_ua": {
+    "data": "04.05",
+    "ocena": 9,
+    "cwiczenia": {
+      "1": {
+        "kg": "75",
+        "wynik": "7-6-5-4",
+        "gorny_zakres": 8,
+        "w_zakresie": false
+      },
+      "2": {
+        "kg": "40",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 10,
+        "w_zakresie": true
+      },
+      "3": {
+        "kg": "27.5",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "4": {
+        "kg": "7",
+        "wynik": "10-10-10-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "5": {
+        "kg": "8",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "6": {
+        "kg": "75",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "7": {
+        "kg": "53",
+        "wynik": "10-10-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "8": {
+        "kg": "61",
+        "wynik": "10-10-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "9": {
+        "kg": "21.5",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
       },
       "10": {
         "kg": "15",
@@ -619,6 +606,15 @@
   "archiwum": {
     "historia_c2": [
       {
+        "data": "04.05",
+        "typ": "UA",
+        "typ_color": "accent",
+        "ocena": "9/10",
+        "kcal": 921,
+        "czas": "1:38",
+        "wyniki": "Ławka 75kg 7-6-5-4 ↑ | DB Triceps ★★ | Face Pull ★★ | High Row 4×12 ✅ | HS Biceps Curl 53kg 🆕 | Seated Row 61kg"
+      },
+      {
         "data": "01.05",
         "typ": "UB",
         "typ_color": "green",
@@ -723,6 +719,7 @@
         "kolor": "accent",
         "label": "🔵 Upper A — Cykl 2",
         "sesje": [
+          "04.05",
           "27.04",
           "20.04",
           "07.04",
@@ -734,6 +731,11 @@
             "zakres": "4×5–8",
             "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 75–77,5kg",
             "dane": [
+              {
+                "v": "75×7-6-5-4",
+                "i": "↑",
+                "c": "green"
+              },
               {
                 "v": "72,5×5-5-5-7",
                 "i": "⚠️",
@@ -767,6 +769,11 @@
                 "c": "green"
               },
               {
+                "v": "40×12-12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
+              {
                 "v": "40×10-10-10-10",
                 "i": "→",
                 "c": "text3"
@@ -788,6 +795,11 @@
             "zakres": "3×8–12",
             "cel": "3×12 → +2,5kg",
             "dane": [
+              {
+                "v": "27,5×12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
               {
                 "v": "27,5×12-12-12",
                 "i": "✅",
@@ -816,6 +828,11 @@
             "cel": "4×12 przez 2 sesje → +2kg",
             "dane": [
               {
+                "v": "7×10-10-10-10",
+                "i": "→",
+                "c": "text3"
+              },
+              {
                 "v": "6×12-12-12-12",
                 "i": "✅",
                 "c": "green"
@@ -842,6 +859,11 @@
             "zakres": "3×10–12",
             "cel": "3×12 przez 2 sesje → +2kg",
             "dane": [
+              {
+                "v": "8×12-12-12-12",
+                "i": "★★",
+                "c": "accent2"
+              },
               {
                 "v": "8×12-12-12",
                 "i": "✅",
@@ -870,6 +892,11 @@
             "cel": "4×12 → +5kg",
             "dane": [
               {
+                "v": "75×12-12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
+              {
                 "v": "75×12-10-10-10",
                 "i": "→",
                 "c": "text3"
@@ -896,6 +923,11 @@
             "zakres": "3×8–12",
             "cel": "3×12 → +2,5kg",
             "dane": [
+              {
+                "v": "HS 53×10-10-10",
+                "i": "🆕",
+                "c": "accent2"
+              },
               {
                 "v": "12×10-8-7",
                 "i": "⚠️",
@@ -924,6 +956,11 @@
             "cel": "3×12 przez 2 sesje → +5kg",
             "dane": [
               {
+                "v": "61×10-10-10",
+                "i": "→",
+                "c": "text3"
+              },
+              {
                 "v": "54×12-12-10",
                 "i": "→",
                 "c": "text3"
@@ -951,6 +988,11 @@
             "cel": "3×12 przez 2 sesje → +2,5kg",
             "dane": [
               {
+                "v": "21,5×12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
+              {
                 "v": "21,5×12-12-10",
                 "i": "→",
                 "c": "text3"
@@ -977,6 +1019,11 @@
             "zakres": "3×10–12",
             "cel": "3×12 przez 2 sesje → +2,5kg",
             "dane": [
+              {
+                "v": "15×12-12-12",
+                "i": "★★",
+                "c": "accent2"
+              },
               {
                 "v": "15×12-12-12",
                 "i": "✅",

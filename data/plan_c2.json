@@ -31,7 +31,7 @@
         "nazwa": "Wyciskanie na maszynie skos (HS ISO Lateral Incline Chest Press)",
         "partia": "Klatka górna",
         "serie": 4,
-        "powt": "8–12",
+        "powt": "8–10",
         "przerwa": "120 s",
         "start": "40 kg",
         "cel": "4×10",
@@ -49,26 +49,28 @@
         "cel_color": "accent2"
       },
       {
-        "nr": "4",
-        "nazwa": "Unoszenie ramion na ławce (Chest Supported Lateral Raise)",
+        "nr": "SS4",
+        "nazwa": "SS · Unoszenie ramion na ławce (Chest Supported Lateral Raise)",
         "partia": "Barki boczne",
         "serie": 4,
         "powt": "10–12",
         "przerwa": "60 s",
         "start": "10 kg",
         "cel": "4×15",
-        "cel_color": "text3"
+        "cel_color": "text3",
+        "ss": true
       },
       {
-        "nr": "5",
-        "nazwa": "Prostowanie ramion w oparciu o ławeczkę (Chest Supported DB Triceps Extension)",
+        "nr": "SS5",
+        "nazwa": "SS · Prostowanie ramion w oparciu o ławeczkę (Chest Supported DB Triceps Extension)",
         "partia": "Triceps",
-        "serie": 3,
+        "serie": 4,
         "powt": "10–12",
         "przerwa": "90 s",
         "start": "—",
         "cel": "kalibracja",
-        "cel_color": "text3"
+        "cel_color": "text3",
+        "ss": true
       },
       {
         "nr": "6",
@@ -83,14 +85,15 @@
       },
       {
         "nr": "7",
-        "nazwa": "Uginanie ramion EZ-bar (EZ-bar Biceps Curl)",
+        "nazwa": "HS Select SE Full Biceps Curl",
         "partia": "Biceps",
         "serie": 3,
         "powt": "8–12",
         "przerwa": "60 s",
-        "start": "—",
+        "start": "53 kg",
         "cel": "3×12",
-        "cel_color": "text3"
+        "cel_color": "text3",
+        "uwaga": "Maszyna HS — zastępuje EZ-bar po zmęczeniu z ławki"
       },
       {
         "nr": "8",
@@ -404,26 +407,128 @@
     "czas": "~55–60 min",
     "alert": "Minimum 1 dzień buforu przed UA/UB/Lower. Fokus: tylne barki, rotatory, stabilizacja lędźwiowa.",
     "cwiczenia": [
-      { "nr": "1", "nazwa": "Face Pull High (High Cable Face Pull)", "serie_powt": "3×15–20", "tempo": "2-1-2-1", "przerwa": "60 s", "cel": "3×20 → +ciężar" },
-      { "nr": "2", "nazwa": "Cable Reverse Fly jednorącz", "serie_powt": "3×15–20", "tempo": "2-0-2-1", "przerwa": "45 s", "cel": "3×20 → +ciężar" },
-      { "nr": "3", "nazwa": "Cable External Rotation (rotatory barku)", "serie_powt": "3×15–20", "tempo": "2-1-2-1", "przerwa": "45 s", "cel": "3×20 → +ciężar" },
-      { "nr": "4", "nazwa": "Crossbody Cable Lateral Raise", "serie_powt": "3×15–20", "tempo": "2-0-2-0", "przerwa": "45 s", "cel": "3×20 → +ciężar" },
-      { "nr": "5", "nazwa": "Cable Pull-Through (biodra + pośladki)", "serie_powt": "3×15–20", "tempo": "2-1-2-0", "przerwa": "60 s", "cel": "3×20 → +ciężar" },
-      { "nr": "6", "nazwa": "Seated Cable Good Morning (lędźwie)", "serie_powt": "3×15–20", "tempo": "3-1-2-0", "przerwa": "60 s", "cel": "3×20 → +ciężar" },
-      { "nr": "7", "nazwa": "TRX Fallout (core antyfleksyjny)", "serie_powt": "3×15–20", "tempo": "3-1-2-0", "przerwa": "60 s", "cel": "3×20 → zmniejsz kąt" }
+      {
+        "nr": "1",
+        "nazwa": "Face Pull High (High Cable Face Pull)",
+        "serie_powt": "3×15–20",
+        "tempo": "2-1-2-1",
+        "przerwa": "60 s",
+        "cel": "3×20 → +ciężar"
+      },
+      {
+        "nr": "2",
+        "nazwa": "Cable Reverse Fly jednorącz",
+        "serie_powt": "3×15–20",
+        "tempo": "2-0-2-1",
+        "przerwa": "45 s",
+        "cel": "3×20 → +ciężar"
+      },
+      {
+        "nr": "3",
+        "nazwa": "Cable External Rotation (rotatory barku)",
+        "serie_powt": "3×15–20",
+        "tempo": "2-1-2-1",
+        "przerwa": "45 s",
+        "cel": "3×20 → +ciężar"
+      },
+      {
+        "nr": "4",
+        "nazwa": "Crossbody Cable Lateral Raise",
+        "serie_powt": "3×15–20",
+        "tempo": "2-0-2-0",
+        "przerwa": "45 s",
+        "cel": "3×20 → +ciężar"
+      },
+      {
+        "nr": "5",
+        "nazwa": "Cable Pull-Through (biodra + pośladki)",
+        "serie_powt": "3×15–20",
+        "tempo": "2-1-2-0",
+        "przerwa": "60 s",
+        "cel": "3×20 → +ciężar"
+      },
+      {
+        "nr": "6",
+        "nazwa": "Seated Cable Good Morning (lędźwie)",
+        "serie_powt": "3×15–20",
+        "tempo": "3-1-2-0",
+        "przerwa": "60 s",
+        "cel": "3×20 → +ciężar"
+      },
+      {
+        "nr": "7",
+        "nazwa": "TRX Fallout (core antyfleksyjny)",
+        "serie_powt": "3×15–20",
+        "tempo": "3-1-2-0",
+        "przerwa": "60 s",
+        "cel": "3×20 → zmniejsz kąt"
+      }
     ]
   },
   "erb": {
     "label": "ER+B — Ramiona + Brzuch · Cykl 2",
     "czas": "~40–45 min",
     "cwiczenia": [
-      { "nr": "SS1a", "nazwa": "HS Biceps Curl", "serie_powt": "3×10–12", "tempo": "2-1-3-0", "przerwa": "45 s*", "cel": "3×12 → +ciężar", "ss": true },
-      { "nr": "SS1b", "nazwa": "HS Triceps Extension", "serie_powt": "3×10–12", "tempo": "2-1-2-0", "przerwa": "60 s*", "cel": "3×12 → +ciężar", "ss": true },
-      { "nr": "SS2a", "nazwa": "Cable Curl (straight bar)", "serie_powt": "3×12–15", "tempo": "2-0-2-0", "przerwa": "45 s*", "cel": "3×15 → +ciężar", "ss": true },
-      { "nr": "SS2b", "nazwa": "Tricep Pushdown (D-handle)", "serie_powt": "3×12–15", "tempo": "2-0-2-0", "przerwa": "60 s*", "cel": "3×15 → +ciężar", "ss": true },
-      { "nr": "3", "nazwa": "HS Abdominal Crunch", "serie_powt": "3×12–15", "tempo": "2-1-2-0", "przerwa": "60 s", "cel": "3×15 → +ciężar" },
-      { "nr": "4", "nazwa": "Rotary Torso Machine", "serie_powt": "3×12–15", "tempo": "2-0-2-1", "przerwa": "45 s", "cel": "3×15 → +ciężar" },
-      { "nr": "5", "nazwa": "TRX Knee Raise", "serie_powt": "3×12–15", "tempo": "2-1-2-0", "przerwa": "60 s", "cel": "3×15 → Hanging Knee Raise" }
+      {
+        "nr": "SS1a",
+        "nazwa": "HS Biceps Curl",
+        "serie_powt": "3×10–12",
+        "tempo": "2-1-3-0",
+        "przerwa": "45 s*",
+        "cel": "3×12 → +ciężar",
+        "ss": true
+      },
+      {
+        "nr": "SS1b",
+        "nazwa": "HS Triceps Extension",
+        "serie_powt": "3×10–12",
+        "tempo": "2-1-2-0",
+        "przerwa": "60 s*",
+        "cel": "3×12 → +ciężar",
+        "ss": true
+      },
+      {
+        "nr": "SS2a",
+        "nazwa": "Cable Curl (straight bar)",
+        "serie_powt": "3×12–15",
+        "tempo": "2-0-2-0",
+        "przerwa": "45 s*",
+        "cel": "3×15 → +ciężar",
+        "ss": true
+      },
+      {
+        "nr": "SS2b",
+        "nazwa": "Tricep Pushdown (D-handle)",
+        "serie_powt": "3×12–15",
+        "tempo": "2-0-2-0",
+        "przerwa": "60 s*",
+        "cel": "3×15 → +ciężar",
+        "ss": true
+      },
+      {
+        "nr": "3",
+        "nazwa": "HS Abdominal Crunch",
+        "serie_powt": "3×12–15",
+        "tempo": "2-1-2-0",
+        "przerwa": "60 s",
+        "cel": "3×15 → +ciężar"
+      },
+      {
+        "nr": "4",
+        "nazwa": "Rotary Torso Machine",
+        "serie_powt": "3×12–15",
+        "tempo": "2-0-2-1",
+        "przerwa": "45 s",
+        "cel": "3×15 → +ciężar"
+      },
+      {
+        "nr": "5",
+        "nazwa": "TRX Knee Raise",
+        "serie_powt": "3×12–15",
+        "tempo": "2-1-2-0",
+        "przerwa": "60 s",
+        "cel": "3×15 → Hanging Knee Raise"
+      }
     ]
   }
 }
