@@ -1,12 +1,17 @@
 {
-  "v": "3.06",
-  "updated": "2026-05-04",
+  "v": "3.07",
+  "updated": "2026-05-11",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.07",
+      "date": "11.05",
+      "msg": "Choroba: 06.05 L + 08.05 UB + 11.05 UA odwołane · nastepny: Lower 13.05"
+    },
+    {
       "v": "3.06",
       "date": "04.05",
-      "msg": "UA 04.05 — Ławka 75kg↑ | DB Triceps★★ | Face Pull★★ | plan: SS4+5, HS Biceps, Incline 8-10 | cykl do 31.05"
+      "msg": "UA 04.05 — Ławka 75kg↑ | DB Triceps★★ | Face Pull★★ | plan SS4+5/HS Biceps/Incline 8-10 | cykl do 31.05"
     },
     {
       "v": "3.05",
@@ -47,11 +52,6 @@
       "v": "2.98",
       "date": "27.04",
       "msg": "UA 27.04 — Ławka 72,5kg ⚠️ | 5 ćwiczeń w zakresie ✅"
-    },
-    {
-      "v": "2.97",
-      "date": "28.04",
-      "msg": "fix: Ławka powt 5–8 (AMRAP w uwaga)"
     }
   ]
 }

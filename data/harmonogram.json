@@ -133,19 +133,22 @@
         "data": "2026-05-06",
         "typ": "L",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": false,
+        "odwolane": true
       },
       {
         "data": "2026-05-08",
         "typ": "UB",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": false,
+        "odwolane": true
       },
       {
         "data": "2026-05-11",
         "typ": "UA",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": false,
+        "odwolane": true
       },
       {
         "data": "2026-05-13",
