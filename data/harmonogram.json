@@ -18,11 +18,12 @@
         "planowane": 9
       },
       "L": {
-        "zrobione": 5,
+        "zrobione": 6,
         "planowane": 9
       }
     },
     "sesje": [
+      "13.05 L",
       "04.05 UA",
       "01.05 UB",
       "29.04 L",
@@ -154,7 +155,7 @@
         "data": "2026-05-13",
         "typ": "L",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-05-15",

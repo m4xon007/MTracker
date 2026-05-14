@@ -1,12 +1,17 @@
 {
-  "v": "3.07",
-  "updated": "2026-05-11",
+  "v": "3.08",
+  "updated": "2026-05-13",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.08",
+      "date": "13.05",
+      "msg": "Lower 13.05 — Trap Bar★★ | Hack Squat★★ | Kneeling Curl★★ | Pallof★★ | Seated Curl 89kg | nastepny: UB 15.05"
+    },
+    {
       "v": "3.07",
       "date": "11.05",
-      "msg": "Choroba: 06.05 L + 08.05 UB + 11.05 UA odwołane · nastepny: Lower 13.05"
+      "msg": "Choroba: 06/08/11.05 odwołane · nastepny: Lower 13.05"
     },
     {
       "v": "3.06",
@@ -47,11 +52,6 @@
       "v": "2.99",
       "date": "29.04",
       "msg": "fix: progresja_c1 pełne dane + historia_c1"
-    },
-    {
-      "v": "2.98",
-      "date": "27.04",
-      "msg": "UA 27.04 — Ławka 72,5kg ⚠️ | 5 ćwiczeń w zakresie ✅"
     }
   ]
 }
