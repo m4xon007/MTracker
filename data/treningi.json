@@ -212,18 +212,6 @@
         "gorny_zakres": 12,
         "w_zakresie": true
       },
-      "4": {
-        "kg": "6",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "5": {
-        "kg": "8",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
       "6": {
         "kg": "75",
         "wynik": "12-10-10-10",
@@ -253,6 +241,18 @@
         "wynik": "12-12-12",
         "gorny_zakres": 12,
         "w_zakresie": true
+      },
+      "SS4": {
+        "kg": "6",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "SS5": {
+        "kg": "8",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
       }
     }
   },
@@ -275,18 +275,6 @@
       "3": {
         "kg": "27.5",
         "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "4": {
-        "kg": "7",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "5": {
-        "kg": "8",
-        "wynik": "12-12-12-12",
         "gorny_zakres": 12,
         "w_zakresie": true
       },
@@ -317,6 +305,18 @@
       "10": {
         "kg": "15",
         "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "SS4": {
+        "kg": "7",
+        "wynik": "10-10-10-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "SS5": {
+        "kg": "8",
+        "wynik": "12-12-12-12",
         "gorny_zakres": 12,
         "w_zakresie": true
       }
