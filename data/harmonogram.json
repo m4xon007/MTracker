@@ -4,9 +4,9 @@
   },
   "cykl2": {
     "label": "Cykl 2 — Kwiecień–Maj 2026 (przedłużony)",
-    "opis": "10 tyg · Mini cut · start 31.03 · deload 25–31.05",
+    "opis": "10+ tyg · Mini cut · start 31.03 · deload 01–07.06",
     "plan_wt_czw_nd": true,
-    "deload": "25–31.05.2026",
+    "deload": "01–07.06.2026",
     "checkpoint": "01.06.2026",
     "bilans": {
       "UA": {
@@ -14,7 +14,7 @@
         "planowane": 9
       },
       "UB": {
-        "zrobione": 5,
+        "zrobione": 6,
         "planowane": 9
       },
       "L": {
@@ -23,6 +23,7 @@
       }
     },
     "sesje": [
+      "22.05 UB",
       "20.05 L",
       "18.05 UA",
       "15.05 UB",
@@ -182,22 +183,40 @@
         "data": "2026-05-22",
         "typ": "UB",
         "deload": true,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-05-25",
         "typ": "UA",
-        "deload": true,
+        "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-27",
         "typ": "L",
-        "deload": true,
+        "deload": false,
         "ukonczone": false
       },
       {
         "data": "2026-05-29",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-01",
+        "typ": "UA",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-03",
+        "typ": "L",
+        "deload": true,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-05",
         "typ": "UB",
         "deload": true,
         "ukonczone": false
