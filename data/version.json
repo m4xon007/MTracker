@@ -1,12 +1,17 @@
 {
-  "v": "3.13",
-  "updated": "2026-05-20",
+  "v": "3.14",
+  "updated": "2026-05-23",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.14",
+      "date": "23.05",
+      "msg": "Waga: +15 pomiarów 04.05–23.05 · maj śr 85,62 kg · trend ↓ · deload start 25.05"
+    },
+    {
       "v": "3.13",
       "date": "20.05",
-      "msg": "Lower 20.05 — Trap Bar 95kg★ | Hack Squat 80kg★ | Seated Curl✅ | Cable Crunch✅ | nastepny: UB 22.05"
+      "msg": "Lower 20.05 — Trap Bar 95kg★ | Hack Squat 80kg★ | Seated Curl✅ | Cable Crunch✅"
     },
     {
       "v": "3.12",
@@ -41,17 +46,12 @@
     {
       "v": "3.06",
       "date": "04.05",
-      "msg": "UA 04.05 — Ławka 75kg↑ | DB Triceps★★ | Face Pull★★ | plan SS4+5/HS Biceps"
+      "msg": "UA 04.05 — Ławka 75kg↑ | DB Triceps★★ | Face Pull★★ | plan SS4+5/HS Biceps | cykl do 31.05"
     },
     {
       "v": "3.05",
       "date": "03.05",
       "msg": "Waga: +11 pomiarów 21.04–02.05 · kwiecień śr 85,54 kg"
-    },
-    {
-      "v": "3.04",
-      "date": "01.05",
-      "msg": "Dieta Pt: kasza manna + banan · zakupy + przepis · prompt update"
     }
   ]
 }
