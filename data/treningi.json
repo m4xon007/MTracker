@@ -360,7 +360,7 @@
         "kg": "5",
         "wynik": "12-12-10-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "10": {
         "kg": "35",

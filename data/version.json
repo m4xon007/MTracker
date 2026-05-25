@@ -1,12 +1,17 @@
 {
-  "v": "3.19",
+  "v": "3.20",
   "updated": "2026-05-25",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.20",
+      "date": "25.05",
+      "msg": "Zasada w_zakresie v3: ≥50% serii w górnym zakresie + żadna nie spada poniżej -2 · prompt zaktualizowany"
+    },
+    {
       "v": "3.19",
       "date": "25.05",
-      "msg": "Nowa zasada w_zakresie: ostatnia seria może być o max 2 poniżej górnego zakresu · 7 korekt · 5 nowych progresji UA"
+      "msg": "Nowa zasada w_zakresie: ostatnia seria może być o max 2 poniżej · 7 korekt"
     },
     {
       "v": "3.18",
@@ -47,11 +52,6 @@
       "v": "3.11",
       "date": "15.05",
       "msg": "fix: SS4/SS5 klucze w ostatni_ua"
-    },
-    {
-      "v": "3.10",
-      "date": "15.05",
-      "msg": "UB 15.05 — Incline 55kg★ | Reverse Pec Deck✅ | Arnold 20kg | Seated Row 35kg"
     }
   ]
 }
