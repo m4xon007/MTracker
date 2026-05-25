@@ -1,12 +1,17 @@
 {
-  "v": "3.17",
+  "v": "3.18",
   "updated": "2026-05-25",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.18",
+      "date": "25.05",
+      "msg": "fix: duplikat UA 18.05 w historia_c2 usunięty"
+    },
+    {
       "v": "3.17",
       "date": "25.05",
-      "msg": "UA 25.05 — Incline 4×10✅ | High Row 4×12✅ | Seated Row★★ | Face Pull★★ | nastepny: Lower 27.05"
+      "msg": "UA 25.05 — Incline 4×10✅ | High Row 4×12✅ | Seated Row★★ | Face Pull★★"
     },
     {
       "v": "3.16",
@@ -47,11 +52,6 @@
       "v": "3.09",
       "date": "14.05",
       "msg": "fix: Czwartek pancake — twaróg Pilos 50g"
-    },
-    {
-      "v": "3.08",
-      "date": "13.05",
-      "msg": "Lower 13.05 — Trap Bar★★ | Hack Squat★★ | Kneeling Curl★★ | Pallof★★"
     }
   ]
 }
