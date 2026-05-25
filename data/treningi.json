@@ -210,7 +210,7 @@
         "kg": "75",
         "wynik": "12-12-12-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "7": {
         "kg": "53",
@@ -228,7 +228,7 @@
         "kg": "21.5",
         "wynik": "12-12-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "10": {
         "kg": "17.5",
@@ -258,13 +258,13 @@
         "kg": "30",
         "wynik": "12-12-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "SS4": {
         "kg": "8",
         "wynik": "12-12-12-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "SS5": {
         "kg": "10",
@@ -402,7 +402,7 @@
         "kg": "5",
         "wynik": "12-12-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "SS3b": {
         "kg": "BW",
@@ -498,7 +498,7 @@
         "kg": "25",
         "wynik": "12-12-12-10",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "SS7": {
         "kg": "65",
@@ -534,7 +534,7 @@
         "kg": "75",
         "wynik": "6-6-6-5",
         "gorny_zakres": 6,
-        "w_zakresie": false
+        "w_zakresie": true
       },
       "2": {
         "kg": "90",
