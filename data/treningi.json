@@ -1,169 +1,151 @@
 {
   "nastepny": {
-    "tytul": "Upper A",
-    "data": "Pn 25.05.2026",
-    "badge": "UA",
-    "badge_color": "accent",
+    "tytul": "Lower",
+    "data": "Śr 27.05.2026",
+    "badge": "L",
+    "badge_color": "yellow",
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Ławka sztanga"
+        "nazwa": "Front Squat"
       },
       {
         "nr": "2",
-        "nazwa": "Wyciskanie na maszynie skos"
+        "nazwa": "Trap Bar Deadlift"
       },
       {
         "nr": "3",
-        "nazwa": "Half-Kneeling Landmine Press"
+        "nazwa": "Hack Squat HS"
       },
       {
-        "nr": "SS4",
-        "nazwa": "SS · Unoszenie ramion na ławce"
+        "nr": "4⚡",
+        "nazwa": "Leg Press (opcjonalny)"
       },
       {
-        "nr": "SS5",
-        "nazwa": "SS · Prostowanie ramion w oparciu o ławeczkę"
+        "nr": "5",
+        "nazwa": "HS Seated Leg Curl"
       },
       {
         "nr": "6",
-        "nazwa": "Ściąganie drążka na maszynie"
+        "nazwa": "HS Kneeling Leg Curl"
       },
       {
-        "nr": "7",
-        "nazwa": "HS Select SE Full Biceps Curl"
+        "nr": "SS7",
+        "nazwa": "SS · Calf Raise (Smith)"
       },
       {
-        "nr": "8",
-        "nazwa": "HS Select Seated Row"
+        "nr": "SS8",
+        "nazwa": "SS · Hanging Knee Raise"
       },
       {
-        "nr": "9",
-        "nazwa": "SS · Prostowanie ramion na wyciągu"
+        "nr": "SS9",
+        "nazwa": "SS · Cable Crunch"
       },
       {
-        "nr": "10",
-        "nazwa": "SS · Face pull półklęcząc"
+        "nr": "SS10",
+        "nazwa": "SS · Pallof Press"
       }
     ]
   },
   "poprzedni": {
-    "tytul": "Upper B",
-    "data": "Pt 22.05.2026",
-    "czas": "1:39",
-    "kcal": 939,
-    "tetno": 120,
-    "obciazenie": 2.8,
-    "ocena_liczba": 9,
-    "ocena_tekst": "Incline 60kg 3×8 ✅ | Reverse Pec Deck ★★ →+2,5kg | Australian Pull-up 3×12 ✅ | zamknięcie Cyklu 2",
+    "tytul": "Upper A",
+    "data": "Pn 25.05.2026",
+    "czas": "1:33",
+    "kcal": 805,
+    "tetno": 114,
+    "obciazenie": 2.4,
+    "ocena_liczba": 8,
+    "ocena_tekst": "Ostatnia pełna UA — Incline 4×10 ✅ | High Row 4×12 ✅ | Seated Row★★ | Face Pull★★ | Cable Triceps 3×12 ✅",
     "alert_sukces": null,
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Podciąganie nachwytem",
-        "ciezar": "BW",
-        "wynik": "8-8-6-6-6",
+        "nazwa": "Ławka sztanga",
+        "ciezar": "72.5 kg",
+        "wynik": "8-8-7-5",
         "badge": "→",
         "badge_color": "gray",
-        "plan": "5×6–8"
+        "plan": "4×5–8"
       },
       {
         "nr": "2",
-        "nazwa": "Incline Barbell Press",
-        "ciezar": "60 kg",
-        "wynik": "8-8-8",
-        "badge": "★ +5kg",
-        "badge_color": "accent2",
-        "plan": "3×6–8"
-      },
-      {
-        "nr": "SS3a",
-        "nazwa": "SS · Australian Pull-up",
-        "ciezar": "+5 kg",
-        "wynik": "12-12-12",
-        "badge": "✅ 3×12",
+        "nazwa": "Wyciskanie na maszynie skos",
+        "ciezar": "45 kg",
+        "wynik": "10-10-10-10",
+        "badge": "✅ 4×10",
         "badge_color": "green",
-        "plan": "3×8–12"
+        "plan": "4×8–10"
       },
       {
-        "nr": "SS3b",
-        "nazwa": "SS · Parallel Bar Dips",
-        "ciezar": "BW",
-        "wynik": "12-10-10",
+        "nr": "3",
+        "nazwa": "Half-Kneeling Landmine Press",
+        "ciezar": "30 kg",
+        "wynik": "12-12-10",
         "badge": "→",
         "badge_color": "gray",
         "plan": "3×8–12"
       },
       {
-        "nr": "SS4a",
-        "nazwa": "SS · Butterfly Chest Fly",
-        "ciezar": "68 kg",
-        "wynik": "10-10-10",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×10–12"
-      },
-      {
-        "nr": "SS4b",
-        "nazwa": "SS · Reverse Pec Deck",
-        "ciezar": "6 kg",
-        "wynik": "12-12-12",
-        "badge": "★★ →+2,5kg",
-        "badge_color": "accent2",
-        "plan": "3×10–12"
-      },
-      {
-        "nr": "7",
-        "nazwa": "Cable Crossover",
-        "ciezar": "12.5 kg",
-        "wynik": "10-10-10",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×10–12"
-      },
-      {
-        "nr": "8",
-        "nazwa": "Arnold Press",
-        "ciezar": "20 kg",
-        "wynik": "10-8-8",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×8–10"
-      },
-      {
-        "nr": "9",
-        "nazwa": "Cable Lateral Raise",
-        "ciezar": "5 kg",
-        "wynik": "12-12-10-10",
-        "badge": "→",
+        "nr": "SS4",
+        "nazwa": "SS · Unoszenie ramion na ławce",
+        "ciezar": "8 kg",
+        "wynik": "12-12-12-10",
+        "badge": "→ +1kg",
         "badge_color": "gray",
         "plan": "4×10–12"
       },
       {
+        "nr": "SS5",
+        "nazwa": "SS · Prostowanie ramion op. ławeczkę",
+        "ciezar": "10 kg",
+        "wynik": "12-12-12-12",
+        "badge": "→ +1kg",
+        "badge_color": "gray",
+        "plan": "4×10–12"
+      },
+      {
+        "nr": "6",
+        "nazwa": "Ściąganie drążka na maszynie",
+        "ciezar": "75 kg",
+        "wynik": "12-12-12-12",
+        "badge": "✅ 4×12",
+        "badge_color": "green",
+        "plan": "4×8–12"
+      },
+      {
+        "nr": "7",
+        "nazwa": "HS Select SE Full Biceps Curl",
+        "ciezar": "53 kg",
+        "wynik": "10-10-8",
+        "badge": "→",
+        "badge_color": "gray",
+        "plan": "3×8–12"
+      },
+      {
+        "nr": "8",
+        "nazwa": "HS Select Seated Row",
+        "ciezar": "61 kg",
+        "wynik": "12-12-12",
+        "badge": "★★ →+5kg",
+        "badge_color": "accent2",
+        "plan": "3×8–12"
+      },
+      {
+        "nr": "9",
+        "nazwa": "SS · Prostowanie ramion na wyciągu",
+        "ciezar": "21.5 kg",
+        "wynik": "12-12-12",
+        "badge": "✅ 3×12",
+        "badge_color": "green",
+        "plan": "3×10–12"
+      },
+      {
         "nr": "10",
-        "nazwa": "Seated Cable Row",
-        "ciezar": "35 kg",
-        "wynik": "12-10-8",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×8–12"
-      },
-      {
-        "nr": "11",
-        "nazwa": "EZ-bar Skull Crusher",
-        "ciezar": "25 kg",
-        "wynik": "12-10-8",
-        "badge": "→",
-        "badge_color": "gray",
-        "plan": "3×8–12"
-      },
-      {
-        "nr": "12",
-        "nazwa": "Hammer Curl",
+        "nazwa": "SS · Face pull półklęcząc",
         "ciezar": "17.5 kg",
-        "wynik": "9-9-8",
-        "badge": "→",
-        "badge_color": "gray",
+        "wynik": "12-12-12",
+        "badge": "★★ →+2,5kg",
+        "badge_color": "accent2",
         "plan": "3×10–12"
       }
     ],
@@ -171,92 +153,26 @@
       {
         "typ": "success",
         "ikona": "★★",
-        "tekst": "Reverse Pec Deck 6kg drugi raz 3×12 → JS odblokuje +2,5kg do 8,5kg. Australian Pull-up +5kg 3×12 — pierwszy raz w pełnym zakresie."
+        "tekst": "Seated Row i Face Pull — drugi raz w zakresie → JS odblokuje: Seated Row →66kg, Face Pull →20kg. Mocne zamknięcie UA."
       },
       {
         "typ": "success",
-        "ikona": "★",
-        "tekst": "Incline 60kg 3×8 — w zakresie od razu przy nowym ciężarze. Przy kolejnym UB jeśli znów 3×8 → progresja potwierdzona."
+        "ikona": "✅",
+        "tekst": "Incline 45kg 4×10 — pierwszy raz w pełnym zakresie przy nowym ciężarze. High Row 75kg 4×12 — też pełny zakres. Cable Triceps 3×12 ✅."
       },
       {
         "typ": "info",
         "ikona": "🏁",
-        "tekst": "Ostatnia sesja Cyklu 2. Przez 8+ tygodni: Ławka 70→75kg, Incline 40→60kg, Trap Bar 85→95kg, Hack Squat 65→80kg, Podciąganie BW 5×8. Solidny cykl."
+        "tekst": "Ostatnia pełna UA Cyklu 2. Ławka: 70→75kg w ciągu cyklu. Na deload lżej, w C3 wróć do 75kg i buduj do 80kg na bulku."
       },
       {
         "typ": "info",
         "ikona": "💡",
-        "tekst": "Deload przesuwa się na 01–07.06. Zostają jeszcze UA 25.05, L 27.05, UB 29.05 — ostatni tydzień cyklu rozszerzonego."
+        "tekst": "Ławka 72,5kg — nierówne serie (8-8-7-5). Zmęczenie końca cyklu widoczne. Deload w dobrym momencie."
       }
     ]
   },
   "ostatni_ua_prev": {
-    "data": "04.05",
-    "ocena": 9,
-    "cwiczenia": {
-      "1": {
-        "kg": "75",
-        "wynik": "7-6-5-4",
-        "gorny_zakres": 8,
-        "w_zakresie": false
-      },
-      "2": {
-        "kg": "40",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 10,
-        "w_zakresie": true
-      },
-      "3": {
-        "kg": "27.5",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "SS4": {
-        "kg": "7",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "SS5": {
-        "kg": "8",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "6": {
-        "kg": "75",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "7": {
-        "kg": "53",
-        "wynik": "10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "8": {
-        "kg": "61",
-        "wynik": "10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "9": {
-        "kg": "21.5",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "10": {
-        "kg": "15",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      }
-    }
-  },
-  "ostatni_ua": {
     "data": "18.05",
     "ocena": 9,
     "cwiczenia": {
@@ -313,6 +229,72 @@
         "wynik": "12-12-10",
         "gorny_zakres": 12,
         "w_zakresie": false
+      },
+      "10": {
+        "kg": "17.5",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      }
+    }
+  },
+  "ostatni_ua": {
+    "data": "25.05",
+    "ocena": 8,
+    "cwiczenia": {
+      "1": {
+        "kg": "72.5",
+        "wynik": "8-8-7-5",
+        "gorny_zakres": 8,
+        "w_zakresie": false
+      },
+      "2": {
+        "kg": "45",
+        "wynik": "10-10-10-10",
+        "gorny_zakres": 10,
+        "w_zakresie": true
+      },
+      "3": {
+        "kg": "30",
+        "wynik": "12-12-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "SS4": {
+        "kg": "8",
+        "wynik": "12-12-12-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "SS5": {
+        "kg": "10",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "6": {
+        "kg": "75",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "7": {
+        "kg": "53",
+        "wynik": "10-10-8",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "8": {
+        "kg": "61",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "9": {
+        "kg": "21.5",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
       },
       "10": {
         "kg": "17.5",
@@ -614,10 +596,20 @@
     "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.   Ławka sztanga:                       __ kg × __-__-__-__\n2.   Wyciskanie na maszynie skos:         __ kg × __-__-__-__\n3.   Half-Kneeling Landmine Press:        __ kg × __-__-__\n4.   Unoszenie ramion na ławce:           __ kg × __-__-__-__\n5.   Prostowanie ramion w op. o ławeczkę: __ kg × __-__-__\n6.   Ściąganie drążka na maszynie:        __ kg × __-__-__-__\n7.   EZ-bar Biceps Curl:                  __ kg × __-__-__\n8.   HS Select Seated Row:                __ kg × __-__-__\nSS9. Prostowanie ramion na wyciągu:       __ kg × __-__-__\nSS10. Face pull półklęcząc:               __ kg × __-__-__\n\nWnioski / uwagi:",
     "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.    Podciąganie (asysta):        __-__-__-__-__\n2.    Smith Incline Press:         __ kg × __-__-__\nSS3a. Australian Pull-up:          __-__-__\nSS3b. Dipy:                        __-__-__\nSS4a. Butterfly:                   __ kg × __-__-__-__\nSS4b. Reverse Pec Deck:            __ kg × __-__-__\n7.    Cable Crossover:             __ kg × __-__-__\n8.    Arnold Press:                __ kg × __-__-__\n9.    Cable Lateral Raise:         __ kg × __-__-__-__\n10.   Seated Cable Row:            __ kg × __-__-__\n11.   EZ-bar Skull Crusher:        __ kg × __-__-__\n12.   Hammer Curl:                 __ kg × __-__-__\n\nWnioski / uwagi:",
     "lower": "Lower [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.   Front Squat:          __ kg × __-__-__-__\n2.   Trap Bar Deadlift:    __ kg × __-__-__-__\n3.   Hack Squat:           __ kg × __-__-__-__\n4.   Leg Press ⚡ (opcja):  __ kg × __-__-__\n5.   Seated Leg Curl:      __ kg × __-__-__-__\n6.   Kneeling Leg Curl:    __ kg × __-__-__-__\nSS7. Calf Raise (Smith):   __ kg × __-__-__-__\nSS8. Hanging Knee Raise:   BW × __-__-__-__\nSS9. Cable Crunch:         __ kg × __-__-__\nSS10. Pallof Press:        __ kg × __-__-__\n\nWnioski / uwagi:",
-    "prompt": "Zaktualizuj dane po odbytym treningu. Zwróć pliki JSON + SQL do Supabase.\n\n[WKLEJ RAPORT TUTAJ]\n\n════ KONTEKST ════\nUser ID Marcin: 03483a1f-c0b6-4261-ab40-2a4870172106\nSupabase URL:   https://nayveopouqlymclmxfkn.supabase.co/rest/v1\n\n════ ARCHITEKTURA DANYCH ════\n\nSource of truth:\n  plan_c2.json          → serie (liczba), zakresy powt, kolejność ćwiczeń (NIEZMIENNE)\n  treningi.json\n    ostatni_[typ]       → wyniki ostatniego treningu danego typu (kg, wynik, w_zakresie)\n    ostatni_[typ]_prev  → wyniki przedostatniego treningu tego samego typu\n    nastepny            → tytul, data, badge — cwiczenia: TYLKO nr i nazwa\n    poprzedni           → pełne dane ostatniego treningu (do wyświetlenia)\n\n════ ZASADA PODWÓJNEJ PROGRESJI ════\n\nProgresja obliczana AUTOMATYCZNIE przez JS (calcProgresja) — dostarcz poprawne dane:\n  up   = ostatni i prev: ten sam kg, oba w_zakresie = true → +ciężar\n  same = inny kg niż prev LUB ostatni w_zakresie = false LUB brak prev\n  new  = brak danych w ostatni\n\nSkok ciężaru: sztanga/trap bar +2,5 kg · hantle +2 kg · maszyny/wyciągi +2,5–5 kg\n\n════ CZĘŚĆ 1 — PLIKI JSON ════\n\n── treningi.json ──\n\n1. ostatni_[typ]_prev — skopiuj CAŁOŚĆ obecnego ostatni_[typ] przed nadpisaniem\n2. ostatni_[typ] — nadpisz wynikami z raportu\n3. nastepny — kolejny trening w rotacji (UA→L→UB→UA…)\n   cwiczenia[]: TYLKO nr i nazwa — nic więcej!\n4. poprzedni — zastąp danymi z raportu\n   cwiczenia[]: nr, nazwa, ciezar, wynik, badge, badge_color, plan\n   wnioski[]: typ (success/warn/info), ikona, tekst\n5. archiwum.historia_c2 — dodaj na początku\n6. archiwum.progresja_c2.[ua|ub|lower] — dodaj datę i dane\n\n⚠️ WYMAGANE KLUCZE — weryfikuj przed wysłaniem pliku:\n  treningi.json TOP-LEVEL:\n    nastepny, poprzedni,\n    ostatni_ua, ostatni_ua_prev,\n    ostatni_ub, ostatni_ub_prev,\n    ostatni_lower, ostatni_lower_prev,\n    szablony_c2 (ua, ub, lower, prompt, ebl, erb, cardio),\n    szablony_c1 (ua, ub, lower),\n    archiwum (historia_c2, historia_c1, progresja_c2, progresja_c1)\n  harmonogram.json:\n    cykl2 (bilans, sesje, plan)\n    cykl1 (bilans, sesje)\n\n── harmonogram.json ──\n\n7. bilans [typ].zrobione +1\n   sesje[] — dodaj \"DD.MM TYP\" na początku\n   plan[] — ukonczone: true dla tej daty\n\n── version.json + service-worker.js ──\n\n8. Podbij v o 0.01, zaktualizuj updated, dodaj wpis w changelog[]\n9. CACHE_VERSION = mtracker-v{nowy_numer}\n\nZawsze generuj WSZYSTKIE 4 pliki: treningi.json + harmonogram.json + version.json + service-worker.js\n\n════ CZĘŚĆ 2 — SQL DO SUPABASE ════\n\nNa końcu odpowiedzi wygeneruj gotowy SQL jako CTE — jeden Run w SQL Editor.\n\nMAPA short_name — exercises:\nUA:    Ławka sztanga | HS ISO Lateral Incline | Half-Kneeling Landmine\n       Chest Supported Lateral Raise | DB Triceps Extension\n       HS ISO Lateral High Row | Dumbbell Rotation Curl | HS Select Seated Row\n       Overhead Cable Triceps Extension | Half-Kneeling Face Pull\nUB:    Podciąganie nachwytem | Incline Barbell Press | Podciąganie australijskie\n       Parallel Bar Dips | Butterfly Chest Fly | Cable Crossover\n       Arnold Press | Seated Dumbbell Reverse Fly | Cable Lateral Raise\n       Seated Cable Row | EZ-bar Skull Crusher | Hammer Curl\nLower: Front Squat | Trap Bar Deadlift | Hack Squat HS | Leg Press\n       HS Seated Leg Curl | HS Kneeling Leg Curl | Smith Machine Calf Raise\n       Hanging Knee Raise | Cable Crunch | Pallof Press\n\nWITH new_session AS (\n  INSERT INTO public.workout_sessions\n    (user_id, cycle_id, session_date, type, rating, duration_min, kcal, avg_hr, rpe, notes)\n  VALUES (\n    '03483a1f-c0b6-4261-ab40-2a4870172106',\n    (SELECT id FROM public.cycles WHERE user_id = '03483a1f-c0b6-4261-ab40-2a4870172106' AND is_active = true),\n    'YYYY-MM-DD', 'upper_a|upper_b|lower', 8, 90, 800, 115, 2.5, 'notatki'\n  ) RETURNING id\n),\nsets AS (\n  INSERT INTO public.session_sets\n    (session_id, exercise_name, exercise_id, set_number, kg, reps, completed)\n  SELECT s.id, e.short_name, e.id, v.set_number, v.kg, v.reps, true\n  FROM new_session s\n  CROSS JOIN (VALUES\n    ('Ławka sztanga', 1, 72.5, 5),\n    ('Ławka sztanga', 2, 72.5, 5)\n    -- ... wszystkie serie wszystkich ćwiczeń\n  ) AS v(short_name, set_number, kg, reps)\n  JOIN public.exercises e ON e.short_name = v.short_name\n),\nprogression AS (\n  INSERT INTO public.exercise_progression\n    (user_id, cycle_id, session_id, exercise_name, exercise_id, session_date, kg, sets_reps_achieved, progression_status)\n  SELECT '03483a1f-c0b6-4261-ab40-2a4870172106',\n    (SELECT id FROM public.cycles WHERE user_id = '03483a1f-c0b6-4261-ab40-2a4870172106' AND is_active = true),\n    s.id, e.short_name, e.id, v.session_date::date, v.kg, v.sets_reps, v.status\n  FROM new_session s\n  CROSS JOIN (VALUES\n    ('Ławka sztanga', 'YYYY-MM-DD', 72.5, '4×5-5-5-7', 'maintain')\n  ) AS v(short_name, session_date, kg, sets_reps, status)\n  JOIN public.exercises e ON e.short_name = v.short_name\n  -- Tylko ćwiczenia główne ⭐: Ławka sztanga, Podciąganie nachwytem, Front Squat, Trap Bar Deadlift\n  -- Usuń całe CTE progression jeśli sesja nie zawiera ćwiczeń głównych\n)\n-- Trigger auto_complete_schedule obsługuje to automatycznie.\n-- Poniższy UPDATE jest fallbackiem.\nUPDATE public.schedule_entries SET completed = true\nWHERE user_id = '03483a1f-c0b6-4261-ab40-2a4870172106'\n  AND planned_date = 'YYYY-MM-DD'\n  AND session_type = 'upper_a|upper_b|lower';\n\n-- Pomiar wagi (usuń jeśli brak w raporcie)\nINSERT INTO public.weight_logs (user_id, measured_at, value_kg)\nVALUES ('03483a1f-c0b6-4261-ab40-2a4870172106', 'YYYY-MM-DD', 00.0)\nON CONFLICT (user_id, measured_at) DO UPDATE SET value_kg = EXCLUDED.value_kg;\n\nWAŻNE:\n• NIE używaj Markdown w SQL — pisz s.id, e.id (NIE [s.id](http://s.id))\n• NIE dodawaj spacji w session_type — 'upper_b' NIE '  upper_b'\n• exercise_name = short_name z mapy powyżej (dokładna pisownia!)\n• Wstaw KAŻDĄ serię jako osobny wiersz w VALUES\n• Usuń blok weight_logs jeśli brak pomiaru wagi\n• Usuń CTE progression jeśli brak ćwiczeń głównych ⭐"
+    "prompt": "Zaktualizuj dane po odbytym treningu. Zwróć pliki JSON + SQL do Supabase.\n\n[WKLEJ RAPORT TUTAJ]\n\n════ KONTEKST ════\nUser ID Marcin: 03483a1f-c0b6-4261-ab40-2a4870172106\nSupabase URL:   https://nayveopouqlymclmxfkn.supabase.co/rest/v1\n\n════ ARCHITEKTURA DANYCH ════\n\nSource of truth:\n  plan_c2.json          → serie (liczba), zakresy powt, kolejność ćwiczeń (NIEZMIENNE)\n  treningi.json\n    ostatni_[typ]       → wyniki ostatniego treningu danego typu (kg, wynik, w_zakresie)\n    ostatni_[typ]_prev  → wyniki przedostatniego treningu tego samego typu\n    nastepny            → tytul, data, badge — cwiczenia: TYLKO nr i nazwa\n    poprzedni           → pełne dane ostatniego treningu (do wyświetlenia)\n\n════ ZASADA PODWÓJNEJ PROGRESJI ════\n\nProgresja obliczana AUTOMATYCZNIE przez JS (calcProgresja) — dostarcz poprawne dane:\n  up   = ostatni i prev: ten sam kg, oba w_zakresie = true → +ciężar\n  same = inny kg niż prev LUB ostatni w_zakresie = false LUB brak prev\n  new  = brak danych w ostatni\n\nSkok ciężaru: sztanga/trap bar +2,5 kg · hantle +2 kg · maszyny/wyciągi +2,5–5 kg\n\n════ CZĘŚĆ 1 — PLIKI JSON ════\n\n── treningi.json ──\n\n1. ostatni_[typ]_prev — skopiuj CAŁOŚĆ obecnego ostatni_[typ] przed nadpisaniem\n2. ostatni_[typ] — nadpisz wynikami z raportu\n3. nastepny — kolejny trening w rotacji (UA→L→UB→UA…)\n   cwiczenia[]: TYLKO nr i nazwa — nic więcej!\n4. poprzedni — zastąp danymi z raportu\n   cwiczenia[]: nr, nazwa, ciezar, wynik, badge, badge_color, plan\n   wnioski[]: typ (success/warn/info), ikona, tekst\n5. archiwum.historia_c2 — dodaj na początku\n6. archiwum.progresja_c2.[ua|ub|lower] — dodaj datę i dane\n\n⚠️ WYMAGANE KLUCZE — weryfikuj przed wysłaniem pliku:\n  treningi.json TOP-LEVEL:\n    nastepny, poprzedni,\n    ostatni_ua, ostatni_ua_prev,\n    ostatni_ub, ostatni_ub_prev,\n    ostatni_lower, ostatni_lower_prev,\n    szablony_c2 (ua, ub, lower, prompt, ebl, erb, cardio),\n    szablony_c1 (ua, ub, lower),\n    archiwum (historia_c2, historia_c1, progresja_c2, progresja_c1)\n  harmonogram.json:\n    cykl2 (bilans, sesje, plan)\n    cykl1 (bilans, sesje)\n\n── harmonogram.json ──\n\n7. bilans [typ].zrobione +1\n   sesje[] — dodaj \"DD.MM TYP\" na początku\n   plan[] — ukonczone: true dla tej daty\n\n── version.json + service-worker.js ──\n\n8. Podbij v o 0.01, zaktualizuj updated, dodaj wpis w changelog[]\n9. CACHE_VERSION = mtracker-v{nowy_numer}\n\nZawsze generuj WSZYSTKIE 4 pliki: treningi.json + harmonogram.json + version.json + service-worker.js\n\n════ CZĘŚĆ 2 — SQL DO SUPABASE ════\n\nNa końcu odpowiedzi wygeneruj gotowy SQL jako CTE — jeden Run w SQL Editor.\n\nMAPA short_name — exercises:\nUA:    Ławka sztanga | HS ISO Lateral Incline | Half-Kneeling Landmine\n       Chest Supported Lateral Raise | DB Triceps Extension\n       HS ISO Lateral High Row | Dumbbell Rotation Curl | HS Select Seated Row\n       Overhead Cable Triceps Extension | Half-Kneeling Face Pull\nUB:    Podciąganie nachwytem | Incline Barbell Press | Podciąganie australijskie\n       Parallel Bar Dips | Butterfly Chest Fly | Cable Crossover\n       Arnold Press | Seated Dumbbell Reverse Fly | Cable Lateral Raise\n       Seated Cable Row | EZ-bar Skull Crusher | Hammer Curl\nLower: Front Squat | Trap Bar Deadlift | Hack Squat HS | Leg Press\n       HS Seated Leg Curl | HS Kneeling Leg Curl | Smith Machine Calf Raise\n       Hanging Knee Raise | Cable Crunch | Pallof Press\n\nWITH new_session AS (\n  INSERT INTO public.workout_sessions\n    (user_id, cycle_id, session_date, type, rating, duration_min, kcal, avg_hr, rpe, notes)\n  VALUES (\n    '03483a1f-c0b6-4261-ab40-2a4870172106',\n    (SELECT id FROM public.cycles WHERE user_id = '03483a1f-c0b6-4261-ab40-2a4870172106' AND is_active = true),\n    'YYYY-MM-DD', 'upper_a|upper_b|lower', 8, 90, 800, 115, 2.5, 'notatki'\n  ) RETURNING id\n),\nsets AS (\n  INSERT INTO public.session_sets\n    (session_id, exercise_name, exercise_id, set_number, kg, reps, completed)\n  SELECT s.id, e.short_name, e.id, v.set_number, v.kg, v.reps, true\n  FROM new_session s\n  CROSS JOIN (VALUES\n    ('Ławka sztanga', 1, 72.5, 5),\n    ('Ławka sztanga', 2, 72.5, 5)\n    -- ... wszystkie serie wszystkich ćwiczeń\n  ) AS v(short_name, set_number, kg, reps)\n  JOIN public.exercises e ON e.short_name = v.short_name\n),\nprogression AS (\n  INSERT INTO public.exercise_progression\n    (user_id, cycle_id, session_id, exercise_name, exercise_id, session_date, kg, sets_reps_achieved, progression_status)\n  SELECT '03483a1f-c0b6-4261-ab40-2a4870172106',\n    (SELECT id FROM public.cycles WHERE user_id = '03483a1f-c0b6-4261-ab40-2a4870172106' AND is_active = true),\n    s.id, e.short_name, e.id, v.session_date::date, v.kg, v.sets_reps, v.status\n  FROM new_session s\n  CROSS JOIN (VALUES\n    ('Ławka sztanga', 'YYYY-MM-DD', 72.5, '4×5-5-5-7', 'maintain')\n  ) AS v(short_name, session_date, kg, sets_reps, status)\n  JOIN public.exercises e ON e.short_name = v.short_name\n  -- Tylko ćwiczenia główne ⭐: Ławka sztanga, Podciąganie nachwytem, Front Squat, Trap Bar Deadlift\n  -- Usuń całe CTE progression jeśli sesja nie zawiera ćwiczeń głównych\n)\n-- Trigger auto_complete_schedule obsługuje to automatycznie.\n-- Poniższy UPDATE jest fallbackiem.\nUPDATE public.schedule_entries SET completed = true\nWHERE user_id = '03483a1f-c0b6-4261-ab40-2a4870172106'\n  AND planned_date = 'YYYY-MM-DD'\n  AND session_type = 'upper_a|upper_b|lower';\n\n-- Pomiar wagi (usuń jeśli brak w raporcie)\nINSERT INTO public.weight_logs (user_id, measured_at, value_kg)\nVALUES ('03483a1f-c0b6-4261-ab40-2a4870172106', 'YYYY-MM-DD', 00.0)\nON CONFLICT (user_id, measured_at) DO UPDATE SET value_kg = EXCLUDED.value_kg;\n\nWAŻNE:\n• NIE używaj Markdown w SQL — pisz s.id, e.id (NIE [s.id](http://s.id))\n• NIE dodawaj spacji w session_type — 'upper_b' NIE '  upper_b'\n• exercise_name = short_name z mapy powyżej (dokładna pisownia!)\n• Wstaw KAŻDĄ serię jako osobny wiersz w VALUES\n• Usuń blok weight_logs jeśli brak pomiaru wagi\n• Usuń CTE progression jeśli brak ćwiczeń głównych ⭐",
+    "waga_bulk": "MONITORING WAGI NA BULKU — aktualizuj co 1–2 tygodnie\n\n════ ZASADY INTERPRETACJI ════\n\n✅ NORMALNY przyrost (nie panikuj):\n• +0,5–1,0 kg w pierwszych 2 tygodniach bulku → glikogen + woda (nie tłuszcz)\n• +0,2–0,4 kg/tydzień w stabilnej fazie → idealne tempo bulku przy nadwyżce ~250 kcal\n• Wahania dobowe ±0,5 kg → normalne, ignoruj\n\n⚠️ SYGNAŁ OSTRZEGAWCZY (zredukuj kalorie o ~100–150 kcal):\n• >0,5 kg/tydzień przez 3 tygodnie z rzędu → za duża nadwyżka\n• Waga rośnie ale siła nie → przyrost głównie z tłuszczu\n• BF na wadze łazienkowej rośnie >1% w miesiąc\n\n🛑 ZATRZYMAJ BULK (wróć do TDEE):\n• >88–89 kg przy obecnej strukturze → BF przekracza ~21–22%\n• Waga rośnie ale samopoczucie i sylwetka wyraźnie gorzej\n\n════ CZĘSTOTLIWOŚĆ WGRYWANIA ════\n• Codziennie rano (najlepiej) lub minimum 3×/tydzień\n• Zawsze o tej samej porze — rano, na czczo, po toalecie\n• Wgrywaj zdjęcia z wagi do MTracker co 1–2 tygodnie\n\n════ CELE WAGOWE C3 (Bulk) ════\n• Start: ~85,5 kg (czerwiec 2026)\n• Oczekiwany skok tygień 1–2: do ~87 kg (glikogen + woda) — NORMALNY\n• Cel po 4 miesiącach bulku: ~88–89 kg max\n• Jeśli przekroczysz 89 kg → czas na mini cut #2\n• Tempo idealne: ~0,25–0,35 kg/tydzień w fazie stabilnej"
   },
   "archiwum": {
     "historia_c2": [
+      {
+        "data": "25.05",
+        "typ": "UA",
+        "typ_color": "accent",
+        "ocena": "8/10",
+        "kcal": 805,
+        "czas": "1:33",
+        "wyniki": "Ławka 72,5kg 8-8-7-5 | Incline 45kg 4×10✅ | High Row 4×12✅ | Seated Row★★ | Face Pull★★ | Cable Triceps✅"
+      },
       {
         "data": "22.05",
         "typ": "UB",
@@ -786,6 +778,7 @@
         "kolor": "accent",
         "label": "🔵 Upper A — Cykl 2",
         "sesje": [
+          "25.05",
           "18.05",
           "18.05",
           "04.05",
@@ -800,6 +793,11 @@
             "zakres": "4×5–8",
             "cel": "2/3 w górnym przez 2 sesje → +2,5kg · cel 75–77,5kg",
             "dane": [
+              {
+                "v": "72,5×8-8-7-5",
+                "i": "→",
+                "c": "text3"
+              },
               {
                 "v": "72,5×8-7-8-5",
                 "i": "→",
@@ -843,6 +841,11 @@
             "cel": "4×12 przez 2 sesje → +2,5kg",
             "dane": [
               {
+                "v": "45×10-10-10-10",
+                "i": "✅",
+                "c": "green"
+              },
+              {
                 "v": "45×9-8-8-8",
                 "i": "↑",
                 "c": "green"
@@ -884,6 +887,11 @@
             "zakres": "3×8–12",
             "cel": "3×12 → +2,5kg",
             "dane": [
+              {
+                "v": "30×12-12-10",
+                "i": "→",
+                "c": "text3"
+              },
               {
                 "v": "30×12-12-12",
                 "i": "★",
@@ -927,6 +935,11 @@
             "cel": "4×12 przez 2 sesje → +2kg",
             "dane": [
               {
+                "v": "8×12-12-12-10",
+                "i": "→",
+                "c": "text3"
+              },
+              {
                 "v": "7×12-12-12-12",
                 "i": "✅",
                 "c": "green"
@@ -968,6 +981,11 @@
             "zakres": "3×10–12",
             "cel": "3×12 przez 2 sesje → +2kg",
             "dane": [
+              {
+                "v": "10×12-12-12-12",
+                "i": "↑",
+                "c": "green"
+              },
               {
                 "v": "9×12-12-12-12",
                 "i": "↑",
@@ -1011,6 +1029,11 @@
             "cel": "4×12 → +5kg",
             "dane": [
               {
+                "v": "75×12-12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
+              {
                 "v": "75×12-12-12-10",
                 "i": "→",
                 "c": "text3"
@@ -1052,6 +1075,11 @@
             "zakres": "3×8–12",
             "cel": "3×12 → +2,5kg",
             "dane": [
+              {
+                "v": "HS53×10-10-8",
+                "i": "→",
+                "c": "text3"
+              },
               {
                 "v": "HS53×10-10-10",
                 "i": "→",
@@ -1096,6 +1124,11 @@
             "dane": [
               {
                 "v": "61×12-12-12",
+                "i": "★★",
+                "c": "accent2"
+              },
+              {
+                "v": "61×12-12-12",
                 "i": "✅",
                 "c": "green"
               },
@@ -1136,6 +1169,11 @@
             "zakres": "3×10–12",
             "cel": "3×12 przez 2 sesje → +2,5kg",
             "dane": [
+              {
+                "v": "21,5×12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
               {
                 "v": "21,5×12-12-10",
                 "i": "→",
@@ -1178,6 +1216,11 @@
             "zakres": "3×10–12",
             "cel": "3×12 przez 2 sesje → +2,5kg",
             "dane": [
+              {
+                "v": "17,5×12-12-12",
+                "i": "★★",
+                "c": "accent2"
+              },
               {
                 "v": "17,5×12-12-12",
                 "i": "★",

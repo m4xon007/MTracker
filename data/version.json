@@ -1,12 +1,22 @@
 {
-  "v": "3.15",
-  "updated": "2026-05-22",
+  "v": "3.17",
+  "updated": "2026-05-25",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.17",
+      "date": "25.05",
+      "msg": "UA 25.05 — Incline 4×10✅ | High Row 4×12✅ | Seated Row★★ | Face Pull★★ | nastepny: Lower 27.05"
+    },
+    {
+      "v": "3.16",
+      "date": "24.05",
+      "msg": "Bulk monitoring: zasady śledzenia wagi + alerty C3"
+    },
+    {
       "v": "3.15",
       "date": "22.05",
-      "msg": "UB 22.05 — Incline 60kg★ | Reverse Pec Deck★★ | Australian✅ | deload → 01-07.06 | nastepny: UA 25.05"
+      "msg": "UB 22.05 — Incline 60kg★ | Reverse Pec Deck★★ | Australian✅ | deload 01-07.06"
     },
     {
       "v": "3.14",
@@ -42,16 +52,6 @@
       "v": "3.08",
       "date": "13.05",
       "msg": "Lower 13.05 — Trap Bar★★ | Hack Squat★★ | Kneeling Curl★★ | Pallof★★"
-    },
-    {
-      "v": "3.07",
-      "date": "11.05",
-      "msg": "Choroba: 06/08/11.05 odwołane · nastepny: Lower 13.05"
-    },
-    {
-      "v": "3.06",
-      "date": "04.05",
-      "msg": "UA 04.05 — Ławka 75kg↑ | DB Triceps★★ | Face Pull★★ | plan SS4+5/HS Biceps | cykl do 31.05"
     }
   ]
 }
