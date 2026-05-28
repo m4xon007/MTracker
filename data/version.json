@@ -1,12 +1,17 @@
 {
-  "v": "3.20",
-  "updated": "2026-05-25",
+  "v": "3.21",
+  "updated": "2026-05-27",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
     {
+      "v": "3.21",
+      "date": "27.05",
+      "msg": "Lower 27.05 — Front Squat 4×6✅🏆 | Trap Bar★★ | Hack Squat★★ | Seated Curl★★ | Kneeling★★ | Cable Crunch★★"
+    },
+    {
       "v": "3.20",
       "date": "25.05",
-      "msg": "Zasada w_zakresie v3: ≥50% serii w górnym zakresie + żadna nie spada poniżej -2 · prompt zaktualizowany"
+      "msg": "Zasada w_zakresie v3: 50% serii w zakresie + żadna poniżej -2 · prompt zaktualizowany"
     },
     {
       "v": "3.19",
@@ -47,11 +52,6 @@
       "v": "3.12",
       "date": "18.05",
       "msg": "UA 18.05 — Landmine 30kg★ | Lateral Raise✅ | Seated Row✅ | Face Pull 17,5kg★"
-    },
-    {
-      "v": "3.11",
-      "date": "15.05",
-      "msg": "fix: SS4/SS5 klucze w ostatni_ua"
     }
   ]
 }
