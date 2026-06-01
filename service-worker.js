@@ -1,8 +1,10 @@
 // service-worker.js
 // MTracker PWA — offline cache
-const CACHE_VERSION = 'mtracker-v3.22';
+// Zmień CACHE_VERSION przy każdym deployu żeby wymusić odświeżenie cache
+const CACHE_VERSION = 'mtracker-v3.23';
 const CACHE_NAME = CACHE_VERSION;
 
+// Zasoby do pre-cache przy instalacji
 const PRECACHE_URLS = [
   '/MTracker/',
   '/MTracker/index.html',
@@ -18,8 +20,10 @@ const PRECACHE_URLS = [
   '/MTracker/data/dieta.json',
 ];
 
+// CDN zasoby — cache przy pierwszym użyciu
 const CDN_CACHE_NAME = 'mtracker-cdn-v1';
 
+// ─── Install ───────────────────────────────────────────────────────────────
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -28,6 +32,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
+// ─── Activate ──────────────────────────────────────────────────────────────
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) =>
@@ -40,11 +45,15 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+// ─── Fetch ─────────────────────────────────────────────────────────────────
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
+
   if (request.method !== 'GET') return;
   if (url.protocol === 'chrome-extension:') return;
+
+  // CDN — Stale-While-Revalidate
   const isCDN = (
     url.hostname.includes('googleapis.com') ||
     url.hostname.includes('gstatic.com') ||
@@ -52,13 +61,17 @@ self.addEventListener('fetch', (event) => {
     url.hostname.includes('cdnjs.cloudflare.com') ||
     url.hostname.includes('unpkg.com')
   );
+
   if (isCDN) {
     event.respondWith(staleWhileRevalidate(request, CDN_CACHE_NAME));
     return;
   }
+
+  // Zasoby lokalne — Cache First, fallback sieć
   event.respondWith(cacheFirst(request, CACHE_NAME));
 });
 
+// ─── Strategie ─────────────────────────────────────────────────────────────
 async function cacheFirst(request, cacheName) {
   const cached = await caches.match(request);
   if (cached) return cached;
