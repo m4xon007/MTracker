@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "cykl": 3,
+    "start": "16.06.2026",
+    "czas_trwania": "10–12 tygodni",
+    "etap": "Bulk · cze–lis 2026",
+    "deload": "TBD",
+    "progresja_zasada": "Podwójna progresja v3: ⌈N/2⌉ serii ≥ górny zakres ORAZ żadna seria nie spada poniżej górny_zakres-2 → w_zakresie=true. Dwie sesje z rzędu w_zakresie=true przy tym samym ciężarze → +ciężar."
+  },
+  "upper_a": {
+    "label": "Upper A — Cykl 3",
+    "czas": "~75–90 min",
+    "alert": "Start 16.06.2026 · Bulk · SS = superseria (bez przerwy między ćwiczeniami oznaczonymi SS)",
+    "uwaga": "⚡ Progresja v3: ⌈N/2⌉ serii w górnym zakresie + min. nie spada poniżej górny-2 przez 2 sesje z rzędu → +ciężar. Bulk: priorytet progresja.",
+    "cwiczenia": [
+      {
+        "nr": "1",
+        "nazwa": "⭐ Ławka sztanga (Barbell Bench Press)",
+        "partia": "Klatka środkowa",
+        "serie": 4,
+        "powt": "5–8",
+        "przerwa": "180 s",
+        "start": "72,5 kg",
+        "cel": "4×8",
+        "cel_color": "accent2",
+        "glowne": true,
+        "uwaga": "w_zakresie=false na starcie (8-8-7-5 w C2) — utrzymaj 72,5 kg aż do spełnienia warunku progresji"
+      },
+      {
+        "nr": "2",
+        "nazwa": "Wyciskanie na maszynie skos (HS ISO Lateral Incline Chest Press)",
+        "partia": "Klatka górna",
+        "serie": 4,
+        "powt": "8–10",
+        "przerwa": "120 s",
+        "start": "45 kg",
+        "cel": "4×10",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "3",
+        "nazwa": "Half-Kneeling Landmine Press",
+        "partia": "Barki przednie",
+        "serie": 3,
+        "powt": "8–12",
+        "przerwa": "90 s",
+        "start": "32,5 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "SS4",
+        "nazwa": "SS · Unoszenie ramion na ławce (Chest Supported Lateral Raise)",
+        "partia": "Barki boczne",
+        "serie": 4,
+        "powt": "10–12",
+        "przerwa": "60 s*",
+        "start": "8 kg",
+        "cel": "4×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "SS5",
+        "nazwa": "SS · Prostowanie ramion w oparciu (Chest Supported DB Triceps Extension)",
+        "partia": "Triceps",
+        "serie": 4,
+        "powt": "10–12",
+        "przerwa": "90 s*",
+        "start": "10 kg",
+        "cel": "4×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "6",
+        "nazwa": "Ściąganie drążka na maszynie (HS ISO Lateral High Row)",
+        "partia": "Plecy (laty, środek)",
+        "serie": 4,
+        "powt": "8–12",
+        "przerwa": "120 s",
+        "start": "80 kg",
+        "cel": "4×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "7",
+        "nazwa": "HS Select SE Full Biceps Curl (maszyna)",
+        "partia": "Biceps",
+        "serie": 3,
+        "powt": "8–12",
+        "przerwa": "60 s",
+        "start": "53 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "8",
+        "nazwa": "HS Select Seated Row",
+        "partia": "Plecy (laty dolne) + biceps",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "90 s",
+        "start": "66 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "9",
+        "nazwa": "SS · Prostowanie ramion na wyciągu (Overhead Cable Triceps Extension)",
+        "partia": "Triceps (głowa długa)",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "60 s*",
+        "start": "24 kg",
+        "cel": "3×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "10",
+        "nazwa": "SS · Face pull półklęcząc ze sznurkiem (Half-Kneeling Face Pull)",
+        "partia": "Barki tylne + rotatory",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "90 s*",
+        "start": "20 kg",
+        "cel": "3×12",
+        "cel_color": "accent2",
+        "ss": true
+      }
+    ]
+  },
+  "upper_b": {
+    "label": "Upper B — Cykl 3",
+    "czas": "~80–90 min",
+    "alert": "SS = superseria. Pary: SS3a+SS3b (Australian+Dipy), SS4a+SS4b (Butterfly+Reverse). Bez przerwy między ćwiczeniami SS.",
+    "uwaga": "⚡ SS = superseria · * = przerwa w superserii. Progresja v3: dwie sesje z rzędu w_zakresie=true → +ciężar.",
+    "cwiczenia": [
+      {
+        "nr": "1",
+        "nazwa": "⭐ Podciąganie nachwytem BW (Pull-up)",
+        "partia": "Plecy (laty) + biceps",
+        "serie": 5,
+        "powt": "6–10",
+        "przerwa": "180 s",
+        "start": "BW",
+        "cel": "5×8",
+        "cel_color": "accent2",
+        "glowne": true,
+        "uwaga": "BW — bez obciążenia. Cel: 5×8 czystych powt."
+      },
+      {
+        "nr": "2",
+        "nazwa": "Incline Barbell Press (Wyciskanie na ławce skośnej)",
+        "partia": "Klatka górna",
+        "serie": 3,
+        "powt": "6–8",
+        "przerwa": "180 s",
+        "start": "62,5 kg",
+        "cel": "3×8",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "SS3a",
+        "nazwa": "SS · Australian Pull-up (Podciąganie australijskie)",
+        "partia": "Plecy + biceps",
+        "serie": 3,
+        "powt": "8–12",
+        "przerwa": "45 s*",
+        "start": "+4 kg",
+        "cel": "3×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "SS3b",
+        "nazwa": "SS · Parallel Bar Dips (Dipy na poręczach)",
+        "partia": "Triceps + klatka dolna",
+        "serie": 3,
+        "powt": "8–12",
+        "przerwa": "90 s*",
+        "start": "BW",
+        "cel": "3×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "SS4a",
+        "nazwa": "SS · Butterfly Chest Fly (Rozpiętki Butterfly)",
+        "partia": "Klatka środkowa",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "45 s*",
+        "start": "68 kg",
+        "cel": "3×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "SS4b",
+        "nazwa": "SS · Reverse Pec Deck (Odwrotne rozpiętki)",
+        "partia": "Barki tylne",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "90 s*",
+        "start": "7 kg",
+        "cel": "3×12",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "7",
+        "nazwa": "Cable Crossover (Krzyżowanie na wyciągu górnym)",
+        "partia": "Klatka środkowa/dolna",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "90 s",
+        "start": "10 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "8",
+        "nazwa": "Arnold Press (Arnoldki siedząc)",
+        "partia": "Barki przednie + boczne",
+        "serie": 3,
+        "powt": "8–10",
+        "przerwa": "90 s",
+        "start": "20 kg",
+        "cel": "3×10",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "9",
+        "nazwa": "Cable Lateral Raise jednorącz",
+        "partia": "Barki boczne",
+        "serie": 4,
+        "powt": "10–12",
+        "przerwa": "60 s",
+        "start": "5 kg",
+        "cel": "4×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "10",
+        "nazwa": "Seated Cable Row — V-bar",
+        "partia": "Plecy (środek)",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "120 s",
+        "start": "35 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "11",
+        "nazwa": "EZ-bar Skull Crusher (Francuz na EZ)",
+        "partia": "Triceps (głowa długa)",
+        "serie": 3,
+        "powt": "8–12",
+        "przerwa": "90 s",
+        "start": "25 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "12",
+        "nazwa": "Hammer Curl (Uginanie młotkiem)",
+        "partia": "Biceps + brachialis",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "60 s",
+        "start": "17,5 kg",
+        "cel": "3×12",
+        "cel_color": "accent2"
+      }
+    ]
+  },
+  "lower": {
+    "label": "Lower — Cykl 3",
+    "czas": "~85–100 min",
+    "alert": "Big 4: Front Squat i Trap Bar Deadlift zakres 4×6. SS: SS7+SS8 (Calf+Knee Raise), SS9+SS10 (Cable Crunch+Pallof). Leg Press opcjonalny ⚡.",
+    "uwaga": "⚠️ Lędźwie >3/10 przy Trap Bar → zamień na Leg Press. ⚡ Leg Press gdy masz energię i sesja <100 min.",
+    "cwiczenia": [
+      {
+        "nr": "1",
+        "nazwa": "⭐ Front Squat",
+        "partia": "Nogi (quad-dominant)",
+        "serie": 4,
+        "powt": "4–6",
+        "przerwa": "180 s",
+        "start": "77,5 kg",
+        "cel": "4×6",
+        "cel_color": "accent2",
+        "glowne": true,
+        "uwaga": "+2,5 kg odblokowane po 4×6 ✅ w C2"
+      },
+      {
+        "nr": "2",
+        "nazwa": "⭐ Trap Bar Deadlift",
+        "partia": "Nogi (hip-dominant) + plecy",
+        "serie": 4,
+        "powt": "4–6",
+        "przerwa": "180 s",
+        "start": "97,5 kg",
+        "cel": "4×6",
+        "cel_color": "accent2",
+        "glowne": true,
+        "uwaga": "+2,5 kg odblokowane po 4×6 ★★ w C2"
+      },
+      {
+        "nr": "3",
+        "nazwa": "Hack Squat HS",
+        "partia": "Nogi (quad)",
+        "serie": 4,
+        "powt": "8–12",
+        "przerwa": "120 s",
+        "start": "85 kg",
+        "cel": "4×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "4",
+        "nazwa": "Leg Press ⚡ (opcjonalny)",
+        "partia": "Nogi (quad)",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "120 s",
+        "start": "—",
+        "cel": "gdy sesja <100 min",
+        "cel_color": "text3"
+      },
+      {
+        "nr": "5",
+        "nazwa": "HS Seated Leg Curl",
+        "partia": "Ścięgna udowe",
+        "serie": 4,
+        "powt": "10–12",
+        "przerwa": "90 s",
+        "start": "94 kg",
+        "cel": "4×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "6",
+        "nazwa": "HS Kneeling Leg Curl",
+        "partia": "Ścięgna udowe (unilateral)",
+        "serie": 4,
+        "powt": "10–12",
+        "przerwa": "60 s",
+        "start": "27,5 kg",
+        "cel": "4×12",
+        "cel_color": "accent2"
+      },
+      {
+        "nr": "SS7",
+        "nazwa": "SS · Calf Raise Smith Machine",
+        "partia": "Łydki",
+        "serie": 4,
+        "powt": "12–15",
+        "przerwa": "45 s*",
+        "start": "65 kg",
+        "cel": "4×15",
+        "cel_color": "text3",
+        "ss": true
+      },
+      {
+        "nr": "SS8",
+        "nazwa": "SS · Hanging Knee Raise (Podciąganie kolan w zwisie)",
+        "partia": "Core — dolny brzuch",
+        "serie": 4,
+        "powt": "12–15",
+        "przerwa": "45 s*",
+        "start": "BW",
+        "cel": "4×15",
+        "cel_color": "text3",
+        "ss": true
+      },
+      {
+        "nr": "SS9",
+        "nazwa": "SS · Cable Crunch (Ściąganie brzucha na wyciągu)",
+        "partia": "Core — prosty brzuch",
+        "serie": 3,
+        "powt": "12–15",
+        "przerwa": "90 s*",
+        "start": "34 kg",
+        "cel": "3×15",
+        "cel_color": "accent2",
+        "ss": true
+      },
+      {
+        "nr": "SS10",
+        "nazwa": "SS · Pallof Press (Odpychanie boczne na wyciągu)",
+        "partia": "Core — antyrotacja",
+        "serie": 3,
+        "powt": "10–12",
+        "przerwa": "60 s*",
+        "start": "10 kg",
+        "cel": "3×12",
+        "cel_color": "text3",
+        "ss": true,
+        "uwaga": "Wróć do 10 kg (prev false przy 12,5 kg)"
+      }
+    ]
+  },
+  "ebl": {
+    "label": "EB+L — Barki + Lędźwie · Cykl 3",
+    "czas": "~55–60 min",
+    "alert": "Minimum 1 dzień buforu przed UA/UB/Lower. Fokus: tylne barki, rotatory, stabilizacja lędźwiowa.",
+    "cwiczenia": [
+      { "nr": "1", "nazwa": "Face Pull High (High Cable Face Pull)",    "serie_powt": "3×15–20", "tempo": "2-1-2-1", "przerwa": "60 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "2", "nazwa": "Cable Reverse Fly jednorącz",              "serie_powt": "3×15–20", "tempo": "2-0-2-1", "przerwa": "45 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "3", "nazwa": "Cable External Rotation (rotatory barku)", "serie_powt": "3×15–20", "tempo": "2-1-2-1", "przerwa": "45 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "4", "nazwa": "Crossbody Cable Lateral Raise",            "serie_powt": "3×15–20", "tempo": "2-0-2-0", "przerwa": "45 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "5", "nazwa": "Cable Pull-Through (biodra + pośladki)",   "serie_powt": "3×15–20", "tempo": "2-1-2-0", "przerwa": "60 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "6", "nazwa": "Seated Cable Good Morning (lędźwie)",      "serie_powt": "3×15–20", "tempo": "3-1-2-0", "przerwa": "60 s",  "cel": "3×20 → +ciężar" },
+      { "nr": "7", "nazwa": "TRX Fallout (core antyfleksyjny)",         "serie_powt": "3×15–20", "tempo": "3-1-2-0", "przerwa": "60 s",  "cel": "3×20 → zmniejsz kąt" }
+    ]
+  },
+  "erb": {
+    "label": "ER+B — Ramiona + Brzuch · Cykl 3",
+    "czas": "~40–45 min",
+    "cwiczenia": [
+      { "nr": "SS1a", "nazwa": "HS Biceps Curl",          "serie_powt": "3×10–12", "tempo": "2-1-3-0", "przerwa": "45 s*", "cel": "3×12 → +ciężar", "ss": true },
+      { "nr": "SS1b", "nazwa": "HS Triceps Extension",    "serie_powt": "3×10–12", "tempo": "2-1-2-0", "przerwa": "60 s*", "cel": "3×12 → +ciężar", "ss": true },
+      { "nr": "SS2a", "nazwa": "Cable Curl (straight bar)","serie_powt": "3×12–15", "tempo": "2-0-2-0", "przerwa": "45 s*", "cel": "3×15 → +ciężar", "ss": true },
+      { "nr": "SS2b", "nazwa": "Tricep Pushdown (D-handle)","serie_powt": "3×12–15","tempo": "2-0-2-0", "przerwa": "60 s*", "cel": "3×15 → +ciężar", "ss": true },
+      { "nr": "3",    "nazwa": "HS Abdominal Crunch",     "serie_powt": "3×12–15", "tempo": "2-1-2-0", "przerwa": "60 s",  "cel": "3×15 → +ciężar" },
+      { "nr": "4",    "nazwa": "Rotary Torso Machine",    "serie_powt": "3×12–15", "tempo": "2-0-2-1", "przerwa": "45 s",  "cel": "3×15 → +ciężar" },
+      { "nr": "5",    "nazwa": "TRX Knee Raise",          "serie_powt": "3×12–15", "tempo": "2-1-2-0", "przerwa": "60 s",  "cel": "3×15 → Hanging Knee Raise" }
+    ]
+  }
+}
