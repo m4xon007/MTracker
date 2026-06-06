@@ -369,7 +369,7 @@
 <section id="plan">
   <h2>🏋️ Plan Treningowy</h2>
   <div class="tab-row" style="flex-wrap:nowrap;gap:4px">
-    <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)" style="flex:1;text-align:center;padding:5px 4px">🆕 C2</button>
+    <button class="tab-btn active" onclick="switchTab('plan','p-cykl2',this)" style="flex:1;text-align:center;padding:5px 4px">🆕 C3</button>
     <button class="tab-btn" onclick="switchTab('plan','p-cykl1',this)" style="flex:1;text-align:center;padding:5px 4px">📦 C1</button>
     <button class="tab-btn" onclick="switchTab('plan','p-core',this)" style="flex:1;text-align:center;padding:5px 4px">🏠 Core</button>
     <button class="tab-btn" onclick="switchTab('plan','p-rozgrzewka',this)" style="flex:1;text-align:center;padding:5px 4px">🔥 Rozgrzewka</button>
@@ -653,10 +653,18 @@
   <h2>🥗 Dieta</h2>
 
   <div class="tab-row" style="flex-wrap:nowrap;gap:4px">
+    <button class="tab-btn active" onclick="switchTab('dieta','d-bulk',this)" style="flex:1;text-align:center;padding:5px 4px">📈 Bulk</button>
+    <button class="tab-btn" onclick="switchTab('dieta','d-minicut',this)" style="flex:1;text-align:center;padding:5px 4px">🔻 Cut</button>
     <button class="tab-btn" onclick="switchTab('dieta','d-rekompozycja',this)" style="flex:1;text-align:center;padding:5px 4px">Reko</button>
-    <button class="tab-btn active" onclick="switchTab('dieta','d-minicut',this)" style="flex:1;text-align:center;padding:5px 4px">🔻 Cut</button>
     <button class="tab-btn" onclick="switchTab('dieta','d-produkty',this)" style="flex:1;text-align:center;padding:5px 4px">🧪 Produkty</button>
     <button class="tab-btn" onclick="switchTab('dieta','d-przepisy',this)" style="flex:1;text-align:center;padding:5px 4px">👨‍🍳 Przepisy</button>
+  </div>
+
+  <div id="d-bulk" class="tab-panel active">
+    <div id="diet-bulk-stats"></div>
+    <h3>Posiłki tygodniowe</h3>
+    <div id="diet-bulk-dni"></div>
+    <div id="diet-bulk-zakupy" style="margin-top:8px"></div>
   </div>
 
   <div id="d-rekompozycja" class="tab-panel">
@@ -667,7 +675,7 @@
     <div id="diet-reko-treningowe"></div>
   </div>
 
-  <div id="d-minicut" class="tab-panel active">
+  <div id="d-minicut" class="tab-panel">
     <div id="diet-minicut-stats"></div>
     <h3>Posiłki — dni odpoczynku</h3>
     <div id="diet-minicut-odpoczynek"></div>
@@ -1896,20 +1904,93 @@
   function renderDieta(d) {
     const errors = [];
     const safe = (name, fn) => { try { fn(); } catch(e) { errors.push(name + ': ' + e.message); console.error(name, e); } };
+    safe('bulk',      () => renderDietaBulk(d.bulk));
     safe('reko',      () => renderDietaReko(d.rekompozycja));
     safe('minicut',   () => renderDietaMinicut(d.minicut));
     safe('produkty',  () => renderDietaProdukty(d.produkty));
     safe('przepisy',  () => renderDietaPrzepisy(d.przepisy));
     safe('zakupy',    () => renderDietaZakupy(d.zakupy));
     if (errors.length) {
-      const el = document.getElementById('diet-minicut-stats');
+      const el = document.getElementById('diet-bulk-stats');
       if (el) el.innerHTML = '<div class="alert alert-warn"><span class="alert-icon">⚠️</span><span>Błąd renderera: ' + errors.join(' | ') + '</span></div>';
     }
-    const aktywna = d.meta && d.meta.aktywna_faza === 'minicut' ? 'd-minicut' : 'd-rekompozycja';
-    ['d-rekompozycja','d-minicut','d-produkty','d-przepisy'].forEach(id => {
+    const faza = d.meta && d.meta.aktywna_faza;
+    const aktywna = faza === 'bulk' ? 'd-bulk' : faza === 'minicut' ? 'd-minicut' : 'd-rekompozycja';
+    ['d-bulk','d-rekompozycja','d-minicut','d-produkty','d-przepisy'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', id === aktywna);
     });
+    // Aktywny przycisk zakładki
+    const tabBtns = document.querySelectorAll('#dieta .tab-btn');
+    tabBtns.forEach(btn => {
+      btn.classList.remove('active');
+      if ((aktywna === 'd-bulk' && btn.textContent.includes('Bulk')) ||
+          (aktywna === 'd-minicut' && btn.textContent.includes('Cut')) ||
+          (aktywna === 'd-rekompozycja' && btn.textContent === 'Reko')) {
+        btn.classList.add('active');
+      }
+    });
+  }
+
+  function renderDietaBulk(b) {
+    if (!b) return;
+    const el = document.getElementById('diet-bulk-stats');
+    if (!el) return;
+    const statsHtml = (b.stats||[]).map(s =>
+      `<div class="stat-box"><div class="stat-num" style="font-size:20px;color:var(--${s.kolor})">${s.wartosc}</div><div class="stat-label">${s.label}</div></div>`
+    ).join('');
+    const alertsHtml = (b.alerty||[]).map(a =>
+      `<div class="alert alert-${a.typ}"><span class="alert-icon">${a.ikona}</span><span>${a.tekst}</span></div>`
+    ).join('');
+    const BADGE_CLS = { blue:'badge-blue', yellow:'badge-yellow', gray:'badge-gray' };
+    const dniRows = (b.dni||[]).map(d => {
+      const bc = BADGE_CLS[d.typ_color] || 'badge-gray';
+      return `<tr><td>${d.dzien}</td><td style="color:var(--accent2)">${d.kcal}</td><td style="color:var(--green)">${d.bialko}</td><td><span class="badge ${bc}">${d.typ}</span></td></tr>`;
+    }).join('');
+    el.innerHTML = `
+      <div class="card" style="border-left:3px solid var(--green)">
+        <div class="card-title">📈 ${b.label}</div>
+        <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-bottom:12px">${statsHtml}</div>
+        ${alertsHtml}
+      </div>
+      <div class="card">
+        <div class="card-title">📅 Plan kalorii — tygodniowy</div>
+        <table>
+          <tr><th>Dzień</th><th>Kcal</th><th>Białko</th><th>Typ</th></tr>
+          ${dniRows}
+          <tr style="font-weight:600;border-top:1px solid var(--border)">
+            <td>Średnia</td>
+            <td style="color:var(--accent2)">${b.srednia?.kcal||'~2954'}</td>
+            <td style="color:var(--green)">${b.srednia?.bialko||'~202g'}</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>`;
+    // Renderuj posiłki — posortowane wg dnia tygodnia
+    const ORDER = ['Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
+    const wszystkie = [...(b.posilki_odpoczynek||[]), ...(b.posilki_treningowe||[])];
+    wszystkie.sort((a, x) =>
+      ORDER.findIndex(o => a.dzien.includes(o)) - ORDER.findIndex(o => x.dzien.includes(o))
+    );
+    renderPosilkiDni('diet-bulk-dni', wszystkie);
+    // Zakupy bulk (jeśli istnieją)
+    const zakupyEl = document.getElementById('diet-bulk-zakupy');
+    if (zakupyEl && b.zakupy) {
+      const karty = (b.zakupy.kategorie||[]).map(kat => {
+        const rows = kat.produkty.map(p =>
+          `<tr><td>${p.nazwa}</td><td><strong>${p.ilosc}</strong></td><td style="font-size:11px;color:var(--text3)">${p.uwagi||''}</td></tr>`
+        ).join('');
+        return `<div class="card"><div class="card-title">${kat.kategoria}</div>
+          <table><tr><th>Produkt</th><th>Ilość</th><th>Uwagi</th></tr>${rows}</table>
+        </div>`;
+      }).join('');
+      zakupyEl.innerHTML = `<details style="margin-bottom:8px">
+        <summary style="cursor:pointer;padding:14px 16px;background:var(--bg2);border:1px solid var(--green);border-radius:8px;font-size:13px;color:var(--green);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;font-weight:600">
+          <span>🛒 ${b.zakupy.tytul||'Lista zakupów — Bulk C3'}</span><span style="font-size:10px;color:var(--text3)">▼</span>
+        </summary>
+        <div style="padding-top:8px">${karty}</div>
+      </details>`;
+    }
   }
 
   function renderPosilkiDni(containerId, dni) {
@@ -2248,16 +2329,17 @@
   Promise.all([
     fetchJSON('waga.json'),
     fetchJSON('treningi.json'),
-    fetchJSON('plan_c2.json'),
+    fetchJSON('plan_c3.json'),
     fetchJSON('roadmap.json'),
     fetchJSON('harmonogram.json'),
     fetchJSON('dieta.json'),
     fetchJSON('plan_c1.json'),
-    fetchJSON('version.json')
-  ]).then(([wagaData, treningiData, planC2Data, roadmapData, harmData, dietaData, planC1Data, versionData]) => {
+    fetchJSON('version.json'),
+    fetchJSON('plan_c2.json')
+  ]).then(([wagaData, treningiData, planC3Data, roadmapData, harmData, dietaData, planC1Data, versionData, planC2Data]) => {
     renderWaga(wagaData);
-    renderTreningi(treningiData, planC2Data);
-    renderPlanC2(planC2Data);
+    renderTreningi(treningiData, planC3Data);
+    renderPlanC2(planC3Data);
     renderPlanC1(planC1Data);
     renderSzablony('tr-szablony-c2', treningiData.szablony_c2, 'C2');
     renderSzablony('tr-szablony-c1', treningiData.szablony_c1, 'C1');
