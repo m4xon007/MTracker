@@ -1,8 +1,13 @@
 {
-  "v": "3.28",
+  "v": "3.29",
   "updated": "2026-06-07",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.29",
+      "date": "07.06",
+      "msg": "treningi: nastepny.cwiczenia → C3 UA numery SS4a/SS4b/SS7a/SS7b"
+    },
     {
       "v": "3.28",
       "date": "07.06",
@@ -47,11 +52,6 @@
       "v": "3.20",
       "date": "23.05",
       "msg": "Waga 85,75 kg · monitoring maja"
-    },
-    {
-      "v": "3.19",
-      "date": "20.05",
-      "msg": "UB maj · progresje"
     }
   ]
 }

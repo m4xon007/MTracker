@@ -7,43 +7,43 @@
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "Ławka sztanga"
+        "nazwa": "⭐ Ławka sztanga"
       },
       {
         "nr": "2",
-        "nazwa": "Wyciskanie na maszynie skos"
+        "nazwa": "Wyciskanie hantli na ławce skośnej"
       },
       {
         "nr": "3",
+        "nazwa": "Wiosłowanie w oparciu o ławkę hantlami"
+      },
+      {
+        "nr": "SS4a",
+        "nazwa": "SS · Unoszenie ramion w oparciu o ławkę"
+      },
+      {
+        "nr": "SS4b",
+        "nazwa": "SS · Prostowanie ramion w oparciu o ławkę"
+      },
+      {
+        "nr": "5",
         "nazwa": "Half-Kneeling Landmine Press"
       },
       {
-        "nr": "SS4",
-        "nazwa": "SS · Unoszenie ramion na ławce"
-      },
-      {
-        "nr": "SS5",
-        "nazwa": "SS · Prostowanie ramion w oparciu o ławeczkę"
-      },
-      {
         "nr": "6",
-        "nazwa": "Ściąganie drążka na maszynie"
-      },
-      {
-        "nr": "7",
-        "nazwa": "HS Select SE Full Biceps Curl"
-      },
-      {
-        "nr": "8",
         "nazwa": "HS Select Seated Row"
       },
       {
-        "nr": "9",
-        "nazwa": "SS · Prostowanie ramion na wyciągu"
+        "nr": "SS7a",
+        "nazwa": "SS · Prostowanie ramion nad głową jednorącz"
       },
       {
-        "nr": "10",
-        "nazwa": "SS · Face pull półklęcząc"
+        "nr": "SS7b",
+        "nazwa": "SS · Face pull półklęcząc ze sznurkiem"
+      },
+      {
+        "nr": "8",
+        "nazwa": "Uginanie ramion na wyciągu jednorącz"
       }
     ]
   },
