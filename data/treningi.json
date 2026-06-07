@@ -7,23 +7,23 @@
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "⭐ Ławka sztanga"
+        "nazwa": "⭐ Ławka sztanga (Barbell Bench Press)"
       },
       {
         "nr": "2",
-        "nazwa": "Wyciskanie hantli na ławce skośnej"
+        "nazwa": "Wyciskanie hantli na ławce skośnej (Incline DB Press)"
       },
       {
         "nr": "3",
-        "nazwa": "Wiosłowanie w oparciu o ławkę hantlami"
+        "nazwa": "Wiosłowanie w oparciu o ławkę hantlami (Chest Supported DB Row)"
       },
       {
         "nr": "SS4a",
-        "nazwa": "SS · Unoszenie ramion w oparciu o ławkę"
+        "nazwa": "SS · Unoszenie ramion w oparciu o ławkę (Chest Supported Lateral Raise)"
       },
       {
         "nr": "SS4b",
-        "nazwa": "SS · Prostowanie ramion w oparciu o ławkę"
+        "nazwa": "SS · Prostowanie ramion w oparciu o ławkę (Chest Supported DB Triceps Extension)"
       },
       {
         "nr": "5",
@@ -35,15 +35,15 @@
       },
       {
         "nr": "SS7a",
-        "nazwa": "SS · Prostowanie ramion nad głową jednorącz"
+        "nazwa": "SS · Prostowanie ramion nad głową jednorącz (Single Arm Cable Overhead Triceps Extension)"
       },
       {
         "nr": "SS7b",
-        "nazwa": "SS · Face pull półklęcząc ze sznurkiem"
+        "nazwa": "SS · Face pull półklęcząc ze sznurkiem (Half-Kneeling Face Pull)"
       },
       {
         "nr": "8",
-        "nazwa": "Uginanie ramion na wyciągu jednorącz"
+        "nazwa": "Uginanie ramion na wyciągu jednorącz (Cable Biceps Curl)"
       }
     ]
   },
@@ -191,134 +191,73 @@
     ]
   },
   "ostatni_ua_prev": {
-    "data": "18.05",
-    "ocena": 9,
-    "cwiczenia": {
-      "1": {
-        "kg": "72.5",
-        "wynik": "8-7-8-5",
-        "gorny_zakres": 8,
-        "w_zakresie": false
-      },
-      "2": {
-        "kg": "45",
-        "wynik": "9-8-8-8",
-        "gorny_zakres": 10,
-        "w_zakresie": false
-      },
-      "3": {
-        "kg": "30",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "SS4": {
-        "kg": "7",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "SS5": {
-        "kg": "9",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "6": {
-        "kg": "75",
-        "wynik": "12-12-12-10",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "7": {
-        "kg": "53",
-        "wynik": "10-10-10",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      },
-      "8": {
-        "kg": "61",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "9": {
-        "kg": "21.5",
-        "wynik": "12-12-10",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "10": {
-        "kg": "17.5",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      }
-    }
+    "data": null,
+    "ocena": null,
+    "cwiczenia": {}
   },
   "ostatni_ua": {
-    "data": "25.05",
-    "ocena": 8,
+    "data": "08.06.2026",
+    "ocena": null,
     "cwiczenia": {
       "1": {
-        "kg": "72.5",
-        "wynik": "8-8-7-5",
+        "kg": "75",
+        "wynik": "—",
         "gorny_zakres": 8,
-        "w_zakresie": false
+        "w_zakresie": null
       },
       "2": {
-        "kg": "45",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 10,
-        "w_zakresie": true
+        "kg": "24",
+        "wynik": "—",
+        "gorny_zakres": 12,
+        "w_zakresie": null
       },
       "3": {
-        "kg": "30",
-        "wynik": "12-12-10",
+        "kg": "20",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": true
+        "w_zakresie": null
       },
-      "SS4": {
-        "kg": "8",
-        "wynik": "12-12-12-10",
-        "gorny_zakres": 12,
-        "w_zakresie": true
+      "SS4a": {
+        "kg": "7.5",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
       },
-      "SS5": {
+      "SS4b": {
         "kg": "10",
-        "wynik": "12-12-12-12",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
+      },
+      "5": {
+        "kg": "30",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": true
+        "w_zakresie": null
       },
       "6": {
-        "kg": "75",
-        "wynik": "12-12-12-12",
+        "kg": "65",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": true
+        "w_zakresie": null
       },
-      "7": {
-        "kg": "53",
-        "wynik": "10-10-8",
-        "gorny_zakres": 12,
-        "w_zakresie": false
+      "SS7a": {
+        "kg": "10",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
+      },
+      "SS7b": {
+        "kg": "17.5",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
       },
       "8": {
-        "kg": "61",
-        "wynik": "12-12-12",
+        "kg": "53",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "9": {
-        "kg": "21.5",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "10": {
-        "kg": "17.5",
-        "wynik": "12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
+        "w_zakresie": null
       }
     }
   },

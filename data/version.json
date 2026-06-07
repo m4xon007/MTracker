@@ -1,8 +1,13 @@
 {
-  "v": "3.29",
+  "v": "3.30",
   "updated": "2026-06-07",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.30",
+      "date": "07.06",
+      "msg": "treningi: ostatni_ua ciężary startowe C3 · nowe numery SS4a/SS4b/SS7a/SS7b"
+    },
     {
       "v": "3.29",
       "date": "07.06",
@@ -47,11 +52,6 @@
       "v": "3.21",
       "date": "27.05",
       "msg": "Ostatni trening C2 · podsumowanie wyników"
-    },
-    {
-      "v": "3.20",
-      "date": "23.05",
-      "msg": "Waga 85,75 kg · monitoring maja"
     }
   ]
 }
