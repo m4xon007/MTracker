@@ -1,8 +1,13 @@
 {
-  "v": "3.25",
+  "v": "3.26",
   "updated": "2026-06-06",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.26",
+      "date": "06.06",
+      "msg": "treningi: nastepny → Upper A Pn 08.06.2026 · start C3"
+    },
     {
       "v": "3.25",
       "date": "06.06",
@@ -47,11 +52,6 @@
       "v": "3.17",
       "date": "13.05",
       "msg": "UA maj · powrót po chorobie"
-    },
-    {
-      "v": "3.16",
-      "date": "06.05",
-      "msg": "Choroba 06-11.05 · 3 sesje odwołane"
     }
   ]
 }
