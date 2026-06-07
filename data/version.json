@@ -1,8 +1,13 @@
 {
-  "v": "3.27",
+  "v": "3.28",
   "updated": "2026-06-07",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.28",
+      "date": "07.06",
+      "msg": "index: guard ebl/erb · fix błędu renderPlanTabSimple"
+    },
     {
       "v": "3.27",
       "date": "07.06",
@@ -47,11 +52,6 @@
       "v": "3.19",
       "date": "20.05",
       "msg": "UB maj · progresje"
-    },
-    {
-      "v": "3.18",
-      "date": "16.05",
-      "msg": "Lower maj · Front Squat 75kg ★"
     }
   ]
 }
