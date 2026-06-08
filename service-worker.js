@@ -1,57 +1,104 @@
-{
-  "v": "3.31",
-    "updated": "2026-06-08",
-      "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
-        "changelog": [
-          {
-            "v": "3.31",
-            "date": "08.06",
-            "msg": "UA C3 #1 · Ławka 75kg · Seated Row 68kg 4×12✅ · harmonogram cykl3"
-          },
-          {
-            "v": "3.30",
-            "date": "07.06",
-            "msg": "treningi: ostatni_ua ciężary startowe C3 · nowe numery SS4a/SS4b/SS7a/SS7b"
-          },
-          {
-            "v": "3.29",
-            "date": "07.06",
-            "msg": "treningi: nastepny.cwiczenia → C3 UA numery SS4a/SS4b/SS7a/SS7b"
-          },
-          {
-            "v": "3.28",
-            "date": "07.06",
-            "msg": "index: guard ebl/erb · fix błędu renderPlanTabSimple"
-          },
-          {
-            "v": "3.27",
-            "date": "07.06",
-            "msg": "plan_c3 nowy plan Bulk C3 · zmienione ćwiczenia UA/UB/Lower"
-          },
-          {
-            "v": "3.26",
-            "date": "06.06",
-            "msg": "treningi: nastepny → Upper A Pn 08.06.2026 · start C3"
-          },
-          {
-            "v": "3.25",
-            "date": "06.06",
-            "msg": "Wymuszenie odświeżenia cache · nastepny UA 08.06.2026"
-          },
-          {
-            "v": "3.24",
-            "date": "06.06",
-            "msg": "index.html: plan C3 · zakładka Bulk · renderDietaBulk · fetch plan_c3.json"
-          },
-          {
-            "v": "3.23",
-            "date": "01.06",
-            "msg": "Dieta: nowy plan Bulk C3 · aktywna_faza=bulk · lista zakupów tygodniowa"
-          },
-          {
-            "v": "3.22",
-            "date": "29.05",
-            "msg": "Cykl 2 zakończony · finalne ciężary C3 · deload 01-07.06"
-          }
-        ]
+// service-worker.js
+// MTracker PWA — offline cache
+// Zmień CACHE_VERSION przy każdym deployu żeby wymusić odświeżenie cache
+const CACHE_VERSION = 'mtracker-v3.32';
+const CACHE_NAME = CACHE_VERSION;
+
+// Zasoby do pre-cache przy instalacji
+const PRECACHE_URLS = [
+  '/MTracker/',
+  '/MTracker/index.html',
+  '/MTracker/manifest.json',
+  '/MTracker/icons/icon-192.png',
+  '/MTracker/icons/icon-512.png',
+  '/MTracker/data/waga.json',
+  '/MTracker/data/treningi.json',
+  '/MTracker/data/plan_c2.json',
+  '/MTracker/data/plan_c1.json',
+  '/MTracker/data/roadmap.json',
+  '/MTracker/data/harmonogram.json',
+  '/MTracker/data/dieta.json',
+];
+
+// CDN zasoby — cache przy pierwszym użyciu
+const CDN_CACHE_NAME = 'mtracker-cdn-v1';
+
+// ─── Install ───────────────────────────────────────────────────────────────
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(PRECACHE_URLS))
+      .then(() => self.skipWaiting())
+  );
+});
+
+// ─── Activate ──────────────────────────────────────────────────────────────
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames
+          .filter((name) => name !== CACHE_NAME && name !== CDN_CACHE_NAME)
+          .map((name) => caches.delete(name))
+      )
+    ).then(() => self.clients.claim())
+  );
+});
+
+// ─── Fetch ─────────────────────────────────────────────────────────────────
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  if (request.method !== 'GET') return;
+  if (url.protocol === 'chrome-extension:') return;
+
+  // CDN — Stale-While-Revalidate
+  const isCDN = (
+    url.hostname.includes('googleapis.com') ||
+    url.hostname.includes('gstatic.com') ||
+    url.hostname.includes('jsdelivr.net') ||
+    url.hostname.includes('cdnjs.cloudflare.com') ||
+    url.hostname.includes('unpkg.com')
+  );
+
+  if (isCDN) {
+    event.respondWith(staleWhileRevalidate(request, CDN_CACHE_NAME));
+    return;
+  }
+
+  // Zasoby lokalne — Cache First, fallback sieć
+  event.respondWith(cacheFirst(request, CACHE_NAME));
+});
+
+// ─── Strategie ─────────────────────────────────────────────────────────────
+async function cacheFirst(request, cacheName) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse && networkResponse.status === 200) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch {
+    if (request.mode === 'navigate') {
+      const cache = await caches.open(cacheName);
+      return cache.match('/MTracker/') || cache.match('/MTracker/index.html');
+    }
+    return new Response('Brak połączenia', { status: 503 });
+  }
+}
+
+async function staleWhileRevalidate(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(request);
+  const fetchPromise = fetch(request).then((networkResponse) => {
+    if (networkResponse && networkResponse.status === 200) {
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  }).catch(() => null);
+  return cached || fetchPromise;
 }

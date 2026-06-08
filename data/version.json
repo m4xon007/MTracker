@@ -1,8 +1,13 @@
 {
-  "v": "3.31",
+  "v": "3.32",
   "updated": "2026-06-08",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.32",
+      "date": "08.06",
+      "msg": "plan_c3 Lower: Hip Thrust + Abduction · Trap Bar 3×4-8 · UB Low Cable Fly opcjonalne"
+    },
     {
       "v": "3.31",
       "date": "08.06",
@@ -47,11 +52,6 @@
       "v": "3.23",
       "date": "01.06",
       "msg": "Dieta: nowy plan Bulk C3 · aktywna_faza=bulk · lista zakupów tygodniowa"
-    },
-    {
-      "v": "3.22",
-      "date": "29.05",
-      "msg": "Cykl 2 zakończony · finalne ciężary C3 · deload 01-07.06"
     }
   ]
 }

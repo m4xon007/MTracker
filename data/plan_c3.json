@@ -6,7 +6,6 @@
     "etap": "Bulk · cze–sie 2026",
     "progresja_zasada": "2/3 serii w górnym zakresie przez 2 sesje z rzędu → +ciężar. Bulk: progresja szybsza — bij rekordy na Big 4."
   },
-
   "upper_a": {
     "label": "Upper A — Cykl 3",
     "czas": "~85–95 min",
@@ -115,7 +114,6 @@
       }
     ]
   },
-
   "upper_b": {
     "label": "Upper B — Cykl 3",
     "czas": "~90–100 min",
@@ -202,7 +200,8 @@
         "powt": "10–15",
         "przerwa": "90 s",
         "start": "8 kg",
-        "uwaga": "Nowe ćwiczenie — kalibracja. Ruch wznoszący z dołu, maksymalne rozciągnięcie klatki."
+        "uwaga": "⚡ Opcjonalne — 2–3 serie tylko gdy jest czas i energia. Klatka dostaje już dużą objętość z Bench/Incline/Butterfly/Decline.",
+        "opcjonalny": true
       },
       {
         "nr": "SS7a",
@@ -249,16 +248,15 @@
       }
     ]
   },
-
   "lower": {
     "label": "Lower — Cykl 3",
-    "czas": "~90–100 min",
-    "alert": "BULK · C3 · Big 4: bij rekordy. SS: Calf Raise+Leg Raise, Woodchop dół→góra+góra→dół. ⚡ Pallof Press opcjonalny.",
-    "uwaga": "⚠️ Lędźwie >3/10 przy Trap Bar → zamień na Leg Press. Zero RDL. ⚡ Pallof Press gdy masz energię i czas.",
+    "czas": "~95–110 min",
+    "alert": "BULK · C3 · Big 4: bij rekordy. Hip Thrust + Abduction = priorytet pośladki. SS: Calf+Leg Raise. ⚡ Pallof opcjonalny.",
+    "uwaga": "⚠️ Trap Bar 3×4–8 (nie 4 serie) — ochrona lędźwi. Skolioza: brak RDL, brak wysokiego obciążenia osiowego. ⚡ Pallof Press gdy czas i energia.",
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "⭐ Front Squat (Przysiad ze sztangą z przodu)",
+        "nazwa": "⭐ Front Squat",
         "partia": "Quad + pośladki",
         "serie": 4,
         "powt": "4–6",
@@ -269,27 +267,38 @@
       },
       {
         "nr": "2",
-        "nazwa": "⭐ Trap Bar Deadlift (Martwy ciąg trapezoidem)",
+        "nazwa": "⭐ Trap Bar Deadlift",
         "partia": "Pośladki + hamstringi + plecy",
-        "serie": 4,
-        "powt": "4–6",
-        "przerwa": "240 s",
+        "serie": 3,
+        "powt": "4–8",
+        "przerwa": "180 s",
         "start": "97,5 kg",
         "glowne": true,
-        "uwaga": "Lędźwie >3/10 → zamień na Leg Press"
+        "uwaga": "3 serie (nie 4) — ochrona lędźwi. Lędźwie >3/10 → zamień na Leg Press."
       },
       {
         "nr": "3",
-        "nazwa": "Hack Squat HS",
-        "partia": "Quad (VMO)",
+        "nazwa": "Hip Thrust Machine",
+        "partia": "Pośladek wielki (glute max)",
         "serie": 4,
-        "powt": "8–10",
-        "przerwa": "120 s",
-        "start": "82,5 kg"
+        "powt": "8–12",
+        "przerwa": "90 s",
+        "start": "—",
+        "uwaga": "Nowe ćwiczenie — kalibracja. Bez obciążenia osiowego kręgosłupa. Pełny zakres, kontrolowany ekscentryk."
       },
       {
         "nr": "4",
-        "nazwa": "HS Seated Leg Curl (Zginanie nóg siedzące)",
+        "nazwa": "Hip Abduction Machine",
+        "partia": "Pośladek średni + mały (glute med)",
+        "serie": 3,
+        "powt": "15–20",
+        "przerwa": "60 s",
+        "start": "—",
+        "uwaga": "Nowe ćwiczenie — kalibracja. Priorytet: jakość ruchu i czucie mięśniowe, nie progresja ciężaru."
+      },
+      {
+        "nr": "5",
+        "nazwa": "HS Seated Leg Curl",
         "partia": "Hamstringi skurcz",
         "serie": 4,
         "powt": "10–12",
@@ -297,8 +306,8 @@
         "start": "91,5 kg"
       },
       {
-        "nr": "5",
-        "nazwa": "HS Kneeling Leg Curl (Zginanie nóg klęcząc)",
+        "nr": "6",
+        "nazwa": "HS Kneeling Leg Curl",
         "partia": "Hamstringi stretch",
         "serie": 3,
         "powt": "10–12",
@@ -306,52 +315,52 @@
         "start": "25 kg"
       },
       {
-        "nr": "SS6a",
-        "nazwa": "SS · Wspięcia na palcach na Leg Pressie (Leg Press Calf Raise)",
+        "nr": "SS7a",
+        "nazwa": "SS · Leg Press Calf Raise",
         "partia": "Łydki gastrocnemius",
         "serie": 4,
         "powt": "12–15",
         "przerwa": "45 s*",
         "start": "60 kg",
         "ss": true,
-        "uwaga": "Nowe ćwiczenie — kalibracja. Pełny zakres ruchu, kontrolowany ekscentryk."
+        "uwaga": "Pełny zakres ruchu, kontrolowany ekscentryk."
       },
       {
-        "nr": "SS6b",
-        "nazwa": "SS · Zwis na drążku — unoszenie nóg prostych (Hanging Leg Raise)",
+        "nr": "SS7b",
+        "nazwa": "SS · Hanging Leg Raise",
         "partia": "Core dolny + biodra",
         "serie": 4,
         "powt": "10–15",
         "przerwa": "90 s",
         "start": "BW",
         "ss": true,
-        "uwaga": "Zamiana za Hanging Knee Raise — nogi proste, większe zaangażowanie core"
+        "uwaga": "Nogi proste — większe zaangażowanie core niż Knee Raise."
       },
       {
-        "nr": "SS7a",
-        "nazwa": "SS · Cable Woodchop dół→góra (Low to High Cable Woodchop)",
+        "nr": "SS8a",
+        "nazwa": "SS · Cable Woodchop dół→góra (Low to High)",
         "partia": "Skośne dolne + biodra",
         "serie": 3,
         "powt": "12–15",
         "przerwa": "45 s*",
         "start": "10 kg",
         "ss": true,
-        "uwaga": "Nowe ćwiczenie — kalibracja. Wyciąg dolny, rotacja z biodra w górę."
+        "uwaga": "Wyciąg dolny, rotacja z biodra w górę."
       },
       {
-        "nr": "SS7b",
-        "nazwa": "SS · Cable Woodchop góra→dół (High to Low Cable Woodchop)",
+        "nr": "SS8b",
+        "nazwa": "SS · Cable Woodchop góra→dół (High to Low)",
         "partia": "Skośne górne + laty",
         "serie": 3,
         "powt": "12–15",
         "przerwa": "90 s",
         "start": "10 kg",
         "ss": true,
-        "uwaga": "Nowe ćwiczenie — kalibracja. Wyciąg górny, rotacja z góry w dół."
+        "uwaga": "Wyciąg górny, rotacja z góry w dół."
       },
       {
-        "nr": "8",
-        "nazwa": "Cable Crunch (Zginanie tułowia na wyciągu)",
+        "nr": "9",
+        "nazwa": "Cable Crunch",
         "partia": "Core prosty",
         "serie": 3,
         "powt": "12–15",
@@ -367,7 +376,7 @@
         "przerwa": "60 s",
         "start": "10 kg",
         "opcjonalny": true,
-        "uwaga": "Tylko gdy masz energię i czas — nie obowiązkowy"
+        "uwaga": "Tylko gdy masz energię i czas."
       }
     ]
   }

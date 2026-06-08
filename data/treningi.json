@@ -15,34 +15,38 @@
       },
       {
         "nr": "3",
-        "nazwa": "Hack Squat HS"
+        "nazwa": "Hip Thrust Machine"
       },
       {
         "nr": "4",
-        "nazwa": "HS Seated Leg Curl"
+        "nazwa": "Hip Abduction Machine"
       },
       {
         "nr": "5",
+        "nazwa": "HS Seated Leg Curl"
+      },
+      {
+        "nr": "6",
         "nazwa": "HS Kneeling Leg Curl"
       },
       {
-        "nr": "SS6a",
+        "nr": "SS7a",
         "nazwa": "SS · Leg Press Calf Raise"
       },
       {
-        "nr": "SS6b",
+        "nr": "SS7b",
         "nazwa": "SS · Hanging Leg Raise"
       },
       {
-        "nr": "SS7a",
+        "nr": "SS8a",
         "nazwa": "SS · Cable Woodchop dół→góra"
       },
       {
-        "nr": "SS7b",
+        "nr": "SS8b",
         "nazwa": "SS · Cable Woodchop góra→dół"
       },
       {
-        "nr": "8",
+        "nr": "9",
         "nazwa": "Cable Crunch"
       },
       {
