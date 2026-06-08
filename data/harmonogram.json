@@ -2,11 +2,214 @@
   "meta": {
     "nota": "Kalendarze są statyczne w index.html. Ten plik zawiera tylko dynamiczne dane: bilans treningów i listę zrealizowanych sesji do aktualizacji przez Claude po każdym treningu."
   },
+  "cykl3": {
+    "label": "Cykl 3 — Czerwiec–Listopad 2026",
+    "opis": "Bulk · Pn/Śr/Pt · rotacja UA→L→UB",
+    "bilans": {
+      "UA": {
+        "zrobione": 1,
+        "planowane": 30
+      },
+      "UB": {
+        "zrobione": 0,
+        "planowane": 30
+      },
+      "L": {
+        "zrobione": 0,
+        "planowane": 30
+      }
+    },
+    "sesje": [
+      "08.06 UA"
+    ],
+    "plan": [
+      {
+        "data": "2026-06-08",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": true
+      },
+      {
+        "data": "2026-06-10",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-12",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-15",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-17",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-19",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-22",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-24",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-26",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-06-29",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-01",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-03",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-06",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-08",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-10",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-13",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-15",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-17",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-20",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-22",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-24",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-27",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-29",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-07-31",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-08-03",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-08-05",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-08-07",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-08-10",
+        "typ": "UA",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-08-12",
+        "typ": "L",
+        "deload": false,
+        "ukonczone": false
+      },
+      {
+        "data": "2026-08-14",
+        "typ": "UB",
+        "deload": false,
+        "ukonczone": false
+      }
+    ]
+  },
   "cykl2": {
-    "label": "Cykl 2 — Kwiecień–Maj 2026 (przedłużony)",
-    "opis": "10+ tyg · Mini cut · start 31.03 · deload 01–07.06",
+    "label": "Cykl 2 — Kwiecień–Maj 2026",
+    "opis": "8 tyg · Mini cut · start 31.03",
     "plan_wt_czw_nd": true,
-    "deload": "01–07.06.2026",
+    "deload": "18–22.05.2026",
     "checkpoint": "01.06.2026",
     "bilans": {
       "UA": {
@@ -42,9 +245,9 @@
       "12.04 UB",
       "09.04 L",
       "07.04 UA",
-      "05.04 UB",
+      "31.03 UA",
       "02.04 L",
-      "31.03 UA"
+      "05.04 UB"
     ],
     "plan": [
       {
@@ -141,22 +344,19 @@
         "data": "2026-05-06",
         "typ": "L",
         "deload": false,
-        "ukonczone": false,
-        "odwolane": true
+        "ukonczone": false
       },
       {
         "data": "2026-05-08",
         "typ": "UB",
         "deload": false,
-        "ukonczone": false,
-        "odwolane": true
+        "ukonczone": false
       },
       {
         "data": "2026-05-11",
         "typ": "UA",
         "deload": false,
-        "ukonczone": false,
-        "odwolane": true
+        "ukonczone": false
       },
       {
         "data": "2026-05-13",
@@ -172,19 +372,19 @@
       },
       {
         "data": "2026-05-18",
-        "typ": "UA",
+        "typ": "D·UA",
         "deload": true,
         "ukonczone": true
       },
       {
         "data": "2026-05-20",
-        "typ": "L",
+        "typ": "D·L",
         "deload": true,
         "ukonczone": true
       },
       {
         "data": "2026-05-22",
-        "typ": "UB",
+        "typ": "D·UB",
         "deload": true,
         "ukonczone": true
       },
@@ -205,24 +405,6 @@
         "typ": "UB",
         "deload": false,
         "ukonczone": true
-      },
-      {
-        "data": "2026-06-01",
-        "typ": "UA",
-        "deload": true,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-06-03",
-        "typ": "L",
-        "deload": true,
-        "ukonczone": false
-      },
-      {
-        "data": "2026-06-05",
-        "typ": "UB",
-        "deload": true,
-        "ukonczone": false
       }
     ]
   },

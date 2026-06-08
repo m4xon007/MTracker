@@ -1,8 +1,13 @@
 {
-  "v": "3.30",
-  "updated": "2026-06-07",
+  "v": "3.31",
+  "updated": "2026-06-08",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.31",
+      "date": "08.06",
+      "msg": "UA C3 #1 · Ławka 75kg · Seated Row 68kg 4×12✅ · harmonogram cykl3"
+    },
     {
       "v": "3.30",
       "date": "07.06",
@@ -47,11 +52,6 @@
       "v": "3.22",
       "date": "29.05",
       "msg": "Cykl 2 zakończony · finalne ciężary C3 · deload 01-07.06"
-    },
-    {
-      "v": "3.21",
-      "date": "27.05",
-      "msg": "Ostatni trening C2 · podsumowanie wyników"
     }
   ]
 }
