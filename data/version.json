@@ -1,8 +1,13 @@
 {
-  "v": "3.32",
+  "v": "3.33",
   "updated": "2026-06-08",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.33",
+      "date": "08.06",
+      "msg": "treningi: ostatni_lower ciężary startowe C3 · nowe numery 3/4/SS7a/SS7b/SS8a/SS8b"
+    },
     {
       "v": "3.32",
       "date": "08.06",
@@ -47,11 +52,6 @@
       "v": "3.24",
       "date": "06.06",
       "msg": "index.html: plan C3 · zakładka Bulk · renderDietaBulk · fetch plan_c3.json"
-    },
-    {
-      "v": "3.23",
-      "date": "01.06",
-      "msg": "Dieta: nowy plan Bulk C3 · aktywna_faza=bulk · lista zakupów tygodniowa"
     }
   ]
 }

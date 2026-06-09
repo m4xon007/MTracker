@@ -469,136 +469,87 @@
     }
   },
   "ostatni_lower": {
-    "data": "27.05",
-    "ocena": 9,
+    "data": "10.06.2026",
+    "ocena": null,
     "cwiczenia": {
       "1": {
         "kg": "75",
-        "wynik": "6-6-6-6",
+        "wynik": "—",
         "gorny_zakres": 6,
-        "w_zakresie": true
+        "w_zakresie": null
       },
       "2": {
-        "kg": "95",
-        "wynik": "6-6-6-6",
-        "gorny_zakres": 6,
-        "w_zakresie": true
+        "kg": "97.5",
+        "wynik": "—",
+        "gorny_zakres": 8,
+        "w_zakresie": null
       },
       "3": {
-        "kg": "80",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 10,
-        "w_zakresie": true
-      },
-      "4⚡": {
         "kg": "—",
         "wynik": "—",
         "gorny_zakres": 12,
         "w_zakresie": null
       },
+      "4": {
+        "kg": "—",
+        "wynik": "—",
+        "gorny_zakres": 20,
+        "w_zakresie": null
+      },
       "5": {
-        "kg": "89",
-        "wynik": "12-12-12-12",
+        "kg": "91.5",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": true
+        "w_zakresie": null
       },
       "6": {
         "kg": "25",
-        "wynik": "12-12-12-10",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": true
+        "w_zakresie": null
       },
-      "SS7": {
-        "kg": "65",
-        "wynik": "15-15-15-12",
+      "SS7a": {
+        "kg": "60",
+        "wynik": "—",
         "gorny_zakres": 15,
-        "w_zakresie": false
+        "w_zakresie": null
       },
-      "SS8": {
+      "SS7b": {
         "kg": "BW",
-        "wynik": "15-15-12-10",
+        "wynik": "—",
         "gorny_zakres": 15,
-        "w_zakresie": false
+        "w_zakresie": null
       },
-      "SS9": {
-        "kg": "31.5",
-        "wynik": "15-15-15",
+      "SS8a": {
+        "kg": "10",
+        "wynik": "—",
         "gorny_zakres": 15,
-        "w_zakresie": true
+        "w_zakresie": null
       },
-      "SS10": {
-        "kg": "12.5",
-        "wynik": "10-10-10",
+      "SS8b": {
+        "kg": "10",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
+      },
+      "9": {
+        "kg": "34",
+        "wynik": "—",
+        "gorny_zakres": 15,
+        "w_zakresie": null
+      },
+      "⚡": {
+        "kg": "10",
+        "wynik": "—",
         "gorny_zakres": 12,
-        "w_zakresie": false
+        "w_zakresie": null
       }
     }
   },
   "ostatni_lower_prev": {
-    "data": "20.05",
-    "ocena": 9,
-    "cwiczenia": {
-      "1": {
-        "kg": "75",
-        "wynik": "5-5-5-5",
-        "gorny_zakres": 6,
-        "w_zakresie": false
-      },
-      "2": {
-        "kg": "95",
-        "wynik": "6-6-6-6",
-        "gorny_zakres": 6,
-        "w_zakresie": true
-      },
-      "3": {
-        "kg": "80",
-        "wynik": "10-10-10-10",
-        "gorny_zakres": 10,
-        "w_zakresie": true
-      },
-      "4⚡": {
-        "kg": "—",
-        "wynik": "—",
-        "gorny_zakres": 12,
-        "w_zakresie": null
-      },
-      "5": {
-        "kg": "89",
-        "wynik": "12-12-12-12",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "6": {
-        "kg": "25",
-        "wynik": "12-12-12-10",
-        "gorny_zakres": 12,
-        "w_zakresie": true
-      },
-      "SS7": {
-        "kg": "65",
-        "wynik": "15-12-12-12",
-        "gorny_zakres": 15,
-        "w_zakresie": false
-      },
-      "SS8": {
-        "kg": "BW",
-        "wynik": "15-12-12-12",
-        "gorny_zakres": 15,
-        "w_zakresie": false
-      },
-      "SS9": {
-        "kg": "31.5",
-        "wynik": "15-15-15",
-        "gorny_zakres": 15,
-        "w_zakresie": true
-      },
-      "SS10": {
-        "kg": "12.5",
-        "wynik": "10-10-1",
-        "gorny_zakres": 12,
-        "w_zakresie": false
-      }
-    }
+    "data": null,
+    "ocena": null,
+    "cwiczenia": {}
   },
   "szablony_c2": {
     "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.   Ławka sztanga:                       __ kg × __-__-__-__\n2.   Wyciskanie na maszynie skos:         __ kg × __-__-__-__\n3.   Half-Kneeling Landmine Press:        __ kg × __-__-__\n4.   Unoszenie ramion na ławce:           __ kg × __-__-__-__\n5.   Prostowanie ramion w op. o ławeczkę: __ kg × __-__-__\n6.   Ściąganie drążka na maszynie:        __ kg × __-__-__-__\n7.   EZ-bar Biceps Curl:                  __ kg × __-__-__\n8.   HS Select Seated Row:                __ kg × __-__-__\nSS9. Prostowanie ramion na wyciągu:       __ kg × __-__-__\nSS10. Face pull półklęcząc:               __ kg × __-__-__\n\nWnioski / uwagi:",
