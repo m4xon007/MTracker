@@ -1,8 +1,13 @@
 {
-  "v": "3.33",
-  "updated": "2026-06-08",
+  "v": "3.34",
+  "updated": "2026-06-10",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.34",
+      "date": "10.06",
+      "msg": "fix: przywracanie wyników ćwiczeń po nawigacji między zakładkami"
+    },
     {
       "v": "3.33",
       "date": "08.06",
@@ -47,11 +52,6 @@
       "v": "3.25",
       "date": "06.06",
       "msg": "Wymuszenie odświeżenia cache · nastepny UA 08.06.2026"
-    },
-    {
-      "v": "3.24",
-      "date": "06.06",
-      "msg": "index.html: plan C3 · zakładka Bulk · renderDietaBulk · fetch plan_c3.json"
     }
   ]
 }
