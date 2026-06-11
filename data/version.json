@@ -1,8 +1,13 @@
 {
-  "v": "3.35",
-  "updated": "2026-06-10",
+  "v": "3.36",
+  "updated": "2026-06-11",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.36",
+      "date": "11.06",
+      "msg": "plan_c3 finalna wersja UA/UB/Lower · SS7 Rope Triceps · UB Low Cable Fly 2×10-12"
+    },
     {
       "v": "3.35",
       "date": "10.06",
@@ -47,11 +52,6 @@
       "v": "3.27",
       "date": "07.06",
       "msg": "plan_c3 nowy plan Bulk C3 · zmienione ćwiczenia UA/UB/Lower"
-    },
-    {
-      "v": "3.26",
-      "date": "06.06",
-      "msg": "treningi: nastepny → Upper A Pn 08.06.2026 · start C3"
     }
   ]
 }

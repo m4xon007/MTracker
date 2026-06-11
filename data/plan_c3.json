@@ -17,11 +17,11 @@
         "nazwa": "⭐ Ławka sztanga (Barbell Bench Press)",
         "partia": "Klatka środkowa",
         "serie": 4,
-        "powt": "5–8 (ostatnia AMRAP)",
+        "powt": "5–8",
         "przerwa": "180 s",
         "start": "75 kg",
         "glowne": true,
-        "uwaga": "Serie 1–3: 5–8 powt · seria 4: AMRAP (max powt z zachowaniem techniki)"
+        "uwaga": "Serie 1–3: 5–8 powt · seria 4: AMRAP"
       },
       {
         "nr": "2",
@@ -30,37 +30,35 @@
         "serie": 4,
         "powt": "8–12",
         "przerwa": "120 s",
-        "start": "24 kg",
-        "uwaga": "Nowe ćwiczenie — kalibracja na start"
+        "start": "25 kg"
       },
       {
         "nr": "3",
         "nazwa": "Wiosłowanie w oparciu o ławkę hantlami (Chest Supported DB Row)",
-        "partia": "Plecy środek (rhomboids, środkowy trapez)",
+        "partia": "Plecy środek",
         "serie": 4,
-        "powt": "10–12",
+        "powt": "8–12",
         "przerwa": "120 s",
-        "start": "20 kg",
-        "uwaga": "Nowe ćwiczenie — kalibracja na start. Neutralny chwyt, klatka oparta o ławkę skośną."
+        "start": "25 kg"
       },
       {
         "nr": "SS4a",
         "nazwa": "SS · Unoszenie ramion w oparciu o ławkę (Chest Supported Lateral Raise)",
         "partia": "Barki boczne",
         "serie": 4,
-        "powt": "12–15",
+        "powt": "10–12",
         "przerwa": "45 s*",
-        "start": "7,5 kg",
+        "start": "8 kg",
         "ss": true
       },
       {
         "nr": "SS4b",
-        "nazwa": "SS · Prostowanie ramion w oparciu o ławkę (Chest Supported DB Triceps Extension)",
+        "nazwa": "SS · Prostowanie ramion w oparciu o ławkę (Chest Supported DB Triceps Ext)",
         "partia": "Triceps",
         "serie": 4,
-        "powt": "10–15",
+        "powt": "10–12",
         "przerwa": "90 s",
-        "start": "9 kg",
+        "start": "10 kg",
         "ss": true
       },
       {
@@ -70,36 +68,35 @@
         "serie": 3,
         "powt": "8–12",
         "przerwa": "90 s",
-        "start": "32,5 kg"
+        "start": "30 kg"
       },
       {
         "nr": "6",
-        "nazwa": "HS Select Seated Row (neutralny chwyt)",
+        "nazwa": "HS Select Seated Row",
         "partia": "Plecy laty dolne",
         "serie": 3,
         "powt": "8–12",
         "przerwa": "90 s",
-        "start": "63,5 kg"
+        "start": "68 kg"
       },
       {
         "nr": "SS7a",
-        "nazwa": "SS · Prostowanie ramion nad głową jednorącz (Single Arm Cable Overhead Triceps Extension)",
+        "nazwa": "SS · Prostowanie ramion nad głową oburącz (Rope Overhead Triceps Extension)",
         "partia": "Triceps głowa długa",
         "serie": 3,
         "powt": "10–15",
         "przerwa": "45 s*",
-        "start": "12 kg",
-        "ss": true,
-        "uwaga": "Kalibracja — ok. połowa poprzedniego ciężaru oburęcznego"
+        "start": "24.5 kg",
+        "ss": true
       },
       {
         "nr": "SS7b",
         "nazwa": "SS · Face pull półklęcząc ze sznurkiem (Half-Kneeling Face Pull)",
         "partia": "Barki tylne + rotatory",
         "serie": 3,
-        "powt": "12–15",
+        "powt": "10–12",
         "przerwa": "90 s",
-        "start": "17,5 kg",
+        "start": "17.5 kg",
         "ss": true
       },
       {
@@ -109,8 +106,7 @@
         "serie": 3,
         "powt": "10–12",
         "przerwa": "60 s",
-        "start": "9 kg",
-        "uwaga": "Kalibracja na start"
+        "start": "24.5 kg"
       }
     ]
   },
@@ -129,7 +125,7 @@
         "przerwa": "180 s",
         "start": "BW",
         "glowne": true,
-        "uwaga": "C3 start: BW bez asysty — cel 5×8, potem +obciążenie"
+        "uwaga": "Cel: 5×8, potem +obciążenie"
       },
       {
         "nr": "2",
@@ -138,7 +134,7 @@
         "serie": 3,
         "powt": "6–8",
         "przerwa": "120 s",
-        "start": "62,5 kg"
+        "start": "62.5 kg"
       },
       {
         "nr": "SS3a",
@@ -148,12 +144,11 @@
         "powt": "8–12",
         "przerwa": "45 s*",
         "start": "22 kg",
-        "ss": true,
-        "uwaga": "Nowe ćwiczenie — kalibracja. Sprawdź logistykę z Australian Pull-up na pierwszej sesji."
+        "ss": true
       },
       {
         "nr": "SS3b",
-        "nazwa": "SS · Podciąganie australijskie z obciążeniem (Australian Pull-up +5kg)",
+        "nazwa": "SS · Podciąganie australijskie z obciążeniem (Australian Pull-up)",
         "partia": "Plecy + biceps",
         "serie": 3,
         "powt": "8–12",
@@ -178,41 +173,27 @@
         "powt": "8–10",
         "przerwa": "45 s*",
         "start": "18 kg",
-        "ss": true,
-        "uwaga": "Zamiana za Arnold Press — czystszy wzorzec, lepsza progresja"
+        "ss": true
       },
       {
         "nr": "SS5b",
         "nazwa": "SS · Odwrotne rozpiętki hantlami siedząc (Seated DB Reverse Fly)",
         "partia": "Barki tylne",
         "serie": 3,
-        "powt": "12–15",
+        "powt": "10–12",
         "przerwa": "90 s",
         "start": "8 kg",
-        "ss": true,
-        "uwaga": "Tułów pochylony do przodu oparty o uda"
-      },
-      {
-        "nr": "6",
-        "nazwa": "Rozpiętki na wyciągu dolnym (Low Cable Fly)",
-        "partia": "Klatka środkowa/dolna",
-        "serie": 3,
-        "powt": "10–15",
-        "przerwa": "90 s",
-        "start": "8 kg",
-        "uwaga": "⚡ Opcjonalne — 2–3 serie tylko gdy jest czas i energia. Klatka dostaje już dużą objętość z Bench/Incline/Butterfly/Decline.",
-        "opcjonalny": true
+        "ss": true
       },
       {
         "nr": "SS7a",
         "nazwa": "SS · Unoszenie ramion z pochyleniem przy wyciągu (Leaning Cable Lateral Raise)",
         "partia": "Barki boczne",
         "serie": 3,
-        "powt": "12–15",
+        "powt": "10–12",
         "przerwa": "45 s*",
         "start": "4 kg",
-        "ss": true,
-        "uwaga": "Nowe ćwiczenie — kalibracja. Trzymaj się słupka wyciągu, wychyl się bokiem."
+        "ss": true
       },
       {
         "nr": "SS7b",
@@ -226,14 +207,13 @@
       },
       {
         "nr": "SS8a",
-        "nazwa": "SS · Prostowanie ramion na wyciągu ze sznurkiem (Cable Pushdown rope)",
+        "nazwa": "SS · Prostowanie ramion na wyciągu ze sznurkiem (Cable Pushdown Rope)",
         "partia": "Triceps głowa boczna",
         "serie": 3,
-        "powt": "10–15",
+        "powt": "10–12",
         "przerwa": "45 s*",
         "start": "25 kg",
-        "ss": true,
-        "uwaga": "Kalibracja — nowe ćwiczenie w miejsce Skull Crusher"
+        "ss": true
       },
       {
         "nr": "SS8b",
@@ -243,8 +223,18 @@
         "powt": "10–12",
         "przerwa": "90 s",
         "start": "15 kg",
-        "ss": true,
-        "uwaga": "Kalibracja na start"
+        "ss": true
+      },
+      {
+        "nr": "6",
+        "nazwa": "Rozpiętki na wyciągu dolnym (Low Cable Fly) ⚡",
+        "partia": "Klatka środkowa/dolna",
+        "serie": 2,
+        "powt": "10–12",
+        "przerwa": "90 s",
+        "start": "8 kg",
+        "opcjonalny": true,
+        "uwaga": "2 serie na końcu — klatka dostaje już dużą objętość."
       }
     ]
   },
@@ -282,8 +272,7 @@
         "serie": 4,
         "powt": "8–12",
         "przerwa": "90 s",
-        "start": "50 kg",
-        "uwaga": "Kalibracja. Pełny zakres, kontrolowany ekscentryk."
+        "start": "50 kg"
       },
       {
         "nr": "SS4a",
@@ -308,31 +297,29 @@
       {
         "nr": "SS5a",
         "nazwa": "SS · Walking Lunges (hantle)",
-        "partia": "Quad + glute + stabilizacja",
+        "partia": "Quad + glute",
         "serie": 3,
-        "powt": "10–12/str",
+        "powt": "10–12",
         "przerwa": "45 s*",
         "start": "10 kg",
-        "ss": true,
-        "uwaga": "Hantle w dłoniach. Kontrolowany krok, kolano nie wychodzi za palce."
+        "ss": true
       },
       {
         "nr": "SS5b",
         "nazwa": "SS · Leg Press Calf Raise",
-        "partia": "Łydki gastrocnemius",
+        "partia": "Łydki",
         "serie": 3,
         "powt": "12–15",
         "przerwa": "90 s",
         "start": "110 kg",
-        "ss": true,
-        "uwaga": "Pełny zakres, kontrolowany ekscentryk."
+        "ss": true
       },
       {
         "nr": "SS6a",
         "nazwa": "SS · Hanging Leg Raise (zwis na drążku — nogi proste)",
         "partia": "Core dolny + biodra",
         "serie": 4,
-        "powt": "10–15",
+        "powt": "10–12",
         "przerwa": "45 s*",
         "start": "BW",
         "ss": true
@@ -346,26 +333,24 @@
         "przerwa": "90 s",
         "start": "10 kg",
         "ss": true,
-        "opcjonalny": true,
-        "uwaga": "Tylko gdy czas i energia."
+        "opcjonalny": true
       },
       {
         "nr": "SS7a",
         "nazwa": "SS · Horizontal Cable Woodchop",
         "partia": "Core rotacja",
         "serie": 3,
-        "powt": "12–15",
+        "powt": "10–12",
         "przerwa": "45 s*",
         "start": "5p",
-        "ss": true,
-        "uwaga": "Wyciąg środkowy — rotacja horyzontalna."
+        "ss": true
       },
       {
         "nr": "SS7b",
         "nazwa": "SS · Cable Crunch",
         "partia": "Core prosty",
         "serie": 3,
-        "powt": "12–15",
+        "powt": "10–12",
         "przerwa": "90 s",
         "start": "12p",
         "ss": true
