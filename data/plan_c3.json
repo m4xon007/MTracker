@@ -251,8 +251,8 @@
   "lower": {
     "label": "Lower — Cykl 3",
     "czas": "~95–110 min",
-    "alert": "BULK · C3 · Big 4: bij rekordy. Hip Thrust + Abduction = priorytet pośladki. SS: Calf+Leg Raise. ⚡ Pallof opcjonalny.",
-    "uwaga": "⚠️ Trap Bar 3×4–8 (nie 4 serie) — ochrona lędźwi. Skolioza: brak RDL, brak wysokiego obciążenia osiowego. ⚡ Pallof Press gdy czas i energia.",
+    "alert": "BULK · C3 · Big 4: bij rekordy. Trap Bar 3 serie (nie 4). SS4=Leg Curl, SS5=Lunges+Calf, SS6=Leg Raise+Pallof, SS7=Woodchop+Crunch.",
+    "uwaga": "⚠️ Trap Bar 3×4–8 — ochrona lędźwi. Skolioza: brak RDL. ⚡ Pallof opcjonalny w SS6.",
     "cwiczenia": [
       {
         "nr": "1",
@@ -261,122 +261,114 @@
         "serie": 4,
         "powt": "4–6",
         "przerwa": "240 s",
-        "start": "75 kg",
-        "glowne": true,
-        "uwaga": "Cel C3: 4×6 pełny zakres"
+        "start": "70 kg",
+        "glowne": true
       },
       {
         "nr": "2",
         "nazwa": "⭐ Trap Bar Deadlift",
-        "partia": "Pośladki + hamstringi + plecy",
+        "partia": "Pośladki + hamstringi",
         "serie": 3,
         "powt": "4–8",
         "przerwa": "180 s",
-        "start": "97,5 kg",
+        "start": "95 kg",
         "glowne": true,
-        "uwaga": "3 serie (nie 4) — ochrona lędźwi. Lędźwie >3/10 → zamień na Leg Press."
+        "uwaga": "3 serie — ochrona lędźwi. >3/10 → Leg Press."
       },
       {
         "nr": "3",
         "nazwa": "Hip Thrust Machine",
-        "partia": "Pośladek wielki (glute max)",
+        "partia": "Glute max",
         "serie": 4,
         "powt": "8–12",
         "przerwa": "90 s",
-        "start": "—",
-        "uwaga": "Nowe ćwiczenie — kalibracja. Bez obciążenia osiowego kręgosłupa. Pełny zakres, kontrolowany ekscentryk."
+        "start": "50 kg",
+        "uwaga": "Kalibracja. Pełny zakres, kontrolowany ekscentryk."
       },
       {
-        "nr": "4",
-        "nazwa": "Hip Abduction Machine",
-        "partia": "Pośladek średni + mały (glute med)",
-        "serie": 3,
-        "powt": "15–20",
-        "przerwa": "60 s",
-        "start": "—",
-        "uwaga": "Nowe ćwiczenie — kalibracja. Priorytet: jakość ruchu i czucie mięśniowe, nie progresja ciężaru."
-      },
-      {
-        "nr": "5",
-        "nazwa": "HS Seated Leg Curl",
+        "nr": "SS4a",
+        "nazwa": "SS · HS Seated Leg Curl",
         "partia": "Hamstringi skurcz",
         "serie": 4,
         "powt": "10–12",
-        "przerwa": "90 s",
-        "start": "91,5 kg"
+        "przerwa": "45 s*",
+        "start": "89 kg",
+        "ss": true
       },
       {
-        "nr": "6",
-        "nazwa": "HS Kneeling Leg Curl",
+        "nr": "SS4b",
+        "nazwa": "SS · HS Kneeling Leg Curl",
         "partia": "Hamstringi stretch",
-        "serie": 3,
+        "serie": 4,
         "powt": "10–12",
         "przerwa": "90 s",
-        "start": "25 kg"
+        "start": "25 kg",
+        "ss": true
       },
       {
-        "nr": "SS7a",
+        "nr": "SS5a",
+        "nazwa": "SS · Walking Lunges (hantle)",
+        "partia": "Quad + glute + stabilizacja",
+        "serie": 3,
+        "powt": "10–12/str",
+        "przerwa": "45 s*",
+        "start": "10 kg",
+        "ss": true,
+        "uwaga": "Hantle w dłoniach. Kontrolowany krok, kolano nie wychodzi za palce."
+      },
+      {
+        "nr": "SS5b",
         "nazwa": "SS · Leg Press Calf Raise",
         "partia": "Łydki gastrocnemius",
-        "serie": 4,
+        "serie": 3,
         "powt": "12–15",
-        "przerwa": "45 s*",
-        "start": "60 kg",
+        "przerwa": "90 s",
+        "start": "110 kg",
         "ss": true,
-        "uwaga": "Pełny zakres ruchu, kontrolowany ekscentryk."
+        "uwaga": "Pełny zakres, kontrolowany ekscentryk."
       },
       {
-        "nr": "SS7b",
-        "nazwa": "SS · Hanging Leg Raise",
+        "nr": "SS6a",
+        "nazwa": "SS · Hanging Leg Raise (zwis na drążku — nogi proste)",
         "partia": "Core dolny + biodra",
         "serie": 4,
         "powt": "10–15",
-        "przerwa": "90 s",
-        "start": "BW",
-        "ss": true,
-        "uwaga": "Nogi proste — większe zaangażowanie core niż Knee Raise."
-      },
-      {
-        "nr": "SS8a",
-        "nazwa": "SS · Cable Woodchop dół→góra (Low to High)",
-        "partia": "Skośne dolne + biodra",
-        "serie": 3,
-        "powt": "12–15",
         "przerwa": "45 s*",
-        "start": "10 kg",
-        "ss": true,
-        "uwaga": "Wyciąg dolny, rotacja z biodra w górę."
+        "start": "BW",
+        "ss": true
       },
       {
-        "nr": "SS8b",
-        "nazwa": "SS · Cable Woodchop góra→dół (High to Low)",
-        "partia": "Skośne górne + laty",
-        "serie": 3,
-        "powt": "12–15",
-        "przerwa": "90 s",
-        "start": "10 kg",
-        "ss": true,
-        "uwaga": "Wyciąg górny, rotacja z góry w dół."
-      },
-      {
-        "nr": "9",
-        "nazwa": "Cable Crunch",
-        "partia": "Core prosty",
-        "serie": 3,
-        "powt": "12–15",
-        "przerwa": "60 s",
-        "start": "34 kg"
-      },
-      {
-        "nr": "⚡",
-        "nazwa": "⚡ Pallof Press (opcjonalny)",
+        "nr": "SS6b",
+        "nazwa": "SS · Pallof Press ⚡ (opcjonalny)",
         "partia": "Core antyrotacja",
         "serie": 3,
         "powt": "10–12",
-        "przerwa": "60 s",
+        "przerwa": "90 s",
         "start": "10 kg",
+        "ss": true,
         "opcjonalny": true,
-        "uwaga": "Tylko gdy masz energię i czas."
+        "uwaga": "Tylko gdy czas i energia."
+      },
+      {
+        "nr": "SS7a",
+        "nazwa": "SS · Horizontal Cable Woodchop",
+        "partia": "Core rotacja",
+        "serie": 3,
+        "powt": "12–15",
+        "przerwa": "45 s*",
+        "start": "5p",
+        "ss": true,
+        "uwaga": "Wyciąg środkowy — rotacja horyzontalna."
+      },
+      {
+        "nr": "SS7b",
+        "nazwa": "SS · Cable Crunch",
+        "partia": "Core prosty",
+        "serie": 3,
+        "powt": "12–15",
+        "przerwa": "90 s",
+        "start": "12p",
+        "ss": true
       }
     ]
   }

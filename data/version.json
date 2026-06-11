@@ -1,8 +1,13 @@
 {
-  "v": "3.34",
+  "v": "3.35",
   "updated": "2026-06-10",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.35",
+      "date": "10.06",
+      "msg": "Lower C3 #1 · Front Squat 70kg 4×6✅ · plan_c3 Lower nowe SS numery · Walking Lunges"
+    },
     {
       "v": "3.34",
       "date": "10.06",
@@ -47,11 +52,6 @@
       "v": "3.26",
       "date": "06.06",
       "msg": "treningi: nastepny → Upper A Pn 08.06.2026 · start C3"
-    },
-    {
-      "v": "3.25",
-      "date": "06.06",
-      "msg": "Wymuszenie odświeżenia cache · nastepny UA 08.06.2026"
     }
   ]
 }

@@ -1,182 +1,196 @@
 {
   "nastepny": {
-    "tytul": "Lower",
-    "data": "Śr 10.06.2026",
-    "badge": "L",
-    "badge_color": "yellow",
+    "tytul": "Upper B",
+    "data": "Pt 12.06.2026",
+    "badge": "UB",
+    "badge_color": "green",
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "⭐ Front Squat"
+        "nazwa": "⭐ Podciąganie nachwytem (Weighted Pull-up)"
       },
       {
         "nr": "2",
-        "nazwa": "⭐ Trap Bar Deadlift"
+        "nazwa": "Wyciskanie sztangi na ławce skośnej (Incline Barbell Press)"
       },
       {
-        "nr": "3",
-        "nazwa": "Hip Thrust Machine"
+        "nr": "SS3a",
+        "nazwa": "SS · Wyciskanie hantli na ławce ujemnej (Decline DB Press)"
+      },
+      {
+        "nr": "SS3b",
+        "nazwa": "SS · Podciąganie australijskie z obciążeniem (Australian Pull-up +5kg)"
       },
       {
         "nr": "4",
-        "nazwa": "Hip Abduction Machine"
+        "nazwa": "Rozpiętki Butterfly (Butterfly Chest Fly)"
       },
       {
-        "nr": "5",
-        "nazwa": "HS Seated Leg Curl"
+        "nr": "SS5a",
+        "nazwa": "SS · Wyciskanie hantli siedząc (DB Shoulder Press)"
+      },
+      {
+        "nr": "SS5b",
+        "nazwa": "SS · Odwrotne rozpiętki hantlami siedząc (Seated DB Reverse Fly)"
       },
       {
         "nr": "6",
-        "nazwa": "HS Kneeling Leg Curl"
+        "nazwa": "Rozpiętki na wyciągu dolnym (Low Cable Fly) ⚡"
       },
       {
         "nr": "SS7a",
-        "nazwa": "SS · Leg Press Calf Raise"
+        "nazwa": "SS · Unoszenie ramion przy wyciągu (Leaning Cable Lateral Raise)"
       },
       {
         "nr": "SS7b",
-        "nazwa": "SS · Hanging Leg Raise"
+        "nazwa": "SS · Wiosłowanie na wyciągu siedząc (Seated Cable Row)"
       },
       {
         "nr": "SS8a",
-        "nazwa": "SS · Cable Woodchop dół→góra"
+        "nazwa": "SS · Prostowanie ramion na wyciągu (Cable Pushdown rope)"
       },
       {
         "nr": "SS8b",
-        "nazwa": "SS · Cable Woodchop góra→dół"
-      },
-      {
-        "nr": "9",
-        "nazwa": "Cable Crunch"
-      },
-      {
-        "nr": "⚡",
-        "nazwa": "⚡ Pallof Press (opcjonalny)"
+        "nazwa": "SS · Uginanie ramion na wyciągu (Cable Biceps Curl)"
       }
     ]
   },
   "poprzedni": {
-    "tytul": "Upper A",
-    "data": "Pn 08.06.2026",
-    "czas": "1:39",
-    "kcal": 915,
-    "tetno": 125,
-    "obciazenie": 2.9,
-    "ocena_liczba": 8,
-    "ocena_tekst": "Pierwszy UA Cyklu 3 — kalibracja · Seated Row 68kg 4×12 ✅ | Landmine 30kg 2×12 ✅ | DB Row nowe",
+    "tytul": "Lower",
+    "data": "Śr 10.06.2026",
+    "czas": "1:42",
+    "kcal": 993,
+    "tetno": 123,
+    "obciazenie": 3.0,
+    "ocena_liczba": 9,
+    "ocena_tekst": "Lower C3 #1 — Front Squat 70kg 4×6✅ | Seated Curl 89kg 4×12✅ | Kneeling Curl 3×12✅ | Pallof 3×12✅",
     "alert_sukces": null,
     "cwiczenia": [
       {
         "nr": "1",
-        "nazwa": "⭐ Ławka sztanga",
-        "ciezar": "75 kg",
-        "wynik": "8-7-6-5",
-        "badge": "→ kalibracja",
-        "badge_color": "gray",
-        "plan": "4×5–8"
+        "nazwa": "⭐ Front Squat",
+        "ciezar": "70 kg",
+        "wynik": "6-6-6-6",
+        "badge": "✅ 4×6",
+        "badge_color": "green",
+        "plan": "4×4–6"
       },
       {
         "nr": "2",
-        "nazwa": "Incline DB Press",
-        "ciezar": "25 kg",
-        "wynik": "8-8-8-6",
+        "nazwa": "⭐ Trap Bar Deadlift",
+        "ciezar": "95 kg",
+        "wynik": "8-8-8-8",
+        "badge": "✅ 4×8 ★",
+        "badge_color": "accent2",
+        "plan": "3×4–8"
+      },
+      {
+        "nr": "3",
+        "nazwa": "Hip Thrust Machine",
+        "ciezar": "50 kg",
+        "wynik": "10-10-10-10",
         "badge": "🆕",
         "badge_color": "accent2",
         "plan": "4×8–12"
       },
       {
-        "nr": "3",
-        "nazwa": "Chest Supported DB Row",
-        "ciezar": "25 kg",
-        "wynik": "12-12-10",
-        "badge": "🆕 ✅",
+        "nr": "SS4a",
+        "nazwa": "SS · HS Seated Leg Curl",
+        "ciezar": "89 kg",
+        "wynik": "12-12-12-12",
+        "badge": "✅ 4×12",
         "badge_color": "green",
         "plan": "4×10–12"
       },
       {
-        "nr": "SS4a",
-        "nazwa": "SS · Chest Supported Lateral Raise",
-        "ciezar": "8 kg",
-        "wynik": "12-12-10",
-        "badge": "🆕",
-        "badge_color": "accent2",
-        "plan": "4×12–15"
+        "nr": "SS4b",
+        "nazwa": "SS · HS Kneeling Leg Curl",
+        "ciezar": "25 kg",
+        "wynik": "12-12-12-10",
+        "badge": "✅ 3×12",
+        "badge_color": "green",
+        "plan": "4×10–12"
       },
       {
-        "nr": "SS4b",
-        "nazwa": "SS · DB Triceps Extension",
-        "ciezar": "10 kg",
-        "wynik": "12-12-12",
+        "nr": "SS5a",
+        "nazwa": "SS · Walking Lunges",
+        "ciezar": "—",
+        "wynik": "—",
+        "badge": "pominięte",
+        "badge_color": "gray",
+        "plan": "3×10–12"
+      },
+      {
+        "nr": "SS5b",
+        "nazwa": "SS · Leg Press Calf Raise",
+        "ciezar": "110 kg",
+        "wynik": "15-15-15-12",
+        "badge": "🆕 ★",
+        "badge_color": "accent2",
+        "plan": "3×12–15"
+      },
+      {
+        "nr": "SS6a",
+        "nazwa": "SS · Hanging Leg Raise",
+        "ciezar": "BW",
+        "wynik": "10-10-8-8",
         "badge": "🆕",
         "badge_color": "accent2",
         "plan": "4×10–15"
       },
       {
-        "nr": "5",
-        "nazwa": "Half-Kneeling Landmine Press",
-        "ciezar": "30 kg",
-        "wynik": "12-12-10",
-        "badge": "✅ 2×12",
+        "nr": "SS6b",
+        "nazwa": "SS · Pallof Press ⚡",
+        "ciezar": "10 kg",
+        "wynik": "12-12-12",
+        "badge": "✅ 3×12",
         "badge_color": "green",
-        "plan": "3×8–12"
-      },
-      {
-        "nr": "6",
-        "nazwa": "HS Select Seated Row",
-        "ciezar": "68 kg",
-        "wynik": "12-12-12-12",
-        "badge": "✅ 4×12",
-        "badge_color": "green",
-        "plan": "3×8–12"
+        "plan": "3×10–12"
       },
       {
         "nr": "SS7a",
-        "nazwa": "SS · Cable Overhead Triceps jednorącz",
-        "ciezar": "24.5 kg",
-        "wynik": "12-10-10",
-        "badge": "🆕",
-        "badge_color": "accent2",
-        "plan": "3×10–15"
-      },
-      {
-        "nr": "SS7b",
-        "nazwa": "SS · Face Pull półklęcząc",
-        "ciezar": "17.5 kg",
+        "nazwa": "SS · Horizontal Cable Woodchop",
+        "ciezar": "5p",
         "wynik": "12-12-12",
-        "badge": "🆕",
-        "badge_color": "accent2",
+        "badge": "🆕 ✅",
+        "badge_color": "green",
         "plan": "3×12–15"
       },
       {
-        "nr": "8",
-        "nazwa": "Cable Biceps Curl jednorącz",
-        "ciezar": "24.5 kg",
-        "wynik": "10-10-10",
+        "nr": "SS7b",
+        "nazwa": "SS · Cable Crunch",
+        "ciezar": "12p",
+        "wynik": "15-15-12",
         "badge": "🆕",
         "badge_color": "accent2",
-        "plan": "3×10–12"
+        "plan": "3×12–15"
       }
     ],
     "wnioski": [
       {
         "typ": "success",
         "ikona": "✅",
-        "tekst": "HS Seated Row 68kg 4×12 od razu w pełnym zakresie — świetny start C3. Progresja odblokowana przy kolejnej sesji jeśli powtórzysz."
+        "tekst": "Front Squat 70kg 4×6 od razu w pełnym zakresie — świetny start C3. Cel: utrzymaj 70kg i powtórz 4×6, potem +2,5kg."
+      },
+      {
+        "typ": "success",
+        "ikona": "★",
+        "tekst": "Trap Bar 95kg 4×8 — zrobiłeś 4 serie zamiast 3, i wszystkie w górnym zakresie. Imponujące. Od teraz planowe 3 serie."
       },
       {
         "typ": "success",
         "ikona": "✅",
-        "tekst": "Landmine 30kg 2×12 w zakresie, DB Row 25kg 2×12 ✅ — nowe ćwiczenia kalibrowały się dobrze."
+        "tekst": "Seated Leg Curl 89kg 4×12 ✅ | Kneeling 25kg 3×12 ✅ | Pallof 3×12 ✅ — hamstringi i core mocne na starcie cyklu."
       },
       {
         "typ": "info",
         "ikona": "💡",
-        "tekst": "Ławka 75kg 8-7-6-5 — dobry wynik na starcie C3 (zakres 5–8). Utrzymaj ciężar, buduj powtórzenia."
+        "tekst": "Calf Raise 110kg na Leg Press — wysoki ciężar startowy, obserwuj zakres ruchu. Hip Thrust 50kg 4×10 — kalibracja poniżej zakresu, buduj do 12."
       },
       {
         "typ": "info",
         "ikona": "💡",
-        "tekst": "SS7a Cable Triceps jednorącz 24.5kg — sprawdź czy to właściwy ciężar, seria 1 to 12 ale kolejne 10. Rozważ lekkie zmniejszenie."
+        "tekst": "Walking Lunges od następnego treningu. Horizontal Woodchop 5p i Cable Crunch 12p — nowe ćwiczenia, kalibracja poziomów stosu."
       }
     ]
   },
@@ -469,6 +483,78 @@
     }
   },
   "ostatni_lower": {
+    "data": "10.06",
+    "ocena": 9,
+    "cwiczenia": {
+      "1": {
+        "kg": "70",
+        "wynik": "6-6-6-6",
+        "gorny_zakres": 6,
+        "w_zakresie": true
+      },
+      "2": {
+        "kg": "95",
+        "wynik": "8-8-8-8",
+        "gorny_zakres": 8,
+        "w_zakresie": true
+      },
+      "3": {
+        "kg": "50",
+        "wynik": "10-10-10-10",
+        "gorny_zakres": 12,
+        "w_zakresie": false
+      },
+      "SS4b": {
+        "kg": "25",
+        "wynik": "12-12-12-10",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "SS5a": {
+        "kg": "—",
+        "wynik": "—",
+        "gorny_zakres": 12,
+        "w_zakresie": null
+      },
+      "SS5b": {
+        "kg": "110",
+        "wynik": "15-15-15-12",
+        "gorny_zakres": 15,
+        "w_zakresie": false
+      },
+      "SS6a": {
+        "kg": "BW",
+        "wynik": "10-10-8-8",
+        "gorny_zakres": 15,
+        "w_zakresie": false
+      },
+      "SS6b": {
+        "kg": "10",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "SS7a": {
+        "kg": "5p",
+        "wynik": "12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      },
+      "SS7b": {
+        "kg": "12p",
+        "wynik": "15-15-12",
+        "gorny_zakres": 15,
+        "w_zakresie": false
+      },
+      "SS4a": {
+        "kg": "89",
+        "wynik": "12-12-12-12",
+        "gorny_zakres": 12,
+        "w_zakresie": true
+      }
+    }
+  },
+  "ostatni_lower_prev": {
     "data": "10.06.2026",
     "ocena": null,
     "cwiczenia": {
@@ -546,11 +632,6 @@
       }
     }
   },
-  "ostatni_lower_prev": {
-    "data": null,
-    "ocena": null,
-    "cwiczenia": {}
-  },
   "szablony_c2": {
     "ua": "Upper A [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.   Ławka sztanga:                       __ kg × __-__-__-__\n2.   Wyciskanie na maszynie skos:         __ kg × __-__-__-__\n3.   Half-Kneeling Landmine Press:        __ kg × __-__-__\n4.   Unoszenie ramion na ławce:           __ kg × __-__-__-__\n5.   Prostowanie ramion w op. o ławeczkę: __ kg × __-__-__\n6.   Ściąganie drążka na maszynie:        __ kg × __-__-__-__\n7.   EZ-bar Biceps Curl:                  __ kg × __-__-__\n8.   HS Select Seated Row:                __ kg × __-__-__\nSS9. Prostowanie ramion na wyciągu:       __ kg × __-__-__\nSS10. Face pull półklęcząc:               __ kg × __-__-__\n\nWnioski / uwagi:",
     "ub": "Upper B [DATA] | Czas: ___ | Kcal: ___ | Tętno: ___ | Obciążenie: ___\nOcena: __/10 — ___\n\n1.    Podciąganie (asysta):        __-__-__-__-__\n2.    Smith Incline Press:         __ kg × __-__-__\nSS3a. Australian Pull-up:          __-__-__\nSS3b. Dipy:                        __-__-__\nSS4a. Butterfly:                   __ kg × __-__-__-__\nSS4b. Reverse Pec Deck:            __ kg × __-__-__\n7.    Cable Crossover:             __ kg × __-__-__\n8.    Arnold Press:                __ kg × __-__-__\n9.    Cable Lateral Raise:         __ kg × __-__-__-__\n10.   Seated Cable Row:            __ kg × __-__-__\n11.   EZ-bar Skull Crusher:        __ kg × __-__-__\n12.   Hammer Curl:                 __ kg × __-__-__\n\nWnioski / uwagi:",
@@ -560,6 +641,15 @@
   },
   "archiwum": {
     "historia_c2": [
+      {
+        "data": "10.06",
+        "typ": "L",
+        "typ_color": "yellow",
+        "ocena": "9/10",
+        "kcal": 993,
+        "czas": "1:42",
+        "wyniki": "Front Squat 70kg 4×6✅ | Trap Bar 95kg 4×8★ | Hip Thrust 50kg🆕 | Seated Curl 89kg 4×12✅ | Pallof✅ | Woodchop🆕"
+      },
       {
         "data": "08.06",
         "typ": "UA",
@@ -1758,6 +1848,7 @@
         "kolor": "yellow",
         "label": "🟡 Lower — Cykl 2",
         "sesje": [
+          "10.06",
           "27.05",
           "20.05",
           "13.05",
@@ -1772,6 +1863,11 @@
             "zakres": "4×4–6",
             "cel": "4×6 przez 2 sesje → +2,5kg · cel 77,5kg",
             "dane": [
+              {
+                "v": "70×6-6-6-6",
+                "i": "✅",
+                "c": "green"
+              },
               {
                 "v": "75×6-6-6-6",
                 "i": "✅",
@@ -1815,6 +1911,11 @@
             "cel": "4×6 przez 2 sesje → +2,5kg · cel 92,5kg",
             "dane": [
               {
+                "v": "95×8-8-8-8",
+                "i": "★",
+                "c": "accent2"
+              },
+              {
                 "v": "95×6-6-6-6",
                 "i": "★★",
                 "c": "accent2"
@@ -1856,6 +1957,11 @@
             "zakres": "4×6–10",
             "cel": "4×10 przez 2 sesje → +5kg",
             "dane": [
+              {
+                "v": "50×10-10-10-10",
+                "i": "🆕",
+                "c": "accent2"
+              },
               {
                 "v": "80×10-10-10-10",
                 "i": "★★",
@@ -1900,6 +2006,11 @@
             "dane": [
               {
                 "v": "89×12-12-12-12",
+                "i": "✅",
+                "c": "green"
+              },
+              {
+                "v": "89×12-12-12-12",
                 "i": "★★",
                 "c": "accent2"
               },
@@ -1940,6 +2051,11 @@
             "zakres": "4×10–12",
             "cel": "4×12 przez 2 sesje → +5kg",
             "dane": [
+              {
+                "v": "25×12-12-12-10",
+                "i": "✅",
+                "c": "green"
+              },
               {
                 "v": "25×12-12-12-10",
                 "i": "★★",

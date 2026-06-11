@@ -15,11 +15,12 @@
         "planowane": 30
       },
       "L": {
-        "zrobione": 0,
+        "zrobione": 1,
         "planowane": 30
       }
     },
     "sesje": [
+      "10.06 L",
       "08.06 UA"
     ],
     "plan": [
@@ -33,7 +34,7 @@
         "data": "2026-06-10",
         "typ": "L",
         "deload": false,
-        "ukonczone": false
+        "ukonczone": true
       },
       {
         "data": "2026-06-12",
