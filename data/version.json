@@ -1,8 +1,13 @@
 {
-  "v": "3.37",
-  "updated": "2026-06-11",
+  "v": "3.38",
+  "updated": "2026-06-12",
   "note": "Numer = CACHE_VERSION w service-worker.js bez prefiksu mtracker-v. Aktualizuj razem z service-worker.js przy każdym commicie. Trzymaj max 10 wpisów w changelog.",
   "changelog": [
+    {
+      "v": "3.38",
+      "date": "12.06",
+      "msg": "index: nowy workout UI · Supabase · dynamiczny selector · WhatsApp · cross-cykl historia"
+    },
     {
       "v": "3.37",
       "date": "11.06",
@@ -47,11 +52,6 @@
       "v": "3.29",
       "date": "07.06",
       "msg": "treningi: nastepny.cwiczenia → C3 UA numery SS4a/SS4b/SS7a/SS7b"
-    },
-    {
-      "v": "3.28",
-      "date": "07.06",
-      "msg": "index: guard ebl/erb · fix błędu renderPlanTabSimple"
     }
   ]
 }
