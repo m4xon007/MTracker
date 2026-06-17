@@ -1,7 +1,7 @@
 // service-worker.js
 // MTracker PWA — offline cache
 // Zmień CACHE_VERSION przy każdym deployu żeby wymusić odświeżenie cache
-const CACHE_VERSION = 'mtracker-v3.38';
+const CACHE_VERSION = 'mtracker-v3.39';
 const CACHE_NAME = CACHE_VERSION;
 
 // Zasoby do pre-cache przy instalacji
@@ -11,13 +11,6 @@ const PRECACHE_URLS = [
   '/MTracker/manifest.json',
   '/MTracker/icons/icon-192.png',
   '/MTracker/icons/icon-512.png',
-  '/MTracker/data/waga.json',
-  '/MTracker/data/treningi.json',
-  '/MTracker/data/plan_c2.json',
-  '/MTracker/data/plan_c1.json',
-  '/MTracker/data/roadmap.json',
-  '/MTracker/data/harmonogram.json',
-  '/MTracker/data/dieta.json',
 ];
 
 // CDN zasoby — cache przy pierwszym użyciu
@@ -52,6 +45,13 @@ self.addEventListener('fetch', (event) => {
 
   if (request.method !== 'GET') return;
   if (url.protocol === 'chrome-extension:') return;
+
+  // Supabase API — Network First (zawsze świeże dane, fallback offline gdy brak sieci)
+  const isSupabase = url.hostname.includes('supabase.co');
+  if (isSupabase) {
+    event.respondWith(networkFirst(request));
+    return;
+  }
 
   // CDN — Stale-While-Revalidate
   const isCDN = (
@@ -101,4 +101,15 @@ async function staleWhileRevalidate(request, cacheName) {
     return networkResponse;
   }).catch(() => null);
   return cached || fetchPromise;
+}
+
+async function networkFirst(request) {
+  try {
+    return await fetch(request);
+  } catch {
+    return new Response(JSON.stringify({ error: 'offline' }), {
+      status: 503,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 }
