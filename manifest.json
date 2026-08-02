@@ -1,8 +1,9 @@
 {
+  "id": "/MTracker/",
   "name": "MTracker — Plan 2026",
   "short_name": "MTracker",
   "description": "Plan treningowy, dieta i dziennik postępów",
-  "start_url": "/MTracker/",
+  "start_url": "/MTracker/?source=pwa",
   "scope": "/MTracker/",
   "display": "standalone",
   "orientation": "portrait",
@@ -23,6 +24,10 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["health", "fitness", "lifestyle"],
+  "categories": [
+    "health",
+    "fitness",
+    "lifestyle"
+  ],
   "screenshots": []
 }
